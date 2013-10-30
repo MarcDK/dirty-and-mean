@@ -504,6 +504,11 @@ html .nohover .info {
 .searchbox input {
   font-size: 90%;
   width: 120px;
+}
+
+.header .searchbox input {
+  font-size: 90%;
+  width: 120px;
   padding: 1px;
   float: right;
   margin-right: 4px;

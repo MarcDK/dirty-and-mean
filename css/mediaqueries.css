@@ -48,71 +48,9 @@
 }
 
 
-@media only screen and  (max-width : 730px)  { 
-
-  html body {
-    font: 90%/1.6 'Lucida Grande', 'Lucida Sans Unicode', Arial, FreeSans, sans-serif;
-  }
-
-  html .lead .title{
-    font-size: 120%;
-  }
-
-  html .lead {
-    margin-bottom: 0;
-  }
+@media only screen and (max-width : 850px) {
   
-  html .lead p {
-    margin-bottom: 2em;
-  }
-  
-
-  html .entry .title {
-    font-size: 170%;
-  }
-
-
-  html .box .title {
-    font-size: 140%;
-  }
-
-  #nav .hamburger-icon {
-    display:block;
-  }
-
-  #marctv .container .box {
-    width: 100%;
-    float: none;
-    padding: 0;
-  }
-
-  html .commentlist li {
-    padding-left: 0;
-  }
-
-  html .commentlist li .vcard .avatar {
-    width: 2em;
-    height: 2em;
-  }
-
-  html .commentlist li .vcard {
-    padding-left: 2.5em;
-  }
-
-  html .commentlist li .comment-author, 
-  html .commentlist .pingback .vcard {
-    padding-bottom: 0.5em;
-  }
-
-  html .commentlist li .children .vcard .avatar {
-    left: 1em;
-  }
-
-  html .commentlist li .children li {
-    padding-left: 1em;
-  }
-
-  /* Hamburger */
+  /* Hamburger Menu */
 
   #nav .hamburger-icon {
     background-color: #333;
@@ -212,5 +150,73 @@
   html #nav .hamburger li {
     float: none;
   }
+  
+  #nav .hamburger-icon {
+    display:block;
+  }
+  
+}
+
+@media only screen and  (max-width : 600px) { 
+
+  html body {
+    font: 90%/1.6 'Lucida Grande', 'Lucida Sans Unicode', Arial, FreeSans, sans-serif;
+  }
+
+  html .lead .title{
+    font-size: 120%;
+  }
+
+  html .lead {
+    margin-bottom: 0;
+  }
+  
+  html .lead p {
+    margin-bottom: 2em;
+  }
+  
+
+  html .entry .title {
+    font-size: 170%;
+  }
+
+
+  html .box .title {
+    font-size: 140%;
+  }
+
+  #marctv .container .box {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+
+  html .commentlist li {
+    padding-left: 0;
+  }
+
+  html .commentlist li .vcard .avatar {
+    width: 2em;
+    height: 2em;
+  }
+
+  html .commentlist li .vcard {
+    padding-left: 2.5em;
+  }
+
+  html .commentlist li .comment-author, 
+  html .commentlist .pingback .vcard {
+    padding-bottom: 0.5em;
+  }
+
+  html .commentlist li .children .vcard .avatar {
+    left: 1em;
+  }
+
+  html .commentlist li .children li {
+    padding-left: 1em;
+  }
+
+  
 
 }
