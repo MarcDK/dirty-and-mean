@@ -15,14 +15,11 @@
       $recent_arr = wp_get_recent_posts($args);
       $recent_pid = $recent_arr[0]['ID'];
 
-      $sticky = get_option('sticky_posts');
-
-      if (count($sticky) > 0) {
-        $lead_pid = $sticky[0];
-      }
-      else {
-        $lead_pid = $recent_pid;
-      }
+      
+      $lead_pid = $recent_pid;
+      
+      
+      $do_not_duplicate = '';
 
       $do_not_duplicate[] = $lead_pid;
       update_option('do_not_duplicate', $do_not_duplicate);
@@ -34,8 +31,10 @@
     </ul>
 
     <?php echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"),FALSE, 'docked'); ?>
-    <?php echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"), 1,'docked'); ?>
+    <?php echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"), 0,'docked'); ?>
 
+    
+    
     <ul class="container bars">
       <li class="box first cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat1")) ?>">Leben</a></li>
       <li class="box middle cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat2")) ?>">Spiele</a></li>

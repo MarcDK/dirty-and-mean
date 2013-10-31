@@ -25,6 +25,14 @@
 
 
 
+@media only screen and  (max-width : 321px)  {
+  .header .searchbox,
+  .header .searchbox input {
+    float: left;
+    margin-top: 8px;
+  }
+}
+
 @media only screen and  (max-width : 960px)  { 
   html .container.multi .box{
     width: 32%;
@@ -48,8 +56,8 @@
 }
 
 
-@media only screen and (max-width : 850px) {
-  
+@media only screen and (max-width : 900px) {
+
   /* Hamburger Menu */
 
   #nav .hamburger-icon {
@@ -61,7 +69,6 @@
     line-height: 0;
     padding: .75rem .5rem;
     margin-top: 0;
-    padding-top: 20px;
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
@@ -150,11 +157,11 @@
   html #nav .hamburger li {
     float: none;
   }
-  
+
   #nav .hamburger-icon {
     display:block;
   }
-  
+
 }
 
 @media only screen and  (max-width : 600px) { 
@@ -170,11 +177,11 @@
   html .lead {
     margin-bottom: 0;
   }
-  
+
   html .lead p {
     margin-bottom: 2em;
   }
-  
+
 
   html .entry .title {
     font-size: 170%;
@@ -217,6 +224,6 @@
     padding-left: 1em;
   }
 
-  
+
 
 }

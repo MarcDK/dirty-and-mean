@@ -422,8 +422,12 @@ function get_marctv_teaserblock() {
 }
 
 function get_marctv_category_container_box( $cat_id, $class, $offset = false ) {
+  
+  $do_not_duplicate = get_option('do_not_duplicate');
+  
   query_posts(array(
     'category__in' => array($cat_id),
+    'post__not_in' => $do_not_duplicate,
     'showposts' => 1,
     'offset' => $offset
   ));
@@ -438,6 +442,7 @@ function get_marctv_category_container_box( $cat_id, $class, $offset = false ) {
     $teaser .= get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', true);
     
     $do_not_duplicate[] = get_the_ID();
+    
     update_option('do_not_duplicate', $do_not_duplicate);
   endwhile;
   
