@@ -26,10 +26,6 @@
 
 
 @media only screen and  (max-width : 321px)  {
-  html .header .searchbox,
-  html .header .searchbox input {
-   
-  }
   
   html  #nav .hamburger-icon:after {
     border-color: #CCCCCC;
@@ -96,7 +92,11 @@
   
   /* Hamburger Menu */
 
-  #nav .hamburger-icon {
+  html .header {
+    margin-top: 0;
+  }
+  
+  html #nav .hamburger-icon {
     background-color: #333;
     z-index: 1000;
     border-top-left-radius: 0;
