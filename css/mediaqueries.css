@@ -38,16 +38,18 @@
 }
   
   html .sitetitle a {
-    background-size: 200px auto;
-    width: 95px;
+    background-size: 240px auto;
+    width: 120px;
   }
   
   html .sitetitle {
-    width: 95px;
+    width: 125px;
+    margin-top: 5px;
   }
   
   html .header .searchbox {
     width: 60px;
+    margin-top: 5px;
   }
   
   html .header .searchbox input {
