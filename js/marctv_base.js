@@ -27,7 +27,7 @@
 
     function undocked(el) {
       console.debug(el);
-      el.css('background',$('body').css('background-color')).css('box-shadow', '0 1px 3px #333');
+      el.css('background',$('body').css('background-color')).css('box-shadow', '0 2px 6px #333');
     }
     
     function redocked(el) {

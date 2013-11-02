@@ -26,10 +26,37 @@
 
 
 @media only screen and  (max-width : 321px)  {
-  .header .searchbox,
-  .header .searchbox input {
-    float: left;
-    margin-top: 8px;
+  html .header .searchbox,
+  html .header .searchbox input {
+   
+  }
+  
+  html  #nav .hamburger-icon:after {
+    border-color: #CCCCCC;
+    border-style: solid none double;
+    border-width: 2px 0 6px;
+    content: " ";
+    display: block;
+    height: 2px;
+    width: 1rem;
+}
+  
+  html .sitetitle a {
+    background-size: 200px auto;
+    width: 95px;
+  }
+  
+  html .sitetitle {
+    width: 95px;
+  }
+  
+  html .header .searchbox {
+    width: 60px;
+  }
+  
+  html .header .searchbox input {
+    width: 50px;
+    margin-top: 1px;
   }
 }
 
@@ -58,6 +85,15 @@
 
 @media only screen and (max-width : 900px) {
 
+    html .header .searchbox {
+    width: 100px;
+  }
+  
+  html .header .searchbox input {
+    width: 95px;
+
+  }
+  
   /* Hamburger Menu */
 
   #nav .hamburger-icon {
