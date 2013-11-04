@@ -2,7 +2,7 @@
   display:none;
 }
 
-@media only screen and  (max-width : 1054px)  { 
+@media only screen and  (max-width : 1054px)  {
   html .section{
     width: 100%;
   }
@@ -13,6 +13,8 @@
     margin-left: -20px;
     margin-right: -20px;
   }
+
+
 
 
   .entry p .jqvideo img,
@@ -26,7 +28,7 @@
 
 
 @media only screen and  (max-width : 321px)  {
-  
+
   html  #nav .hamburger-icon:after {
     border-color: #CCCCCC;
     border-style: solid none double;
@@ -35,35 +37,42 @@
     display: block;
     height: 2px;
     width: 1rem;
-}
-  
+  }
+
   html .sitetitle a {
     background-size: 240px auto;
-    width: 120px;
+    width: 135px;
   }
-  
+
   html .sitetitle {
-    width: 125px;
+    width: 130px;
     margin-top: 5px;
   }
-  
+
   html .header .searchbox {
     width: 60px;
     margin-top: 5px;
   }
-  
+
   html .header .searchbox input {
     width: 50px;
     margin-top: 1px;
   }
 }
 
-@media only screen and  (max-width : 960px)  { 
+@media only screen and  (max-width : 700px)  {
+  #marctv .entry p.pollux {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and  (max-width : 960px)  {
   html .container.multi .box{
     width: 32%;
     border: 0;
-    padding: 0 1%; 
-
+    padding: 0 1%;
   }
 
   html .container.multi .box.first,
@@ -83,21 +92,21 @@
 
 @media only screen and (max-width : 900px) {
 
-    html .header .searchbox {
+  html .header .searchbox {
     width: 100px;
   }
-  
+
   html .header .searchbox input {
     width: 95px;
 
   }
-  
+
   /* Hamburger Menu */
 
   html .header {
     margin-top: 0;
   }
-  
+
   html #nav .hamburger-icon {
     background-color: #333;
     z-index: 1000;
@@ -113,7 +122,7 @@
 
     /* No support for these yet, use at own risk */
     -o-user-select: none;
-    user-select: none;   
+    user-select: none;
     border: none;
   }
 
@@ -169,8 +178,8 @@
   html #nav .hamburger li a{
     font-size: 100%;
     color: #efefef;
-    padding: 0.6em 0.6em 0.6em 0.8em; 
-    margin: 0;  
+    padding: 0.6em 0.6em 0.6em 0.8em;
+    margin: 0;
     text-decoration: none;
     font-weight: 300;
     background: #111;
@@ -202,10 +211,10 @@
 
 }
 
-@media only screen and  (max-width : 600px) { 
+@media only screen and  (max-width : 600px) {
 
   html body {
-    font: 90%/1.6 'Lucida Grande', 'Lucida Sans Unicode', Arial, FreeSans, sans-serif;
+    font: 90%/1.6 'Roboto','Lucida Grande', 'Lucida Sans Unicode', Arial, FreeSans, sans-serif;
   }
 
   html .lead .title{
@@ -249,7 +258,7 @@
     padding-left: 2.5em;
   }
 
-  html .commentlist li .comment-author, 
+  html .commentlist li .comment-author,
   html .commentlist .pingback .vcard {
     padding-bottom: 0.5em;
   }
