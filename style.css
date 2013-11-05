@@ -609,6 +609,7 @@ html .nohover .info {
 
 .cat-more a:hover {
   background-color: #333;
+  color: #fff;
 }
 
 .bars .middle {
