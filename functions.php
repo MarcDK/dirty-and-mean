@@ -286,7 +286,7 @@ function marctv_get_randompost($exclude = array(), $cat = "Reviews") {
     $html .= '<li class="box first last">';
 
     while (have_posts()) : the_post();
-      $html .= get_marctv_teaser(get_the_ID(), true, '', '', true, '', '', true);
+      $html .= get_marctv_teaser(get_the_ID(), true, '', '', true, '', '', false);
     endwhile;
 
     $html .= '</li>';

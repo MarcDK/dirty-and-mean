@@ -29,6 +29,13 @@
 
 @media only screen and  (max-width : 321px)  {
 
+  #marctv .entry p.castor, 
+  #marctv .entry p.pollux {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+  
   html  #nav .hamburger-icon:after {
     border-color: #CCCCCC;
     border-style: solid none double;

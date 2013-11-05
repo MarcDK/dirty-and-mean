@@ -100,8 +100,13 @@ ul,ol {
 
 
 a,a.inverted:hover {
+  position: relative;
   color:#2e5393;
   text-decoration:none;
+}
+
+a:active {
+  top: 1px;
 }
 
 a.inverted {
@@ -650,12 +655,12 @@ a[href*='=087022'] {
 
 html .entry p.pollux {
   float: right;
-  margin: 0.3em 0.5em 0.5em 1em;
+  margin: 0.3em 0 0.5em 1em;
   width: 50%;
 }
 
 html .entry p.castor {
   float: left;
-  margin: 0.3em 0.5em 0.5em 1em;
+  margin: 0.3em 1em 0.5em 0;
   width: 33%;
 }
