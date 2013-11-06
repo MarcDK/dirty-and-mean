@@ -334,6 +334,10 @@ a:active {
   font-size: 80%; 
 }
 
+.container.multi .title {
+  height: 2em
+}
+
 .container .box{
   width: 32%;
   border: 0;
