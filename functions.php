@@ -421,9 +421,13 @@ function get_marctv_teaserblock() {
   return $html;
 }
 
-function get_marctv_category_container_box( $cat_id, $class, $offset = false ) {
-  
-  $do_not_duplicate = get_option('do_not_duplicate');
+function get_marctv_category_container_box( $cat_id, $class, $offset = false, $check_duplicates = true ) {
+
+  if($check_duplicates) {
+    $do_not_duplicate = get_option('do_not_duplicate');
+  } else {
+    $do_not_duplicate = '';
+  }
   
   query_posts(array(
     'category__in' => array($cat_id),
@@ -443,7 +447,9 @@ function get_marctv_category_container_box( $cat_id, $class, $offset = false ) {
     
     $do_not_duplicate[] = get_the_ID();
     
-    update_option('do_not_duplicate', $do_not_duplicate);
+    if($check_duplicates) {
+      update_option('do_not_duplicate', $do_not_duplicate);
+    }
   endwhile;
   
   $teaser .= '</li>';
@@ -460,13 +466,14 @@ function get_marctv_category_container_box( $cat_id, $class, $offset = false ) {
  * @param integer $cat_id3 The third post_id of the post to display the teaser.
  * @param integer $offset Optional. The offset to the next post
  */
-function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = false, $classes) {
-
+function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = false, $classes, $check_duplicates = true) {
+  
   $teaser .= '<ul class="container bars ' . $classes . '">';
-  $teaser .= get_marctv_category_container_box($cat_id1, 'first odd', $offset);
-  $teaser .= get_marctv_category_container_box($cat_id2, 'middle even', $offset);
-  $teaser .= get_marctv_category_container_box($cat_id3, 'last odd', $offset);
+  $teaser .= get_marctv_category_container_box($cat_id1, 'first odd', $offset, $check_duplicates);
+  $teaser .= get_marctv_category_container_box($cat_id2, 'middle even', $offset, $check_duplicates );
+  $teaser .= get_marctv_category_container_box($cat_id3, 'last odd', $offset, $check_duplicates);
   $teaser .= '</ul>';
+  
   return $teaser;
 }
 
