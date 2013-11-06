@@ -104,7 +104,7 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
   if ($headline_bottom) {
     $teaser .= '<h2 class="title">' . esc_html(get_the_title($post_id)) . '</h2>';
   }
-  
+
 
   if ($show_excerpt) {
 
@@ -112,8 +112,8 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
 
     $teaser .= '<p>' . $excerpt . '</p>';
   }
-  
-   $teaser .= '</a>';
+
+  $teaser .= '</a>';
 
   return $teaser;
 }
@@ -421,14 +421,22 @@ function get_marctv_teaserblock() {
   return $html;
 }
 
-function get_marctv_category_container_box( $cat_id, $class, $offset = false, $check_duplicates = true ) {
+function get_marctv_category_container_box($cat_id, $class, $offset = false, $check_duplicates = true) {
 
-  if($check_duplicates) {
+  if ($check_duplicates) {
     $do_not_duplicate = get_option('do_not_duplicate');
-  } else {
+  }
+  else {
     $do_not_duplicate = '';
   }
-  
+
+  $sticky = get_option('sticky_posts');
+
+
+  if (in_category($cat_id, $sticky[0])) {
+    
+  }
+
   query_posts(array(
     'category__in' => array($cat_id),
     'post__not_in' => $do_not_duplicate,
@@ -436,22 +444,30 @@ function get_marctv_category_container_box( $cat_id, $class, $offset = false, $c
     'offset' => $offset
   ));
   $teaser .= '<li class="box ' . $class . '">';
+  if (!$offset) {
+    $teaser .= '<h2 class="supertitle"><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></h2>';
+  }
+
+  if (in_category($cat_id, $sticky[0])) {
+    $teaser .= get_marctv_teaser($sticky[0], true, '', 'medium', true, '', '', true);
+  }
+  else {
+
+    while (have_posts()) : the_post();
 
 
-  while (have_posts()) : the_post();
-    if (!$offset) {
-      $teaser .= '<h2 class="supertitle"><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></h2>';
-    }
-    
-    $teaser .= get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', true);
-    
-    $do_not_duplicate[] = get_the_ID();
-    
-    if($check_duplicates) {
-      update_option('do_not_duplicate', $do_not_duplicate);
-    }
-  endwhile;
-  
+      $teaser .= get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', true);
+
+      $do_not_duplicate[] = get_the_ID();
+
+      if ($check_duplicates) {
+        update_option('do_not_duplicate', $do_not_duplicate);
+      }
+    endwhile;
+  }
+
+
+
   $teaser .= '</li>';
   return $teaser;
 }
@@ -467,13 +483,13 @@ function get_marctv_category_container_box( $cat_id, $class, $offset = false, $c
  * @param integer $offset Optional. The offset to the next post
  */
 function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = false, $classes, $check_duplicates = true) {
-  
+
   $teaser .= '<ul class="container bars ' . $classes . '">';
   $teaser .= get_marctv_category_container_box($cat_id1, 'first odd', $offset, $check_duplicates);
-  $teaser .= get_marctv_category_container_box($cat_id2, 'middle even', $offset, $check_duplicates );
+  $teaser .= get_marctv_category_container_box($cat_id2, 'middle even', $offset, $check_duplicates);
   $teaser .= get_marctv_category_container_box($cat_id3, 'last odd', $offset, $check_duplicates);
   $teaser .= '</ul>';
-  
+
   return $teaser;
 }
 
@@ -591,16 +607,16 @@ function marctv_comment($comment, $args, $depth) {
       <div class="comment-author vcard">
         <?php echo get_avatar($comment, $size = '100') ?>
 
-        <?php printf(__('<cite class="fn">%s</cite> <span class="says">sagt:</span>'), get_comment_author_link()) ?>
+      <?php printf(__('<cite class="fn">%s</cite> <span class="says">sagt:</span>'), get_comment_author_link()) ?>
       </div>
       <?php if ($comment->comment_approved == '0') : ?>
         <em><?php _e('Your comment is awaiting moderation.') ?></em>
         <br />
       <?php endif; ?>
       <div class="comment-meta commentmetadata"><?php do_action('flag_comment_link'); ?> <a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)) ?>"><?php printf(__('%1$s'), get_comment_date('j. M Y')); ?></a><?php edit_comment_link(__('(Edit)'), '  ', ''); ?></div>
-      <?php comment_text(); ?>
+        <?php comment_text(); ?>
       <div class="reply">
-        <?php comment_reply_link(array_merge($args, array('reply_text' => 'Antworten', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+    <?php comment_reply_link(array_merge($args, array('reply_text' => 'Antworten', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
       </div>
     </div>
     <?php
@@ -677,7 +693,7 @@ function marctv_comment($comment, $args, $depth) {
           <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanenter Link zu <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
           <p><?php the_content_rss('', TRUE, '', 100); ?></p>
         </li>
-      <?php endwhile; ?>
+  <?php endwhile; ?>
     </ul>
   </li>
 
@@ -936,25 +952,20 @@ function robots_comment_pages() {
 
 add_action('wp_head', 'robots_comment_pages');
 
-
 function custom_excerpt_length() {
   return 20;
 }
 
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
-
 // Replaces the excerpt "more" text by a link
 function new_excerpt_more() {
-       global $post;
-	return ' […] <a class="moretag" href="'. get_permalink($post->ID) . '">mehr…</a>';
+  global $post;
+  return ' […] <a class="moretag" href="' . get_permalink($post->ID) . '">mehr…</a>';
 }
+
 //add_filter('excerpt_more', 'new_excerpt_more');
 
- wp_enqueue_script(
-          "jquery.sticky", get_template_directory_uri() . "/js/jquery.sticky.js", array("jquery"), "1.1", 0);
-
- 
-
- 
+wp_enqueue_script(
+    "jquery.sticky", get_template_directory_uri() . "/js/jquery.sticky.js", array("jquery"), "1.1", 0);
 ?>
