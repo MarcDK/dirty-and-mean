@@ -431,7 +431,6 @@ function get_marctv_category_container_box($cat_id, $class, $offset = false, $ch
   $teaser .= '<li class="box ' . $class . '">';
 
 
-
   $args = array(
     'numberposts' => 1,
     'offset' => $offset,
@@ -479,112 +478,6 @@ function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = f
   $teaser .= get_marctv_category_container_box($cat_id3, 'last odd', $offset, $check_duplicates);
   $teaser .= '</ul>';
 
-  return $teaser;
-}
-
-/**
- * Display the marctv category list2
- *
- * @since 0.71
- *
- * @param integer $cat_id Optional. The post_id of the post to display the teaser.
- * @param integer $offset Optional. The offset to the next post
- */
-function get_marctv_category_list2($cat_id, $offset = false) {
-
-  $teaser = '<h2 class="supertitle"><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></h2>';
-  $teaser .= '<ul class="">';
-
-  query_posts(array(
-    'category__in' => array($cat_id),
-    'showposts' => 2
-  ));
-
-
-  while (have_posts()) : the_post();
-    $i++;
-    $teaser .= '<li>';
-    $teaser .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
-
-    $teaser .= '</li>';
-    $do_not_duplicate[] = $post->ID;
-  endwhile;
-
-
-
-  $teaser .= '<li class="cat-more"><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></li>';
-  $teaser .= '</ul>';
-  return $teaser;
-}
-
-/**
- * Display the marctv category bar
- *
- * @since 0.71
- *
- * @param integer $cat_id Optional. The post_id of the post to display the teaser.
- * @param bool $show_info Optional. Show the infoboxt. Default is true.
- * @param string $additional_classes Optional. additional classes on a element.
- * @param string image size: org, medium, small, default.
- */
-function get_marctv_category_list($cat_id, $reset_loop = false) {
-
-
-  $do_not_duplicate = get_option('do_not_duplicate');
-  $stickys = get_option('sticky_posts');
-  $sticky = array_diff($stickys, array($stickys[0]));
-
-  $teaser .= '<h2 class="supertitle"><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></h2>';
-  $teaser .= '<ul>';
-  $i = 0;
-
-  if (count($sticky) > 0) :
-
-    $args = array(
-      'category__in' => array($cat_id),
-      'showposts' => 2,
-      'post__in' => $sticky,
-    );
-
-    $posts = get_posts($args);
-
-    foreach ($posts as $post) {
-      $i++;
-      $teaser .= '<li>';
-      $teaser .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
-      $teaser .= '</li>';
-      $do_not_duplicate[] = $post->ID;
-    }
-
-  endif;
-
-  $count = 2 - $i;
-
-  if ($reset_loop) {
-    $do_not_duplicate = '';
-  }
-
-  $args = array(
-    'category__in' => array($cat_id),
-    'showposts' => $count,
-    'post__not_in' => $do_not_duplicate,
-  );
-
-  $posts = get_posts($args);
-
-  foreach ($posts as $post) {
-    $do_not_duplicate[] = $post->ID;
-    $teaser .= '<li>';
-    $teaser .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
-    $teaser .= '</li>';
-  }
-
-  if (!$reset_loop) {
-    update_option('do_not_duplicate', $do_not_duplicate);
-  }
-
-  $teaser .= '<li class="cat-more"><a href="' . get_category_link($cat_id) . '">alle</a></li>';
-  $teaser .= '</ul>';
   return $teaser;
 }
 
@@ -664,108 +557,6 @@ function marctv_comment($comment, $args, $depth) {
     echo $pagination;
   }
 
-  function post_elements($cat_id) {
-    ?>
-  <li class="grid_4">
-    <h2 class="headline"><a href="<?php echo get_category_link(get_option($cat_id)); ?>"><?php echo get_cat_name(get_option($cat_id)) ?></a></h2>
-    <ul class="box">
-      <?php
-      query_posts(array(
-        'cat' => get_option($cat_id),
-        'showposts' => 4,
-        'post__not_in' => $do_not_duplicate
-      ));
-      while (have_posts()) : the_post();
-        ?>
-        <li>
-          <small class="grey"><?php the_time('j. F Y') ?> - <a href="<?php the_permalink() ?>#respond" rel="nofollow"><?php comments_number('Kommentieren &#187;', '1 Kommentar &#187;', '% Kommentare &#187;'); ?></a>  <?php edit_post_link('Edit', ' | ', '  '); ?></small>
-          <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanenter Link zu <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-          <p><?php the_content_rss('', TRUE, '', 100); ?></p>
-        </li>
-      <?php endwhile; ?>
-    </ul>
-  </li>
-
-  <?php
-}
-
-/* These functions are needed to extract  the thumbail-urls from the text */
-
-function getMiddleImg($the_content) {
-  /* Rausfiltern der Bild-URL */
-  $anfang = strpos($the_content, '"http:');
-
-  $ab_http = substr($the_content, $anfang + 1);
-  $ende = strpos($ab_http, "\"");
-  $http_string = substr($ab_http, 0, $ende);
-  $img_arr = (split("/", $http_string));
-  $path_to_image = implode('/', array_slice($img_arr, 0, -1));
-  $filename = (split("[.]", $img_arr[count($img_arr) - 1]));
-  $filename_str = str_replace('-620x270', "", $filename[0]);
-  $thumbnail_image = $path_to_image . "/" . $filename_str . "-300x130." . $filename[1];
-
-  if ($http_string == "") {
-    return false;
-  }
-  else {
-    return $thumbnail_image;
-  }
-}
-
-function getThumbImg($the_content) {
-  /* Rausfiltern der ThumbBild-URL */
-  $anfang = strpos($the_content, '"http:');
-  $ab_http = substr($the_content, $anfang + 1);
-  $ende = strpos($ab_http, "\"");
-  $http_string = substr($ab_http, 0, $ende);
-  $img_arr = (split("/", $http_string));
-  $path_to_image = implode('/', array_slice($img_arr, 0, -1));
-  $filename = (split("[.]", $img_arr[count($img_arr) - 1]));
-  $filename_str = str_replace('-620x270', "", $filename[0]);
-  $thumbnail_image = $path_to_image . "/" . $filename_str . "-150x65." . $filename[1];
-
-  if ($http_string == "") {
-    return false;
-  }
-  else {
-    return $thumbnail_image;
-  }
-}
-
-function getImgURL($the_content) {
-  /* Rausfiltern der Bild-URL */
-  $anfang = strpos($the_content, '"http:');
-  $ab_http = substr($the_content, $anfang + 1);
-  $ende = strpos($ab_http, "\"");
-  $http_string = substr($ab_http, 0, $ende);
-
-  if ($http_string == "") {
-    return false;
-  }
-  else {
-    return $http_string;
-  }
-}
-
-function getOrgImgURL($the_content) {
-  /* Rausfiltern der Bild-URL */
-  $anfang = strpos($the_content, '"http:');
-  $ab_http = substr($the_content, $anfang + 1);
-  $ende = strpos($ab_http, "\"");
-  $http_string = substr($ab_http, 0, $ende);
-  $img_arr = (split("/", $http_string));
-  $path_to_image = implode('/', array_slice($img_arr, 0, -1));
-  $filename = (split("[.]", $img_arr[count($img_arr) - 1]));
-  $filename_str = str_replace('-620x270', "", $filename[0]);
-  $orgimgurl = $path_to_image . "/" . $filename_str . "." . $filename[1];
-
-  if ($http_string == "") {
-    return false;
-  }
-  else {
-    return $orgimgurl;
-  }
-}
 
 /* Admin menu */
 
@@ -864,8 +655,6 @@ function marctv_post_tags($posttags) {
 
 add_action('init', 'register_marctv_menus');
 
-
-
 add_action('login_head', 'marctv_custom_login_logo');
 
 add_action('admin_menu', 'marctv_theme_menu');
@@ -874,19 +663,8 @@ add_theme_support('automatic-feed-links');
 
 add_theme_support('post-thumbnails');
 
-remove_action('wp_head', 'parent_post_rel_link', 10, 0); // prev link
-
-remove_action('wp_head', 'rsd_link');
 
 wp_enqueue_script("marctv.base", get_bloginfo('template_directory') . "/js/marctv_base.js", array("jquery"), "1.1", 0);
-
-register_sidebar(array(
-  'name' => 'MarcTV Top',
-  'id' => 'marctv_top',
-  'description' => 'On top of the world',
-  'before_title' => '<h2 class="title">',
-  'after_title' => '</h2>'
-));
 
 add_filter('next_posts_link_attributes', 'get_next_posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'get_previous_posts_link_attributes');
@@ -946,14 +724,6 @@ function custom_excerpt_length() {
 }
 
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
-
-// Replaces the excerpt "more" text by a link
-function new_excerpt_more() {
-  global $post;
-  return ' […] <a class="moretag" href="' . get_permalink($post->ID) . '">mehr…</a>';
-}
-
-//add_filter('excerpt_more', 'new_excerpt_more');
 
 wp_enqueue_script(
     "jquery.sticky", get_template_directory_uri() . "/js/jquery.sticky.js", array("jquery"), "1.1", 0);
