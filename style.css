@@ -219,6 +219,7 @@ a:active {
 .entry h5,
 .entry h6 {
   margin-bottom: 0.2em;
+  clear: both;
 }
 
 .entry h2,

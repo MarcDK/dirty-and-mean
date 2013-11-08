@@ -46,7 +46,7 @@
           <li>
             <ul>
               <li><a rel="nofollow" target="_blank" href="http://www.youtube.com/MarcDK">YouTube</a></li>
-              <li><a rel="nofollow" target="_blank" href="https://profiles.google.com/marc.toensing">Google+</a></li>
+              <li><a rel="nofollow" target="_blank" href="https://plus.google.com/+MarcTönsing?rel=author">Google+</a></li>
             </ul>
           </li>
         </ul>
