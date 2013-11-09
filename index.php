@@ -7,24 +7,20 @@
       <?php
       $sticky = get_option('sticky_posts');
 
-      if ($sticky[0]) {
-        $lead_pid = $sticky[0];
-      }
-      else {
-        $linkcat = get_option("marctv_linkcat");
-        $args = array(
-          'numberposts' => '1',
-          'post_status' => 'publish',
-          'category__not_in' => $linkcat
-        );
+      $linkcat = get_option("marctv_linkcat");
+      $args = array(
+        'numberposts' => '1',
+        'post_status' => 'publish',
+        'category__not_in' => $linkcat
+      );
 
-        $recent_arr = wp_get_recent_posts($args);
-        $recent_pid = $recent_arr[0]['ID'];
+      $recent_arr = wp_get_recent_posts($args);
+      $recent_pid = $recent_arr[0]['ID'];
 
 
-        $lead_pid = $recent_pid;
-      }
-      
+      $lead_pid = $recent_pid;
+
+
       $do_not_duplicate = '';
 
       $do_not_duplicate[] = $lead_pid;
@@ -46,6 +42,8 @@
       <li class="box middle cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat2")) ?>">Spiele</a></li>
       <li class="box last cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat3")) ?>">Medien</a></li>
     </ul>
+
+    <?php echo get_marctv_sticky_posts(); ?>
 
     <?php echo get_marctv_teaserblock(); ?>
 
