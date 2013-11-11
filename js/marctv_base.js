@@ -31,12 +31,10 @@
     });
 
     function undocked(el) {
-      console.debug(el);
       el.css('background', $('body').css('background-color')).css('box-shadow', '0 2px 6px #333');
     }
 
     function redocked(el) {
-      console.debug(el);
       el.css('background', 'transparent').css('box-shadow', 'none');
     }
 

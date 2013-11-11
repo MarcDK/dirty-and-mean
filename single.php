@@ -5,6 +5,7 @@
  */
 get_header();
 ?>
+
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <?php
     if (function_exists('yoast_breadcrumb')) {
@@ -84,6 +85,8 @@ else:
     <div class="section">
       <?php echo get_marctv_last_commented_articles(); ?>
 
+      <?php echo get_marctv_sticky_posts(); ?>
+
       <?php
       if (get_option('marctv-cache')) {
         $html = get_transient('marctv-teaserblock-single');
@@ -106,16 +109,16 @@ else:
 
       echo $html;
       ?>
-      
-      <?php echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"),FALSE, 'docked', FALSE); ?>
+
+      <?php echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"), FALSE, 'docked', FALSE); ?>
       <ul class="container bars">
         <li class="box first cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat1")) ?>">Leben</a></li>
         <li class="box middle cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat2")) ?>">Spiele</a></li>
         <li class="box last cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat3")) ?>">Medien</a></li>
       </ul>  
-      
-      
-      
+
+
+
       <?php
       echo marctv_get_randompost();
       ?>
