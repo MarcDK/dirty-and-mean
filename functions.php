@@ -370,7 +370,7 @@ function get_marctv_sticky_posts() {
     'orderby' => '',
     'order' => 'DESC',
     'include' => get_option('sticky_posts'),
-    'exclude' => $do_not_duplicate,
+    'post__not_in' => array($do_not_duplicate),
     'meta_key' => '',
     'meta_value' => '',
     'post_type' => 'post',
@@ -427,7 +427,7 @@ function get_marctv_most_commented_articles() {
       'orderby' => 'comment_count',
       'order' => 'DESC',
       'include' => '',
-      'exclude' => $do_not_duplicate,
+      'post__not_in' => array($do_not_duplicate),
       'meta_key' => '',
       'meta_value' => '',
       'post_type' => 'post',
@@ -493,7 +493,8 @@ function get_marctv_category_container_box($cat_id, $class, $offset = false, $ch
   if ($check_duplicates) {
     $do_not_duplicate = get_option('do_not_duplicate');
   }
-
+  
+  
   $teaser .= '<li class="box ' . $class . '">';
 
 
@@ -504,7 +505,7 @@ function get_marctv_category_container_box($cat_id, $class, $offset = false, $ch
     'orderby' => 'post_date',
     'order' => 'DESC',
     'include' => '',
-    'exclude' => $do_not_duplicate,
+    'post__not_in' => array($do_not_duplicate),
     'meta_key' => '',
     'meta_value' => '',
     'post_type' => 'post',

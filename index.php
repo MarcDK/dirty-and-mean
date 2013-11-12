@@ -5,8 +5,6 @@
     <ul class="container lead">
 
       <?php
-      $sticky = get_option('sticky_posts');
-
       $linkcat = get_option("marctv_linkcat");
       $args = array(
         'numberposts' => '1',
