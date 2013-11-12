@@ -20,7 +20,6 @@
 
 
       $do_not_duplicate = '';
-
       $do_not_duplicate[] = $lead_pid;
       update_option('do_not_duplicate', $do_not_duplicate);
       ?>

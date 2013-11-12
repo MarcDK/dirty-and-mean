@@ -275,7 +275,7 @@ function marctv_get_randompost($exclude = array(), $cat = "Reviews") {
     query_posts(array(
       'showposts' => 1,
       'orderby' => 'rand',
-      'post__not_in' => array($exclude),
+      'post__not_in' => $exclude,
       'category_name' => $cat //You can insert any category name
     ));
 
@@ -370,13 +370,16 @@ function get_marctv_sticky_posts() {
     'orderby' => '',
     'order' => 'DESC',
     'include' => get_option('sticky_posts'),
-    'post__not_in' => array($do_not_duplicate),
+    'post__not_in' => $do_not_duplicate,
     'meta_key' => '',
     'meta_value' => '',
     'post_type' => 'post',
     'post_status' => 'publish'
   );
 
+
+  
+  
   $postlist = get_posts($args);
   
   $html .= '<ul class="container">';
@@ -398,9 +401,13 @@ function get_marctv_sticky_posts() {
       $key++;
       $html .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', false);
       $html .= '</li>';
+      $do_not_duplicate[] = $post->ID;
     }
 
     $html .= '</ul>';
+    
+    update_option('do_not_duplicate', $do_not_duplicate);
+    
     return $html; 
 }
 
@@ -505,7 +512,7 @@ function get_marctv_category_container_box($cat_id, $class, $offset = false, $ch
     'orderby' => 'post_date',
     'order' => 'DESC',
     'include' => '',
-    'post__not_in' => array($do_not_duplicate),
+    'post__not_in' => $do_not_duplicate,
     'meta_key' => '',
     'meta_value' => '',
     'post_type' => 'post',
