@@ -45,6 +45,10 @@
     height: 2px;
     width: 1rem;
   }
+  
+  html .header .searchbox {
+    margin-right: 4px;
+  }
 
   html .sitetitle a {
     background-size: 240px auto;

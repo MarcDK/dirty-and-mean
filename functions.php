@@ -522,10 +522,8 @@ function get_marctv_category_container_box($cat_id, $class, $offset = false, $ch
 
   $postlist = get_posts($args);
 
-
-  if (!$offset) {
-    $teaser .= '<h2 class="supertitle"><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></h2>';
-  }
+  $teaser .= '<h2 class="supertitle"><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></h2>';
+  
 
   foreach ($postlist as $post) {
     $teaser .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
