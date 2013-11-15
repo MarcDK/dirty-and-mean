@@ -358,10 +358,10 @@ function get_adb_article() {
  * 
  */
 function get_marctv_sticky_posts() {
-  
-   $html = '<div class="container docked"><h2 class="col_title supertitle">Aktuell</h2></div>';
 
-  
+  $html = '<div class="container docked"><h2 class="col_title supertitle">Aktuell</h2></div>';
+
+
   $do_not_duplicate = get_option('do_not_duplicate');
 
   $args = array(
@@ -378,37 +378,37 @@ function get_marctv_sticky_posts() {
   );
 
 
-  
-  
+
+
   $postlist = get_posts($args);
-  
+
   $html .= '<ul class="container">';
   $key = 1;
 
-  
-   foreach ($postlist as $post) {
 
-      /* first-last classes */
-      if ($key == 1) {
-        $html .= '<li class="box first">';
-      }
-      else if ($key % 3 == 0) {
-        $html .= '<li class="box last">';
-      }
-      else {
-        $html .= '<li class="box">';
-      }
-      $key++;
-      $html .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', false);
-      $html .= '</li>';
-      $do_not_duplicate[] = $post->ID;
+  foreach ($postlist as $post) {
+
+    /* first-last classes */
+    if ($key == 1) {
+      $html .= '<li class="box first">';
     }
+    else if ($key % 3 == 0) {
+      $html .= '<li class="box last">';
+    }
+    else {
+      $html .= '<li class="box">';
+    }
+    $key++;
+    $html .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
+    $html .= '</li>';
+    $do_not_duplicate[] = $post->ID;
+  }
 
-    $html .= '</ul>';
-    
-    update_option('do_not_duplicate', $do_not_duplicate);
-    
-    return $html; 
+  $html .= '</ul>';
+
+  update_option('do_not_duplicate', $do_not_duplicate);
+
+  return $html;
 }
 
 /**
@@ -426,7 +426,7 @@ function get_marctv_most_commented_articles() {
 
     $html = '<div class="container docked"><h2 class="col_title supertitle"><a rel="nofollow" href="http://feeds.feedburner.com/marctv/comments">Meistkommentiert</a></h2></div>';
 
-   
+
 
     $args = array(
       'numberposts' => 3,
@@ -442,7 +442,7 @@ function get_marctv_most_commented_articles() {
     );
 
     $postlist = get_posts($args);
-    
+
     $html .= '<ul class="container">';
     $key = 1;
 
@@ -493,25 +493,39 @@ function get_marctv_teaserblock() {
   return $html;
 }
 
-function get_marctv_category_container_box($cat_id, $class, $offset = false, $check_duplicates = true) {
 
-  $do_not_duplicate = '';
 
-  if ($check_duplicates) {
-    $do_not_duplicate = get_option('do_not_duplicate');
+function get_parent_category_id($post_ID) {
+
+  $categories = get_the_category($post_ID);
+
+  foreach ($categories as $category) {
+    // Retrieve first occurence of category without a parent
+    if ($category->parent == 0) {
+      $category_id = $category->cat_ID;
+    }
+  }
+
+  return $category_id;
+}
+
+
+
+function get_marctv_posts_container($duplicates = true, $docked = true) {
+
+  $html = '';
+  
+  if($duplicates) {
+     $do_not_duplicate = get_option('do_not_duplicate');
   }
   
-  
-  $teaser .= '<li class="box ' . $class . '">';
-
-
   $args = array(
-    'numberposts' => 1,
-    'offset' => $offset,
-    'category' => $cat_id,
+    'numberposts' => 3,
+    'offset' => '',
+    'category' => '',
     'orderby' => 'post_date',
     'order' => 'DESC',
-    'include' => '',
+    
     'post__not_in' => $do_not_duplicate,
     'meta_key' => '',
     'meta_value' => '',
@@ -522,38 +536,52 @@ function get_marctv_category_container_box($cat_id, $class, $offset = false, $ch
 
   $postlist = get_posts($args);
 
-  $teaser .= '<h2 class="supertitle"><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></h2>';
-  
+
+  $key = 0;
 
   foreach ($postlist as $post) {
-    $teaser .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
+
+    $key++;
+
+    if ($key == 1) {
+      $docked_class = '';
+      if($docked) { $docked_class = 'docked'; }
+      $html .= '<ul class="container bars '. $docked_class . '">';
+    }
+
+    switch ($key) {
+      case 1:
+        $class = "odd first";
+        break;
+
+      case 2:
+        $class = "middle even";
+        break;
+
+      case 3:
+        $class = "odd last";
+        break;
+
+      default:
+        $class = "";
+    }
+
+    $html .= '<li class="box ' . $class . '">';
+    $html .= '<h2 class="supertitle"><a href="' . get_category_link(get_parent_category_id($post->ID)) . '">' . get_cat_name(get_parent_category_id($post->ID)) . '</a></h2>';
+
+    $html .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
     $do_not_duplicate[] = $post->ID;
-    update_option('do_not_duplicate',$do_not_duplicate);
+
+    $html .= '</li>';
+
+    if ($key % 3 == 0) {
+      $html .= '</ul>';
+    }
   }
-  $teaser .= '</li>';
 
-  return $teaser;
-}
+  update_option('do_not_duplicate', $do_not_duplicate);
 
-/**
- * Display the marctv category category
- *
- * @since 0.71
- *
- * @param integer $cat_id2 The first post_id of the post to display the teaser.
- * @param integer $cat_id2 The second post_id of the post to display the teaser.
- * @param integer $cat_id3 The third post_id of the post to display the teaser.
- * @param integer $offset Optional. The offset to the next post
- */
-function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = false, $classes, $check_duplicates = true) {
-
-  $teaser .= '<ul class="container bars ' . $classes . '">';
-  $teaser .= get_marctv_category_container_box($cat_id1, 'first odd', $offset, $check_duplicates);
-  $teaser .= get_marctv_category_container_box($cat_id2, 'middle even', $offset, $check_duplicates);
-  $teaser .= get_marctv_category_container_box($cat_id3, 'last odd', $offset, $check_duplicates);
-  $teaser .= '</ul>';
-
-  return $teaser;
+  return $html;
 }
 
 function marctv_comment($comment, $args, $depth) {
@@ -562,276 +590,276 @@ function marctv_comment($comment, $args, $depth) {
   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
     <div id="comment-<?php comment_ID(); ?>">
       <div class="comment-author vcard">
-  <?php echo get_avatar($comment, $size = '100') ?>
+        <?php echo get_avatar($comment, $size = '100') ?>
 
         <?php printf(__('<cite class="fn">%s</cite> <span class="says">sagt:</span>'), get_comment_author_link()) ?>
       </div>
-        <?php if ($comment->comment_approved == '0') : ?>
+      <?php if ($comment->comment_approved == '0') : ?>
         <em><?php _e('Your comment is awaiting moderation.') ?></em>
         <br />
       <?php endif; ?>
       <div class="comment-meta commentmetadata"><?php do_action('flag_comment_link'); ?> <a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)) ?>"><?php printf(__('%1$s'), get_comment_date('j. M Y')); ?></a><?php edit_comment_link(__('(Edit)'), '  ', ''); ?></div>
       <?php comment_text(); ?>
       <div class="reply">
-      <?php comment_reply_link(array_merge($args, array('reply_text' => 'Antworten', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+        <?php comment_reply_link(array_merge($args, array('reply_text' => 'Antworten', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
       </div>
     </div>
-        <?php
+    <?php
+  }
+
+  function marctv_pagination($seperator = ' | ', $after_previous = '&nbsp;&nbsp;', $before_next = '&nbsp;&nbsp;', $prelabel = 'Vorherige', $nxtlabel = 'Nächste', $current_page_tag = 'strong', $posts_per_page = '9') {
+    global $paged, $wp_query;
+    if ($paged == '') {
+      $paged = 1;
+    }
+
+    $pagination .= $after_previous;
+
+    $numposts = $wp_query->found_posts;
+
+    $max_num_pages = ceil($numposts / $posts_per_page);
+
+    if ($max_num_pages > 1) {
+
+      $offset = "3";
+
+
+      for ($cnt = 1; $cnt <= $max_num_pages; $cnt++) {
+        $classname = "hidden";
+
+        if ($cnt == 1 OR $cnt == $max_num_pages) {
+          $classname = '';
+        }
+
+        if ($cnt > ($paged - $offset) AND $cnt < ($paged + $offset)) {
+          $classname = '';
+        }
+        else {
+          if ($cnt == "2" OR $cnt == $max_num_pages - 1) {
+            $x[] = "…";
+          }
+        }
+
+        if ($current_page_tag && $paged == $cnt) {
+          $begin_link = "<$current_page_tag>";
+          $end_link = "</$current_page_tag>";
+          $x[] = '<a class="current ' . $classname . '" href="' . get_pagenum_link($cnt) . '">' . $begin_link . $cnt . $end_link . '</a>';
+        }
+        else {
+          $begin_link = "<$current_page_tag>";
+          $end_link = "</$current_page_tag>";
+          $x[] = '<a class="' . $classname . '" href="' . get_pagenum_link($cnt) . '">' . $begin_link . $cnt . $end_link . '</a>';
+        }
       }
 
-      function marctv_pagination($seperator = ' | ', $after_previous = '&nbsp;&nbsp;', $before_next = '&nbsp;&nbsp;', $prelabel = 'Vorherige', $nxtlabel = 'Nächste', $current_page_tag = 'strong', $posts_per_page = '9') {
-        global $paged, $wp_query;
-        if ($paged == '') {
-          $paged = 1;
-        }
-
-        $pagination .= $after_previous;
-
-        $numposts = $wp_query->found_posts;
-
-        $max_num_pages = ceil($numposts / $posts_per_page);
-
-        if ($max_num_pages > 1) {
-
-          $offset = "3";
+      $pagination .= join($seperator, $x);
+    }
+    $pagination .= $before_next;
 
 
-          for ($cnt = 1; $cnt <= $max_num_pages; $cnt++) {
-            $classname = "hidden";
+    echo $pagination;
+  }
 
-            if ($cnt == 1 OR $cnt == $max_num_pages) {
-              $classname = '';
-            }
+  /* Admin menu */
 
-            if ($cnt > ($paged - $offset) AND $cnt < ($paged + $offset)) {
-              $classname = '';
-            }
-            else {
-              if ($cnt == "2" OR $cnt == $max_num_pages - 1) {
-                $x[] = "…";
-              }
-            }
+  function marctv_theme_menu() {
+    add_theme_page('Options', 'Category Options', 'manage_options', 'marctv-theme-simple-and-clean', 'marctv_theme_options');
+  }
 
-            if ($current_page_tag && $paged == $cnt) {
-              $begin_link = "<$current_page_tag>";
-              $end_link = "</$current_page_tag>";
-              $x[] = '<a class="current ' . $classname . '" href="' . get_pagenum_link($cnt) . '">' . $begin_link . $cnt . $end_link . '</a>';
-            }
-            else {
-              $begin_link = "<$current_page_tag>";
-              $end_link = "</$current_page_tag>";
-              $x[] = '<a class="' . $classname . '" href="' . get_pagenum_link($cnt) . '">' . $begin_link . $cnt . $end_link . '</a>';
-            }
-          }
+  function marctv_theme_options() {
+    if (!current_user_can('manage_options')) {
+      wp_die(__('You do not have sufficient permissions to access this page.'));
+    }
 
-          $pagination .= join($seperator, $x);
-        }
-        $pagination .= $before_next;
+    $msg = '';
+    if (isset($_POST['marctv-settings'])) {
 
+      check_admin_referer('marctv-settings' . $_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
 
-        echo $pagination;
+      if (update_option('marctv_cat1', trim(stripslashes($_POST['marctv-cat1'])))) {
+        $msg = '<p> cat1 saved.</p>';
       }
-
-      /* Admin menu */
-
-      function marctv_theme_menu() {
-        add_theme_page('Options', 'Category Options', 'manage_options', 'marctv-theme-simple-and-clean', 'marctv_theme_options');
+      if (update_option('marctv_cat2', trim(stripslashes($_POST['marctv-cat2'])))) {
+        $msg = '<p> cat2 saved.</p>';
       }
-
-      function marctv_theme_options() {
-        if (!current_user_can('manage_options')) {
-          wp_die(__('You do not have sufficient permissions to access this page.'));
-        }
-
-        $msg = '';
-        if (isset($_POST['marctv-settings'])) {
-
-          check_admin_referer('marctv-settings' . $_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
-
-          if (update_option('marctv_cat1', trim(stripslashes($_POST['marctv-cat1'])))) {
-            $msg = '<p> cat1 saved.</p>';
-          }
-          if (update_option('marctv_cat2', trim(stripslashes($_POST['marctv-cat2'])))) {
-            $msg = '<p> cat2 saved.</p>';
-          }
-          if (update_option('marctv_cat3', trim(stripslashes($_POST['marctv-cat3'])))) {
-            $msg = '<p> cat3 saved.</p>';
-          }
-          if (update_option('marctv_catfav', trim(stripslashes($_POST['marctv-catfav'])))) {
-            $msg = '<p> catfav saved.</p>';
-          }
-          if (update_option('marctv_linkcat', trim(stripslashes($_POST['marctv-linkcat'])))) {
-            $msg = '<p> linkcat saved.</p>';
-          }
-          if (update_option('marctv-cache', trim(stripslashes($_POST['marctv-cache'])))) {
-            $msg = '<p>Cache setting saved.</p>';
-          }
-        }
-
-        echo '<div class="wrap">';
-        echo '<h2>Dirty & Mean Theme</h2>';
-        echo '<form method="post" action="">';
-        echo '<input type="hidden" value="1" name="marctv-settings" id="marctv-settings" />';
-
-        wp_nonce_field('marctv-settings' . $_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
-
-
-        echo '<p>Category ID 1:  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_cat1')))) . '" name="marctv-cat1" id="marctv-cat1" class="form_elem" size="30" type="text" /></p>';
-        echo '<p>Category ID 2:  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_cat2')))) . '" name="marctv-cat2" id="marctv-cat2" class="form_elem" size="30" type="text" /></p>';
-        echo '<p>Category ID 3:  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_cat3')))) . '" name="marctv-cat3" id="marctv-cat3" class="form_elem" size="30" type="text" /></p>';
-        echo '<p>Category Linkcat:  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_linkcat')))) . '" name="marctv-linkcat" id="marctv-linkcat" class="form_elem" size="30" type="text" /></p>';
-        echo '<p>Cache  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv-cache')))) . '" name="marctv-cache" id="marctv-cache" class="form_elem" size="30" type="text" /></p>';
-        echo '<p>Favorite tag slug (optional): <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_catfav')))) . '" name="marctv-catfav" id="marctv-catfav" class="form_elem" size="30" type="text" /></p>';
-        echo '<p class="submit"><input class="button-primary" type="submit" name="submit" value="Abspeichern" /></p>';
-        echo '</form>';
-
-        if (empty($msg)) {
-          $msg .= '<p>no changes</p>';
-        }
-        if (!empty($msg)) {
-          echo '<div id="message">' . $msg . '</div>';
-        }
-        echo '</div>';
+      if (update_option('marctv_cat3', trim(stripslashes($_POST['marctv-cat3'])))) {
+        $msg = '<p> cat3 saved.</p>';
       }
+      if (update_option('marctv_catfav', trim(stripslashes($_POST['marctv-catfav'])))) {
+        $msg = '<p> catfav saved.</p>';
+      }
+      if (update_option('marctv_linkcat', trim(stripslashes($_POST['marctv-linkcat'])))) {
+        $msg = '<p> linkcat saved.</p>';
+      }
+      if (update_option('marctv-cache', trim(stripslashes($_POST['marctv-cache'])))) {
+        $msg = '<p>Cache setting saved.</p>';
+      }
+    }
 
-      function marctv_custom_login_logo() {
-        echo '<style type="text/css">
+    echo '<div class="wrap">';
+    echo '<h2>Dirty & Mean Theme</h2>';
+    echo '<form method="post" action="">';
+    echo '<input type="hidden" value="1" name="marctv-settings" id="marctv-settings" />';
+
+    wp_nonce_field('marctv-settings' . $_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
+
+
+    echo '<p>Category ID 1:  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_cat1')))) . '" name="marctv-cat1" id="marctv-cat1" class="form_elem" size="30" type="text" /></p>';
+    echo '<p>Category ID 2:  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_cat2')))) . '" name="marctv-cat2" id="marctv-cat2" class="form_elem" size="30" type="text" /></p>';
+    echo '<p>Category ID 3:  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_cat3')))) . '" name="marctv-cat3" id="marctv-cat3" class="form_elem" size="30" type="text" /></p>';
+    echo '<p>Category Linkcat:  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_linkcat')))) . '" name="marctv-linkcat" id="marctv-linkcat" class="form_elem" size="30" type="text" /></p>';
+    echo '<p>Cache  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv-cache')))) . '" name="marctv-cache" id="marctv-cache" class="form_elem" size="30" type="text" /></p>';
+    echo '<p>Favorite tag slug (optional): <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_catfav')))) . '" name="marctv-catfav" id="marctv-catfav" class="form_elem" size="30" type="text" /></p>';
+    echo '<p class="submit"><input class="button-primary" type="submit" name="submit" value="Abspeichern" /></p>';
+    echo '</form>';
+
+    if (empty($msg)) {
+      $msg .= '<p>no changes</p>';
+    }
+    if (!empty($msg)) {
+      echo '<div id="message">' . $msg . '</div>';
+    }
+    echo '</div>';
+  }
+
+  function marctv_custom_login_logo() {
+    echo '<style type="text/css">
     h1 a { background-image:url(' . get_bloginfo('template_directory') . '/images/wp_login.png) !important; }
   </style>';
-      }
+  }
 
-      function register_marctv_menus() {
-        register_nav_menus(array(
-          'mainnav' => __('Main Navigation')
-        ));
-      }
+  function register_marctv_menus() {
+    register_nav_menus(array(
+      'mainnav' => __('Main Navigation')
+    ));
+  }
 
-      function marctv_post_tags($posttags) {
-        if (is_array($posttags)) {
-          $the_tags = '<ul class="hlist tags"><li class="tag">Weitere Artikel zu ';
+  function marctv_post_tags($posttags) {
+    if (is_array($posttags)) {
+      $the_tags = '<ul class="hlist tags"><li class="tag">Weitere Artikel zu ';
 
-          $i = 0;
-          $divider = '';
-          foreach ($posttags as $tag) {
-            $i++;
-            if ($i === count($posttags) && count($posttags) != 1) {
-              $divider = ' und ';
-            }
-            else if ($i > 1) {
-              $divider = ', ';
-            }
-            $the_tags .= $divider . '<a rel="tag" href="' . get_tag_link($tag->term_id) . '"><strong>' . $tag->name . '</strong></a>';
-          }
-          $the_tags .= '.</li></ul>';
-          return $the_tags;
+      $i = 0;
+      $divider = '';
+      foreach ($posttags as $tag) {
+        $i++;
+        if ($i === count($posttags) && count($posttags) != 1) {
+          $divider = ' und ';
         }
-      }
-
-      add_action('init', 'register_marctv_menus');
-
-      add_action('login_head', 'marctv_custom_login_logo');
-
-      add_action('admin_menu', 'marctv_theme_menu');
-
-      add_theme_support('automatic-feed-links');
-
-      add_theme_support('post-thumbnails');
-
-
-      wp_enqueue_script("marctv.base", get_bloginfo('template_directory') . "/js/marctv_base.js", array("jquery"), "1.1", 0);
-
-      add_filter('next_posts_link_attributes', 'get_next_posts_link_attributes');
-      add_filter('previous_posts_link_attributes', 'get_previous_posts_link_attributes');
-
-
-      if (!function_exists('get_next_posts_link_attributes')) {
-
-        function get_next_posts_link_attributes($attr) {
-          $attr = 'rel="next" title="Next Page"';
-          return $attr;
+        else if ($i > 1) {
+          $divider = ', ';
         }
-
+        $the_tags .= $divider . '<a rel="tag" href="' . get_tag_link($tag->term_id) . '"><strong>' . $tag->name . '</strong></a>';
       }
-      if (!function_exists('get_previous_posts_link_attributes')) {
+      $the_tags .= '.</li></ul>';
+      return $the_tags;
+    }
+  }
 
-        function get_previous_posts_link_attributes($attr) {
-          $attr = 'rel="prev" title="Previous Page"';
-          return $attr;
-        }
+  add_action('init', 'register_marctv_menus');
 
+  add_action('login_head', 'marctv_custom_login_logo');
+
+  add_action('admin_menu', 'marctv_theme_menu');
+
+  add_theme_support('automatic-feed-links');
+
+  add_theme_support('post-thumbnails');
+
+
+  wp_enqueue_script("marctv.base", get_bloginfo('template_directory') . "/js/marctv_base.js", array("jquery"), "1.1", 0);
+
+  add_filter('next_posts_link_attributes', 'get_next_posts_link_attributes');
+  add_filter('previous_posts_link_attributes', 'get_previous_posts_link_attributes');
+
+
+  if (!function_exists('get_next_posts_link_attributes')) {
+
+    function get_next_posts_link_attributes($attr) {
+      $attr = 'rel="next" title="Next Page"';
+      return $attr;
+    }
+
+  }
+  if (!function_exists('get_previous_posts_link_attributes')) {
+
+    function get_previous_posts_link_attributes($attr) {
+      $attr = 'rel="prev" title="Previous Page"';
+      return $attr;
+    }
+
+  }
+
+  /**
+   * Convert Yoast breadcrumbs to use Microdata
+   *
+   * @params string $breadcrumbs Breadcrumb HTML
+   * @return string
+   * @author Jaik Dean
+   * */
+  function convertBreadcrumbsToMicrodata($breadcrumbs) {
+    // remove the XML namespace
+    $breadcrumbs = str_replace(' xmlns:v="http://rdf.data-vocabulary.org/#"', '', $breadcrumbs);
+
+    // convert each breadcrumb
+    $breadcrumbs = preg_replace(
+        '/<span typeof="v:Breadcrumb"><a href="([^"]+)" rel="v:url" property="v:title">([^<]+)<\\/a><\\/span>/', '<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="$1" itemprop="url"><span itemprop="title">$2</span></a></span>', $breadcrumbs
+    );
+
+    $breadcrumbs = preg_replace(
+        '/<span typeof="v:Breadcrumb"><span class="breadcrumb_last" property="v:title">([^<]+)<\\/span><\\/span>/', '<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span class="breadcrumb_last" itemprop="title">$1</span></span>', $breadcrumbs
+    );
+
+    return $breadcrumbs;
+  }
+
+  add_filter('wpseo_breadcrumb_output', 'convertBreadcrumbsToMicrodata');
+
+  function robots_comment_pages() {
+    if (get_query_var('cpage') >= 1 || get_query_var('cpage') < get_comment_pages_count())
+      echo "<meta name=\"robots\" content=\"noindex\" />\n";
+  }
+
+  add_action('wp_head', 'robots_comment_pages');
+
+  function custom_excerpt_length() {
+    return 20;
+  }
+
+  add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
+  wp_enqueue_script(
+      "jquery.sticky", get_template_directory_uri() . "/js/jquery.sticky.js", array("jquery"), "1.1", 0);
+
+  function marctv_get_the_excerpt($id = false) {
+    global $post;
+
+    $old_post = $post;
+    if ($id != $post->ID) {
+      $post = get_page($id);
+    }
+
+    if (!$excerpt = trim($post->post_excerpt)) {
+      $excerpt = $post->post_content;
+      $excerpt = strip_shortcodes($excerpt);
+      $excerpt = apply_filters('the_content', $excerpt);
+      $excerpt = str_replace(']]>', ']]&gt;', $excerpt);
+      $excerpt = strip_tags($excerpt);
+      $excerpt_length = apply_filters('excerpt_length', 55);
+      $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+
+      $words = preg_split("/[\n\r\t ]+/", $excerpt, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
+      if (count($words) > $excerpt_length) {
+        array_pop($words);
+        $excerpt = implode(' ', $words);
+        $excerpt = $excerpt . $excerpt_more;
       }
-
-      /**
-       * Convert Yoast breadcrumbs to use Microdata
-       *
-       * @params string $breadcrumbs Breadcrumb HTML
-       * @return string
-       * @author Jaik Dean
-       * */
-      function convertBreadcrumbsToMicrodata($breadcrumbs) {
-        // remove the XML namespace
-        $breadcrumbs = str_replace(' xmlns:v="http://rdf.data-vocabulary.org/#"', '', $breadcrumbs);
-
-        // convert each breadcrumb
-        $breadcrumbs = preg_replace(
-            '/<span typeof="v:Breadcrumb"><a href="([^"]+)" rel="v:url" property="v:title">([^<]+)<\\/a><\\/span>/', '<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="$1" itemprop="url"><span itemprop="title">$2</span></a></span>', $breadcrumbs
-        );
-
-        $breadcrumbs = preg_replace(
-            '/<span typeof="v:Breadcrumb"><span class="breadcrumb_last" property="v:title">([^<]+)<\\/span><\\/span>/', '<span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span class="breadcrumb_last" itemprop="title">$1</span></span>', $breadcrumbs
-        );
-
-        return $breadcrumbs;
+      else {
+        $excerpt = implode(' ', $words);
       }
+    }
 
-      add_filter('wpseo_breadcrumb_output', 'convertBreadcrumbsToMicrodata');
+    $post = $old_post;
 
-      function robots_comment_pages() {
-        if (get_query_var('cpage') >= 1 || get_query_var('cpage') < get_comment_pages_count())
-          echo "<meta name=\"robots\" content=\"noindex\" />\n";
-      }
-
-      add_action('wp_head', 'robots_comment_pages');
-
-      function custom_excerpt_length() {
-        return 20;
-      }
-
-      add_filter('excerpt_length', 'custom_excerpt_length', 999);
-
-      wp_enqueue_script(
-          "jquery.sticky", get_template_directory_uri() . "/js/jquery.sticky.js", array("jquery"), "1.1", 0);
-
-      function marctv_get_the_excerpt($id = false) {
-        global $post;
-
-        $old_post = $post;
-        if ($id != $post->ID) {
-          $post = get_page($id);
-        }
-
-        if (!$excerpt = trim($post->post_excerpt)) {
-          $excerpt = $post->post_content;
-          $excerpt = strip_shortcodes($excerpt);
-          $excerpt = apply_filters('the_content', $excerpt);
-          $excerpt = str_replace(']]>', ']]&gt;', $excerpt);
-          $excerpt = strip_tags($excerpt);
-          $excerpt_length = apply_filters('excerpt_length', 55);
-          $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
-
-          $words = preg_split("/[\n\r\t ]+/", $excerpt, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
-          if (count($words) > $excerpt_length) {
-            array_pop($words);
-            $excerpt = implode(' ', $words);
-            $excerpt = $excerpt . $excerpt_more;
-          }
-          else {
-            $excerpt = implode(' ', $words);
-          }
-        }
-
-        $post = $old_post;
-
-        return $excerpt;
-      }
-      ?>
+    return $excerpt;
+  }
+  ?>

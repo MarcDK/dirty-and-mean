@@ -110,14 +110,8 @@ else:
       echo $html;
       ?>
 
-      <?php echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"), FALSE, 'docked', FALSE); ?>
-      <ul class="container bars">
-        <li class="box first cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat1")) ?>">Leben</a></li>
-        <li class="box middle cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat2")) ?>">Spiele</a></li>
-        <li class="box last cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat3")) ?>">Medien</a></li>
-      </ul>  
-
-
+      <?php echo get_marctv_posts_container(true, true); ?>
+      <?php echo get_marctv_posts_container(true, false); ?>
 
       <?php
       echo marctv_get_randompost();
