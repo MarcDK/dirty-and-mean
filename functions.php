@@ -377,11 +377,7 @@ function get_marctv_sticky_posts() {
     'post_status' => 'publish'
   );
 
-
-
-
   $postlist = get_posts($args);
-
   $html .= '<ul class="container">';
   $key = 1;
 
@@ -493,6 +489,70 @@ function get_marctv_teaserblock() {
   return $html;
 }
 
+/**
+ * Display the marctv category category
+ *
+ * @since 0.71
+ *
+ * @param integer $cat_id2 The first post_id of the post to display the teaser.
+ * @param integer $cat_id2 The second post_id of the post to display the teaser.
+ * @param integer $cat_id3 The third post_id of the post to display the teaser.
+ * @param integer $offset Optional. The offset to the next post
+ */
+function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = false, $classes, $check_duplicates = true) {
+
+  $teaser .= '<ul class="container bars ' . $classes . '">';
+  $teaser .= get_marctv_category_container_box($cat_id1, 'first odd', $offset, $check_duplicates);
+  $teaser .= get_marctv_category_container_box($cat_id2, 'middle even', $offset, $check_duplicates);
+  $teaser .= get_marctv_category_container_box($cat_id3, 'last odd', $offset, $check_duplicates);
+  $teaser .= '</ul>';
+
+  return $teaser;
+}
+
+function get_marctv_category_container_box($cat_id, $class, $offset = false, $check_duplicates = true) {
+
+  $do_not_duplicate = '';
+
+  if ($check_duplicates) {
+    $do_not_duplicate = get_option('do_not_duplicate');
+  }
+  
+  
+  $teaser .= '<li class="box ' . $class . '">';
+
+
+  $args = array(
+    'numberposts' => 1,
+    'offset' => $offset,
+    'category' => $cat_id,
+    'orderby' => 'post_date',
+    'order' => 'DESC',
+    'include' => '',
+    'post__not_in' => $do_not_duplicate,
+    'meta_key' => '',
+    'meta_value' => '',
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'suppress_filters' => true
+  );
+
+  $postlist = get_posts($args);
+
+
+
+  $teaser .= '<h2 class="supertitle"><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></h2>';
+  
+
+  foreach ($postlist as $post) {
+    $teaser .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
+    $do_not_duplicate[] = $post->ID;
+    update_option('do_not_duplicate',$do_not_duplicate);
+  }
+  $teaser .= '</li>';
+
+  return $teaser;
+}
 
 
 function get_parent_category_id($post_ID) {
@@ -509,6 +569,11 @@ function get_parent_category_id($post_ID) {
   return $category_id;
 }
 
+
+function get_marctv_selected_categories ($cat1, $cat2, $cat3) {
+  
+  
+}
 
 
 function get_marctv_posts_container($duplicates = true, $docked = true) {
