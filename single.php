@@ -83,48 +83,23 @@ else:
   <div class="site"> <!-- site -->
 
     <div class="section">
-      <?php echo get_marctv_last_commented_articles(); ?>
 
       <?php echo get_marctv_sticky_posts(); ?>
 
-      <?php
-      if (get_option('marctv-cache')) {
-        $html = get_transient('marctv-teaserblock-single');
-      }
-
-      if (!$html) {
-        // $html = get_marctv_most_commented_articles();
-        // $html .= get_adb_article();
-        // 
-
-
-        $html .= get_marctv_favourite_articles();
-
-
-        // $html .= get_marctv_teaserblock_single();
-
-
-        set_transient('marctv-teaserblock-single', $html, 24 * 60 * 60);
-      }
-
-      echo $html;
-      ?>
-
-      <?php //echo get_marctv_posts_container(true, true); ?>
-      <?php //echo get_marctv_posts_container(true, false); ?>
-
-
       <?php echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"), FALSE, 'docked', FALSE); ?>
+      
       <ul class="container bars">
         <li class="box first cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat1")) ?>">Leben</a></li>
         <li class="box middle cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat2")) ?>">Spiele</a></li>
         <li class="box last cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat3")) ?>">Medien</a></li>
       </ul>  
+      
+      <?php echo get_marctv_favourite_articles(); ?>
 
+      <?php echo marctv_get_randompost(); ?>
 
-      <?php
-      echo marctv_get_randompost();
-      ?>
+      <?php echo get_marctv_last_commented_articles(); ?>
+      
     </div>
   </div>
   <?php get_footer(); ?>
