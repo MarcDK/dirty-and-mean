@@ -29,13 +29,32 @@
 
 @media only screen and  (max-width : 321px)  {
 
+  html .header .hamburger {
+    right: 5px;
+  }
+  
+  html .site {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  html .hreview .text {
+    width: 100%;
+  }
+  
+  html .entry p.childIMG,
+  html .entry .marctv-gallery{
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
   #marctv .entry p.castor, 
   #marctv .entry p.pollux {
     float: none;
     margin: 0;
     width: 100%;
   }
-  
+
   html  #nav .hamburger-icon:after {
     border-color: #CCCCCC;
     border-style: solid none double;
@@ -45,7 +64,7 @@
     height: 2px;
     width: 1rem;
   }
-  
+
   html .header .searchbox {
     margin-right: 4px;
   }

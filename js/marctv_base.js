@@ -31,11 +31,13 @@
     });
 
     function undocked(el) {
-      $(el).css('background', $('body').css('background-color')).css('box-shadow', '0 2px 6px #333');
+      console.debug(el);
+      el.css('background', $('body').css('background-color')).css('box-shadow', '0 2px 6px #333');
     }
 
     function redocked(el) {
-      $(el).css('background', 'transparent').css('box-shadow', 'none');
+      console.debug(el);
+      el.css('background', 'transparent').css('box-shadow', 'none');
     }
 
   });

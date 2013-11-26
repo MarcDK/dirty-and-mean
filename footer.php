@@ -12,7 +12,7 @@
     $tagcache = wp_tag_cloud(array(
       'smallest' => 8,
       'largest' => 14,
-      'number' => 18,
+      'number' => 40,
       'format' => 'flat',
       'echo' => false));
     set_transient('taghtml', $tagcache, 24 * 60 * 60);
