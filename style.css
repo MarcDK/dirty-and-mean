@@ -383,6 +383,11 @@ a:active {
 
 /* infobox */
 
+.is-touch .showontouch .infobox .info{
+  opacity: 1;
+  filter: alpha(opacity = 1);
+}
+
 .infobox:hover .info,
 html .nohover .info {
   opacity: 1;
@@ -402,13 +407,9 @@ html .nohover .info {
   font-size: 80%;
   padding: 2px 4px;
   position: absolute;
-
-
   opacity: 0;
   filter: alpha(opacity = 0);
-
   zoom: 1;
-
   border-radius: 2px 2px 2px 2px;
   -moz-border-radius: 2px 2px 2px 2px;
   -webkit-border-radius: 2px 2px 2px 2px;

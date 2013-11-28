@@ -163,7 +163,7 @@ function get_marctv_last_commented_articles() {
     $results = $wpdb->get_results($query);
 
     $html = '<div class="container docked"><h2 class="supertitle"><a rel="nofollow" href="http://feeds.feedburner.com/marctv/comments">Zuletzt kommentiert</a></h2></div>';
-    $html .= '<ul class="container multi">';
+    $html .= '<ul class="container multi showontouch">';
 
 
 
@@ -383,10 +383,7 @@ function get_marctv_tags($ids) {
   return $html;
 }
 
-/**
- * Display articles most commented articles
- * 
- */
+
 function get_marctv_sticky_posts() {
 
   $html = '<div class="container docked"><h2 class="col_title supertitle">Aktuell</h2></div>';
@@ -452,8 +449,6 @@ function get_marctv_most_commented_articles() {
 
     $html = '<div class="container docked"><h2 class="col_title supertitle"><a rel="nofollow" href="http://feeds.feedburner.com/marctv/comments">Meistkommentiert</a></h2></div>';
 
-
-
     $args = array(
       'numberposts' => 3,
       'offset' => '',
@@ -469,7 +464,7 @@ function get_marctv_most_commented_articles() {
 
     $postlist = get_posts($args);
 
-    $html .= '<ul class="container">';
+    $html .= '<ul class="container showontouch">';
     $key = 1;
 
     foreach ($postlist as $post) {

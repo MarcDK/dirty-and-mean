@@ -40,13 +40,12 @@
 
     <?php echo get_marctv_sticky_posts(); ?>
 
-    <?php //echo get_marctv_posts_container(true,true); ?>
-    <?php //echo get_marctv_posts_container(true,false); ?>
-
     <div id="marctvflickrbar"></div>
 
     <?php echo get_marctv_favourite_articles(); ?>
 
+    <?php echo get_marctv_most_commented_articles(); ?>
+    
     <?php echo marctv_get_randompost(); ?>
 
     <?php echo get_marctv_last_commented_articles(); ?>

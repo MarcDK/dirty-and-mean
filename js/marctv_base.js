@@ -21,7 +21,7 @@
     ;
 
     if (is_touch_device()) {
-      $('body').addClass('is_touch');
+      $('body').addClass('is-touch');
     }
 
     $(".header .innerheader").sticky({
