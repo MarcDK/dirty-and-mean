@@ -7,15 +7,11 @@
     width: 100%;
   }
 
-
   .entry p.childIMG,
   .entry .marctv-gallery{
     margin-left: -20px;
     margin-right: -20px;
   }
-
-
-
 
   .entry p .jqvideo img,
   .entry p img{
@@ -32,7 +28,7 @@
   html .header .hamburger {
     right: 5px;
   }
-  
+
   html .site {
     margin-left: 5px;
     margin-right: 5px;
@@ -41,7 +37,7 @@
   html .hreview .text {
     width: 100%;
   }
-  
+
   html .entry p.childIMG,
   html .entry .marctv-gallery{
     margin-left: -5px;
@@ -90,6 +86,92 @@
   }
 }
 
+
+
+@media only screen and  (max-width : 600px) {
+
+  html body {
+    font: 90%/1.6 'Roboto','Lucida Grande', 'Lucida Sans Unicode', Arial, FreeSans, sans-serif;
+  }
+
+  html .lead .title{
+    font-size: 120%;
+  }
+
+  html .lead {
+    margin-bottom: 0;
+  }
+
+  html .lead p {
+    margin-bottom: 2em;
+  }
+
+
+  html .entry .title {
+    font-size: 170%;
+  }
+
+
+  html .box .title {
+    font-size: 140%;
+  }
+
+  #marctv .container .box {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+
+  html .commentlist li {
+    padding-left: 0;
+  }
+
+  html .commentlist li .vcard .avatar {
+    width: 2em;
+    height: 2em;
+  }
+
+  html .commentlist li .vcard {
+    padding-left: 2.5em;
+  }
+
+  html .commentlist li .comment-author,
+  html .commentlist .pingback .vcard {
+    padding-bottom: 0.5em;
+  }
+
+  html .commentlist li .children .vcard .avatar {
+    left: 1em;
+  }
+
+  html .commentlist li .children li {
+    padding-left: 1em;
+  }
+
+
+  #marctv .container.multi .box,
+  #marctv .container.double .box {
+    width: 48%;
+    border: 0;
+    padding: 0 2%;
+    float: left;
+    font-size: 70%;
+  }
+
+  #marctv .container.multi .box:nth-child(odd),
+  #marctv .container.double .box.first {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  #marctv .container.multi .box:nth-child(even),
+  #marctv .container.double .box.last{
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+}
+
 @media only screen and  (max-width : 700px)  {
   #marctv .entry p.pollux,
   #marctv .entry p.castor {
@@ -97,6 +179,7 @@
     margin: 0;
     width: 100%;
   }
+
 }
 
 @media only screen and  (max-width : 960px)  {
@@ -242,66 +325,3 @@
 
 }
 
-@media only screen and  (max-width : 600px) {
-
-  html body {
-    font: 90%/1.6 'Roboto','Lucida Grande', 'Lucida Sans Unicode', Arial, FreeSans, sans-serif;
-  }
-
-  html .lead .title{
-    font-size: 120%;
-  }
-
-  html .lead {
-    margin-bottom: 0;
-  }
-
-  html .lead p {
-    margin-bottom: 2em;
-  }
-
-
-  html .entry .title {
-    font-size: 170%;
-  }
-
-
-  html .box .title {
-    font-size: 140%;
-  }
-
-  #marctv .container .box {
-    width: 100%;
-    float: none;
-    padding: 0;
-  }
-
-  html .commentlist li {
-    padding-left: 0;
-  }
-
-  html .commentlist li .vcard .avatar {
-    width: 2em;
-    height: 2em;
-  }
-
-  html .commentlist li .vcard {
-    padding-left: 2.5em;
-  }
-
-  html .commentlist li .comment-author,
-  html .commentlist .pingback .vcard {
-    padding-bottom: 0.5em;
-  }
-
-  html .commentlist li .children .vcard .avatar {
-    left: 1em;
-  }
-
-  html .commentlist li .children li {
-    padding-left: 1em;
-  }
-
-
-
-}
