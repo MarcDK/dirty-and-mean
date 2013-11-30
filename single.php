@@ -96,7 +96,7 @@ else:
 
             <?php echo get_marctv_favourite_articles(); ?>
 
-            <?php echo get_marctv_most_commented_articles(); ?> 
+            <?php //echo get_marctv_most_commented_articles(); ?> 
 
             <?php echo marctv_get_randompost(); ?>
 
