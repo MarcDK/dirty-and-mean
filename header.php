@@ -26,7 +26,7 @@
     <div id=fig1><div class="figure"><div></div></div></div>
     <div id=fig2><div class="figure"><div></div></div></div>   
     <div class="header">
-      <div class="innerheader">
+      <div id="header" class="innerheader">
         <div class="site">
           <div class="section"> 
             <?php if (is_home()) : ?>
