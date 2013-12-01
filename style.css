@@ -151,6 +151,7 @@ a:active {
   padding: 0;
   text-indent: -5000em;
   width:130px;  
+  margin-top: 1px;
 }
 
 .title {
@@ -509,7 +510,7 @@ html .nohover .info {
 .header .searchbox {
   float: right;
   width: 140px;
-  padding-top: 2px;
+  padding-top: 3px;
 }
 
 .searchbox input {
