@@ -384,7 +384,7 @@ a:active {
 
 /* infobox */
 
-.is-touch .showontouch .infobox .info{
+.is-touch .infobox .info{
   opacity: 1;
   filter: alpha(opacity = 1);
 }
@@ -533,10 +533,10 @@ html .nohover .info {
 
 
 .commentbox {
-  background: #F7F7F7;
+  background: #eee;
   padding-top: 2em;
-  border-top: 1px solid #333;
-  border-bottom: 0.1em solid #333;
+  border-top: 3px solid #333;
+  border-bottom: 3px solid #333;
 }
 
 /* article nav */
@@ -620,7 +620,7 @@ html .nohover .info {
 }
 
 .bars .middle {
- 
+
 }
 
 .lastwords {
