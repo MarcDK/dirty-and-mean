@@ -360,6 +360,9 @@ a:active {
   padding-right: 0;
 }
 
+.container.morph .box p{
+  height: 6em;
+}
 
 
 .container .box{

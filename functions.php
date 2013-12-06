@@ -526,10 +526,15 @@ function get_marctv_teaserblock() {
  */
 function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = false, $classes, $check_duplicates = true) {
 
-  $teaser .= '<ul class="container bars ' . $classes . '">';
-  $teaser .= get_marctv_category_container_box($cat_id1, 'first odd', $offset, $check_duplicates);
-  $teaser .= get_marctv_category_container_box($cat_id2, 'middle even', $offset, $check_duplicates);
-  $teaser .= get_marctv_category_container_box($cat_id3, 'last odd', $offset, $check_duplicates);
+  $teaser .= '<ul class="container morph ' . $classes . '">';
+  $teaser .= get_marctv_category_container_box($cat_id1, 'first ', $offset, $check_duplicates);
+  $teaser .= get_marctv_category_container_box($cat_id2, '', $offset, $check_duplicates);
+  $teaser .= get_marctv_category_container_box($cat_id3, 'multi-last', $offset, $check_duplicates);
+  
+  $teaser .= get_marctv_category_container_box($cat_id1, 'multi-first', 1, $check_duplicates);
+  $teaser .= get_marctv_category_container_box($cat_id2, '', 1, $check_duplicates);
+  $teaser .= get_marctv_category_container_box($cat_id3, 'last', 1, $check_duplicates);
+  
   $teaser .= '</ul>';
 
   return $teaser;
