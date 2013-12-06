@@ -26,7 +26,6 @@ Template Name: Archives
 
 </div>
 
-<?php get_footer(); ?>
   </ul>
 
 </div>

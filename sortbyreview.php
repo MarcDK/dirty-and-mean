@@ -18,9 +18,10 @@ get_header();
       ?>
       <div class="entry">
         <h1 class="title entry-title"><span><?php esc_html(the_title()); ?><?php edit_post_link('edit', '<small> ', '</small>'); ?></span></h1>
-            <?php the_content(); ?>
+        <?php the_content(); ?>
       </div>
-    <?php endwhile;
+    <?php
+    endwhile;
   endif;
   ?>
 
@@ -37,36 +38,40 @@ get_header();
     );
 
     $the_query = new WP_Query($args);
+    
     $key = 0;
-// The Loop
+    
     while ($the_query->have_posts()) :
       $the_query->the_post();
       $key++;
       // cfvalue:field 
       if ($key % 3 == 0) {
         echo '<li class="box last">';
-      }
-      else if (($key - 1) % 3 == 0) {
+      } else if (($key - 1) % 3 == 0) {
         echo '<li class="box first">';
-      }
-      else {
+      } else {
         echo '<li class="box">';
       }
 
       echo get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', false);
+
+      if ($key % 3 == 0) {
+        echo '</ul><ul class="container">';
+      }
       ?>
       </li>
-      <?php
-    endwhile;
-
-    /* Restore original Post Data 
-     * NB: Because we are using new WP_Query we aren't stomping on the 
-     * original $wp_query and it does not need to be reset.
-     */
-    wp_reset_postdata();
-    ?>
+    <?php endwhile; ?>
   </ul>
-    <?php marctv_pagination(" ", '<span class="pagenav">', "</span>", "« Vorherige", "Nächste »", 'span', '9'); ?>
+
+  <?php 
+  /* Restore original Post Data 
+  * NB: Because we are using new WP_Query we aren't stomping on the 
+  * original $wp_query and it does not need to be reset.
+  */
+  wp_reset_postdata();
+  ?>
+</ul>
+<?php marctv_pagination(" ", '<span class="pagenav">', "</span>", "« Vorherige", "Nächste »", 'span', '9'); ?>
 </div><!-- #primary -->
 
 <?php get_footer(); ?>

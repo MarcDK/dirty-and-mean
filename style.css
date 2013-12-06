@@ -535,8 +535,8 @@ html .nohover .info {
 .commentbox {
   background: #eee;
   padding-top: 2em;
-  border-top: 3px solid #333;
-  border-bottom: 3px solid #333;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
 }
 
 /* article nav */
