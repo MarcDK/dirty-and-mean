@@ -20,12 +20,12 @@ get_header();
         <h1 class="title entry-title"><span><?php esc_html(the_title()); ?><?php edit_post_link('edit', '<small> ', '</small>'); ?></span></h1>
         <?php the_content(); ?>
       </div>
-    <?php
+      <?php
     endwhile;
   endif;
   ?>
 
-  <ul class="container">
+  <ul class="container multi showontouch docked">
     <?php
     $args = array(
       'post_type' => 'post',
@@ -38,36 +38,45 @@ get_header();
     );
 
     $the_query = new WP_Query($args);
-    
+
     $key = 0;
+    
     
     while ($the_query->have_posts()) :
       $the_query->the_post();
       $key++;
       // cfvalue:field 
-      if ($key % 3 == 0) {
+      if ($key % 6 == 0) {
         echo '<li class="box last">';
-      } else if (($key - 1) % 3 == 0) {
+      }
+      else if (($key - 1) % 6 == 0) {
         echo '<li class="box first">';
-      } else {
+      }
+      else if (($key - 4 ) % 6 == 0) {
+        echo '<li class="box multi-first">';
+      }
+      else if (($key - 3 ) % 6 == 0) {
+        echo '<li class="box multi-last">';
+      }
+      else {
         echo '<li class="box">';
       }
 
       echo get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', false);
 
-      if ($key % 3 == 0) {
-        echo '</ul><ul class="container">';
+      if ($key % 6 == 0) {
+        echo '</ul><ul class="container multi showontouch docked">';
       }
       ?>
       </li>
     <?php endwhile; ?>
   </ul>
 
-  <?php 
+  <?php
   /* Restore original Post Data 
-  * NB: Because we are using new WP_Query we aren't stomping on the 
-  * original $wp_query and it does not need to be reset.
-  */
+   * NB: Because we are using new WP_Query we aren't stomping on the 
+   * original $wp_query and it does not need to be reset.
+   */
   wp_reset_postdata();
   ?>
 </ul>
