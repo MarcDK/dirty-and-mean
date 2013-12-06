@@ -64,31 +64,37 @@ get_header();
       ?>
     </div>
 
-    <ul class="container">
+    <ul class="container morph">
   <?php
   $key = 0;
   while (have_posts()) : the_post();
     $key++;
     // cfvalue:field 
-    if ($key % 3 == 0) {
-      echo '<li class="box last">';
-    }
-    else if (($key - 1) % 3 == 0) {
-      echo '<li class="box first">';
-    }
-    else {
-      echo '<li class="box">';
-    }
+   if ($key % 6 == 0) {
+        echo '<li class="box last">';
+      }
+      else if (($key - 1) % 6 == 0) {
+        echo '<li class="box first">';
+      }
+      else if (($key - 4 ) % 6 == 0) {
+        echo '<li class="box multi-first">';
+      }
+      else if (($key - 3 ) % 6 == 0) {
+        echo '<li class="box multi-last">';
+      }
+      else {
+        echo '<li class="box">';
+      }
 
     echo get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', true);
 
-    if ($key % 3 == 0) {
-      echo '</ul><ul class="container">';
+    if ($key % 6 == 0) {
+      echo '</ul>';
     }
     ?>
         </li>
       <?php endwhile; ?>
-    </ul>
+   
 
       <?php
     else :

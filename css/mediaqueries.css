@@ -24,7 +24,7 @@
 
 
 @media only screen and  (max-width : 321px)  {
-  
+
   html .header .hamburger {
     right: 5px;
   }
@@ -136,7 +136,8 @@
 
 
   #marctv .container.multi .box,
-  #marctv .container.double .box {
+  #marctv .container.double .box,
+  #marctv .container.morph .box {
     width: 48%;
     border: 0;
     padding: 0 2%;
@@ -145,15 +146,21 @@
   }
 
   #marctv .container.multi .box:nth-child(odd),
+  #marctv .container.morph .box:nth-child(odd),
   #marctv .container.double .box.first {
     margin-left: 0;
     padding-left: 0;
   }
 
   #marctv .container.multi .box:nth-child(even),
+  #marctv .container.morph .box:nth-child(even),
   #marctv .container.double .box.last{
     margin-right: 0;
     padding-right: 0;
+  }
+
+  #marctv .container.morph .box p{
+      height: 5em;
   }
 
 

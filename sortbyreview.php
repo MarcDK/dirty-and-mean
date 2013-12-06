@@ -25,7 +25,7 @@ get_header();
   endif;
   ?>
 
-  <ul class="container multi showontouch docked">
+  <ul class="container morph showontouch docked">
     <?php
     $args = array(
       'post_type' => 'post',
@@ -65,7 +65,7 @@ get_header();
       echo get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', false);
 
       if ($key % 6 == 0) {
-        echo '</ul><ul class="container multi showontouch docked">';
+        echo '</ul><ul class="container morph showontouch docked">';
       }
       ?>
       </li>

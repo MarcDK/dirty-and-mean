@@ -336,9 +336,31 @@ a:active {
   font-size: 80%; 
 }
 
-.container.multi .title {
+.container.multi .title,
+.container.morph .title{
   height: 2em
 }
+/* morph */
+
+.container.morph .box{
+  width: 32%;
+  border: 0;
+  padding: 0 1%;
+}
+
+.container.morph .box.first,
+.container.morph .box.multi-first{
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.container.morph .box.last,
+.container.morph .box.multi-last{
+  margin-right: 0;
+  padding-right: 0;
+}
+
+
 
 .container .box{
   width: 32%;
