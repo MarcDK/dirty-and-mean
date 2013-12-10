@@ -70,6 +70,12 @@
     width: 50px;
     margin-top: 1px;
   }
+  
+  html .container.morph .box .title,
+  html .container.double .box .title {
+    font-size: 100%
+  }
+  
 }
 
 
@@ -82,6 +88,10 @@
 
   html .lead .title{
     font-size: 120%;
+  }
+  
+  html .hreview .text {
+    width: 100%;
   }
 
   html .lead {
@@ -142,7 +152,7 @@
     border: 0;
     padding: 0 2%;
     float: left;
-    font-size: 70%;
+    font-size: 80%;
   }
 
   #marctv .container.multi .box:nth-child(odd),
@@ -160,7 +170,7 @@
   }
 
   #marctv .container.morph .box p{
-      height: 5em;
+      height: 6em;
   }
 
 

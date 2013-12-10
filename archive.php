@@ -115,7 +115,7 @@ get_header();
     endif;
     ?>
 
-
+    </ul>
   <div class="nav-article">
     <span class="nav-previous"><?php echo get_previous_posts_link('« Vorherige'); ?>&nbsp;</span>
     <span class="nav-next">&nbsp;<?php echo get_next_posts_link('Nächste »'); ?></span>
@@ -123,7 +123,7 @@ get_header();
 
 
 
-<?php marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '9'); ?>
+<?php marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '6'); ?>
 
 </div>
 
