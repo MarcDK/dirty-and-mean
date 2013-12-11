@@ -158,7 +158,7 @@ a:active {
   line-height: 1.2;
   font-weight: 700;
   margin-bottom: 8px;
-  font-size: 110%;
+  font-size: 105%;
 }
 
 .headline {
@@ -686,13 +686,15 @@ a[href*='=087022'] {
 
 /* Castor and Pollux */
 
-html .entry p.pollux {
+html .entry p.pollux,
+html .entry .alignright {
   float: right;
   margin: 0.3em 0 0.5em 1em;
   width: 33%;
 }
 
-html .entry p.castor {
+html .entry p.castor,
+html .entry .alignleft {
   float: left;
   margin: 0.3em 1em 0.5em 0;
   width: 33%;
