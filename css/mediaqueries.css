@@ -94,6 +94,12 @@
     width: 100%;
   }
 
+  html .archive .nav-article .nav-next,
+  html .archive .nav-article .nav-previous {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  
   html .lead {
     margin-bottom: 0;
   }
