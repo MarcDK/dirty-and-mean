@@ -383,7 +383,6 @@ function get_marctv_tags($ids) {
   return $html;
 }
 
-
 function get_marctv_sticky_posts() {
 
   $html = '<div class="container docked"><h2 class="col_title supertitle">Aktuell</h2></div>';
@@ -530,11 +529,11 @@ function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = f
   $teaser .= get_marctv_category_container_box($cat_id1, 'first ', $offset, $check_duplicates);
   $teaser .= get_marctv_category_container_box($cat_id2, '', $offset, $check_duplicates);
   $teaser .= get_marctv_category_container_box($cat_id3, 'multi-last', $offset, $check_duplicates);
-  
+
   $teaser .= get_marctv_category_container_box($cat_id1, 'multi-first', 1, $check_duplicates);
   $teaser .= get_marctv_category_container_box($cat_id2, '', 1, $check_duplicates);
   $teaser .= get_marctv_category_container_box($cat_id3, 'last', 1, $check_duplicates);
-  
+
   $teaser .= '</ul>';
 
   return $teaser;
@@ -967,4 +966,10 @@ jQuery("#postexcerpt .handlediv").after("<div style=\"position:absolute;top:0px;
 
   add_action('admin_head-post.php', 'excerpt_count_js');
   add_action('admin_head-post-new.php', 'excerpt_count_js');
+
+  function my_theme_add_editor_styles() {
+    add_editor_style('custom-editor-style.css');
+  }
+
+  add_action('init', 'my_theme_add_editor_styles');
   ?>
