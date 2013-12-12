@@ -1,11 +1,14 @@
 .alignright,
-.alignright img { 
+.alignright img,
+.alignleft ,
+.alignleft img{ 
   width: 200px ! important;
   height: 88px ! important;
+  margin: 0;
 }
 
-.alignleft ,
-.alignleft img{
-  width: 200px ! important;
-  height: 88px ! important;
+
+
+h2, h3, h4 {
+  clear:both;
 }

@@ -954,19 +954,6 @@ function marctv_comment($comment, $args, $depth) {
     return $excerpt;
   }
 
-  function excerpt_count_js() {
-    echo '<script>jQuery(document).ready(function(){
-jQuery("#postexcerpt .handlediv").after("<div style=\"position:absolute;top:0px;right:5px;color:#666;\">Excerpt length: </small><input type=\"text\" value=\"0\" maxlength=\"3\" size=\"3\" id=\"excerpt_counter\" readonly=\"\" style=\"background:#fff;\"> <small>character(s).</div>");
-     jQuery("#excerpt_counter").val(jQuery("#excerpt").val().length);
-     jQuery("#excerpt").keyup( function() {
-     jQuery("#excerpt_counter").val(jQuery("#excerpt").val().length);
-   });
-});</script>';
-  }
-
-  add_action('admin_head-post.php', 'excerpt_count_js');
-  add_action('admin_head-post-new.php', 'excerpt_count_js');
-
   function my_theme_add_editor_styles() {
     add_editor_style('custom-editor-style.css');
   }
