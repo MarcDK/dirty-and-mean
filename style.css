@@ -703,7 +703,7 @@ html .entry p.castor,
 }
 
 /* kick-ass */
-.miami-beach {
+#nav .sub-menu li.miami-beach a {
   color: #fff;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #2e5393, 0 0 29px #2E5392, 0 0 40px #2e5393, 0 0 50px #2e5393, 0 0 75px #2e5393;
 }
