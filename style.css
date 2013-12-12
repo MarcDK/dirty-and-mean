@@ -706,4 +706,37 @@ html .entry p.castor,
 #nav .sub-menu li.miami-beach a {
   color: #fff;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #2e5393, 0 0 29px #2E5392, 0 0 40px #2e5393, 0 0 50px #2e5393, 0 0 75px #2e5393;
+  -webkit-animation-name: glow;
+  -webkit-animation-duration : 5s;
+  -webkit-animation-iteration-count : infinite;
+  -webkit-animation-direction : normal;
+  -webkit-animation-timing-function : linear;
+}
+
+
+
+
+@-webkit-keyframes glow {
+  from {
+   color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #2e5393, 0 0 29px #2E5392, 0 0 40px #2e5393, 0 0 50px #2e5393, 0 0 75px #2e5393;
+}
+
+25% {
+
+}
+
+50% {
+ color: #ccc;
+  text-shadow: 0 0 5px #333, 0 0 10px #333, 0 0 15px #333, 0 0 20px #2e5393, 0 0 29px #2E5392, 0 0 40px #2e5393, 0 0 50px #2e5393, 0 0 75px #2e5393;
+}
+
+75% {
+
+}
+
+to {
+    color: #fff;
+     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #2e5393, 0 0 29px #2E5392, 0 0 40px #2e5393, 0 0 50px #2e5393, 0 0 75px #2e5393;
+}
 }
