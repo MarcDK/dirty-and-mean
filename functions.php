@@ -526,13 +526,13 @@ function get_marctv_teaserblock() {
 function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = false, $classes, $check_duplicates = true) {
 
   $teaser .= '<ul class="container morph ' . $classes . '">';
-  $teaser .= get_marctv_category_container_box($cat_id1, 'first ', $offset, $check_duplicates);
-  $teaser .= get_marctv_category_container_box($cat_id2, '', $offset, $check_duplicates);
-  $teaser .= get_marctv_category_container_box($cat_id3, 'multi-last', $offset, $check_duplicates);
+  $teaser .= get_marctv_category_container_box($cat_id1, 'first ', 0, $check_duplicates);
+  $teaser .= get_marctv_category_container_box($cat_id2, '', 0, $check_duplicates);
+  $teaser .= get_marctv_category_container_box($cat_id3, 'multi-last', 0, $check_duplicates);
 
-  $teaser .= get_marctv_category_container_box($cat_id1, 'multi-first', 1, $check_duplicates);
-  $teaser .= get_marctv_category_container_box($cat_id2, '', 1, $check_duplicates);
-  $teaser .= get_marctv_category_container_box($cat_id3, 'last', 1, $check_duplicates);
+  $teaser .= get_marctv_category_container_box($cat_id1, 'multi-first', 0, $check_duplicates);
+  $teaser .= get_marctv_category_container_box($cat_id2, '', 0, $check_duplicates);
+  $teaser .= get_marctv_category_container_box($cat_id3, 'last', 0, $check_duplicates);
 
   $teaser .= '</ul>';
 
@@ -542,11 +542,7 @@ function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = f
 function get_marctv_category_container_box($cat_id, $class, $offset = false, $check_duplicates = true) {
 
   $do_not_duplicate = '';
-
-  if ($check_duplicates) {
-    $do_not_duplicate = get_option('do_not_duplicate');
-  }
-
+  $do_not_duplicate = get_option('do_not_duplicate');
 
   $teaser .= '<li class="box ' . $class . '">';
 
