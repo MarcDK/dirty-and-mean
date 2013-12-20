@@ -355,10 +355,6 @@ function get_adb_article() {
 
 function get_marctv_tags($ids) {
 
-
-
-
-
   $args = array(
     'numberposts' => 1,
     'offset' => '',
@@ -524,7 +520,7 @@ function get_marctv_teaserblock() {
  * @param integer $offset Optional. The offset to the next post
  */
 function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = false, $classes, $check_duplicates = true) {
-
+  
   $teaser .= '<ul class="container morph ' . $classes . '">';
   $teaser .= get_marctv_category_container_box($cat_id1, 'first ', 0, $check_duplicates);
   $teaser .= get_marctv_category_container_box($cat_id2, '', 0, $check_duplicates);
@@ -535,13 +531,14 @@ function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = f
   $teaser .= get_marctv_category_container_box($cat_id3, 'last', 0, $check_duplicates);
 
   $teaser .= '</ul>';
-
+  
   return $teaser;
 }
 
+
+
 function get_marctv_category_container_box($cat_id, $class, $offset = false, $check_duplicates = true) {
 
-  $do_not_duplicate = '';
   $do_not_duplicate = get_option('do_not_duplicate');
 
   $teaser .= '<li class="box ' . $class . '">';
@@ -563,8 +560,6 @@ function get_marctv_category_container_box($cat_id, $class, $offset = false, $ch
   );
 
   $postlist = get_posts($args);
-
-
 
   $teaser .= '<h2 class="supertitle"><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></h2>';
 
