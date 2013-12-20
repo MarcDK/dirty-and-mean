@@ -338,7 +338,7 @@ a:active {
 
 .container.multi .title,
 .container.morph .title{
-  height: 2em
+  height: 1.7em
 }
 /* morph */
 
@@ -709,7 +709,9 @@ html .entry p.castor,
   -webkit-animation-iteration-count : 1;
   -webkit-animation-direction : normal;
   -webkit-animation-timing-function : ease-out;
+  -webkit-animation-delay:0.5s;
   animation-name: glow;
+  animation-delay: 0.5s;
   animation-duration : 2s;
   animation-iteration-count : 1;
   animation-direction : normal;
@@ -726,6 +728,8 @@ html .entry p.castor,
 }
 
 25% {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #333, 0 0 29px #333, 0 0 40px #333, 0 0 50px #333, 0 0 75px #333;
 
 }
 
@@ -746,7 +750,7 @@ to {
 @keyframes glow {
   from {
   color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #2e5393, 0 0 29px #2E5392, 0 0 40px #2e5393, 0 0 50px #2e5393, 0 0 75px #2e5393;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #333, 0 0 29px #333, 0 0 40px #333, 0 0 50px #333, 0 0 75px #333;
 }
 
 25% {

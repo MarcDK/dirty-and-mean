@@ -34,7 +34,7 @@
             <?php else : ?>
               <div class="sitetitle"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></div>
             <?php endif ?>
-            <nav><div id="nav"><?php wp_nav_menu(array('theme_location' => 'mainnav')); ?></div></nav>
+            <nav><div id="nav"><?php wp_nav_menu(array('theme_location' => 'mainnav', 'container' => '')); ?></div></nav>
             <?php get_search_form(); ?>
           </div>
         </div>
