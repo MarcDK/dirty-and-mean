@@ -56,6 +56,6 @@ get_header();
 
   <?php endif; ?>
 
-  <?php marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '9'); ?>
+  <?php marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '6'); ?>
 </div>
 <?php get_footer(); ?>
