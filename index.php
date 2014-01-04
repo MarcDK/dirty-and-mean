@@ -47,7 +47,7 @@
     <?php echo get_marctv_most_commented_articles(); ?>
     
     <?php echo marctv_get_randompost(); ?>
-
+   
     <?php echo get_marctv_last_commented_articles(); ?>
 
   </div>
