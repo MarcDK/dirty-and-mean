@@ -2,24 +2,25 @@
 
 
 <div class="section tagcloud">
-  <?php
-  if (get_option('marctv-cache')) {
-    $tagcache = get_transient('taghtml');
-    // If it wasn't there regenerate the data and save the transient
-  }
+  <?php if (is_home()) : ?>
+    <?php
+    if (get_option('marctv-cache')) {
+      $tagcache = get_transient('taghtml');
+      // If it wasn't there regenerate the data and save the transient
+    }
 
-  if (!$tagcache) {
-    $tagcache = wp_tag_cloud(array(
-      'smallest' => 8,
-      'largest' => 14,
-      'number' => 40,
-      'format' => 'flat',
-      'echo' => false));
-    set_transient('taghtml', $tagcache, 24 * 60 * 60);
-  }
-  echo $tagcache;
-  ?>
-
+    if (!$tagcache) {
+      $tagcache = wp_tag_cloud(array(
+        'smallest' => 8,
+        'largest' => 14,
+        'number' => 50,
+        'format' => 'flat',
+        'echo' => false));
+      set_transient('taghtml', $tagcache, 24 * 60 * 60);
+    }
+    echo $tagcache;
+    ?>
+  <?php endif ?>
 </div>
 
 
@@ -31,7 +32,7 @@
     <ul class="container section">
       <li class="box first">
         <div class="supertitle">Suche</div>
-        <?php get_search_form(); ?>
+<?php get_search_form(); ?>
       </li>
       <li class="box">
         <div class="supertitle">Abonnieren</div>
@@ -65,15 +66,15 @@
     </ul>
 
   </div>
-  <?php wp_reset_query();
-  $postID = get_the_ID();
-  ?>
+<?php
+wp_reset_query();
+?>
   <div class="lastwords">Dirty and Mean - MarcTV <?php echo date('Y'); ?></div>
 </div>
 
 </body>
 </html>
 <!-- <?php
-printf(__('%d queries. %s seconds. '), get_num_queries(), timer_stop(0, 3));
-echo_memory_usage();
+  printf(__('%d queries. %s seconds. '), get_num_queries(), timer_stop(0, 3));
+  echo_memory_usage();
 ?> -->

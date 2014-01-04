@@ -38,6 +38,7 @@
       <li class="box last cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat3")) ?>">Medien</a></li>
     </ul>
 
+    
     <?php echo get_marctv_sticky_posts(); ?>
 
     <div id="marctvflickrbar"></div>

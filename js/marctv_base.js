@@ -38,5 +38,11 @@
       el.css('background', 'transparent').css('box-shadow', 'none');
     }
 
+    $.getJSON('http://api.justin.tv/api/stream/summary.json?channel=marctvde&jsonp=?', function(a) {
+      if (a.streams_count > 0) {
+        $('#nav .menu').append('<li class="twitch-status menu-item"><a title="Leute gucken ' + a.viewers_count + ' mir auf twitch.tv beim Spielen zu" href="http://www.twitch.tv/marctvde">Live!</a></li>');
+      }
+    });
+
   });
 })(jQuery); 

@@ -338,7 +338,7 @@ a:active {
 
 .container.multi .title,
 .container.morph .title{
-  height: 1.7em
+  height: 1.8em
 }
 /* morph */
 
@@ -606,7 +606,7 @@ html .nohover .info {
 }
 
 .tagcloud {
-  padding-bottom: 1em;
+  padding-bottom: 3em;
   text-align: center;
 }
 
@@ -702,71 +702,23 @@ html .entry p.castor,
   width: 33%;
 }
 
-/* kick-ass */
-#nav .sub-menu li.miami-beach a {
-  -webkit-animation-name: glow;
-  -webkit-animation-duration : 1s;
-  -webkit-animation-iteration-count : 1;
-  -webkit-animation-direction : normal;
-  -webkit-animation-timing-function : ease-out;
-  -webkit-animation-delay:0.5s;
-  animation-name: glow;
-  animation-delay: 0.5s;
-  animation-duration : 2s;
-  animation-iteration-count : 1;
-  animation-direction : normal;
-  animation-timing-function : ease-out;
+
+.twitch-status a:before { 
+  content: '● ';
+  color: red;
+  -webkit-animation: blink 1s steps(5, start) 2;
+  animation: blink 1s steps(5, start) 2;
 }
 
 
-
-
-@-webkit-keyframes glow {
-  from {
-  color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #2e5393, 0 0 29px #2E5392, 0 0 40px #2e5393, 0 0 50px #2e5393, 0 0 75px #2e5393;
+@-webkit-keyframes blink {
+ to {
+        visibility: hidden;
+    }
 }
 
-25% {
-  color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #333, 0 0 29px #333, 0 0 40px #333, 0 0 50px #333, 0 0 75px #333;
-
-}
-
-50% {
-
-}
-
-75% {
-
-}
-
-to {
-  color: #ccc;
-  text-shadow: 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333;
-}
-}
-
-@keyframes glow {
-  from {
-  color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #333, 0 0 29px #333, 0 0 40px #333, 0 0 50px #333, 0 0 75px #333;
-}
-
-25% {
-
-}
-
-50% {
-
-}
-
-75% {
-
-}
-
-to {
-  color: #ccc;
-  text-shadow: 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333, 0 0 0 #333;
-}
+@keyframes blink {
+ to {
+        visibility: hidden;
+    }
 }
