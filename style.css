@@ -702,23 +702,3 @@ html .entry p.castor,
   width: 33%;
 }
 
-
-.twitch-status a:before { 
-  content: '● ';
-  color: red;
-  -webkit-animation: blink 1s steps(5, start) 2;
-  animation: blink 1s steps(5, start) 2;
-}
-
-
-@-webkit-keyframes blink {
- to {
-        visibility: hidden;
-    }
-}
-
-@keyframes blink {
- to {
-        visibility: hidden;
-    }
-}
