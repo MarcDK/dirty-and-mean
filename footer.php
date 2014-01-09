@@ -4,6 +4,7 @@
 <div class="section tagcloud">
   <?php if (is_home()) : ?>
     <?php
+    $tagcache = false;
     if (get_option('marctv-cache')) {
       $tagcache = get_transient('taghtml');
       // If it wasn't there regenerate the data and save the transient

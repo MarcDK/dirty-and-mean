@@ -47,7 +47,7 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
     $link = get_permalink($post_id);
   }
 
-  $teaser .= '<a class="inverted infobox ' . $additional_classes . '" href="' . $link . '" rel="bookmark">';
+  $teaser = '<a class="inverted infobox ' . $additional_classes . '" href="' . $link . '" rel="bookmark">';
   if (!$headline_bottom) {
     $teaser .= '<h2 class="title">' . esc_html(get_the_title($post_id)) . '</h2>';
   }
@@ -129,6 +129,9 @@ function display_max_pages($posts_per_page) {
  * 
  */
 function get_marctv_last_commented_articles() {
+  
+  $html = false;
+  
   if (get_option('marctv-cache')) {
     $html = get_transient('marctv-purified-lastcom');
   }
@@ -211,7 +214,8 @@ function get_marctv_last_commented_articles() {
  * 
  */
 function get_marctv_favourite_articles() {
-
+  $html = false;
+  
   if (get_option('marctv-cache')) {
     $html = get_transient('marctv-purified-favarea');
   }
@@ -254,7 +258,8 @@ function get_marctv_favourite_articles() {
 
 function marctv_get_randompost($exclude = array(), $cat = "Reviews") {
 
-
+  $html = false;
+  
   if (get_option('marctv-cache')) {
     $html = get_transient('marctv-random');
     // If it wasn't there regenerate the data and save the transient
@@ -419,7 +424,9 @@ function get_marctv_sticky_posts() {
  * 
  */
 function get_marctv_most_commented_articles() {
-
+  
+  $html = false;
+  
   if (get_option('marctv-cache')) {
     $html = get_transient('marctv-purified-mostcom');
   }
@@ -504,7 +511,7 @@ function get_marctv_teaserblock() {
  */
 function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = false, $classes, $check_duplicates = true) {
 
-  $teaser .= '<ul class="container morph ' . $classes . '">';
+  $teaser = '<ul class="container morph ' . $classes . '">';
   $teaser .= get_marctv_category_container_box($cat_id1, 'first ', 0, $check_duplicates);
   $teaser .= get_marctv_category_container_box($cat_id2, '', 0, $check_duplicates);
   $teaser .= get_marctv_category_container_box($cat_id3, 'multi-last', 0, $check_duplicates);
@@ -522,7 +529,7 @@ function get_marctv_category_container_box($cat_id, $class, $offset = false, $ch
 
   $do_not_duplicate = get_option('do_not_duplicate');
 
-  $teaser .= '<li class="box ' . $class . '">';
+  $teaser = '<li class="box ' . $class . '">';
 
 
   $args = array(
