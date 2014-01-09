@@ -58,7 +58,7 @@ if (post_password_required()) {
         '<p class="comment-form-author"><label for="author">' . __('Name', 'domainreference') . '</label> ' .
         ( $req ? '<span class="required">*</span>' : '' ) .
         '<input id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) .
-        '" size="30"' . $aria_req . ' /></p>',
+        '" size="30" /></p>',
         'author' =>
         '<p class="comment-form-author"><input type="text" name="author" id="author" value="' . esc_attr($commenter['comment_author']) . '" size="22"  required />
             <label for="author">' . __('Name', 'domainreference') . '*</label></p>',
@@ -66,7 +66,7 @@ if (post_password_required()) {
         '<p class="comment-form-email"><label for="email">' . __('Email', 'domainreference') . '</label> ' .
         ( $req ? '<span class="required">*</span><em>Unterstützt <a rel="nofollow" href="http://gravatar.com">gravatar.com für Benutzerbilder</a></em>' : '' ) .
         '<input id="email" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) .
-        '" size="30"' . $aria_req . ' /></p>',
+        '" size="30" /></p>',
         'email' =>
         '<p class="comment-form-email"><input type="email" name="email" id="email" value="' . esc_attr($commenter['comment_author_email']) . '" size="22" required />
             <label for="email">' . __('Email', 'domainreference') . '* <small><em>Unterstützt <a rel="nofollow" tabindex="-1" href="http://gravatar.com">gravatar.com für Benutzerbilder</a></em></small></label></p>',
@@ -84,7 +84,7 @@ if (post_password_required()) {
         'fields' => $fields,
         'comment_notes_before' => '',
         'comment_notes_after' => '',
-        'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
+        'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8"></textarea></p>'
       );
 
       comment_form($comments_args);
