@@ -25,12 +25,13 @@
 #nav a {
   color: #555;
   display: block;
-  font-size: 120%;
+  font-size: 110%;
   font-weight: 300;
   line-height: 1.1;
   padding: 6px 0.5em;
   text-decoration: none;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 #nav li:last-child a{
@@ -120,7 +121,7 @@ body  #nav .menu li:hover > a,
 #nav .menu .sub-menu{
   margin: 0;
   position: absolute;
-  width: 150px;
+  width: 170px;
   background-color: #333;
   z-index: 9999;
   padding: 3px 0 10px;
