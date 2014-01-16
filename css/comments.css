@@ -125,11 +125,11 @@
 
 #respond {
   background: #4A4A4A;;
-  background-image: -moz-linear-gradient(top, #4a4a4a, #2c2c2a);
-  background-image: linear-gradient(top, #4a4a4a, #2c2c2a);
-  background-image: -o-linear-gradient(top, #4a4a4a, #2c2c2a); /* Opera */
-  background-image: -ms-linear-gradient(top, #4a4a4a, #2c2c2a); /* IE */
-  background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#4a4a4a),to(#2c2c2a)); /* iOS 3.x */
+  background-image: -moz-linear-gradient(top, #2c2c2a, #4a4a4a);
+  background-image: linear-gradient(top, #2c2c2a, #4a4a4a);
+  background-image: -o-linear-gradient(top, #2c2c2a, #4a4a4a); /* Opera */
+  background-image: -ms-linear-gradient(top, #2c2c2a, #4a4a4a); /* IE */
+  background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#2c2c2a),to(#4a4a4a)); /* iOS 3.x */
   padding: 2.5%;
   width: 95%;
   margin-bottom: 1.5em;

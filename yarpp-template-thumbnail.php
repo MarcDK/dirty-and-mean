@@ -4,7 +4,14 @@
   Author: mitcho (Michael Yoshitaka Erlewine)
  */ ?>
 
+
+
+
 <?php if (have_posts()): ?>
+<div class="relatedbox commentbox">
+    <div class=" site">
+        <div class="section" id="relatedbox">
+
   <?php
 
   $mostcom = '<h2 class="supertitle">Mehr zum Thema</h2>';
@@ -24,7 +31,7 @@
       $mostcom .= '<li class="box">';
     }
     $key++;
-    $mostcom .= get_marctv_teaser(get_the_ID(), true, '', 'medium');
+    $mostcom .= get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', false, false);
     $mostcom .= '</li>';
     ?>
   <?php endwhile; ?>
@@ -33,7 +40,9 @@
   $mostcom .= '</ul>';
   echo $mostcom;
   ?>
-
+        </div>
+    </div>
+</div>
 <?php else: ?>
 
 <?php endif; ?>

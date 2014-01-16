@@ -39,7 +39,7 @@
     </ul>
 
     
-    <?php echo get_marctv_sticky_posts(); ?>
+    <?php //echo get_marctv_sticky_posts(); ?>
 
     <div id="marctvflickrbar"></div>
 

@@ -57,16 +57,14 @@ else:
 </div>
 
 </div> <!-- /site -->
-<div class="commentbox">
-    <div class="site">
-        <div class="section" id="relatedbox">
+
             <?php
             if (function_exists('related_posts')) {
                 related_posts();
             }
             ?>
-        </div>
-    </div>
+
+<div class="commentbox">
     <div class="site">
         <div class="section" id="comments">
 
@@ -84,7 +82,7 @@ else:
 
         <div class="section">
 
-            <?php echo get_marctv_sticky_posts(); ?>
+            <?php //echo get_marctv_sticky_posts(); ?>
 
             <?php //echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"), FALSE, 'docked', FALSE); ?>
             <?php /*

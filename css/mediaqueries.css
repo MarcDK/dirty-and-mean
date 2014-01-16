@@ -82,6 +82,8 @@
 
 @media only screen and  (max-width : 600px) {
 
+
+  
   html body {
     font: 90%/1.6 'Roboto','Lucida Grande', 'Lucida Sans Unicode', Arial, FreeSans, sans-serif;
   }
@@ -192,6 +194,8 @@
     width: 100%;
     margin-bottom: 1.5em;
   }
+  
+
 
 }
 
