@@ -373,7 +373,7 @@ function get_marctv_tags($ids) {
 
 function get_marctv_sticky_posts() {
 
-  $html = '<div class="container docked"><h2 class="col_title supertitle">Aktuell</h2></div>';
+  $html = '<div class="container docked"><h2 class="col_title supertitle">Aktuelle Themen</h2></div>';
 
 
   $do_not_duplicate = get_option('do_not_duplicate');
