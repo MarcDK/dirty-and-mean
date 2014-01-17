@@ -8,9 +8,9 @@
 
 
 <?php if (have_posts()): ?>
-<div class="relatedbox commentbox">
-    <div class=" site">
-        <div class="section" id="relatedbox">
+<div class="relatedbox fullwidth">
+    <div class="site">
+        <div class="section">
 
   <?php
 

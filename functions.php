@@ -804,7 +804,7 @@ function register_marctv_menus() {
 
 function marctv_post_tags($posttags) {
   if (is_array($posttags)) {
-    $the_tags = '<ul class="hlist tags"><li class="tag">Weitere Artikel zu ';
+    $the_tags = '<li class="tag">Weitere Artikel zu ';
 
     $i = 0;
     $divider = '';
@@ -817,7 +817,7 @@ function marctv_post_tags($posttags) {
       }
       $the_tags .= $divider . '<a rel="tag" href="' . get_tag_link($tag->term_id) . '"><strong>' . $tag->name . '</strong></a>';
     }
-    $the_tags .= '.</li></ul>';
+    $the_tags .= '.</li>';
     return $the_tags;
   }
 }

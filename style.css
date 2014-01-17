@@ -59,7 +59,7 @@ ul,ol {
 
 .supertitle,
 .comment-reply-title {
-  font-size: 180%;
+  font-size: 140%;
   margin-bottom: 0.5em;
   margin-top: 0.2em;
   font-weight: 700;
@@ -263,17 +263,11 @@ a:active {
   margin-bottom: 0.5em
 }
 
-.entry .hlist li {
-  float: left;
-  list-style: none;
-}
-
 .entry ul.hlist{
   font-size: 90%;
   list-style: none;
   margin: 0;
   overflow: hidden;
-  padding: 7px 0 0;
   margin: 0;
 }
 /* box */
@@ -557,15 +551,22 @@ html .nohover .info {
 }
 
 
-.commentbox {
-  background: #eee;
+.fullwidth {
   padding-top: 2em;
+}
+
+.relatedbox {
+  background: #fff;
+}
+
+.commentbox {
   border-top: 1px solid #333;
+  background: #eee;
   border-bottom: 1px solid #333;
 }
 
 /* article nav */
-.commentbox .nav-article {
+.fullwidth .nav-article {
   overflow: hidden;
   margin: 1em 10px;
 }
@@ -700,22 +701,4 @@ html .entry p.castor,
   padding: 0;
   margin: 0.3em 1em 0.5em 0;
   width: 33%;
-}
-
-.relatedbox {
-  border: none;
-  background: #4A4A4A;;
-  background-image: -moz-linear-gradient(top, #2c2c2a, #4a4a4a);
-  background-image: linear-gradient(top, #2c2c2a, #4a4a4a);
-  background-image: -o-linear-gradient(top, #2c2c2a, #4a4a4a); /* Opera */
-  background-image: -ms-linear-gradient(top, #2c2c2a, #4a4a4a); /* IE */
-  background-image: -webkit-gradient(linear,0% 0%,0% 100%,from(#2c2c2a),to(#4a4a4a)); /* iOS 3.x */
-}
-
-.relatedbox,
-.relatedbox a,
-.relatedbox .title,
-.relatedbox .supertitle{
-  color: #eee;
- border-color: #eee;
 }

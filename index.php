@@ -28,7 +28,9 @@
         <?php echo get_marctv_teaser($lead_pid, true, '', 'default'); ?>
       </li>
     </ul>
-
+    
+    <?php echo get_marctv_last_commented_articles(); ?>
+    
     <?php echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"), FALSE, 'docked'); ?>
 
 
@@ -49,8 +51,6 @@
     
     <?php echo marctv_get_randompost(); ?>
    
-    <?php echo get_marctv_last_commented_articles(); ?>
-
   </div>
   <?php wp_reset_query(); ?>
 <?php else : ?>
