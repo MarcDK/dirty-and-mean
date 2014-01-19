@@ -61,7 +61,6 @@
 #nav .current-menu-item a,
 #nav .current-menu-parent a {
   color: #333;
-  text-decoration:underline;
   font-weight: 700;
 }
 
