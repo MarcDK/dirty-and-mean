@@ -14,7 +14,7 @@
 
   <?php
 
-  $mostcom = '<h2 class="supertitle">Mehr zum Thema</h2>';
+  $mostcom = '<div class="supertitle">Mehr zum Thema</div>';
   $mostcom .= '<ul class="container">';
   $key = 1;
   ?>

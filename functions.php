@@ -49,7 +49,7 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
 
   $teaser = '<a class="inverted infobox ' . $additional_classes . '" href="' . $link . '" rel="bookmark">';
   if (!$headline_bottom) {
-    $teaser .= '<h2 class="title">' . esc_html(get_the_title($post_id)) . '</h2>';
+    $teaser .= '<div class="title">' . esc_html(get_the_title($post_id)) . '</div>';
   }
   if ($show_info) {
     $comment_count = get_comments_number($post_id);
@@ -97,7 +97,7 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
   }
 
   if ($headline_bottom) {
-    $teaser .= '<h2 class="title">' . esc_html(get_the_title($post_id)) . '</h2>';
+    $teaser .= '<div class="title">' . esc_html(get_the_title($post_id)) . '</div>';
   }
 
 
@@ -160,7 +160,7 @@ function get_marctv_last_commented_articles() {
 
     $results = $wpdb->get_results($query);
 
-    $html = '<div class="container docked"><h2 class="supertitle"><a rel="nofollow" href="http://feeds.feedburner.com/marctv/comments">Zuletzt kommentiert</a></h2></div>';
+    $html = '<div class="container docked"><div class="supertitle"><a rel="nofollow" href="http://feeds.feedburner.com/marctv/comments">Zuletzt kommentiert</a></div></div>';
     $html .= '<ul class="container multi showontouch">';
 
 
@@ -230,7 +230,7 @@ function get_marctv_favourite_articles() {
 
       query_posts(array('tag' => get_option("marctv_catfav"), 'showposts' => 2, 'post__not_in' => $do_not_duplicate, 'orderby' => 'rand'));
 
-      $html = '<div class="container docked"><h2 class="supertitle"><a rel="tag" href="/blog/tag/' . get_option("marctv_catfav") . '/">' . $tagobj->name . '</a></h2></div>';
+      $html = '<div class="container docked"><div class="supertitle"><a rel="tag" href="/blog/tag/' . get_option("marctv_catfav") . '/">' . $tagobj->name . '</a></div></div>';
       $html .= '<ul class="container double">';
 
       $key = 1;
@@ -274,7 +274,7 @@ function marctv_get_randompost($exclude = array(), $cat = "Reviews") {
     ));
 
 
-    $html = '<div class="container docked"><h2 class="supertitle"><a href="' . get_category_link(get_cat_ID($cat)) . '">Spiel doch mal wieder…</a></h2></div> ';
+    $html = '<div class="container docked"><div class="supertitle"><a href="' . get_category_link(get_cat_ID($cat)) . '">Spiel doch mal wieder…</a></div></div> ';
     $html .= '<ul class="container lead nomargin">';
     $html .= '<li class="box first last">';
 
@@ -317,7 +317,7 @@ function get_adb_article() {
         'orderby' => 'rand')
       );
 
-      $html = '<div class="container docked"><h2 class="col_title supertitle"><a rel="tag" href="/blog/tag/' . $the_tag . '/">' . $tagobj->name . '</a></h2></div>';
+      $html = '<div class="container docked"><div class="col_title supertitle"><a rel="tag" href="/blog/tag/' . $the_tag . '/">' . $tagobj->name . '</a></div></div>';
       $html .= '<ul class="container double">';
       $key = 1;
       while (have_posts()) : the_post();
@@ -373,7 +373,7 @@ function get_marctv_tags($ids) {
 
 function get_marctv_sticky_posts() {
 
-  $html = '<div class="container docked"><h2 class="col_title supertitle">Aktuelle Themen</h2></div>';
+  $html = '<div class="container docked"><div class="col_title supertitle">Aktuelle Themen</div></div>';
 
 
   $do_not_duplicate = get_option('do_not_duplicate');
@@ -434,7 +434,7 @@ function get_marctv_most_commented_articles() {
 
     $do_not_duplicate = get_option('do_not_duplicate');
 
-    $html = '<div class="container docked"><h2 class="col_title supertitle"><a rel="nofollow" href="http://feeds.feedburner.com/marctv/comments">Meistkommentiert</a></h2></div>';
+    $html = '<div class="container docked"><div class="col_title supertitle"><a rel="nofollow" href="http://feeds.feedburner.com/marctv/comments">Meistkommentiert</a></div></div>';
 
     $args = array(
       'numberposts' => 3,
@@ -549,7 +549,7 @@ function get_marctv_category_container_box($cat_id, $class, $offset = false, $ch
 
   $postlist = get_posts($args);
 
-  $teaser .= '<h2 class="supertitle"><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></h2>';
+  $teaser .= '<div class="supertitle"><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></div>';
 
 
   foreach ($postlist as $post) {
@@ -637,7 +637,7 @@ function get_marctv_posts_container($duplicates = true, $docked = true) {
     }
 
     $html .= '<li class="box ' . $class . '">';
-    $html .= '<h2 class="supertitle"><a href="' . get_category_link(get_parent_category_id($post->ID)) . '">' . get_cat_name(get_parent_category_id($post->ID)) . '</a></h2>';
+    $html .= '<div class="supertitle"><a href="' . get_category_link(get_parent_category_id($post->ID)) . '">' . get_cat_name(get_parent_category_id($post->ID)) . '</a></div>';
 
     $html .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
     $do_not_duplicate[] = $post->ID;
@@ -765,7 +765,7 @@ function marctv_theme_options() {
   }
 
   echo '<div class="wrap">';
-  echo '<h2>Dirty & Mean Theme</h2>';
+  echo '<div>Dirty & Mean Theme</div>';
   echo '<form method="post" action="">';
   echo '<input type="hidden" value="1" name="marctv-settings" id="marctv-settings" />';
 
