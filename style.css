@@ -46,6 +46,7 @@ ul,ol {
 
 .header{
   margin-top: 20px;
+  padding-bottom: 2em;
 }
 
 .header .innerheader {
@@ -53,31 +54,32 @@ ul,ol {
   z-index: 10000;
 }
 
-.main-content {
-  padding-top: 2em;
-}
-
-.supertitle,
-.comment-reply-title {
-  font-size: 140%;
+.supertitle {
   margin-bottom: 0.5em;
   margin-top: 0.2em;
-  font-weight: 700;
-  border-bottom: 2px solid black;
+  font-weight: 300;
+  border-bottom: 2px solid #666;
   padding: 0;
+  font-size: 90%;
+  text-transform: uppercase;
+  color: #666;
+  line-height: 1.2;
 }
 
+.supertitle a {
+  color: #666;
+  padding: 0.3em 0;
+  display: inline;
+}
+
+.comments-title {
+  font-size: 200%;  
+}
 .comment-reply-title {
   color: #fff;
   border-bottom: 0.1em solid #eee;
 }
 
-.supertitle a {
-  color: #333;
-  padding: 0.3em 0;
-  display: inline;
-  font-weight: 700;
-}
 
 .site {
   margin-left: 20px;
@@ -158,7 +160,7 @@ a:active {
   line-height: 1.2;
   font-weight: 700;
   margin-bottom: 8px;
-  font-size: 105%;
+  font-size: 110%;
 }
 
 .headline {
@@ -386,6 +388,8 @@ a:active {
 
 #bottom .supertitle {
   border-bottom: 2px solid #eee;
+  font-size: 120%;
+  color: #EEE;  
 }
 
 #bottom .box {

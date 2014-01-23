@@ -1,8 +1,9 @@
 
 
 
-<div class="section tagcloud">
+
   <?php if (is_home()) : ?>
+
     <?php
     $tagcache = false;
     if (get_option('marctv-cache')) {
@@ -19,14 +20,18 @@
         'echo' => false));
       set_transient('taghtml', $tagcache, 24 * 60 * 60);
     }
-    echo $tagcache;
+    
+    echo '<div class="section tagcloud">'.$tagcache.'</div>';
+    
     ?>
   <?php endif ?>
-</div>
+
 
 
 
 <?php wp_footer(); ?>
+
+
 </div> <!-- /site -->
 <div id="bottom">
   <div class="inner">
