@@ -602,12 +602,12 @@ html .nohover .info {
 
 .breadcrumbs {
   font-size: 70%;
-  color: #666;
+  color: #aaa;
 }
 
 .breadcrumbs a, 
 .breadcrumbs span {
-  color: #666;
+  color: #aaa;
 }
 
 .tagcloud {
