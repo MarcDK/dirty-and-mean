@@ -524,6 +524,7 @@ html .nohover .info {
   color: #fff;
 }
 
+.paged .nav-paged,
 .archive .nav-paged,
 .search .nav-paged {
   text-align: center;
@@ -584,10 +585,13 @@ html .nohover .info {
   width: 50%;
 } 
 
+.paged .nav-article .nav-next,
 .archive .nav-article .nav-next,
 .search .nav-article .nav-next,
 .search .nav-article .nav-previous,
-.archive .nav-article .nav-previous {
+.archive .nav-article .nav-previous,
+.archive .nav-article .nav-previous,
+.paged .nav-article .nav-previous {
   width: 25%;
 }
 
