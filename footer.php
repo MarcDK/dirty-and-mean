@@ -61,11 +61,12 @@
           </ul>
         </li>
         <li class="box last">
-          <div class="supertitle">Rechtliches</div>
+          <div class="supertitle">Wichtiges</div>
           <ul class="rows">
             <li>
               <ul>
                 <li><a href="http://marctv.de/marc-toensing/#impressum">Impressum</a></li>
+                <li><a href="http://marctv.de/blogfreunde">Blogfreunde</a></li>
               </ul>
             </li>
           </ul>

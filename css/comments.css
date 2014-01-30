@@ -301,9 +301,8 @@
   padding:0 170px 0 0;
 }
 
-.commentlist li .comment-meta {
-  font-weight:700;
-  line-height:1.4;
+.commentlist li .comment-meta { 
+ line-height:1.4;
   position:absolute;
   right:10px;
   text-align:right;

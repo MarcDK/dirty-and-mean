@@ -311,7 +311,7 @@ a:active {
 }
 
 .lead .title {
-  font-size: 280%;
+  font-size: 230%;
 }
 
 .container.lead .box {
@@ -384,6 +384,15 @@ a:active {
   font-size:14px;
   padding-top: 2em;
   color: #eee;
+}
+
+#bottom .container {
+  margin-bottom: 0;
+}
+
+.rows > li {
+  width: 50%;
+  float: left;
 }
 
 #bottom .supertitle {
@@ -555,6 +564,9 @@ html .nohover .info {
   margin-top: 0.5em;
 }
 
+html .fullscreenicon {
+  opacity: 0.6; 
+}
 
 .fullwidth {
   padding-top: 2em;
