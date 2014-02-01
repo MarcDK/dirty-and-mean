@@ -1,4 +1,4 @@
-#nav .hamburger-icon {
+#navigation .hamburger-icon {
   display:none;
 }
 
@@ -238,7 +238,7 @@
     margin-top: 0;
   }
 
-  html #nav .hamburger-icon {
+  html #navigation .hamburger-icon {
     background-color: #333;
     z-index: 1000;
     border-top-left-radius: 0;
@@ -267,35 +267,35 @@
     display: none;
   }
 
-  html #nav .hamburger .sub-menu {
+  html #navigation .hamburger .sub-menu {
     display: block;
     position: relative;
     background: none;
     box-shadow: none;
   }
 
-  html #nav  li:first-child {
+  html #navigation  li:first-child {
     display: none ! important;
   }
 
 
-  html #nav .hamburger a {
+  html #navigation .hamburger a {
     border: none;
 
   }
 
-  html #nav ul {
+  html #navigation ul {
     margin: 0;
     padding: 0.4em 0.4em 1em 0.4em;
     z-index: 1000;
   }
 
-  html #nav ul{
+  html #navigation ul{
 
   }
 
-  html #nav .hamburger .sub-menu li a,
-  html #nav .hamburger li a{
+  html #navigation .hamburger .sub-menu li a,
+  html #navigation .hamburger li a{
     font-size: 100%;
     color: #efefef;
     padding: 0.6em 0.6em 0.6em 0.8em;
@@ -305,31 +305,31 @@
     background: #111;
   }
 
-  html #nav .hamburger li a:hover {
+  html #navigation .hamburger li a:hover {
 
   }
 
-  body  #nav .menu.hamburger  li:hover > a {
+  body  #navigation .menu.hamburger  li:hover > a {
     background: #222;
   }
 
-  body  #nav .menu.hamburger  li:active > a {
+  body  #navigation .menu.hamburger  li:active > a {
     background: #000;
   }
 
-  html #nav .hamburger .sub-menu {
+  html #navigation .hamburger .sub-menu {
     padding: 0 0 0.5em 1.5em;
   }
 
-  html #nav .hamburger li {
+  html #navigation .hamburger li {
     float: none;
   }
 
-  #nav .hamburger-icon {
+  #navigation .hamburger-icon {
     display:block;
   }
 
-  html  #nav .hamburger-icon:after {
+  html  #navigation .hamburger-icon:after {
     border-color: #CCCCCC;
     border-style: solid none double;
     border-width: 2px 0 6px;

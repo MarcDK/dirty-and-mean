@@ -30,11 +30,11 @@
         <div class="site">
           <div class="section"> 
             <?php if (is_home()) : ?>
-              <h1 class="sitetitle"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
+              <h1 class="sitelogo"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
             <?php else : ?>
-              <div class="sitetitle"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></div>
+              <div class="sitelogo"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></div>
             <?php endif ?>
-            <nav id="primary-navigation"><div id="nav"><?php wp_nav_menu(array('theme_location' => 'mainnav', 'container' => '')); ?></div></nav>
+            <nav id="primary-navigation"><div id="navigation"><?php wp_nav_menu(array('theme_location' => 'mainnav', 'container' => '')); ?></div></nav>
             <?php get_search_form(); ?>
           </div>
         </div>

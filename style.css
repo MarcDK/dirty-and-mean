@@ -39,14 +39,25 @@ ul,ol {
   list-style:none;
 }
 
-.sitetitle{
+.sitelogo{
   width: 130px;
   float: left;
 }
 
-.header{
-  margin-top: 20px;
-  padding-bottom: 2em;
+.header .innerheader{
+  padding-top: 0.2em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid black;
+}
+
+.header {
+  margin-bottom: 0.6em;
+}
+
+.sticky-wrapper .innerheader,
+.header {
+  background: #edeff4; 
+
 }
 
 .header .innerheader {
@@ -144,7 +155,7 @@ a:active {
   margin: 0;
 }
 
-.sitetitle a {
+.sitelogo a {
   background: url('images/marctv_logo.png') no-repeat 0 0;
   background: rgba(0,0,0,0) url('images/marctv_logo.svg') no-repeat 0 0;
   display: block;
@@ -578,7 +589,7 @@ html .fullscreenicon {
 
 .commentbox {
   border-top: 1px solid #333;
-  background: #eee;
+  background: #edeff4;
   border-bottom: 1px solid #333;
 }
 

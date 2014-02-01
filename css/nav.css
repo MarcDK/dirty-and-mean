@@ -1,4 +1,4 @@
-#nav {
+#navigation {
   line-height:normal;
   overflow: hidden;
   float: right;
@@ -8,21 +8,21 @@
   margin-left: 10px;
 }
 
-#nav ul {
+#navigation ul {
   list-style: none;
   margin: 0;
   overflow: hidden;
   padding: 0;
 }
 
-#nav li {
+#navigation li {
   float:left;
   margin:0;
   padding:0;
 
 }
 
-#nav a {
+#navigation a {
   color: #555;
   display: block;
   font-size: 110%;
@@ -34,45 +34,45 @@
   text-transform: uppercase;
 }
 
-#nav li:last-child a{
+#navigation li:last-child a{
   border-right:none;
 }
 
-#nav > ul a {width:auto;}
+#navigation > ul a {width:auto;}
 /* Commented Backslash Hack hides rule from IE5-Mac \*/
-#nav a {float:none;}
+#navigation a {float:none;}
 /* End IE5-Mac hack */
-#nav a:hover {
+#navigation a:hover {
   color:#333;
 }
-#nav a:active{
+#navigation a:active{
   color: #2200C1;
 }
 
-#nav #current,
-#nav .current-menu-item,
-#nav .current-menu-parent{
+#navigation #current,
+#navigation .current-menu-item,
+#navigation .current-menu-parent{
   border-width:0;
 }
 
 
 
-#nav #current a,
-#nav .current-menu-item a,
-#nav .current-menu-parent a {
+#navigation #current a,
+#navigation .current-menu-item a,
+#navigation .current-menu-parent a {
   color: #333;
   font-weight: 700;
 }
 
-#nav #current a:hover,
-#nav .current-menu-item a:hover,
-#nav .current-menu-parent a:hover {
+#navigation #current a:hover,
+#navigation .current-menu-item a:hover,
+#navigation .current-menu-parent a:hover {
   color: #444;
 }
 
-#nav #current a:active,
-#nav .current-menu-item a:active,
-#nav .current-menu-parent a:active{
+#navigation #current a:active,
+#navigation .current-menu-item a:active,
+#navigation .current-menu-parent a:active{
   color: darkred;
 }
 
@@ -93,14 +93,14 @@
 
 /* Subnav */
 
-#nav ul li:hover > ul {
+#navigation ul li:hover > ul {
   display: block;
   margin: 0;
   padding: 0;
 }
 
-body  #nav .menu li:hover > a,
-#nav ul ul *:hover > a {
+body  #navigation .menu li:hover > a,
+#navigation ul ul *:hover > a {
   background: #333;
   color: #FFFFFF;
   text-decoration: none;
@@ -119,7 +119,7 @@ body  #nav .menu li:hover > a,
 
 }
 
-#nav .menu .sub-menu{
+#navigation .menu .sub-menu{
   margin: 0;
   position: absolute;
   width: 170px;
@@ -128,13 +128,13 @@ body  #nav .menu li:hover > a,
   padding: 3px 0 10px;
 }
 
-#nav .sub-menu li{
+#navigation .sub-menu li{
   float: none;
   position: relative;
 }
 
 
-#nav .sub-menu li a{
+#navigation .sub-menu li a{
   border: none;
   padding: 10px 5px 6px 10px;
   font-weight: 300;
@@ -146,14 +146,14 @@ body  #nav .menu li:hover > a,
   text-transform: inherit;
 }
 
-#nav .sub-menu li.current-menu-item a{
+#navigation .sub-menu li.current-menu-item a{
   color: #eee;
 }
 
-#nav .sub-menu li a:hover{
+#navigation .sub-menu li a:hover{
   color: #fff; 
 }
 
-body  #nav #menu-mainnav .sub-menu a:hover{
+body  #navigation #menu-mainnav .sub-menu a:hover{
   background: none;
 }
