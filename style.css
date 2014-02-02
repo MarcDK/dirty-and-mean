@@ -47,7 +47,7 @@ ul,ol {
 .header .innerheader{
   padding-top: 0.2em;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #666;
 }
 
 .header {
@@ -56,8 +56,7 @@ ul,ol {
 
 .sticky-wrapper .innerheader,
 .header {
-  background: #edeff4; 
-
+  background: #fff;
 }
 
 .header .innerheader {
@@ -589,7 +588,7 @@ html .fullscreenicon {
 
 .commentbox {
   border-top: 1px solid #333;
-  background: #edeff4;
+  background: #eee;
   border-bottom: 1px solid #333;
 }
 
