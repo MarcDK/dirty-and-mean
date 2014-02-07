@@ -2,29 +2,28 @@
 
 
 
-  <?php if (is_home()) : ?>
+<?php if (is_home()) : ?>
 
-    <?php
-    $tagcache = false;
-    if (get_option('marctv-cache')) {
-      $tagcache = get_transient('taghtml');
-      // If it wasn't there regenerate the data and save the transient
-    }
+  <?php
+  $tagcache = false;
+  if (get_option('marctv-cache')) {
+    $tagcache = get_transient('taghtml');
+    // If it wasn't there regenerate the data and save the transient
+  }
 
-    if (!$tagcache) {
-      $tagcache = wp_tag_cloud(array(
-        'smallest' => 8,
-        'largest' => 14,
-        'number' => 50,
-        'format' => 'flat',
-        'echo' => false));
-      set_transient('taghtml', $tagcache, 24 * 60 * 60);
-    }
-    
-    echo '<div class="section tagcloud">'.$tagcache.'</div>';
-    
-    ?>
-  <?php endif ?>
+  if (!$tagcache) {
+    $tagcache = wp_tag_cloud(array(
+      'smallest' => 8,
+      'largest' => 14,
+      'number' => 50,
+      'format' => 'flat',
+      'echo' => false));
+    set_transient('taghtml', $tagcache, 24 * 60 * 60);
+  }
+
+  echo '<div class="section tagcloud">' . $tagcache . '</div>';
+  ?>
+<?php endif ?>
 
 
 
@@ -40,6 +39,7 @@
         <li class="box first">
           <div class="supertitle">Suche</div>
           <?php get_search_form(); ?>
+          
         </li>
         <li class="box">
           <div class="supertitle">Abonnieren</div>
@@ -84,6 +84,6 @@
 </body>
 </html>
 <!-- <?php
-printf(__('%d queries. %s seconds. '), get_num_queries(), timer_stop(0, 3));
-echo_memory_usage();
-?> -->
+  printf(__('%d queries. %s seconds. '), get_num_queries(), timer_stop(0, 3));
+  echo_memory_usage();
+  ?> -->

@@ -16,7 +16,7 @@
 
     if (is_touch_device()) {
       $('body').addClass('is-touch');
-    } else {
+    } else if ($(window).width() > 640) {
       $(".header .innerheader").sticky({
         topSpacing: 0,
         redocked_callback: redocked,
@@ -30,13 +30,11 @@
     }
 
     function undocked(el) {
-
-      /* el.css('background', $('body').css('background-color')).css('box-shadow', '0 2px 6px #333'); */
+      el.css({ background: '#fff' }).css({ boxShadow: '0 0 4px #333' });
     }
 
     function redocked(el) {
-
-      /* el.css('background', 'transparent').css('box-shadow', 'none'); */
+      el.css({ background: 'transparent' }).css({ boxShadow: '0 0 0 0' }); 
     }
 
 

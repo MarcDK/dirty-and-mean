@@ -45,9 +45,10 @@ ul,ol {
 }
 
 .header .innerheader{
-  padding-top: 0.2em;
+  padding-top: 0.4em;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid #666;
+
+ 
 }
 
 .header {
@@ -83,7 +84,7 @@ ul,ol {
 }
 
 .comments-title {
-  font-size: 200%;  
+  font-size: 200%;
 }
 .comment-reply-title {
   color: #fff;
@@ -105,7 +106,7 @@ ul,ol {
 .hidden{
   display:none;
 }
-.section img, 
+.section img,
 .section video{
   width: 100%;
 }
@@ -162,7 +163,7 @@ a:active {
   margin: 0;
   padding: 0;
   text-indent: -5000em;
-  width:130px;  
+  width:130px;
   margin-top: 1px;
 }
 
@@ -210,6 +211,7 @@ a:active {
 .entry .title {
   font-size: 260%;
   font-weight: 700;
+  margin-top: 0.5em;
 }
 
 .entry p,
@@ -227,22 +229,27 @@ a:active {
 
 .entry h1,
 .entry h2,
-.entry h3, 
+.entry h3,
 .entry h4,
 .entry h5,
 .entry h6 {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.3em;
   clear: both;
 }
 
 .entry h2,
-.entry h3, 
+.entry h3,
 .entry h4,
 .entry h5,
 .entry h6 {
   font-size: 140%;
   font-weight: 700;
   margin-top: 2em;
+}
+
+.entry h3 {
+  font-size: 110%;
+  color: #666;
 }
 
 .entry ul {
@@ -338,8 +345,8 @@ a:active {
 .container.multi .box{
   width: 16%;
   border: 0;
-  padding: 0 0.4%; 
-  font-size: 80%; 
+  padding: 0 0.4%;
+  font-size: 80%;
 }
 
 .container.multi .title,
@@ -408,7 +415,7 @@ a:active {
 #bottom .supertitle {
   border-bottom: 2px solid #eee;
   font-size: 120%;
-  color: #EEE;  
+  color: #EEE;
 }
 
 #bottom .box {
@@ -502,7 +509,7 @@ html .nohover .info {
   font-weight: 700;
 }
 
-.hreview .summary, 
+.hreview .summary,
 .text .item{
   font-size: 110%;
 }
@@ -547,7 +554,7 @@ html .nohover .info {
 .archive .nav-paged,
 .search .nav-paged {
   text-align: center;
-  margin-bottom: 2em; 
+  margin-bottom: 2em;
 }
 
 .header .searchbox {
@@ -575,7 +582,7 @@ html .nohover .info {
 }
 
 html .fullscreenicon {
-  opacity: 0.6; 
+  opacity: 0.6;
 }
 
 .fullwidth {
@@ -605,7 +612,7 @@ html .fullscreenicon {
 .nav-article .nav-next,
 .nav-article .nav-previous {
   width: 50%;
-} 
+}
 
 .paged .nav-article .nav-next,
 .archive .nav-article .nav-next,
@@ -624,16 +631,6 @@ html .fullscreenicon {
 .nav-article .nav-next{
   float: right;
   text-align: right;
-}
-
-.breadcrumbs {
-  font-size: 70%;
-  color: #aaa;
-}
-
-.breadcrumbs a, 
-.breadcrumbs span {
-  color: #aaa;
 }
 
 .tagcloud {

@@ -7,69 +7,69 @@ get_header();
 ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <?php
-    if (function_exists('yoast_breadcrumb')) {
-      yoast_breadcrumb('<div class="section breadcrumbs">', '</div>');
-    }
-    ?>
-    <div class="section entry">
-      <h1 class="title entry-title"><span><?php esc_html(the_title()); ?><?php edit_post_link('edit', '<small> ', '</small>'); ?></span></h1>
-    </div>
-    <div <?php post_class('article section entry'); ?> id="post-<?php the_ID(); ?>">
-      <div class="inner">
-        <?php the_content(); ?>
+    <div class="hentry entry">
+      <div class="section">
+        <h1 class="entry-title title "><span><?php esc_html(the_title()); ?><?php edit_post_link('edit', '<small> ', '</small>'); ?></span></h1>
+      </div>
+      <div <?php post_class('article section entry'); ?> id="post-<?php the_ID(); ?>">
+        <div class="inner entry-content">
+          <?php the_content(); ?>
 
-        <div class="tools section">
-          <ul class="hlist author tags">
+          <div class="tools section">
+            <ul class="hlist tags">
+              <?php
+              if (function_exists('marctv_post_tags')) {
+                echo marctv_post_tags(get_the_tags());
+              }
+              ?>
+              <li class="breadcrumbs">
 
-
-            <?php
-            if (function_exists('marctv_post_tags')) {
-              echo marctv_post_tags(get_the_tags());
-            }
-            ?>
-
-            <?php wp_link_pages(array('before' => ' <li class="article_pagination"><div class="nav-paged"><span class="first">Artikelseiten:</span> ', 'after' => '</div></li>', 'next_or_number' => 'number', 'pagelink' => '<span>%</span>')); ?>
-
-
-            <li>Veröffentlicht von
-              <?php if (get_the_author_meta('user_url') != "") : ?>
-                <a rel="author" href="<?php the_author_meta('user_url'); ?>"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?></a> am <?php the_date(); ?>
-              <?php else: ?>
-                <?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?> am <?php the_date(); ?>
-              <?php endif ?>
-            </li>
-
-
-
-            <?php /*
-              <!--
-              <li class="nav-article-tool">
-              <div class="nav-article">
-              <span class="nav-previous">
-              <?php previous_post_link(); ?>
-              </span>
-              <span class="nav-next">
-              <?php next_post_link(); ?>
-              </span>
-              </div>
               </li>
-              -->
-             */ ?>
+              <?php wp_link_pages(array('before' => ' <li class="article_pagination"><div class="nav-paged"><span class="first">Artikelseiten:</span> ', 'after' => '</div></li>', 'next_or_number' => 'number', 'pagelink' => '<span>%</span>')); ?>
+
+              <li>Geschrieben
+                <?php if (get_the_author_meta('user_url') != "") : ?>
+                  von <a class="author vcard" href="<?php the_author_meta('user_url'); ?>"><span class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?></span></a>
+                <?php else: ?>
+                  von <span rel="vcard author"><span class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?> am <?php the_date(); ?></span></span>
+                <?php endif ?> am <time class="updated" datetime="<?php the_date('c'); ?>"><?php the_time(__('F j, Y')); ?> </time> 
+              </li>
+              <li><?php
+                if (function_exists('yoast_breadcrumb')) {
+                  yoast_breadcrumb();
+                }
+                ?></li>
 
 
-          </ul>
+
+              <?php /*
+                <!--
+                <li class="nav-article-tool">
+                <div class="nav-article">
+                <span class="nav-previous">
+                <?php previous_post_link(); ?>
+                </span>
+                <span class="nav-next">
+                <?php next_post_link(); ?>
+                </span>
+                </div>
+                </li>
+                -->
+               */ ?>
+
+
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <?php
-  endwhile;
-else:
-  ?>
-  <p>Leider wurde kein Artikel gefunden.</p>
-<?php endif; ?>
+      <?php
+    endwhile;
+  else:
+    ?>
+    <p>Leider wurde kein Artikel gefunden.</p>
+  <?php endif; ?>
 
-
+</div> <!-- / hentry -->
 </div> <!-- /site -->
 
 <?php

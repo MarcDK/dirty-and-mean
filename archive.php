@@ -9,11 +9,7 @@ get_header();
 
 
   <?php if (have_posts()) : ?>
-    <?php
-    if (function_exists('yoast_breadcrumb')) {
-      yoast_breadcrumb('<div class="section breadcrumbs">', '</div>');
-    }
-    ?>
+   
     <div class="entry">
       <?php /* If this is a category archive */ if (is_category()) {
         ?>

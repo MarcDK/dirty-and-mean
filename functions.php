@@ -55,7 +55,8 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
 
     if ($comment_count == 0) {
       $comment_count = "Keine ";
-    } else {
+    }
+    else {
       $comment_count = number_format($comment_count);
     }
 
@@ -63,9 +64,11 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
 
     if ($extra) {
       $teaser .= '<div class="info">' . $extra . ' </div>';
-    } else if ($score) {
+    }
+    else if ($score) {
       $teaser .= '<span class="info">' . $comment_count . ' Kommentare<br><span class="rating">Wertung: ' . $score[0] . '/10</span></span>';
-    } else {
+    }
+    else {
       $teaser .= '<span class="info">' . $comment_count . ' Kommentare</span>';
     }
   }
@@ -89,7 +92,8 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
     $html = preg_replace('/(height)=\"\d*\"\s/', "", $img_html);
 
     $teaser .= $html;
-  } else {
+  }
+  else {
     $teaser .= '<img src="/media/dummy.jpg" alt="' . (get_the_title($post_id)) . '" />';
   }
 
@@ -182,22 +186,26 @@ function get_marctv_last_commented_articles() {
       /* first-last classes */
       if ($key == 1) {
         $html .= '<li class="box first">';
-      } else if ($key % 6 == 0) {
+      }
+      else if ($key % 6 == 0) {
         $html .= '<li class="box last">';
-      } else if ($key % 3 == 0) {
+      }
+      else if ($key % 3 == 0) {
         $html .= '<li class="box multi-last">';
-      } else if ($key % 4 == 0) {
+      }
+      else if ($key % 4 == 0) {
         $html .= '<li class="box multi-first">';
-      } else {
+      }
+      else {
         $html .= '<li class="box">';
       }
       $key++;
 
 
-      $comments = get_comments (array(
+      $comments = get_comments(array(
         'post_id' => $result->ID,
         'number' => 1
-      )
+          )
       );
 
 
@@ -249,9 +257,11 @@ function get_marctv_favourite_articles() {
         /* first-last classes */
         if ($key == 1) {
           $html .= '<li class="box first">';
-        } else if ($key % 2 == 0) {
+        }
+        else if ($key % 2 == 0) {
           $html .= '<li class="box last">';
-        } else {
+        }
+        else {
           $html .= '<li class="box">';
         }
 
@@ -335,9 +345,11 @@ function get_adb_article() {
         /* first-last classes */
         if ($key == 1) {
           $html .= '<li class="box first">';
-        } else if ($key % 2 == 0) {
+        }
+        else if ($key % 2 == 0) {
           $html .= '<li class="box last">';
-        } else {
+        }
+        else {
           $html .= '<li class="box">';
         }
         $key++;
@@ -409,9 +421,11 @@ function get_marctv_sticky_posts() {
     /* first-last classes */
     if ($key == 1) {
       $html .= '<li class="box first">';
-    } else if ($key % 3 == 0) {
+    }
+    else if ($key % 3 == 0) {
       $html .= '<li class="box last">';
-    } else {
+    }
+    else {
       $html .= '<li class="box">';
     }
     $key++;
@@ -467,9 +481,11 @@ function get_marctv_most_commented_articles() {
       /* first-last classes */
       if ($key == 1) {
         $html .= '<li class="box first">';
-      } else if ($key % 3 == 0) {
+      }
+      else if ($key % 3 == 0) {
         $html .= '<li class="box last">';
-      } else {
+      }
+      else {
         $html .= '<li class="box">';
       }
       $key++;
@@ -665,18 +681,18 @@ function marctv_comment($comment, $args, $depth) {
   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
     <div id="comment-<?php comment_ID(); ?>">
       <div class="comment-author vcard">
-        <?php echo get_avatar($comment, $size = '100') ?>
+    <?php echo get_avatar($comment, $size = '100') ?>
 
-        <?php printf(__('<cite class="fn">%s</cite> <span class="says">sagt:</span>'), get_comment_author_link()) ?>
+    <?php printf(__('<cite class="fn">%s</cite> <span class="says">sagt:</span>'), get_comment_author_link()) ?>
       </div>
-      <?php if ($comment->comment_approved == '0') : ?>
+    <?php if ($comment->comment_approved == '0') : ?>
         <em><?php _e('Your comment is awaiting moderation.') ?></em>
         <br />
-      <?php endif; ?>
+    <?php endif; ?>
       <div class="comment-meta commentmetadata"><?php do_action('flag_comment_link'); ?> <a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)) ?>"><?php printf(__('%1$s'), get_comment_date('j. M Y')); ?></a><?php edit_comment_link(__('(Edit)'), '  ', ''); ?></div>
-      <?php comment_text(); ?>
+    <?php comment_text(); ?>
       <div class="reply">
-        <?php comment_reply_link(array_merge($args, array('reply_text' => 'Antworten', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+    <?php comment_reply_link(array_merge($args, array('reply_text' => 'Antworten', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
       </div>
     </div>
     <?php
@@ -708,7 +724,8 @@ function marctv_comment($comment, $args, $depth) {
 
         if ($cnt > ($paged - $offset) AND $cnt < ($paged + $offset)) {
           $classname = '';
-        } else {
+        }
+        else {
           if ($cnt == "2" OR $cnt == $max_num_pages - 1) {
             $x[] = "…";
           }
@@ -718,7 +735,8 @@ function marctv_comment($comment, $args, $depth) {
           $begin_link = "<$current_page_tag>";
           $end_link = "</$current_page_tag>";
           $x[] = '<a class="current ' . $classname . '" href="' . get_pagenum_link($cnt) . '">' . $begin_link . $cnt . $end_link . '</a>';
-        } else {
+        }
+        else {
           $begin_link = "<$current_page_tag>";
           $end_link = "</$current_page_tag>";
           $x[] = '<a class="' . $classname . '" href="' . get_pagenum_link($cnt) . '">' . $begin_link . $cnt . $end_link . '</a>';
@@ -809,7 +827,7 @@ function marctv_comment($comment, $args, $depth) {
 
   function marctv_post_tags($posttags) {
     if (is_array($posttags)) {
-      $the_tags = '<li class="tag">Weitere Artikel zu ';
+      $the_tags = '<li class="tag tags">Weitere Artikel zu ';
 
       $i = 0;
       $divider = '';
@@ -817,7 +835,8 @@ function marctv_comment($comment, $args, $depth) {
         $i++;
         if ($i === count($posttags) && count($posttags) != 1) {
           $divider = ' und ';
-        } else if ($i > 1) {
+        }
+        else if ($i > 1) {
           $divider = ', ';
         }
         $the_tags .= $divider . '<a rel="tag" href="' . get_tag_link($tag->term_id) . '"><strong>' . $tag->name . '</strong></a>';
@@ -890,13 +909,6 @@ function marctv_comment($comment, $args, $depth) {
 
   add_filter('wpseo_breadcrumb_output', 'convertBreadcrumbsToMicrodata');
 
-  function robots_comment_pages() {
-    if (get_query_var('cpage') >= 1 || get_query_var('cpage') < get_comment_pages_count())
-      echo "<meta name=\"robots\" content=\"noindex\" />\n";
-  }
-
-  add_action('wp_head', 'robots_comment_pages');
-
   function custom_excerpt_length() {
     return 20;
   }
@@ -925,7 +937,8 @@ function marctv_comment($comment, $args, $depth) {
         array_pop($words);
         $excerpt = implode(' ', $words);
         $excerpt = $excerpt . $excerpt_more;
-      } else {
+      }
+      else {
         $excerpt = implode(' ', $words);
       }
     }
