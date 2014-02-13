@@ -704,7 +704,7 @@ function marctv_comment($comment, $args, $depth) {
       $paged = 1;
     }
 
-    $pagination .= $after_previous;
+    $pagination = $after_previous;
 
     $numposts = $wp_query->found_posts;
 
@@ -827,7 +827,7 @@ function marctv_comment($comment, $args, $depth) {
 
   function marctv_post_tags($posttags) {
     if (is_array($posttags)) {
-      $the_tags = '<li class="tag tags">Weitere Artikel zu ';
+      $the_tags = 'Weitere Artikel zu ';
 
       $i = 0;
       $divider = '';
@@ -841,7 +841,7 @@ function marctv_comment($comment, $args, $depth) {
         }
         $the_tags .= $divider . '<a rel="tag" href="' . get_tag_link($tag->term_id) . '"><strong>' . $tag->name . '</strong></a>';
       }
-      $the_tags .= '.</li>';
+
       return $the_tags;
     }
   }

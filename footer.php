@@ -55,7 +55,8 @@
               <ul>
                 <li><a rel="nofollow" target="_blank" href="http://www.youtube.com/MarcDK">YouTube</a></li>
                 <li><a rel="nofollow" target="_blank" href="https://twitch.tv/marctvde">Twitch.TV</a></li>
-                <li><a rel="nofollow" target="_blank" href="https://plus.google.com/+MarcTönsing?rel=author">Google+</a></li>
+                <li><a target="_blank" href="https://plus.google.com/113333812119791259931?rel=author">Google+</a></li>
+                <li><a target="_blank" rel="publisher" href="https://plus.google.com/+MarctvDe/">Google+ Page</a></li>
               </ul>
             </li>
           </ul>
@@ -66,7 +67,7 @@
             <li>
               <ul>
                 <li><a href="http://marctv.de/marc-toensing/#impressum">Impressum</a></li>
-                <li><a href="http://marctv.de/blogfreunde">Blogfreunde</a></li>
+                <li><a href="http://marctv.de/blogfreunde/">Blogfreunde</a></li>
               </ul>
             </li>
           </ul>

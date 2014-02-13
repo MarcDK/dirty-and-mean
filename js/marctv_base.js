@@ -1,7 +1,5 @@
 (function($) {
   $(document).ready(function($) {
-    $("p > img").parent().addClass('childIMG');
-    $("p > .jqvideo").parent().addClass('childIMG');
     $("#navigation > ul").addClass("hamburger");
     $('<a class="hamburger-icon"></a>').prependTo('#navigation').click(
             function() {

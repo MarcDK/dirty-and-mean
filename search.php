@@ -10,11 +10,7 @@ get_header();
 ?>
 
 <div id="content" class="section">
-  <?php
-  if (function_exists('yoast_breadcrumb')) {
-    yoast_breadcrumb('<div class="section breadcrumbs">', '</div>');
-  }
-  ?>
+
   <div class="entry">
     <h1 class="title">Suchergebnisse für '<span><?php echo get_search_query(); ?></span>'</h1>
   </div>

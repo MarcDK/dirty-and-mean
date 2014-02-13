@@ -39,16 +39,9 @@ ul,ol {
   list-style:none;
 }
 
-.sitelogo{
+.sitelogo {
   width: 130px;
   float: left;
-}
-
-.header .innerheader{
-  padding-top: 0.4em;
-  padding-bottom: 0.3em;
-
- 
 }
 
 .header {
@@ -63,6 +56,8 @@ ul,ol {
 .header .innerheader {
   width: 100%;
   z-index: 10000;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .supertitle {
@@ -83,7 +78,7 @@ ul,ol {
   display: inline;
 }
 
-.comments-title {
+#comments .comments-title {
   font-size: 200%;
 }
 .comment-reply-title {
@@ -223,6 +218,11 @@ a:active {
   margin-bottom: 1.5em;
 }
 
+.entry ol li,
+.entry ul li {
+  margin-bottom: 0.5em;
+}
+
 .entry blockquote p {
   font-size: 120%;
 }
@@ -242,14 +242,17 @@ a:active {
 .entry h4,
 .entry h5,
 .entry h6 {
-  font-size: 140%;
+  font-size: 120%;
   font-weight: 700;
   margin-top: 2em;
 }
 
 .entry h3 {
-  font-size: 110%;
-  color: #666;
+  font-size: 100%;
+}
+
+.entry h3:before {
+  content: '—';
 }
 
 .entry ul {
@@ -276,6 +279,10 @@ a:active {
 .tools,
 .tools a{
   color: #666;
+}
+
+.tools .breadcrumb span {
+  font-style: italic;
 }
 
 .tools li {

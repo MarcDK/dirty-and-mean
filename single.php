@@ -7,58 +7,46 @@ get_header();
 ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <div class="hentry entry">
+    <div id="post-<?php the_ID(); ?>" <?php post_class('entry article section'); ?>>
       <div class="section">
         <h1 class="entry-title title "><span><?php esc_html(the_title()); ?><?php edit_post_link('edit', '<small> ', '</small>'); ?></span></h1>
-      </div>
-      <div <?php post_class('article section entry'); ?> id="post-<?php the_ID(); ?>">
-        <div class="inner entry-content">
-          <?php the_content(); ?>
-
-          <div class="tools section">
-            <ul class="hlist tags">
-              <?php
-              if (function_exists('marctv_post_tags')) {
-                echo marctv_post_tags(get_the_tags());
-              }
-              ?>
-              <li class="breadcrumbs">
-
-              </li>
-              <?php wp_link_pages(array('before' => ' <li class="article_pagination"><div class="nav-paged"><span class="first">Artikelseiten:</span> ', 'after' => '</div></li>', 'next_or_number' => 'number', 'pagelink' => '<span>%</span>')); ?>
-
-              <li>Geschrieben
-                <?php if (get_the_author_meta('user_url') != "") : ?>
-                  von <a class="author vcard" href="<?php the_author_meta('user_url'); ?>"><span class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?></span></a>
-                <?php else: ?>
-                  von <span rel="vcard author"><span class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?> am <?php the_date(); ?></span></span>
-                <?php endif ?> am <time class="updated" datetime="<?php the_date('c'); ?>"><?php the_time(__('F j, Y')); ?> </time> 
-              </li>
-              <li><?php
-                if (function_exists('yoast_breadcrumb')) {
-                  yoast_breadcrumb();
-                }
-                ?></li>
-
-
-
-              <?php /*
-                <!--
-                <li class="nav-article-tool">
-                <div class="nav-article">
-                <span class="nav-previous">
-                <?php previous_post_link(); ?>
-                </span>
-                <span class="nav-next">
-                <?php next_post_link(); ?>
-                </span>
-                </div>
+        <div class="content-body">
+          <div class="inner entry-content">
+            <?php the_content(); ?>
+            <div class="tools section">
+              <ul class="hlist tags">
+                <li class="tag tags"><?php
+                  if (function_exists('marctv_post_tags')) {
+                    echo marctv_post_tags(get_the_tags());
+                  }
+                  ?></li>
+                <?php wp_link_pages(array('before' => ' <li class="article_pagination"><div class="nav-paged"><span class="first">Artikelseiten:</span> ', 'after' => '</div></li>', 'next_or_number' => 'number', 'pagelink' => '<span>%</span>')); ?>
+                <li class="date">
+                  <?php if (get_the_author_meta('user_url') != "") : ?>
+                    Geschrieben von <a class="vcard author" href="<?php the_author_meta('user_url'); ?>"><span class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?></span></a>
+                  <?php else: ?>
+                    Geschrieben von <span rel="vcard author"><span class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?> am <?php the_date(); ?></span></span>
+                  <?php endif ?> am <time class="updated" datetime="<?php the_date('c'); ?>"><?php the_time(__('F j, Y')); ?> </time>
                 </li>
-                -->
-               */ ?>
-
-
-            </ul>
+                <li class="breadcrumb">Du bist hier: <?php
+                  if (function_exists('yoast_breadcrumb')) {
+                    yoast_breadcrumb();
+                  }
+                  ?></li>
+             
+                  <li class="nav-article-tool">
+                  <div class="nav-article">
+                  <span class="nav-previous">
+                  <?php previous_post_link(); ?>
+                  </span>
+                  <span class="nav-next">
+                  <?php next_post_link(); ?>
+                  </span>
+                  </div>
+                  </li>
+                   
+              </ul>
+            </div>
           </div>
         </div>
       </div>
