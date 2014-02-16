@@ -79,7 +79,7 @@ ul,ol {
 }
 
 #comments .comments-title {
-  font-size: 200%;
+  font-size: 140%;
 }
 .comment-reply-title {
   color: #fff;
@@ -242,7 +242,7 @@ a:active {
 .entry h4,
 .entry h5,
 .entry h6 {
-  font-size: 120%;
+  font-size: 140%;
   font-weight: 700;
   margin-top: 2em;
 }
