@@ -141,9 +141,13 @@ a:active {
 .section {
   margin: 0 auto;
   width: 960px;
-
   padding: 0;
   overflow: hidden;
+}
+
+html .article-wrapper {
+  width: 85%;
+  margin: 0 auto;
 }
 
 .nomargin {
@@ -358,7 +362,12 @@ a:active {
 
 .container.multi .title,
 .container.morph .title{
-  height: 2em
+  height: 2em;
+}
+
+
+#marctvflickrbar .container.multi .title {
+  height: 1.7em;
 }
 /* morph */
 

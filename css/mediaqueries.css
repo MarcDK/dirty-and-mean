@@ -7,7 +7,7 @@
     width: 100%;
   }
 
- 
+
 
   .entry p .jqvideo img,
   .entry p img{
@@ -60,20 +60,18 @@
     width: 50px;
     margin-top: 1px;
   }
-  
+
   html .container.morph .box .title,
   html .container.double .box .title {
     font-size: 100%
   }
-  
+
 }
 
 
 
 @media only screen and  (max-width : 600px) {
 
-
-  
   html body {
     font: 90%/1.6 'Roboto','Lucida Grande', 'Lucida Sans Unicode', Arial, FreeSans, sans-serif;
   }
@@ -81,9 +79,14 @@
   html .lead .title{
     font-size: 120%;
   }
-  
+
   html .hreview .text {
     width: 100%;
+  }
+
+  #marctv .article-wrapper {
+    width: 100%;
+    margin: 0 auto;
   }
 
   html .archive .nav-article .nav-next,
@@ -91,7 +94,7 @@
     width: 50%;
     margin-bottom: 20px;
   }
-  
+
   html .lead {
     margin-bottom: 0;
   }
@@ -115,6 +118,8 @@
     float: none;
     padding: 0;
   }
+
+
 
   html .commentlist li {
     padding-left: 0;
@@ -168,7 +173,7 @@
   }
 
   #marctv .container.morph .box p{
-      height: 6em;
+    height: 6em;
   }
 
 
@@ -184,7 +189,7 @@
     width: 100%;
     margin-bottom: 1.5em;
   }
-  
+
 
 
 }
