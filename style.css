@@ -109,7 +109,8 @@ ul,ol {
 
 a,a.inverted:hover {
   position: relative;
-  color:#2e5393;
+  color: #2e5393;
+  color: #007FBE;
   text-decoration:none;
 }
 
@@ -143,11 +144,6 @@ a:active {
   width: 960px;
   padding: 0;
   overflow: hidden;
-}
-
-html .article-wrapper {
-  width: 85%;
-  margin: 0 auto;
 }
 
 .nomargin {
@@ -252,11 +248,7 @@ html .article-wrapper {
 }
 
 .entry h3 {
-  font-size: 100%;
-}
-
-.entry h3:before {
-  content: '—';
+  font-size: 115%;
 }
 
 .entry ul {
@@ -362,7 +354,7 @@ html .article-wrapper {
 
 .container.multi .title,
 .container.morph .title{
-  height: 2em;
+  height: 1.9em;
 }
 
 
@@ -411,12 +403,12 @@ html .article-wrapper {
 }
 
 #bottom {
-  background-color:#333;
+  background-color:#111;
   background-image:none;
   box-shadow:0 2px 5px #000 inset;
   font-size:14px;
   padding-top: 2em;
-  color: #eee;
+  color: #A0A0A0;
 }
 
 #bottom .container {
@@ -429,9 +421,9 @@ html .article-wrapper {
 }
 
 #bottom .supertitle {
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid #A0A0A0;
   font-size: 120%;
-  color: #EEE;
+  color: #A0A0A0;
 }
 
 #bottom .box {
@@ -444,7 +436,7 @@ html .article-wrapper {
 }
 
 #bottom a {
-  color: #eee;
+  color: #A0A0A0;
 }
 
 /* infobox */
@@ -493,7 +485,7 @@ html .nohover .info {
 .hreview{
   overflow: hidden;
   padding: 0;
-  border-top: 2px solid #2E5393;
+  border-top: 2px solid #007FBE;
 }
 
 
@@ -502,7 +494,7 @@ html .nohover .info {
   font-size: 300%;
   color: #EEE;
   line-height: 1.2;
-  background: #2E5393;
+  background: #007FBE;
   padding: 2px;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7)
 }
@@ -694,7 +686,7 @@ html .fullscreenicon {
 
 .lastwords {
   /* last but not least */
-  background: #222;
+  background: #111;
   text-align: right;
   padding: 0 10px;
 }

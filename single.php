@@ -73,7 +73,7 @@ if (function_exists('related_posts')) {
 
       <?php
       if (function_exists('marctv_promoted_comments')) {
-        marctv_promoted_comments();
+        echo marctv_promoted_comments();
       }
       ?>
       <?php comments_template(); ?>
