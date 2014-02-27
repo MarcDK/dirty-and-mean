@@ -107,11 +107,16 @@ ul,ol {
 }
 
 
-a,a.inverted:hover {
+a,
+a.inverted:hover {
   position: relative;
   color: #2e5393;
   color: #007FBE;
   text-decoration:none;
+}
+
+a.inverted:hover .title{ 
+  color: #007FBE;
 }
 
 a:active {
@@ -124,7 +129,7 @@ a.inverted {
 }
 
 a:hover{
-  text-decoration:underline;
+  text-decoration: underline;
 }
 
 a:active {
@@ -132,7 +137,7 @@ a:active {
 }
 
 .box a:hover .title {
-  text-decoration: underline;
+
 }
 
 .box a:hover {
@@ -568,7 +573,7 @@ html .nohover .info {
 .header .searchbox {
   float: right;
   width: 140px;
-  padding-top: 3px;
+  padding-top: 6px;
 }
 
 .searchbox input {

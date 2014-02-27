@@ -76,7 +76,7 @@
   html .sitelogo a {
     width:130px;
     height: 30px;
-    background-size: 140px;
+    background-size: 130px;
   }
 
   html body {
@@ -233,7 +233,15 @@
     width: 95px;
 
   }
-
+  
+  html  #navigation {
+    padding-top:0;
+  }
+  
+  html .header .searchbox {
+    padding-top: 1px;
+  }
+  
   /* Hamburger Menu */
 
   html .header {
