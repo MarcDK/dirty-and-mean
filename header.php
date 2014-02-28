@@ -13,9 +13,6 @@
     <?php if (is_singular() && get_option('thread_comments')) wp_enqueue_script('comment-reply'); ?>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <?php wp_enqueue_style('marctv-base', get_bloginfo('template_url') . '/style.css'); ?>
-    <?php wp_enqueue_style('marctv-mediaqueries', get_bloginfo('template_url') . '/css/mediaqueries.css'); ?>
-    <?php wp_enqueue_style('nav', get_bloginfo('template_url') . '/css/nav.css'); ?>
-    <?php wp_enqueue_style('comments', get_bloginfo('template_url') . '/css/comments.css'); ?>
     <?php wp_head(); ?>
     <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>

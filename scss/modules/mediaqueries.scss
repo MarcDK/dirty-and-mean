@@ -7,8 +7,6 @@
     width: 100%;
   }
 
-
-
   .entry p .jqvideo img,
   .entry p img{
     width: 100%;
@@ -21,17 +19,50 @@
 
 @media only screen and  (max-width : 321px)  {
 
-  html .header .hamburger {
-    right: 5px;
-  }
+  html {
 
-  html .site {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
+    .header {
+      .hamburger {
+        right: 5px;
+      }
 
-  html .hreview .text {
-    width: 100%;
+      .searchbox {
+        input {
+          width: 50px;
+          margin-top: 1px;
+        }
+
+        width: 60px;
+        margin-top: 5px;
+
+      } 
+    }
+
+    .site {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .hreview .text {
+      width: 100%;
+    }
+
+    .sitetitle {
+
+      a {
+        background-size: 120px auto;
+        width: 135px;
+      }
+
+      width: 130px;
+      margin-top: 5px;
+    }
+
+    .container.morph .box .title,
+    .container.double .box .title {
+      font-size: 100%
+    }
+
   }
 
   #marctv .entry p.castor, 
@@ -41,38 +72,13 @@
     width: 100%;
   }
 
-  html .sitetitle a {
-    background-size: 120px auto;
-    width: 135px;
-  }
-
-  html .sitetitle {
-    width: 130px;
-    margin-top: 5px;
-  }
-
-  html .header .searchbox {
-    width: 60px;
-    margin-top: 5px;
-  }
-
-  html .header .searchbox input {
-    width: 50px;
-    margin-top: 1px;
-  }
-
-  html .container.morph .box .title,
-  html .container.double .box .title {
-    font-size: 100%
-  }
-
 }
 
 
 
 @media only screen and  (max-width : 600px) {
-  
-  
+
+
   html .sitelogo a {
     width:130px;
     height: 30px;
@@ -233,15 +239,15 @@
     width: 95px;
 
   }
-  
+
   html  #navigation {
     padding-top:0;
   }
-  
+
   html .header .searchbox {
     padding-top: 1px;
   }
-  
+
   /* Hamburger Menu */
 
   html .header {
