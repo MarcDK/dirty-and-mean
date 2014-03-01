@@ -57,7 +57,6 @@ get_header();
     ?>
     <p>Leider wurde kein Artikel gefunden.</p>
   <?php endif; ?>
-
 </div> <!-- / hentry -->
 </div> <!-- /site -->
 
@@ -89,7 +88,6 @@ if (function_exists('related_posts')) {
     <div class="section">
 
       <?php echo get_marctv_sticky_posts(); ?>
-
       <?php //echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"), FALSE, 'docked', FALSE); ?>
       <?php /*
         <ul class="container bars">
@@ -103,8 +101,6 @@ if (function_exists('related_posts')) {
       <?php //echo get_marctv_most_commented_articles(); ?>
 
       <?php echo marctv_get_randompost(); ?>
-
-
 
     </div>
   </div>

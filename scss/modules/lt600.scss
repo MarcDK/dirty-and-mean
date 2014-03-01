@@ -1,0 +1,93 @@
+@media only screen and (max-width: 600px) {
+  html {
+    .sitelogo a {
+      width: 130px;
+      height: 30px;
+      background-size: 130px;
+    }
+    body {
+      font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+    }
+    .lead .title {
+      font-size: 120%;
+    }
+    .hreview .text {
+      width: 100%;
+    }
+  }
+  #marctv .article-wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  html {
+    .archive .nav-article {
+      .nav-next, .nav-previous {
+        width: 50%;
+        margin-bottom: 20px;
+      }
+    }
+    .lead {
+      margin-bottom: 0;
+      p {
+        margin-bottom: 2em;
+      }
+    }
+    .entry .title {
+      font-size: 170%;
+    }
+    .box .title {
+      font-size: 140%;
+    }
+  }
+  #marctv .container .box {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+  html .commentlist {
+    li {
+      padding-left: 0;
+      .vcard {
+        .avatar {
+          width: 2em;
+          height: 2em;
+        }
+        padding-left: 2.5em;
+      }
+      .comment-author {
+        padding-bottom: 0.5em;
+      }
+    }
+    .pingback .vcard {
+      padding-bottom: 0.5em;
+    }
+    li .children {
+      .vcard .avatar {
+        left: 1em;
+      }
+      li {
+        padding-left: 1em;
+      }
+    }
+  }
+  #marctv .container {
+    &.multi .box, &.double .box, &.morph .box {
+      width: 48%;
+      border: 0;
+      padding: 0 2%;
+      float: left;
+      font-size: 80%;
+    }
+    &.multi .box:nth-child(odd), &.morph .box:nth-child(odd), &.double .box.first {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    &.multi .box:nth-child(even), &.morph .box:nth-child(even), &.double .box.last {
+      margin-right: 0;
+      padding-right: 0;
+    }
+    &.morph .box p {
+      height: 6em;
+    }
+  }
+}

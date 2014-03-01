@@ -16,7 +16,6 @@
     <?php wp_head(); ?>
     <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-    <!-- TradeDoubler site verification 2348651 -->
   </head>
 
   <body <?php body_class(); ?>>

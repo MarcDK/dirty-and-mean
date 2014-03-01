@@ -21,6 +21,7 @@
         undocked_callback: undocked
       });
     }
+    
     // detect touch device and adds body class
     function is_touch_device() {
       return 'ontouchstart' in window // works on most browsers
@@ -28,11 +29,11 @@
     }
 
     function undocked(el) {
-      el.css({ background: '#fff' }).css({ boxShadow: '0 0 4px #333' });
+      el.css({background: '#fff'}).css({boxShadow: '0 0 4px #333'});
     }
 
     function redocked(el) {
-      el.css({ background: 'transparent' }).css({ boxShadow: '0 0 0 0' }); 
+      el.css({background: 'transparent'}).css({boxShadow: '0 0 0 0'});
     }
 
 

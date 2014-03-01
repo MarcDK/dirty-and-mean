@@ -1,0 +1,108 @@
+@media only screen and (max-width: 600px) {
+  /* line 3, ../../scss/modules/lt600.scss */
+  html .sitelogo a {
+    width: 130px;
+    height: 30px;
+    background-size: 130px;
+  }
+  /* line 8, ../../scss/modules/lt600.scss */
+  html body {
+    font: 90%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+  }
+  /* line 11, ../../scss/modules/lt600.scss */
+  html .lead .title {
+    font-size: 120%;
+  }
+  /* line 14, ../../scss/modules/lt600.scss */
+  html .hreview .text {
+    width: 100%;
+  }
+
+  /* line 18, ../../scss/modules/lt600.scss */
+  #marctv .article-wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* line 24, ../../scss/modules/lt600.scss */
+  html .archive .nav-article .nav-next, html .archive .nav-article .nav-previous {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  /* line 29, ../../scss/modules/lt600.scss */
+  html .lead {
+    margin-bottom: 0;
+  }
+  /* line 31, ../../scss/modules/lt600.scss */
+  html .lead p {
+    margin-bottom: 2em;
+  }
+  /* line 35, ../../scss/modules/lt600.scss */
+  html .entry .title {
+    font-size: 170%;
+  }
+  /* line 38, ../../scss/modules/lt600.scss */
+  html .box .title {
+    font-size: 140%;
+  }
+
+  /* line 42, ../../scss/modules/lt600.scss */
+  #marctv .container .box {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+
+  /* line 48, ../../scss/modules/lt600.scss */
+  html .commentlist li {
+    padding-left: 0;
+  }
+  /* line 50, ../../scss/modules/lt600.scss */
+  html .commentlist li .vcard {
+    padding-left: 2.5em;
+  }
+  /* line 51, ../../scss/modules/lt600.scss */
+  html .commentlist li .vcard .avatar {
+    width: 2em;
+    height: 2em;
+  }
+  /* line 57, ../../scss/modules/lt600.scss */
+  html .commentlist li .comment-author {
+    padding-bottom: 0.5em;
+  }
+  /* line 61, ../../scss/modules/lt600.scss */
+  html .commentlist .pingback .vcard {
+    padding-bottom: 0.5em;
+  }
+  /* line 65, ../../scss/modules/lt600.scss */
+  html .commentlist li .children .vcard .avatar {
+    left: 1em;
+  }
+  /* line 68, ../../scss/modules/lt600.scss */
+  html .commentlist li .children li {
+    padding-left: 1em;
+  }
+
+  /* line 74, ../../scss/modules/lt600.scss */
+  #marctv .container.multi .box, #marctv .container.double .box, #marctv .container.morph .box {
+    width: 48%;
+    border: 0;
+    padding: 0 2%;
+    float: left;
+    font-size: 80%;
+  }
+  /* line 81, ../../scss/modules/lt600.scss */
+  #marctv .container.multi .box:nth-child(odd), #marctv .container.morph .box:nth-child(odd), #marctv .container.double .box.first {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  /* line 85, ../../scss/modules/lt600.scss */
+  #marctv .container.multi .box:nth-child(even), #marctv .container.morph .box:nth-child(even), #marctv .container.double .box.last {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  /* line 89, ../../scss/modules/lt600.scss */
+  #marctv .container.morph .box p {
+    height: 6em;
+  }
+}

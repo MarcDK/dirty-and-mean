@@ -1,5 +1,3 @@
-@import 'compass/css3';
-
 body {
   margin: 0;
   padding: 0;
@@ -15,6 +13,14 @@ body {
 
 ul, ol {
   list-style: none;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic; 
 }
 
 .sitelogo {
@@ -63,12 +69,16 @@ ul, ol {
 
 .comment-reply-title {
   color: #fff;
-  border-bottom: 0.1em solid #eee;
+  font-size: 140%;
 }
 
 .site {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: $margin;
+  margin-right: $margin;
+  @media screen and (max-width: 600px) {
+    margin-left: $margin/4;
+    margin-right: $margin/4;
+  }
 }
 
 .appendix {
@@ -88,13 +98,11 @@ ul, ol {
 
 a {
   position: relative;
-  color: #2e5393;
-  color: #007FBE;
+  color: $marctv-color;
   text-decoration: none;
   &.inverted:hover {
     position: relative;
-    color: #2e5393;
-    color: #007FBE;
+    color: $marctv-color;
     text-decoration: none;
     .title {
       color: #007FBE;
@@ -159,86 +167,6 @@ a {
   line-height: 1.2;
 }
 
-/* article */
-
-.entry {
-  overflow: visible;
-  font-size: 110%;
-  .wp-caption-text, .pictext {
-    font-size: 85%;
-    font-style: italic;
-    text-align: center;
-    color: #333;
-    padding: 0 0.5em 0.4em;
-    display: block;
-  }
-  .wp-caption {
-    background-color: #eee;
-    margin: 0;
-  }
-  .title {
-    font-size: 260%;
-    font-weight: 700;
-    margin-top: 0.5em;
-  }
-  p, ul, ol, .video, .marctv-gallery, .figure {
-    margin-bottom: 1.5em;
-  }
-  ol li, ul li {
-    margin-bottom: 0.5em;
-  }
-  blockquote p {
-    font-size: 120%;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 0.3em;
-    clear: both;
-  }
-  h2, h3, h4, h5, h6 {
-    font-size: 140%;
-    font-weight: 700;
-    margin-top: 2em;
-  }
-  h3 {
-    font-size: 115%;
-  }
-  ul {
-    list-style: square;
-    margin-left: 1.1em;
-  }
-  ol {
-    list-style: decimal;
-    margin-left: 1.5em;
-  }
-}
-
-.tools {
-  font-size: 90%;
-  border-top: 1px solid #333;
-  padding-top: 0.5em;
-  margin-bottom: 1em;
-  .nav-article-tool {
-    overflow: hidden;
-  }
-  color: #666;
-  a {
-    color: #666;
-  }
-  .breadcrumb span {
-    font-style: italic;
-  }
-  li {
-    margin-bottom: 0.5em;
-  }
-}
-
-.entry ul.hlist {
-  font-size: 90%;
-  list-style: none;
-  margin: 0;
-  overflow: hidden;
-  margin: 0;
-}
 
 /* box */
 
@@ -522,9 +450,7 @@ html .fullscreenicon {
 }
 
 .commentbox {
-  border-top: 1px solid #333;
-  background: #eee;
-  border-bottom: 1px solid #333;
+  background: #f3f3f3;
 }
 
 /* article nav */
@@ -638,18 +564,3 @@ a[href*='=087022'] {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABCVJREFUeNq0VV9IZFUY/525d2bUdK7O5KaZf7BwLCOwXQMV2RJ90GqXcAmi8sEefPFlsSeRMBKMEHoJUcTQjcRFhIEskHrSaJyQgnBVdPNBbUnF1VHnz507d27fOXr1OjtSsXXgzNxz7jm/7/t+3+/7LjMMA//nYDk5Oay6uvrp7u7uz10uVw3taY+JaT88PPypt7f3tt/vfyDbbLYns7KyrhcVFd1yOBzsv/A6Ozv7FmH6CPt72W63e8jziry8PBaNRpFIJB4LnEDhdrsZxyTsX2S+xyfPBQdPNsAYgyzLYvLLfPAz8XhczFQ5PN0TuLJ105zm4KA8qkAggPn5eWxubgrwgoIC1NbWoqqqCpIkXXDqEYwkq2eDXwyFQhgcHMTExARUVRUeczDKFSYnJ9He3o7W1lYRmfW+9dmWUlpECzcwNTWFkZERhMNheL1edHR0oKWlBZRAHB0dYWxsDCsrK3A6nZfmRDYBrRRxj46Pj7G0tCQOlZaWoqurCzU1Ndjb20MsFoPP5xPPq6urgirTaxODY16gyDo4DZz/trY2NDQ0gBSGiooKRCIRYTw9PV2AcAq5I2byL40glQq4B+Xl5SgsLMTi4iIGBgawvr6Og4MDseZndF3/W1nLycBmqKRhbG9vo6+vDzMzMwgGg1AUBcXFxdA07WyaBqwUXaiLVDLlIXN5UrljeHgYGxsbaGpqwujoKIaGhgTn+/v7giJOW/L9lDK9EBbxv7CwgOnpabEuKytDZ2cnKisrRSQ8B1Y5/2OKrOW+tbWFnZ0dseaAfJq1sba2dnaWn4lTLpjkQIIIMZK6mc2qfauKqGEhMzNTrJeXlzE+Pi6quaenB7Ozs2dnJ+7eRcDvR5q6CcefP0A6WLyAlUJfjCpWx9Wr11Bf3yB2uO77+/vR2Ngoqrq5+Q2UlJSId1E1LpIthX6HvPsj0u71AXpE4KQ0wBIx6FoI2Z5cfNz7GW6+9TZcWS6iTcKVp57BRz2f4M5Xd3D7w25cf/V1fPuND9cqX4QaCUEtuAEj61nC0C6RKaOEaUHYyZOEPQfPXSnHl8NfYPcgioiqI9ftQqbiJg81vP/Om3iv2Qsl/DP0wKdQc1+jD8FL0PLq4ZAyONqjBphBhePMRdz9CuwPvoP8hw9OxJCZng/DoSBxTMe1MPHyEHL4PiRtF1qGF5HSD6Dn0sfQILoy8uE4b9LnBswGxxgVjlIKXemAcbgKef9XyMF7kB/+Bhbb5WEi8QQVW34zou5K6J6Xieg0SIkovbPDJjDOkyxTAo+o/O/z7sjb8ImMNG4RCcULVXkBMUMTtNCLU2nYaTpOEkk5O0mqKRGITssxOTajopI9Ho9SV1f3LkXwPElUT1aV9e88YWc/yTUkUY9anpub+5q6bZCdXmWnp40UUP92GFbMvwQYAMN9CxPEMYHgAAAAAElFTkSuQmCC);
 }
 
-/* Castor and Pollux */
-
-html .entry p.pollux, #marctv .entry .alignright {
-  float: right;
-  margin: 0.3em 0 0.5em 1em;
-  width: 33%;
-  padding: 0;
-}
-
-html .entry p.castor, #marctv .entry .alignleft {
-  float: left;
-  padding: 0;
-  margin: 0.3em 1em 0.5em 0;
-  width: 33%;
-}

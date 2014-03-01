@@ -1,0 +1,131 @@
+@media only screen and (max-width : 900px) {
+
+  html .header .searchbox {
+    width: 100px;
+  }
+
+  html .header .searchbox input {
+    width: 95px;
+
+  }
+
+  html  #navigation {
+    padding-top:0;
+  }
+
+  html .header .searchbox {
+    padding-top: 1px;
+  }
+
+  /* Hamburger Menu */
+
+  html .header {
+    margin-top: 0;
+  }
+
+  html #navigation .hamburger-icon {
+    background-color: #333;
+    z-index: 1000;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    font-size: 0;
+    line-height: 0;
+    padding: .75rem .5rem;
+    margin-top: 0;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+
+    /* No support for these yet, use at own risk */
+    -o-user-select: none;
+    user-select: none;
+    border: none;
+  }
+
+
+  html .hamburger {
+    background-color: #333;
+    position: absolute;
+    position: absolute;
+    right: 20px;
+    z-index: 100;
+    display: none;
+  }
+
+  html #navigation .hamburger .sub-menu {
+    display: block;
+    position: relative;
+    background: none;
+    box-shadow: none;
+  }
+
+  html #navigation  li:first-child {
+    display: none ! important;
+  }
+
+
+  html #navigation .hamburger a {
+    border: none;
+
+  }
+
+  html #navigation ul {
+    margin: 0;
+    padding: 0.4em 0.4em 1em 0.4em;
+    z-index: 1000;
+  }
+
+  html #navigation ul{
+
+  }
+
+  html #navigation .hamburger .sub-menu li a,
+  html #navigation .hamburger li a{
+    font-size: 100%;
+    color: #efefef;
+    padding: 0.6em 0.6em 0.6em 0.8em;
+    margin: 0;
+    text-decoration: none;
+    font-weight: 300;
+    background: #111;
+  }
+
+  html #navigation .hamburger li a:hover {
+
+  }
+
+  body  #navigation .menu.hamburger  li:hover > a {
+    background: #222;
+  }
+
+  body  #navigation .menu.hamburger  li:active > a {
+    background: #000;
+  }
+
+  html #navigation .hamburger .sub-menu {
+    padding: 0 0 0.5em 1.5em;
+  }
+
+  html #navigation .hamburger li {
+    float: none;
+  }
+
+  #navigation .hamburger-icon {
+    display:block;
+  }
+
+  html  #navigation .hamburger-icon:after {
+    border-color: #CCCCCC;
+    border-style: solid none double;
+    border-width: 2px 0 6px;
+    content: " ";
+    display: block;
+    height: 2px;
+    width: 1rem;
+  }
+
+  html .header .searchbox {
+    margin-right: 4px;
+  }
+
+}

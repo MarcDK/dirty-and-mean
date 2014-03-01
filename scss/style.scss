@@ -9,9 +9,11 @@ License URI: license.txt
 Tags: marctv, simple, clean
 */
 
+@import '_init.scss'; 
 @import 'compass/reset';
 @import 'compass/css3';
 @import 'modules/mediaqueries.scss';
 @import 'modules/nav.scss';
 @import 'modules/comments.scss';
-@import 'modules/body.scss';  
+@import 'modules/entry.scss';
+@import 'modules/base.scss';  
