@@ -1,137 +1,76 @@
-@media only screen and (max-width: 900px) {
-  /* line 3, ../../scss/modules/lt900.scss */
-  html .header .searchbox {
-    width: 100px;
-  }
+/*
+Syntax error: Undefined variable: "$margin".
+        on line 50 of /Users/toensing/Sites/Wordpress/wp-content/themes/dirty-and-mean/scss/modules/lt900.scss
 
-  /* line 7, ../../scss/modules/lt900.scss */
-  html .header .searchbox input {
-    width: 95px;
-  }
-
-  /* line 12, ../../scss/modules/lt900.scss */
-  html #navigation {
-    padding-top: 0;
-  }
-
-  /* line 16, ../../scss/modules/lt900.scss */
-  html .header .searchbox {
-    padding-top: 1px;
-  }
-
-  /* Hamburger Menu */
-  /* line 22, ../../scss/modules/lt900.scss */
-  html .header {
-    margin-top: 0;
-  }
-
-  /* line 26, ../../scss/modules/lt900.scss */
-  html #navigation .hamburger-icon {
-    background-color: #333;
-    z-index: 1000;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    font-size: 0;
-    line-height: 0;
-    padding: 0.75rem 0.5rem;
-    margin-top: 0;
-    -webkit-user-select: none;
-    /* Chrome all / Safari all */
-    -moz-user-select: none;
-    /* Firefox all */
-    -ms-user-select: none;
-    /* IE 10+ */
-    /* No support for these yet, use at own risk */
-    -o-user-select: none;
-    user-select: none;
-    border: none;
-  }
-
-  /* line 46, ../../scss/modules/lt900.scss */
-  html .hamburger {
-    background-color: #333;
-    position: absolute;
-    position: absolute;
-    right: 20px;
-    z-index: 100;
-    display: none;
-  }
-
-  /* line 55, ../../scss/modules/lt900.scss */
-  html #navigation .hamburger .sub-menu {
-    display: block;
-    position: relative;
-    background: none;
-    box-shadow: none;
-  }
-
-  /* line 62, ../../scss/modules/lt900.scss */
-  html #navigation li:first-child {
-    display: none !important;
-  }
-
-  /* line 67, ../../scss/modules/lt900.scss */
-  html #navigation .hamburger a {
-    border: none;
-  }
-
-  /* line 72, ../../scss/modules/lt900.scss */
-  html #navigation ul {
-    margin: 0;
-    padding: 0.4em 0.4em 1em 0.4em;
-    z-index: 1000;
-  }
-
-  /* line 83, ../../scss/modules/lt900.scss */
-  html #navigation .hamburger .sub-menu li a,
-  html #navigation .hamburger li a {
-    font-size: 100%;
-    color: #efefef;
-    padding: 0.6em 0.6em 0.6em 0.8em;
-    margin: 0;
-    text-decoration: none;
-    font-weight: 300;
-    background: #111;
-  }
-
-  /* line 97, ../../scss/modules/lt900.scss */
-  body #navigation .menu.hamburger li:hover > a {
-    background: #222;
-  }
-
-  /* line 101, ../../scss/modules/lt900.scss */
-  body #navigation .menu.hamburger li:active > a {
-    background: #000;
-  }
-
-  /* line 105, ../../scss/modules/lt900.scss */
-  html #navigation .hamburger .sub-menu {
-    padding: 0 0 0.5em 1.5em;
-  }
-
-  /* line 109, ../../scss/modules/lt900.scss */
-  html #navigation .hamburger li {
-    float: none;
-  }
-
-  /* line 113, ../../scss/modules/lt900.scss */
-  #navigation .hamburger-icon {
-    display: block;
-  }
-
-  /* line 117, ../../scss/modules/lt900.scss */
-  html #navigation .hamburger-icon:after {
-    border-color: #CCCCCC;
-    border-style: solid none double;
-    border-width: 2px 0 6px;
-    content: " ";
-    display: block;
-    height: 2px;
-    width: 1rem;
-  }
-
-  /* line 127, ../../scss/modules/lt900.scss */
-  html .header .searchbox {
-    margin-right: 4px;
-  }
-}
+Backtrace:
+/Users/toensing/Sites/Wordpress/wp-content/themes/dirty-and-mean/scss/modules/lt900.scss:50
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/script/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/script/node.rb:40:in `perform'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:296:in `visit_prop'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:318:in `visit_rule'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:360:in `visit_media'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:126:in `visit_root'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/engine.rb:315:in `_render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.5/lib/sass/../sass/engine.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/update_project.rb:45:in `perform'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:30
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44:in `call'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44
+/usr/bin/compass:23:in `load'
+/usr/bin/compass:23
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$margin\".\A         on line 50 of /Users/toensing/Sites/Wordpress/wp-content/themes/dirty-and-mean/scss/modules/lt900.scss"; }

@@ -267,7 +267,7 @@ a {
   box-shadow: 0 2px 5px #000 inset;
   font-size: 14px;
   padding-top: 2em;
-  color: #A0A0A0;
+  color: $grey;
   .container {
     margin-bottom: 0;
   }
@@ -280,9 +280,9 @@ a {
 
 #bottom {
   .supertitle {
-    border-bottom: 2px solid #A0A0A0;
+    border-bottom: 2px solid $grey;
     font-size: 120%;
-    color: #A0A0A0;
+    color: $grey;
   }
   .box {
     margin-bottom: 2em;
@@ -291,7 +291,7 @@ a {
     margin: 0 15px;
   }
   a {
-    color: #A0A0A0;
+    color: $grey;
   }
 }
 
@@ -450,7 +450,7 @@ html .fullscreenicon {
 }
 
 .commentbox {
-  background: #f3f3f3;
+  background: $grey;
 }
 
 /* article nav */

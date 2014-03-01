@@ -12,8 +12,8 @@ body:not(.artdirected) {
         margin-left: -$margin;
         margin-right: -$margin;
         @media screen and (max-width: 600px) {
-          margin-left: -$margin/4;
-          margin-right: -$margin/4;
+          margin-left: 0;
+          margin-right: 0;
         }
       }
     }
@@ -34,6 +34,7 @@ body:not(.artdirected) {
   }
   .wp-caption {
     margin: 0;
+    background: $grey;
   }
   .title {
     font-size: 260%;
@@ -69,11 +70,6 @@ body:not(.artdirected) {
     list-style: decimal;
     margin-left: 1.5em;
   }
-  
-  
-  
-  
-  
   
   
   .alignright {
