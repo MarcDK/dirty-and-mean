@@ -1,3 +1,5 @@
+@import 'vars';
+
 /* article */
 
 .entry.section {
@@ -9,8 +11,8 @@ body:not(.artdirected) {
     .inner > {
       .figure,
       .marctv-gallery{
-        margin-left: -$margin;
-        margin-right: -$margin;
+        margin-left: -$marctv-margin;
+        margin-right: -$marctv-margin;
         @media screen and (max-width: 600px) {
           margin-left: 0;
           margin-right: 0;

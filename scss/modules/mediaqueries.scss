@@ -1,3 +1,5 @@
+@import 'vars';
+
 #navigation .hamburger-icon {
   display:none;
 }
@@ -7,6 +9,7 @@
     width: 100%;
   }
 }
+
 
 
 @import 'modules/lt320.scss';

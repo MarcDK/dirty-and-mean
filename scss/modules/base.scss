@@ -1,3 +1,6 @@
+@import 'vars';
+@import 'compass/css3';
+
 body {
   margin: 0;
   padding: 0;
@@ -73,11 +76,11 @@ em {
 }
 
 .site {
-  margin-left: $margin;
-  margin-right: $margin;
+  margin-left: $marctv-margin;
+  margin-right: $marctv-margin;
   @media screen and (max-width: 600px) {
-    margin-left: $margin/4;
-    margin-right: $margin/4;
+    margin-left: $marctv-margin/4;
+    margin-right: $marctv-margin/4;
   }
 }
 

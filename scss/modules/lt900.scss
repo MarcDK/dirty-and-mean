@@ -1,3 +1,5 @@
+@import 'vars';
+
 @media only screen and (max-width : 900px) {
   
   html .header .searchbox {
@@ -47,12 +49,12 @@
     background-color: #333;
     position: absolute;
     position: absolute;
-    right: $margin;
+    right: $marctv-margin;
     z-index: 100;
     display: none;
    
     @media screen and (max-width: 600px) {
-      right: $margin/4;
+      right: $marctv-margin/4;
     }
     
   }
