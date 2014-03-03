@@ -101,23 +101,20 @@
 #navigation .sub-menu li a:hover {
   color: #fff;
 }
-
-/* Subnav */
-/* line 95, ../../scss/modules/nav.scss */
+/* line 91, ../../scss/modules/nav.scss */
 #navigation ul li:hover > ul {
   display: block;
   margin: 0;
   padding: 0;
 }
-
-/* line 102, ../../scss/modules/nav.scss */
-body #navigation .menu li:hover > a,
-#navigation ul ul *:hover > a {
+/* line 96, ../../scss/modules/nav.scss */
+#navigation .menu li:hover > a, #navigation ul ul *:hover > a {
   background: #333;
   color: #FFFFFF;
   text-decoration: none;
 }
 
+/* Subnav */
 /* line 108, ../../scss/modules/nav.scss */
 .menu {
   margin-left: 10px;

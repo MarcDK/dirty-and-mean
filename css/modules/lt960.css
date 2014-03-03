@@ -5,17 +5,13 @@
     border: 0;
     padding: 0 1%;
   }
-
-  /* line 9, ../../scss/modules/lt960.scss */
-  html .container.multi .box.first,
-  html .container.multi .box.multi-first {
+  /* line 6, ../../scss/modules/lt960.scss */
+  html .container.multi .box.first, html .container.multi .box.multi-first {
     margin-left: 0;
     padding-left: 0;
   }
-
-  /* line 15, ../../scss/modules/lt960.scss */
-  html .container.multi .box.last,
-  html .container.multi .box.multi-last {
+  /* line 10, ../../scss/modules/lt960.scss */
+  html .container.multi .box.last, html .container.multi .box.multi-last {
     margin-right: 0;
     padding-right: 0;
   }

@@ -25,7 +25,7 @@
       ?>
 
       <li class="box first last">
-        <?php echo get_marctv_teaser($lead_pid, true, '', 'default'); ?>
+        <?php echo get_marctv_teaser($lead_pid, true, '', 'large'); ?>
       </li>
     </ul>
 

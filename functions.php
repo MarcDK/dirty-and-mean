@@ -14,6 +14,8 @@ function echo_memory_usage() {
 if (function_exists('add_image_size')) {
   add_image_size('facebookimage', 403, 403, true); //(cropped) 
   add_image_size('fullhd', 1920, 836);
+  add_image_size('legacy_m', 460, 200);
+  add_image_size('legacy_s', 300, 130);
   add_image_size('4k', 3840, 1673);
 }
 
@@ -70,6 +72,9 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
     case "small":
       $imgsize = "thumbnail";
       break;
+    case "large":
+      $imgsize = "large";
+      break;
     default:
       $imgsize = "full";
   }
@@ -85,7 +90,7 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
   }
 
   if ($headline_bottom) {
-    $teaser .= '<div class="title">' . esc_html(get_the_title($post_id)) . '</div>';
+    $teaser .= '<h2 class="title">' . esc_html(get_the_title($post_id)) . '</h2>';
   }
 
 
