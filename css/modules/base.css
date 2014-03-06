@@ -4,7 +4,7 @@ body {
   padding: 0;
   color: #333;
   background: #fff;
-  font: 100%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+  font: 100% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
 
 /* line 12, ../../scss/modules/base.scss */
@@ -55,7 +55,7 @@ em {
   margin-bottom: 0.5em;
   margin-top: 0.2em;
   font-weight: 300;
-  border-bottom: 2px solid #666666;
+  border-bottom: 2px solid #666;
   padding: 0;
   font-size: 90%;
   text-transform: uppercase;
@@ -304,7 +304,7 @@ a:active {
 #bottom {
   background-color: #111;
   background-image: none;
-  box-shadow: 0 2px 5px black inset;
+  box-shadow: 0 2px 5px #000 inset;
   font-size: 14px;
   padding-top: 2em;
   color: #f3f3f3;
@@ -363,9 +363,9 @@ a:active {
 }
 /* line 313, ../../scss/modules/base.scss */
 .infobox .info {
-  transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
+  transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -webkit-transition: all .1s linear;
   background: #333;
   top: 0.5em;
   left: 0.5em;
@@ -388,7 +388,7 @@ a:active {
 .hreview {
   overflow: hidden;
   padding: 0;
-  border-top: 2px solid #007fbe;
+  border-top: 2px solid #007FBE;
 }
 /* line 343, ../../scss/modules/base.scss */
 .hreview .rating {
@@ -449,7 +449,7 @@ a:active {
 .nav-paged a span {
   background: #fff;
   color: #333;
-  border: 1px solid #333333;
+  border: 1px solid #333;
 }
 /* line 395, ../../scss/modules/base.scss */
 .nav-paged span {
@@ -457,7 +457,7 @@ a:active {
   background: #333;
   color: #fff;
   padding: 2px 13px;
-  border: 1px solid #333333;
+  border: 1px solid #333;
 }
 /* line 402, ../../scss/modules/base.scss */
 .nav-paged a span:hover, .nav-paged .current span {
@@ -611,7 +611,7 @@ html .fullscreenicon {
 /* line 534, ../../scss/modules/base.scss */
 .warning {
   background: #eee;
-  border: 1px solid #bbbbbb;
+  border: 1px solid #bbb;
   padding: 1em;
   margin-bottom: 1em;
 }
