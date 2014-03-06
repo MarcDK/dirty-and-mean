@@ -968,4 +968,19 @@ function marctv_comment($comment, $args, $depth) {
   }
 
   add_action('init', 'my_theme_add_editor_styles');
+ 
+  
+  
+
+
+add_filter('wp_get_attachment_link', 'remove_img_width_height', 10, 4);
+
+function remove_img_width_height( $html, $post_id, $post_image_id,$post_thumbnail) {
+    
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    
+    return $html;
+}
+  
+  
   ?>

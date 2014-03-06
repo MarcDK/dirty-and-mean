@@ -1,4 +1,4 @@
-/*
+/*!
 Theme Name: Dirty and Mean
 Theme URI: http://marctv.de
 Description: MarcTV Theme 2014
@@ -8,7 +8,7 @@ License: GPL v3
 License URI: license.txt
 Tags: marctv, simple, clean
 */
-/* line 17, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -30,45 +30,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -141,7 +141,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
   /* line 8, ../scss/modules/lt600.scss */
   html body {
-    font: 90%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+    font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
   }
   /* line 11, ../scss/modules/lt600.scss */
   html .lead .title {
@@ -281,7 +281,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     border-top-right-radius: 0;
     font-size: 0;
     line-height: 0;
-    padding: 0.75rem 0.5rem;
+    padding: .75rem .5rem;
     margin-top: 0;
     -webkit-user-select: none;
     /* Chrome all / Safari all */
@@ -582,8 +582,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
   background-image: linear-gradient(top, #eeeeee, #cccccc);
-  border: 1px solid #cccccc;
-  border-bottom: 1px solid #bbbbbb;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -593,7 +593,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   line-height: 1;
   padding: 0.4em 0.8em;
   text-align: center;
-  text-shadow: 0 1px 0 #eeeeee;
+  text-shadow: 0 1px 0 #eee;
   width: auto;
 }
 
@@ -614,20 +614,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
   background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
   background-image: linear-gradient(top, #dddddd, #bbbbbb);
-  border: 1px solid #bbbbbb;
-  border-bottom: 1px solid #999999;
+  border: 1px solid #bbb;
+  border-bottom: 1px solid #999;
   cursor: pointer;
-  text-shadow: 0 1px 0 #dddddd;
+  text-shadow: 0 1px 0 #ddd;
 }
 
 /* line 95, ../scss/modules/comments.scss */
 .searchform .formbutton:active,
 #commentform #submit:active {
-  border: 1px solid #aaaaaa;
-  border-bottom: 1px solid #888888;
-  -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #333333;
-  -moz-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #333333;
-  box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #333333;
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #888;
+  -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #333;
+  -moz-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #333;
+  box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #333;
 }
 
 /* line 102, ../scss/modules/comments.scss */
@@ -719,7 +719,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 174, ../scss/modules/comments.scss */
 #respond p.red {
-  border: 2px solid darkred;
+  border: 2px solid #8B0000;
   margin-left: 2px;
   padding: 2px;
 }
@@ -738,7 +738,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 190, ../scss/modules/comments.scss */
 .bottom {
-  border-top: 1px dotted #cccccc;
+  border-top: 1px dotted #CCC;
 }
 
 /* line 194, ../scss/modules/comments.scss */
@@ -772,7 +772,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 218, ../scss/modules/comments.scss */
 .commentlist blockquote {
-  border-left: 2px solid #dddddd;
+  border-left: 2px solid #ddd;
   margin: 5px 0px;
   padding-bottom: 1px;
   padding-left: 5px;
@@ -840,7 +840,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 276, ../scss/modules/comments.scss */
 .commentlist li .children .vcard .avatar {
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   height: 30px;
   left: 0;
   margin-top: 2px;
@@ -912,7 +912,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 339, ../scss/modules/comments.scss */
 .commentlist li .vcard .avatar {
-  border: 2px solid #dddddd;
+  border: 2px solid #ddd;
   left: 0;
   position: absolute;
   margin-top: 2px;
@@ -1013,27 +1013,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   overflow: initial;
 }
 
-/* line 13, ../scss/modules/entry.scss */
-body:not(.artdirected) .entry .inner > .figure,
-body:not(.artdirected) .entry .inner > .marctv-gallery {
-  margin-left: -60px;
-  margin-right: -60px;
-}
-@media screen and (max-width: 600px) {
-  /* line 13, ../scss/modules/entry.scss */
-  body:not(.artdirected) .entry .inner > .figure,
-  body:not(.artdirected) .entry .inner > .marctv-gallery {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-/* line 25, ../scss/modules/entry.scss */
+/* line 10, ../scss/modules/entry.scss */
 .entry {
   overflow: visible;
   font-size: 110%;
 }
-/* line 29, ../scss/modules/entry.scss */
+/* line 14, ../scss/modules/entry.scss */
 .entry .wp-caption-text, .entry .pictext {
   font-size: 85%;
   font-style: italic;
@@ -1042,62 +1027,74 @@ body:not(.artdirected) .entry .inner > .marctv-gallery {
   padding: 0 0.5em 0.4em;
   display: block;
 }
-/* line 37, ../scss/modules/entry.scss */
+/* line 22, ../scss/modules/entry.scss */
 .entry .wp-caption {
   margin: 0;
   background: #f3f3f3;
 }
-/* line 41, ../scss/modules/entry.scss */
+/* line 26, ../scss/modules/entry.scss */
 .entry .title {
   font-size: 260%;
   font-weight: 700;
   margin-top: 0.5em;
 }
-/* line 46, ../scss/modules/entry.scss */
+/* line 31, ../scss/modules/entry.scss */
 .entry p, .entry ul, .entry ol, .entry .video, .entry .marctv-gallery, .entry .figure {
   margin-bottom: 1.5em;
 }
-/* line 49, ../scss/modules/entry.scss */
+/* line 34, ../scss/modules/entry.scss */
 .entry ol li, .entry ul li {
   margin-bottom: 0.5em;
 }
-/* line 52, ../scss/modules/entry.scss */
+/* line 37, ../scss/modules/entry.scss */
 .entry blockquote p {
   font-size: 120%;
 }
-/* line 55, ../scss/modules/entry.scss */
+/* line 40, ../scss/modules/entry.scss */
 .entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
   margin-bottom: 0.3em;
   clear: both;
 }
-/* line 59, ../scss/modules/entry.scss */
+/* line 44, ../scss/modules/entry.scss */
 .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
   font-size: 140%;
   font-weight: 700;
   margin-top: 2em;
 }
-/* line 64, ../scss/modules/entry.scss */
+/* line 49, ../scss/modules/entry.scss */
 .entry h3 {
   font-size: 115%;
 }
-/* line 67, ../scss/modules/entry.scss */
+/* line 52, ../scss/modules/entry.scss */
 .entry ul {
   list-style: square;
   margin-left: 1.1em;
 }
-/* line 71, ../scss/modules/entry.scss */
+/* line 56, ../scss/modules/entry.scss */
 .entry ol {
   list-style: decimal;
   margin-left: 1.5em;
 }
-/* line 77, ../scss/modules/entry.scss */
+/* line 61, ../scss/modules/entry.scss */
+.entry .gallery-item {
+  float: left;
+  margin-right: 0.3%;
+  width: 33%;
+}
+/* line 67, ../scss/modules/entry.scss */
+.entry .js .gallery-item {
+  float: none;
+  margin-right: 0;
+  width: inherit;
+}
+/* line 73, ../scss/modules/entry.scss */
 .entry .alignright {
   float: right;
   margin: 0.3em 0 0.5em 1em !important;
   width: 33%;
   padding: 0;
 }
-/* line 84, ../scss/modules/entry.scss */
+/* line 80, ../scss/modules/entry.scss */
 .entry .alignleft {
   float: left;
   padding: 0;
@@ -1105,15 +1102,15 @@ body:not(.artdirected) .entry .inner > .marctv-gallery {
   width: 33%;
 }
 
-/* line 93, ../scss/modules/entry.scss */
+/* line 89, ../scss/modules/entry.scss */
 .tools {
-  border-top: 1px solid #333333;
+  border-top: 1px solid #333;
   padding-top: 0.5em;
   margin-bottom: 1em;
   color: #666;
-  font: 90%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+  font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
-/* line 100, ../scss/modules/entry.scss */
+/* line 96, ../scss/modules/entry.scss */
 .tools .hlist {
   font-size: 90%;
   list-style: none;
@@ -1121,21 +1118,36 @@ body:not(.artdirected) .entry .inner > .marctv-gallery {
   overflow: hidden;
   margin: 0;
 }
-/* line 108, ../scss/modules/entry.scss */
+/* line 104, ../scss/modules/entry.scss */
 .tools .nav-article-tool {
   overflow: hidden;
 }
-/* line 112, ../scss/modules/entry.scss */
+/* line 108, ../scss/modules/entry.scss */
 .tools a {
   color: #666;
 }
-/* line 116, ../scss/modules/entry.scss */
+/* line 112, ../scss/modules/entry.scss */
 .tools .breadcrumb span {
   font-style: italic;
 }
-/* line 120, ../scss/modules/entry.scss */
+/* line 116, ../scss/modules/entry.scss */
 .tools li {
   margin-bottom: 0.5em;
+}
+
+/* line 126, ../scss/modules/entry.scss */
+body:not(.artdirected) .entry .inner .figure,
+body:not(.artdirected) .entry .inner .marctv-gallery {
+  margin-left: -60px;
+  margin-right: -60px;
+}
+@media screen and (max-width: 600px) {
+  /* line 126, ../scss/modules/entry.scss */
+  body:not(.artdirected) .entry .inner .figure,
+  body:not(.artdirected) .entry .inner .marctv-gallery {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /* line 4, ../scss/modules/base.scss */
@@ -1144,7 +1156,7 @@ body {
   padding: 0;
   color: #333;
   background: #fff;
-  font: 100%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+  font: 100% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
 
 /* line 12, ../scss/modules/base.scss */
@@ -1195,7 +1207,7 @@ em {
   margin-bottom: 0.5em;
   margin-top: 0.2em;
   font-weight: 300;
-  border-bottom: 2px solid #666666;
+  border-bottom: 2px solid #666;
   padding: 0;
   font-size: 90%;
   text-transform: uppercase;
@@ -1444,7 +1456,7 @@ a:active {
 #bottom {
   background-color: #111;
   background-image: none;
-  box-shadow: 0 2px 5px black inset;
+  box-shadow: 0 2px 5px #000 inset;
   font-size: 14px;
   padding-top: 2em;
   color: #f3f3f3;
@@ -1503,9 +1515,9 @@ a:active {
 }
 /* line 313, ../scss/modules/base.scss */
 .infobox .info {
-  transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
+  transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -webkit-transition: all .1s linear;
   background: #333;
   top: 0.5em;
   left: 0.5em;
@@ -1528,7 +1540,7 @@ a:active {
 .hreview {
   overflow: hidden;
   padding: 0;
-  border-top: 2px solid #007fbe;
+  border-top: 2px solid #007FBE;
 }
 /* line 343, ../scss/modules/base.scss */
 .hreview .rating {
@@ -1589,7 +1601,7 @@ a:active {
 .nav-paged a span {
   background: #fff;
   color: #333;
-  border: 1px solid #333333;
+  border: 1px solid #333;
 }
 /* line 395, ../scss/modules/base.scss */
 .nav-paged span {
@@ -1597,7 +1609,7 @@ a:active {
   background: #333;
   color: #fff;
   padding: 2px 13px;
-  border: 1px solid #333333;
+  border: 1px solid #333;
 }
 /* line 402, ../scss/modules/base.scss */
 .nav-paged a span:hover, .nav-paged .current span {
@@ -1751,7 +1763,7 @@ html .fullscreenicon {
 /* line 534, ../scss/modules/base.scss */
 .warning {
   background: #eee;
-  border: 1px solid #bbbbbb;
+  border: 1px solid #bbb;
   padding: 1em;
   margin-bottom: 1em;
 }

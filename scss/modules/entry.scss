@@ -6,26 +6,11 @@
   overflow: initial;;
 }
 
-body:not(.artdirected) {
-  .entry {
-    .inner > {
-      .figure,
-      .marctv-gallery{
-        margin-left: -$marctv-margin;
-        margin-right: -$marctv-margin;
-        @media screen and (max-width: 600px) {
-          margin-left: 0;
-          margin-right: 0;
-        }
-      }
-    }
-  }
-}
 
 .entry {
   overflow: visible;
   font-size: 110%;
-  
+
   .wp-caption-text, .pictext {
     font-size: 85%;
     font-style: italic;
@@ -39,7 +24,7 @@ body:not(.artdirected) {
     background: $grey;
   }
   .title {
-    font-size: 260%;
+    font-size: 260%; 
     font-weight: 700;
     margin-top: 0.5em;
   }
@@ -72,22 +57,33 @@ body:not(.artdirected) {
     list-style: decimal;
     margin-left: 1.5em;
   }
+
+  .gallery-item {
+    float: left;
+    margin-right: 0.3%;
+    width: 33%;
+  }
   
-  
+  .js .gallery-item {
+    float: none;
+    margin-right: 0;
+    width: inherit;
+  }
+
   .alignright {
     float: right;
     margin: 0.3em 0 0.5em 1em ! important;
     width: 33%;
     padding: 0;
   }
-  
+
   .alignleft {
     float: left;
     padding: 0;
     margin: 0.3em 1em 0.5em 0 ! important;
     width: 33%;
   }
-  
+
 }
 
 .tools {
@@ -104,21 +100,37 @@ body:not(.artdirected) {
     overflow: hidden;
     margin: 0;
   }
-  
+
   .nav-article-tool {
     overflow: hidden;
   }
-  
+
   a {
     color: #666;
   }
-  
+
   .breadcrumb span {
     font-style: italic;
   }
-  
+
   li {
     margin-bottom: 0.5em;
   }
 }
 
+
+body:not(.artdirected) {
+  .entry {
+    .inner {
+      .figure,
+      .marctv-gallery{
+        margin-left: -$marctv-margin;
+        margin-right: -$marctv-margin;
+        @media screen and (max-width: 600px) {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
