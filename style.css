@@ -1085,16 +1085,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .entry .js .gallery-item {
   float: none;
   margin-right: 0;
-  width: inherit;
 }
-/* line 73, ../scss/modules/entry.scss */
+/* line 72, ../scss/modules/entry.scss */
 .entry .alignright {
   float: right;
   margin: 0.3em 0 0.5em 1em !important;
   width: 33%;
   padding: 0;
 }
-/* line 80, ../scss/modules/entry.scss */
+/* line 79, ../scss/modules/entry.scss */
 .entry .alignleft {
   float: left;
   padding: 0;
@@ -1102,7 +1101,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 33%;
 }
 
-/* line 89, ../scss/modules/entry.scss */
+/* line 88, ../scss/modules/entry.scss */
 .tools {
   border-top: 1px solid #333;
   padding-top: 0.5em;
@@ -1110,7 +1109,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: #666;
   font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
-/* line 96, ../scss/modules/entry.scss */
+/* line 95, ../scss/modules/entry.scss */
 .tools .hlist {
   font-size: 90%;
   list-style: none;
@@ -1118,31 +1117,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   overflow: hidden;
   margin: 0;
 }
-/* line 104, ../scss/modules/entry.scss */
+/* line 103, ../scss/modules/entry.scss */
 .tools .nav-article-tool {
   overflow: hidden;
 }
-/* line 108, ../scss/modules/entry.scss */
+/* line 107, ../scss/modules/entry.scss */
 .tools a {
   color: #666;
 }
-/* line 112, ../scss/modules/entry.scss */
+/* line 111, ../scss/modules/entry.scss */
 .tools .breadcrumb span {
   font-style: italic;
 }
-/* line 116, ../scss/modules/entry.scss */
+/* line 115, ../scss/modules/entry.scss */
 .tools li {
   margin-bottom: 0.5em;
 }
 
-/* line 126, ../scss/modules/entry.scss */
+/* line 125, ../scss/modules/entry.scss */
 body:not(.artdirected) .entry .inner .figure,
 body:not(.artdirected) .entry .inner .marctv-gallery {
   margin-left: -60px;
   margin-right: -60px;
 }
 @media screen and (max-width: 600px) {
-  /* line 126, ../scss/modules/entry.scss */
+  /* line 125, ../scss/modules/entry.scss */
   body:not(.artdirected) .entry .inner .figure,
   body:not(.artdirected) .entry .inner .marctv-gallery {
     margin-left: 0;
