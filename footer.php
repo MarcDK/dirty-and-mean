@@ -34,12 +34,11 @@
 </div> <!-- /site -->
 <div id="bottom">
   <div class="inner">
-    <nav>
+    <nav class="site">
       <ul class="container section">
         <li class="box first">
           <div class="supertitle">Suche</div>
           <?php get_search_form(); ?>
-          
         </li>
         <li class="box">
           <div class="supertitle">Abonnieren</div>

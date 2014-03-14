@@ -11,8 +11,7 @@
   <div class="relatedbox fullwidth">
     <div class="site">
       <div class="section">
-        
-
+       
           <?php
           $mostcom = '<div class="supertitle">Mehr zum Thema</div>';
           $mostcom .= '<ul class="container">';

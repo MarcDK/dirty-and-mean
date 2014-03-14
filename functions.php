@@ -16,8 +16,21 @@ if (function_exists('add_image_size')) {
   add_image_size('fullhd', 1920, 836);
   add_image_size('legacy_m', 460, 200);
   add_image_size('legacy_s', 300, 130);
-  add_image_size('4k', 3840, 1673);
+  add_image_size('4k', 3840, 1680);
+  add_image_size('EOS', 4000, 1750);
 }
+
+
+
+add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+
+function my_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        '4k' => __('4k Resolution'),
+        'EOS' => __('EOS Full'),
+    ) );
+}
+
 
 // img unautop
 function img_unautop($pee) {

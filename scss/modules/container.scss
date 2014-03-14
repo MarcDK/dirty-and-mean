@@ -1,0 +1,63 @@
+.container {
+  margin-bottom: 3em;
+  padding-left: 0;
+  overflow: hidden;
+
+  &.bars.docked, &.docked, &.bars.docked .box {
+    margin-bottom: 0;
+  }
+  &.lead .box {
+    width: 100%;
+  }
+  &.double .box {
+    width: 49%;
+    margin: 0%;
+    padding: 0 1%;
+    border: 0;
+  }
+  &.multi {
+    .box {
+      width: 16%;
+      border: 0;
+      padding: 0 0.4%;
+      font-size: 80%;
+    }
+    .title {
+      height: 1.9em;
+    }
+  }
+  &.morph .title {
+    height: 1.9em;
+  }
+  &.morph .box {
+    width: 32%;
+    border: 0;
+    padding: 0 1%;
+    &.first, &.multi-first {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    &.last, &.multi-last {
+      margin-right: 0;
+      padding-right: 0;
+    }
+    p {
+      height: 6em;
+    }
+  }
+  
+  .box {
+    width: 32%;
+    border: 0;
+    padding: 0 1%;
+    &.first {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    &.last {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+}
+

@@ -4,12 +4,12 @@
   overflow: initial;
 }
 
-/* line 10, ../../scss/modules/entry.scss */
+/* line 8, ../../scss/modules/entry.scss */
 .entry {
   overflow: visible;
   font-size: 110%;
 }
-/* line 14, ../../scss/modules/entry.scss */
+/* line 12, ../../scss/modules/entry.scss */
 .entry .wp-caption-text, .entry .pictext {
   font-size: 85%;
   font-style: italic;
@@ -18,73 +18,73 @@
   padding: 0 0.5em 0.4em;
   display: block;
 }
-/* line 22, ../../scss/modules/entry.scss */
+/* line 20, ../../scss/modules/entry.scss */
 .entry .wp-caption {
   margin: 0;
   background: #f3f3f3;
 }
-/* line 26, ../../scss/modules/entry.scss */
+/* line 24, ../../scss/modules/entry.scss */
 .entry .title {
   font-size: 260%;
   font-weight: 700;
   margin-top: 0.5em;
 }
-/* line 31, ../../scss/modules/entry.scss */
+/* line 29, ../../scss/modules/entry.scss */
 .entry p, .entry ul, .entry ol, .entry .video, .entry .marctv-gallery, .entry .figure {
   margin-bottom: 1.5em;
 }
-/* line 34, ../../scss/modules/entry.scss */
+/* line 32, ../../scss/modules/entry.scss */
 .entry ol li, .entry ul li {
   margin-bottom: 0.5em;
 }
-/* line 37, ../../scss/modules/entry.scss */
+/* line 35, ../../scss/modules/entry.scss */
 .entry blockquote p {
   font-size: 120%;
 }
-/* line 40, ../../scss/modules/entry.scss */
+/* line 38, ../../scss/modules/entry.scss */
 .entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
   margin-bottom: 0.3em;
   clear: both;
 }
-/* line 44, ../../scss/modules/entry.scss */
+/* line 42, ../../scss/modules/entry.scss */
 .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
   font-size: 140%;
   font-weight: 700;
   margin-top: 2em;
 }
-/* line 49, ../../scss/modules/entry.scss */
+/* line 47, ../../scss/modules/entry.scss */
 .entry h3 {
   font-size: 115%;
 }
-/* line 52, ../../scss/modules/entry.scss */
+/* line 50, ../../scss/modules/entry.scss */
 .entry ul {
   list-style: square;
   margin-left: 1.1em;
 }
-/* line 56, ../../scss/modules/entry.scss */
+/* line 54, ../../scss/modules/entry.scss */
 .entry ol {
   list-style: decimal;
   margin-left: 1.5em;
 }
-/* line 61, ../../scss/modules/entry.scss */
+/* line 59, ../../scss/modules/entry.scss */
 .entry .gallery-item {
   float: left;
   margin-right: 0.3%;
   width: 33%;
 }
-/* line 67, ../../scss/modules/entry.scss */
+/* line 65, ../../scss/modules/entry.scss */
 .entry .js .gallery-item {
   float: none;
   margin-right: 0;
 }
-/* line 72, ../../scss/modules/entry.scss */
+/* line 70, ../../scss/modules/entry.scss */
 .entry .alignright {
   float: right;
   margin: 0.3em 0 0.5em 1em !important;
   width: 33%;
   padding: 0;
 }
-/* line 79, ../../scss/modules/entry.scss */
+/* line 77, ../../scss/modules/entry.scss */
 .entry .alignleft {
   float: left;
   padding: 0;
@@ -92,7 +92,7 @@
   width: 33%;
 }
 
-/* line 88, ../../scss/modules/entry.scss */
+/* line 86, ../../scss/modules/entry.scss */
 .tools {
   border-top: 1px solid #333;
   padding-top: 0.5em;
@@ -100,7 +100,7 @@
   color: #666;
   font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
-/* line 95, ../../scss/modules/entry.scss */
+/* line 93, ../../scss/modules/entry.scss */
 .tools .hlist {
   font-size: 90%;
   list-style: none;
@@ -108,31 +108,31 @@
   overflow: hidden;
   margin: 0;
 }
-/* line 103, ../../scss/modules/entry.scss */
+/* line 101, ../../scss/modules/entry.scss */
 .tools .nav-article-tool {
   overflow: hidden;
 }
-/* line 107, ../../scss/modules/entry.scss */
+/* line 105, ../../scss/modules/entry.scss */
 .tools a {
   color: #666;
 }
-/* line 111, ../../scss/modules/entry.scss */
+/* line 109, ../../scss/modules/entry.scss */
 .tools .breadcrumb span {
   font-style: italic;
 }
-/* line 115, ../../scss/modules/entry.scss */
+/* line 113, ../../scss/modules/entry.scss */
 .tools li {
   margin-bottom: 0.5em;
 }
 
-/* line 125, ../../scss/modules/entry.scss */
+/* line 123, ../../scss/modules/entry.scss */
 body:not(.artdirected) .entry .inner .figure,
 body:not(.artdirected) .entry .inner .marctv-gallery {
   margin-left: -60px;
   margin-right: -60px;
 }
 @media screen and (max-width: 600px) {
-  /* line 125, ../../scss/modules/entry.scss */
+  /* line 123, ../../scss/modules/entry.scss */
   body:not(.artdirected) .entry .inner .figure,
   body:not(.artdirected) .entry .inner .marctv-gallery {
     margin-left: 0;
