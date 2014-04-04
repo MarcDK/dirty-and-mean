@@ -4,7 +4,7 @@ body {
   padding: 0;
   color: #333333;
   background: #fff;
-  font: 100% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+  font: 112.5%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
 
 /* line 12, ../../scss/modules/base.scss */
@@ -230,7 +230,7 @@ a:active {
 #bottom {
   background-color: #111;
   background-image: none;
-  box-shadow: 0 2px 5px #000 inset;
+  box-shadow: 0 2px 5px black inset;
   font-size: 14px;
   padding-top: 2em;
   color: #f3f3f3;
@@ -558,7 +558,7 @@ html .fullscreenicon {
 /* line 487, ../../scss/modules/base.scss */
 .warning {
   background: #eee;
-  border: 1px solid #bbb;
+  border: 1px solid #bbbbbb;
   padding: 1em;
   margin-bottom: 1em;
 }
