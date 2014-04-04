@@ -13,7 +13,7 @@
     font-size: 85%;
     font-style: italic;
     text-align: center;
-    color: #333;
+    color: $black;
     padding: 0 0.5em 0.4em;
     display: block;
   }
@@ -84,12 +84,13 @@
 }
 
 .tools {
-  border-top: 1px solid #333;
+  border-top: 1px solid $black;
   padding-top: 0.5em;
   margin-bottom: 1em;
-  color: #666;
+  color: $darkgrey;
   font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
-
+  
+  
   .hlist {
     font-size: 90%;
     list-style: none;
@@ -98,12 +99,16 @@
     margin: 0;
   }
 
+  li {
+    
+  }
+  
   .nav-article-tool {
     overflow: hidden;
   }
 
   a {
-    color: #666;
+    color: $darkgrey;
   }
 
   .breadcrumb span {

@@ -200,7 +200,7 @@
   }
   /* line 27, ../../scss/modules/lt900.scss */
   html #navigation .hamburger-icon {
-    background-color: #333;
+    background-color: #333333;
     z-index: 1000;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -221,7 +221,7 @@
   }
   /* line 46, ../../scss/modules/lt900.scss */
   html #navigation .hamburger {
-    background-color: #333;
+    background-color: #333333;
     position: absolute;
     position: absolute;
     right: 60px;

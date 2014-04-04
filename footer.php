@@ -1,7 +1,3 @@
-
-
-
-
 <?php if (is_home()) : ?>
 
   <?php
@@ -24,13 +20,7 @@
   echo '<div class="section tagcloud">' . $tagcache . '</div>';
   ?>
 <?php endif ?>
-
-
-
-
 <?php wp_footer(); ?>
-
-
 </div> <!-- /site -->
 <div id="bottom">
   <div class="inner">

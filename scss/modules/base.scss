@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  color: #333;
+  color: $black;
   background: #fff;
   font: 100% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
@@ -19,6 +19,10 @@ strong {
 
 em {
   font-style: italic; 
+}
+
+small {
+  font-size: 90%;
 }
 
 .sitelogo {
@@ -48,14 +52,14 @@ em {
   margin-bottom: 0.5em;
   margin-top: 0.2em;
   font-weight: 300;
-  border-bottom: 2px solid #666;
+  border-bottom: 2px solid $black;
   padding: 0;
   font-size: 90%;
   text-transform: uppercase;
-  color: #666;
+  color: $black;
   line-height: 1.2;
   a {
-    color: #666;
+    color: $black;
     padding: 0.3em 0;
     display: inline;
   }
@@ -110,7 +114,7 @@ a {
     top: 1px;
   }
   &.inverted {
-    color: #333;
+    color: $black;
     outline: none;
   }
   &:hover {
@@ -122,7 +126,7 @@ a {
 }
 
 .box a:hover {
-  color: #333;
+  color: $black;
 }
 
 .section {
@@ -152,10 +156,11 @@ a {
   line-height: 1.2;
   font-weight: 700;
   margin-bottom: 8px;
+  font-size: 120%;
 }
 
 .headline {
-  background: #333;
+  color: $black;
   color: #fff;
   padding: 0.2em 0.3em;
   display: inline;
@@ -246,24 +251,36 @@ a {
 
 .infobox {
   .info {
-    transition: all .1s linear;
-    -moz-transition: all .1s linear;
-    -webkit-transition: all .1s linear;
-    background: #333;
-    top: 0.5em;
-    left: 0.5em;
+    @include transition(all 0.05s linear);
+    @include border-radius(0 2px 2px 2px);
+    @include text-shadow(0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7));
+    background: $black;
+    top: 0;
+    left: 0;
     color: #FFFFFF;
     font-size: 80%;
-    padding: 2px 4px;
+    padding: 2px 5px;
     position: absolute;
     opacity: 0;
     filter: alpha(opacity = 0);
     zoom: 1;
-    border-radius: 2px 2px 2px 2px;
-    -moz-border-radius: 2px 2px 2px 2px;
-    -webkit-border-radius: 2px 2px 2px 2px;
-    -khtml-border-radius: 2px 2px 2px 2px;
-    -o-border-radius: 2px 2px 2px 2px;
+  }
+  .info.comment-count {
+
+  }
+  
+  .info.rating {
+    @include border-radius(2px 0 2px 2px);
+    right: 0;
+    left: auto;
+    font-size: 150%;
+    color: #EEE;
+    line-height: 1.2;
+    background: $marctv-color;
+    opacity: 1;
+    padding: 2px 7px;
+    letter-spacing: -1px;
+    filter: alpha(opacity = 1);
   }
   position: relative;
   display: block;
@@ -274,15 +291,15 @@ a {
 .hreview {
   overflow: hidden;
   padding: 0;
-  border-top: 2px solid #007FBE;
+  border-top: 2px solid $marctv-color;
   .rating {
     float: right;
     font-size: 300%;
     color: #EEE;
     line-height: 1.2;
-    background: #007FBE;
+    background: $marctv-color;
     padding: 2px;
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
+    @include text-shadow(0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7));
   }
   .claim {
     display: block;
@@ -325,17 +342,17 @@ a {
   a span {
     background: #fff;
     color: #333;
-    border: 1px solid #333;
+    border: 1px solid $black;
   }
   span {
     font-size: 110%;
-    background: #333;
+    background: $black;
     color: #fff;
     padding: 2px 13px;
-    border: 1px solid #333;
+    border: 1px solid $black;
   }
   a span:hover, .current span {
-    background: #333;
+    background: $black;
     color: #fff;
   }
 }
@@ -443,7 +460,7 @@ html .fullscreenicon {
 }
 
 .cat-more a {
-  background-color: #666;
+  background-color: $black;
   display: block;
   color: #fff;
   padding: 0.5em 0;
@@ -454,7 +471,8 @@ html .fullscreenicon {
   -o-border-radius: 2px 2px 2px 2px;
   margin-bottom: 1em;
   &:hover {
-    background-color: #333;
+    background-color: $marctv-color;
+    text-decoration: none;
     color: #fff;
   }
 }

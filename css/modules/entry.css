@@ -14,7 +14,7 @@
   font-size: 85%;
   font-style: italic;
   text-align: center;
-  color: #333;
+  color: #333333;
   padding: 0 0.5em 0.4em;
   display: block;
 }
@@ -94,13 +94,13 @@
 
 /* line 86, ../../scss/modules/entry.scss */
 .tools {
-  border-top: 1px solid #333;
+  border-top: 1px solid #333333;
   padding-top: 0.5em;
   margin-bottom: 1em;
-  color: #666;
+  color: #666666;
   font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
-/* line 93, ../../scss/modules/entry.scss */
+/* line 94, ../../scss/modules/entry.scss */
 .tools .hlist {
   font-size: 90%;
   list-style: none;
@@ -108,31 +108,31 @@
   overflow: hidden;
   margin: 0;
 }
-/* line 101, ../../scss/modules/entry.scss */
+/* line 106, ../../scss/modules/entry.scss */
 .tools .nav-article-tool {
   overflow: hidden;
 }
-/* line 105, ../../scss/modules/entry.scss */
+/* line 110, ../../scss/modules/entry.scss */
 .tools a {
-  color: #666;
+  color: #666666;
 }
-/* line 109, ../../scss/modules/entry.scss */
+/* line 114, ../../scss/modules/entry.scss */
 .tools .breadcrumb span {
   font-style: italic;
 }
-/* line 113, ../../scss/modules/entry.scss */
+/* line 118, ../../scss/modules/entry.scss */
 .tools li {
   margin-bottom: 0.5em;
 }
 
-/* line 123, ../../scss/modules/entry.scss */
+/* line 128, ../../scss/modules/entry.scss */
 body:not(.artdirected) .entry .inner .figure,
 body:not(.artdirected) .entry .inner .marctv-gallery {
   margin-left: -60px;
   margin-right: -60px;
 }
 @media screen and (max-width: 600px) {
-  /* line 123, ../../scss/modules/entry.scss */
+  /* line 128, ../../scss/modules/entry.scss */
   body:not(.artdirected) .entry .inner .figure,
   body:not(.artdirected) .entry .inner .marctv-gallery {
     margin-left: 0;

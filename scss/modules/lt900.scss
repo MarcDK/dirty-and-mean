@@ -25,7 +25,7 @@
       padding-top:0;
       
       .hamburger-icon {
-        background-color: #333;
+        background-color: $black;
         z-index: 1000;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
@@ -44,7 +44,7 @@
       
       
       .hamburger {
-        background-color: #333;
+        background-color: $black;
         position: absolute;
         position: absolute;
         right: $marctv-margin;

@@ -133,9 +133,6 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
     if ($comment_count == 0) {
       $comment_count = "Keine ";
     }
-    else {
-      $comment_count = number_format($comment_count);
-    }
 
     $score = get_post_meta($post_id, 'rating');
 
@@ -143,10 +140,11 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
       $teaser .= '<div class="info">' . $extra . ' </div>';
     }
     else if ($score) {
-      $teaser .= '<span class="info">' . $comment_count . ' Kommentare<br><span class="rating">Wertung: ' . $score[0] . '/10</span></span>';
+      //$teaser .= '<span class="info comment-count">' . $comment_count . ' Kommentare</span>';
+      $teaser .= '<span class="info rating">' . $score[0] . '/10</span>';
     }
     else {
-      $teaser .= '<span class="info">' . $comment_count . ' Kommentare</span>';
+      //$teaser .= '<span class="info comment-count">' . $comment_count . ' Kommentare</span>';
     }
   }
 
@@ -887,6 +885,7 @@ function marctv_comment($comment, $args, $depth) {
   function marctv_load_basejs() {
     wp_enqueue_script("marctv.base", get_template_directory_uri() . "/js/marctv_base.js", array("jquery"), "1.1", 0);
     wp_enqueue_script("jquery.sticky", get_template_directory_uri() . "/js/jquery.sticky.js", array("jquery"), "1.1", 0);
+    wp_enqueue_style( 'themename-style', get_stylesheet_uri(), array( 'dashicons' ), '1.0' );
   }
 
   add_action('wp_enqueue_scripts', 'marctv_load_basejs');

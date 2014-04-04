@@ -1,3 +1,4 @@
+@import 'vars';
 @import 'compass/css3';
 
 #navigation {
@@ -38,7 +39,7 @@
   a {
     float: none;
     &:hover {
-      color: #333;
+      color: $black;
     }
     &:active {
       color: #2200C1;
@@ -48,7 +49,7 @@
     border-width: 0;
   }
   #current a, .current-menu-item a, .current-menu-parent a {
-    color: #333;
+    color: $black;
     font-weight: 700;
   }
   #current a:hover, .current-menu-item a:hover, .current-menu-parent a:hover {
@@ -62,7 +63,7 @@
     margin: 0;
     position: absolute;
     width: 170px;
-    background-color: #333;
+    background-color: $black;
     z-index: 9999;
     padding: 3px 0 10px;
   }
@@ -94,7 +95,7 @@
     padding: 0;
   }
   .menu li:hover > a, ul ul *:hover > a {
-    background: #333;
+    background: $black;
     color: #FFFFFF;
     text-decoration: none;
   }
