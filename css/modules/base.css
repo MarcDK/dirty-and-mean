@@ -18,7 +18,7 @@ strong {
 }
 
 /* line 20, ../../scss/modules/base.scss */
-em {
+em, cite {
   font-style: italic;
 }
 
