@@ -29,45 +29,46 @@
   text-decoration: none;
   white-space: nowrap;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
-/* line 33, ../../scss/modules/navigation.scss */
+/* line 34, ../../scss/modules/navigation.scss */
 #navigation li:last-child a {
   border-right: none;
 }
-/* line 36, ../../scss/modules/navigation.scss */
+/* line 37, ../../scss/modules/navigation.scss */
 #navigation > ul a {
   width: auto;
 }
-/* line 39, ../../scss/modules/navigation.scss */
+/* line 40, ../../scss/modules/navigation.scss */
 #navigation a {
   float: none;
 }
-/* line 41, ../../scss/modules/navigation.scss */
+/* line 42, ../../scss/modules/navigation.scss */
 #navigation a:hover {
   color: #333333;
 }
-/* line 44, ../../scss/modules/navigation.scss */
+/* line 45, ../../scss/modules/navigation.scss */
 #navigation a:active {
   color: #2200C1;
 }
-/* line 48, ../../scss/modules/navigation.scss */
+/* line 49, ../../scss/modules/navigation.scss */
 #navigation #current, #navigation .current-menu-item, #navigation .current-menu-parent {
   border-width: 0;
 }
-/* line 51, ../../scss/modules/navigation.scss */
+/* line 52, ../../scss/modules/navigation.scss */
 #navigation #current a, #navigation .current-menu-item a, #navigation .current-menu-parent a {
   color: #333333;
   font-weight: 700;
 }
-/* line 55, ../../scss/modules/navigation.scss */
+/* line 56, ../../scss/modules/navigation.scss */
 #navigation #current a:hover, #navigation .current-menu-item a:hover, #navigation .current-menu-parent a:hover {
   color: #444;
 }
-/* line 58, ../../scss/modules/navigation.scss */
+/* line 59, ../../scss/modules/navigation.scss */
 #navigation #current a:active, #navigation .current-menu-item a:active, #navigation .current-menu-parent a:active {
   color: darkred;
 }
-/* line 62, ../../scss/modules/navigation.scss */
+/* line 63, ../../scss/modules/navigation.scss */
 #navigation .menu .sub-menu {
   margin: 0;
   position: absolute;
@@ -76,12 +77,12 @@
   z-index: 9999;
   padding: 3px 0 10px;
 }
-/* line 70, ../../scss/modules/navigation.scss */
+/* line 71, ../../scss/modules/navigation.scss */
 #navigation .sub-menu li {
   float: none;
   position: relative;
 }
-/* line 73, ../../scss/modules/navigation.scss */
+/* line 74, ../../scss/modules/navigation.scss */
 #navigation .sub-menu li a {
   border: none;
   padding: 10px 5px 6px 10px;
@@ -93,21 +94,21 @@
   font-size: 100%;
   text-transform: inherit;
 }
-/* line 84, ../../scss/modules/navigation.scss */
+/* line 85, ../../scss/modules/navigation.scss */
 #navigation .sub-menu li.current-menu-item a {
   color: #eee;
 }
-/* line 87, ../../scss/modules/navigation.scss */
+/* line 88, ../../scss/modules/navigation.scss */
 #navigation .sub-menu li a:hover {
   color: #fff;
 }
-/* line 92, ../../scss/modules/navigation.scss */
+/* line 93, ../../scss/modules/navigation.scss */
 #navigation ul li:hover > ul {
   display: block;
   margin: 0;
   padding: 0;
 }
-/* line 97, ../../scss/modules/navigation.scss */
+/* line 98, ../../scss/modules/navigation.scss */
 #navigation .menu li:hover > a, #navigation ul ul *:hover > a {
   background: #333333;
   color: #FFFFFF;
@@ -115,11 +116,11 @@
 }
 
 /* Subnav */
-/* line 106, ../../scss/modules/navigation.scss */
+/* line 107, ../../scss/modules/navigation.scss */
 .menu {
   margin-left: 10px;
 }
-/* line 107, ../../scss/modules/navigation.scss */
+/* line 108, ../../scss/modules/navigation.scss */
 .menu .sub-menu {
   display: none;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px;

@@ -16,8 +16,8 @@
       'echo' => false));
     set_transient('taghtml', $tagcache, 24 * 60 * 60);
   }
-
-  echo '<div class="section tagcloud">' . $tagcache . '</div>';
+  
+  echo '<div class="section tagcloud"><div class="col_title supertitle"><span>Weitere Themen</span></div>' . $tagcache . '</div>';
   ?>
 <?php endif ?>
 <?php wp_footer(); ?>

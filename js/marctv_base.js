@@ -29,11 +29,11 @@
     }
 
     function undocked(el) {
-      el.css({background: '#fff'}).css({boxShadow: '0 0 4px #333'});
+      el.animate({padding: '0 0'});
     }
 
     function redocked(el) {
-      el.css({background: 'transparent'}).css({boxShadow: '0 0 0 0'});
+      el.animate({padding: '0.5em 0'});
     }
 
 

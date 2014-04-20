@@ -10,46 +10,46 @@
   }
 }
 @media only screen and (max-width: 321px) {
-  /* line 6, ../../scss/modules/lt320.scss */
-  html .header .hamburger {
+  /* line 7, ../../scss/modules/lt320.scss */
+  html .header #navigation .hamburger {
     right: 5px;
   }
-  /* line 10, ../../scss/modules/lt320.scss */
+  /* line 11, ../../scss/modules/lt320.scss */
   html .header .searchbox {
     width: 60px;
     margin-top: 5px;
   }
-  /* line 11, ../../scss/modules/lt320.scss */
+  /* line 12, ../../scss/modules/lt320.scss */
   html .header .searchbox input {
     width: 50px;
     margin-top: 1px;
   }
-  /* line 22, ../../scss/modules/lt320.scss */
+  /* line 23, ../../scss/modules/lt320.scss */
   html .site {
     margin-left: 5px;
     margin-right: 5px;
   }
-  /* line 27, ../../scss/modules/lt320.scss */
+  /* line 28, ../../scss/modules/lt320.scss */
   html .hreview .text {
     width: 100%;
   }
-  /* line 31, ../../scss/modules/lt320.scss */
+  /* line 32, ../../scss/modules/lt320.scss */
   html .sitetitle {
     width: 130px;
     margin-top: 5px;
   }
-  /* line 33, ../../scss/modules/lt320.scss */
+  /* line 34, ../../scss/modules/lt320.scss */
   html .sitetitle a {
     background-size: 120px auto;
     width: 135px;
   }
-  /* line 43, ../../scss/modules/lt320.scss */
+  /* line 44, ../../scss/modules/lt320.scss */
   html .container.morph .box .title,
   html .container.double .box .title {
     font-size: 100%;
   }
 
-  /* line 50, ../../scss/modules/lt320.scss */
+  /* line 51, ../../scss/modules/lt320.scss */
   #marctv .entry .alignright,
   #marctv .entry .alignleft {
     float: none;
@@ -112,37 +112,51 @@
     padding: 0;
   }
 
-  /* line 48, ../../scss/modules/lt600.scss */
+  /* line 50, ../../scss/modules/lt600.scss */
+  html .commentlist .comment-meta a:first-child:before {
+    content: "# ";
+  }
+  /* line 53, ../../scss/modules/lt600.scss */
+  html .commentlist .comment-meta span {
+    display: none;
+  }
+  /* line 57, ../../scss/modules/lt600.scss */
   html .commentlist li {
+    border-top: 1px dotted #333333;
     padding-left: 0;
   }
-  /* line 50, ../../scss/modules/lt600.scss */
+  /* line 60, ../../scss/modules/lt600.scss */
   html .commentlist li .vcard {
     padding-left: 2.5em;
   }
-  /* line 51, ../../scss/modules/lt600.scss */
+  /* line 61, ../../scss/modules/lt600.scss */
   html .commentlist li .vcard .avatar {
     width: 2em;
     height: 2em;
   }
-  /* line 57, ../../scss/modules/lt600.scss */
+  /* line 67, ../../scss/modules/lt600.scss */
   html .commentlist li .comment-author {
     padding-bottom: 0.5em;
   }
-  /* line 61, ../../scss/modules/lt600.scss */
+  /* line 71, ../../scss/modules/lt600.scss */
   html .commentlist .pingback .vcard {
     padding-bottom: 0.5em;
   }
-  /* line 65, ../../scss/modules/lt600.scss */
+  /* line 74, ../../scss/modules/lt600.scss */
+  html .commentlist li .children {
+    background-image: url("images/left-stroke.gif");
+    background-repeat: repeat-y;
+  }
+  /* line 79, ../../scss/modules/lt600.scss */
   html .commentlist li .children .vcard .avatar {
     left: 1em;
   }
-  /* line 68, ../../scss/modules/lt600.scss */
+  /* line 82, ../../scss/modules/lt600.scss */
   html .commentlist li .children li {
     padding-left: 1em;
   }
 
-  /* line 74, ../../scss/modules/lt600.scss */
+  /* line 88, ../../scss/modules/lt600.scss */
   #marctv .container.multi .box, #marctv .container.double .box, #marctv .container.morph .box {
     width: 48%;
     border: 0;
@@ -150,17 +164,17 @@
     float: left;
     font-size: 80%;
   }
-  /* line 81, ../../scss/modules/lt600.scss */
+  /* line 95, ../../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(odd), #marctv .container.morph .box:nth-child(odd), #marctv .container.double .box.first {
     margin-left: 0;
     padding-left: 0;
   }
-  /* line 85, ../../scss/modules/lt600.scss */
+  /* line 99, ../../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(even), #marctv .container.morph .box:nth-child(even), #marctv .container.double .box.last {
     margin-right: 0;
     padding-right: 0;
   }
-  /* line 89, ../../scss/modules/lt600.scss */
+  /* line 103, ../../scss/modules/lt600.scss */
   #marctv .container.morph .box p {
     height: 6em;
   }
@@ -286,13 +300,13 @@
   }
   /* line 122, ../../scss/modules/lt900.scss */
   html #navigation .hamburger-icon:after {
-    border-color: #CCCCCC;
+    border-color: #efefef;
     border-style: solid none double;
-    border-width: 2px 0 6px;
+    border-width: 4px 0 12px;
     content: " ";
     display: block;
-    height: 2px;
-    width: 1rem;
+    height: 4px;
+    width: 2rem;
   }
 }
 @media only screen and (max-width: 900px) and (max-width: 600px) {

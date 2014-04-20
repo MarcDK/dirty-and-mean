@@ -1,44 +1,44 @@
 @media only screen and (max-width: 321px) {
-  /* line 6, ../../scss/modules/lt320.scss */
-  html .header .hamburger {
+  /* line 7, ../../scss/modules/lt320.scss */
+  html .header #navigation .hamburger {
     right: 5px;
   }
-  /* line 10, ../../scss/modules/lt320.scss */
+  /* line 11, ../../scss/modules/lt320.scss */
   html .header .searchbox {
     width: 60px;
     margin-top: 5px;
   }
-  /* line 11, ../../scss/modules/lt320.scss */
+  /* line 12, ../../scss/modules/lt320.scss */
   html .header .searchbox input {
     width: 50px;
     margin-top: 1px;
   }
-  /* line 22, ../../scss/modules/lt320.scss */
+  /* line 23, ../../scss/modules/lt320.scss */
   html .site {
     margin-left: 5px;
     margin-right: 5px;
   }
-  /* line 27, ../../scss/modules/lt320.scss */
+  /* line 28, ../../scss/modules/lt320.scss */
   html .hreview .text {
     width: 100%;
   }
-  /* line 31, ../../scss/modules/lt320.scss */
+  /* line 32, ../../scss/modules/lt320.scss */
   html .sitetitle {
     width: 130px;
     margin-top: 5px;
   }
-  /* line 33, ../../scss/modules/lt320.scss */
+  /* line 34, ../../scss/modules/lt320.scss */
   html .sitetitle a {
     background-size: 120px auto;
     width: 135px;
   }
-  /* line 43, ../../scss/modules/lt320.scss */
+  /* line 44, ../../scss/modules/lt320.scss */
   html .container.morph .box .title,
   html .container.double .box .title {
     font-size: 100%;
   }
 
-  /* line 50, ../../scss/modules/lt320.scss */
+  /* line 51, ../../scss/modules/lt320.scss */
   #marctv .entry .alignright,
   #marctv .entry .alignleft {
     float: none;

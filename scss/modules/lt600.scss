@@ -45,7 +45,17 @@
     padding: 0;
   }
   html .commentlist {
+
+    .comment-meta {
+      a:first-child:before {
+        content: "# ";   
+      }
+      span {
+        display:none; 
+      }
+    }
     li {
+      border-top: 1px dotted #333;
       padding-left: 0;
       .vcard {
         .avatar {
@@ -62,6 +72,10 @@
       padding-bottom: 0.5em;
     }
     li .children {
+
+      background-image: url('images/left-stroke.gif');
+      background-repeat: repeat-y;
+
       .vcard .avatar {
         left: 1em;
       }

@@ -31,20 +31,21 @@ small {
 }
 
 .header {
-  margin-bottom: 0.6em;
+  margin-bottom: 2em;
 }
 
-.sticky-wrapper .innerheader {
-  background: #fff;
-}
+
 
 .header {
-  background: #fff;
+
   .innerheader {
+    @include background-image(linear-gradient(white, #efefef));
+    border-bottom: 1px solid #333;
     width: 100%;
     z-index: 10000;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    @include box-shadow(#333 0 0 4px);
   }
 }
 
@@ -56,17 +57,21 @@ small {
   padding: 0;
   font-size: 90%;
   text-transform: uppercase;
-  color: $black;
+  color: #fff;
   line-height: 1.2;
+  span {
+    background: $black;
+    padding: 0 0.3em;
+  }
   a {
-    color: $black;
+    color: #fff;
     padding: 0.3em 0;
     display: inline;
   }
 }
 
 #comments .comments-title {
-  font-size: 140%;
+  font-size: 160%;
 }
 
 .comment-reply-title {
@@ -129,6 +134,10 @@ a {
   color: $black;
 }
 
+.box .supertitle a:hover {
+  color: #fff;
+}
+
 .section {
   margin: 0 auto;
   width: 960px;
@@ -180,7 +189,7 @@ a {
     margin-bottom: 2em;
   }
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 
@@ -201,7 +210,6 @@ a {
 #bottom {
   background-color: #111;
   background-image: none;
-  box-shadow: 0 2px 5px #000 inset;
   font-size: 14px;
   padding-top: 2em;
   color: $grey;
@@ -239,7 +247,7 @@ a {
     opacity: 1;
     filter: alpha(opacity = 1); 
   } 
-  
+
   .galleria-image-nav {
     display: none;
   }
@@ -268,7 +276,7 @@ a {
   .info.comment-count {
 
   }
-  
+
   .info.rating {
     @include border-radius(2px 0 2px 2px);
     right: 0;
@@ -442,7 +450,7 @@ html .fullscreenicon {
 
 .tagcloud {
   padding-bottom: 3em;
-  text-align: center;
+  text-align: justify;
 }
 
 .solid {
