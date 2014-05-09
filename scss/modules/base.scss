@@ -18,13 +18,13 @@ strong {
 }
 
 em {
-  font-style: italic; 
+  font-style: italic;
 }
 
 cite {
-   font-style: italic; 
-   font-size:  90%;
-   color: $darkgrey;
+  font-style: italic;
+  font-size:  90%;
+  color: $darkgrey;
 }
 
 small {
@@ -208,32 +208,27 @@ a {
   font-size: 230%;
 }
 
-
-
-
-
-
-#bottom {
-  background-color: #111;
-  background-image: none;
-  font-size: 14px;
-  padding-top: 2em;
-  color: $grey;
-  .container {
-    margin-bottom: 0;
-  }
-}
-
 .rows > li {
   width: 50%;
   float: left;
 }
 
 #bottom {
+
+  background-color: #111;
+  background-image: none;
+  font-size: 14px;
+  padding-top: 2em;
+  color: $darkgrey;
+
+  .container {
+    margin-bottom: 0;
+  }
+
   .supertitle {
-    border-bottom: 2px solid $grey;
+    border-bottom: 2px solid $darkgrey;
     font-size: 120%;
-    color: $grey;
+    color: $darkgrey;
   }
   .box {
     margin-bottom: 2em;
@@ -242,7 +237,7 @@ a {
     margin: 0 15px;
   }
   a {
-    color: $grey;
+    color: $darkgrey;
   }
 }
 
@@ -251,8 +246,8 @@ a {
 .is-touch {
   .infobox .info {
     opacity: 1;
-    filter: alpha(opacity = 1); 
-  } 
+    filter: alpha(opacity = 1);
+  }
 
   .galleria-image-nav {
     display: none;
@@ -353,6 +348,10 @@ a {
 .nav-paged {
   margin: 0 0 0.5em 0;
   padding: 0;
+
+  a:hover {
+    text-decoration: none;
+  }
   a span {
     background: #fff;
     color: #333;
@@ -368,6 +367,7 @@ a {
   a span:hover, .current span {
     background: $black;
     color: #fff;
+    text-decoration: none;
   }
 }
 

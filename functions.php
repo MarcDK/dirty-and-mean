@@ -342,7 +342,7 @@ function marctv_get_randompost($exclude = array(), $cat = "Reviews") {
  * 
  */
 function get_adb_article() {
-
+  $html = '';
   if (get_option('marctv-cache')) {
     $html = get_transient('marctv-purified-adbarea');
   }
