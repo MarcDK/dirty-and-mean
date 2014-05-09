@@ -14,42 +14,22 @@
   html .header #navigation .hamburger {
     right: 5px;
   }
-  /* line 11, ../../scss/modules/lt320.scss */
-  html .header .searchbox {
-    width: 60px;
-    margin-top: 5px;
-  }
-  /* line 12, ../../scss/modules/lt320.scss */
-  html .header .searchbox input {
-    width: 50px;
-    margin-top: 1px;
-  }
-  /* line 23, ../../scss/modules/lt320.scss */
+  /* line 14, ../../scss/modules/lt320.scss */
   html .site {
     margin-left: 5px;
     margin-right: 5px;
   }
-  /* line 28, ../../scss/modules/lt320.scss */
+  /* line 19, ../../scss/modules/lt320.scss */
   html .hreview .text {
     width: 100%;
   }
-  /* line 32, ../../scss/modules/lt320.scss */
-  html .sitetitle {
-    width: 130px;
-    margin-top: 5px;
-  }
-  /* line 34, ../../scss/modules/lt320.scss */
-  html .sitetitle a {
-    background-size: 120px auto;
-    width: 135px;
-  }
-  /* line 44, ../../scss/modules/lt320.scss */
+  /* line 24, ../../scss/modules/lt320.scss */
   html .container.morph .box .title,
   html .container.double .box .title {
     font-size: 100%;
   }
 
-  /* line 51, ../../scss/modules/lt320.scss */
+  /* line 31, ../../scss/modules/lt320.scss */
   #marctv .entry .alignright,
   #marctv .entry .alignleft {
     float: none;
@@ -58,105 +38,103 @@
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 3, ../../scss/modules/lt600.scss */
-  html .sitelogo a {
-    width: 130px;
-    height: 30px;
-    background-size: 130px;
-  }
-  /* line 8, ../../scss/modules/lt600.scss */
+  /* line 4, ../../scss/modules/lt600.scss */
   html body {
-    font: 90%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+    font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
   }
-  /* line 11, ../../scss/modules/lt600.scss */
+  /* line 7, ../../scss/modules/lt600.scss */
   html .lead .title {
     font-size: 120%;
   }
-  /* line 14, ../../scss/modules/lt600.scss */
+  /* line 10, ../../scss/modules/lt600.scss */
   html .hreview .text {
     width: 100%;
   }
 
-  /* line 18, ../../scss/modules/lt600.scss */
+  /* line 14, ../../scss/modules/lt600.scss */
   #marctv .article-wrapper {
     width: 100%;
     margin: 0 auto;
   }
 
-  /* line 24, ../../scss/modules/lt600.scss */
+  /* line 20, ../../scss/modules/lt600.scss */
   html .archive .nav-article .nav-next, html .archive .nav-article .nav-previous {
     width: 50%;
     margin-bottom: 20px;
   }
-  /* line 29, ../../scss/modules/lt600.scss */
+  /* line 25, ../../scss/modules/lt600.scss */
   html .lead {
     margin-bottom: 0;
   }
-  /* line 31, ../../scss/modules/lt600.scss */
+  /* line 27, ../../scss/modules/lt600.scss */
   html .lead p {
     margin-bottom: 2em;
   }
-  /* line 35, ../../scss/modules/lt600.scss */
+  /* line 31, ../../scss/modules/lt600.scss */
   html .entry .title {
     font-size: 170%;
   }
-  /* line 38, ../../scss/modules/lt600.scss */
+  /* line 34, ../../scss/modules/lt600.scss */
   html .box .title {
     font-size: 140%;
   }
 
-  /* line 42, ../../scss/modules/lt600.scss */
+  /* line 38, ../../scss/modules/lt600.scss */
   #marctv .container .box {
     width: 100%;
     float: none;
     padding: 0;
   }
 
-  /* line 50, ../../scss/modules/lt600.scss */
+  /* line 46, ../../scss/modules/lt600.scss */
   html .commentlist .comment-meta a:first-child:before {
     content: "# ";
   }
-  /* line 53, ../../scss/modules/lt600.scss */
+  /* line 49, ../../scss/modules/lt600.scss */
   html .commentlist .comment-meta span {
     display: none;
   }
-  /* line 57, ../../scss/modules/lt600.scss */
+  /* line 53, ../../scss/modules/lt600.scss */
   html .commentlist li {
-    border-top: 1px dotted #333333;
+    border-top: 1px dotted #333;
     padding-left: 0;
   }
-  /* line 60, ../../scss/modules/lt600.scss */
+  /* line 56, ../../scss/modules/lt600.scss */
   html .commentlist li .vcard {
     padding-left: 2.5em;
   }
-  /* line 61, ../../scss/modules/lt600.scss */
+  /* line 57, ../../scss/modules/lt600.scss */
   html .commentlist li .vcard .avatar {
     width: 2em;
     height: 2em;
   }
-  /* line 67, ../../scss/modules/lt600.scss */
+  /* line 63, ../../scss/modules/lt600.scss */
   html .commentlist li .comment-author {
     padding-bottom: 0.5em;
   }
-  /* line 71, ../../scss/modules/lt600.scss */
+  /* line 67, ../../scss/modules/lt600.scss */
   html .commentlist .pingback .vcard {
     padding-bottom: 0.5em;
   }
-  /* line 74, ../../scss/modules/lt600.scss */
+  /* line 70, ../../scss/modules/lt600.scss */
   html .commentlist li .children {
     background-image: url("images/left-stroke.gif");
     background-repeat: repeat-y;
   }
-  /* line 79, ../../scss/modules/lt600.scss */
+  /* line 75, ../../scss/modules/lt600.scss */
   html .commentlist li .children .vcard .avatar {
     left: 1em;
   }
-  /* line 82, ../../scss/modules/lt600.scss */
+  /* line 78, ../../scss/modules/lt600.scss */
   html .commentlist li .children li {
     padding-left: 1em;
   }
 
-  /* line 88, ../../scss/modules/lt600.scss */
+  /* line 84, ../../scss/modules/lt600.scss */
+  #marctv .container.multi .box {
+    height: 13em;
+  }
+  /* line 87, ../../scss/modules/lt600.scss */
   #marctv .container.multi .box, #marctv .container.double .box, #marctv .container.morph .box {
     width: 48%;
     border: 0;
@@ -164,17 +142,17 @@
     float: left;
     font-size: 80%;
   }
-  /* line 95, ../../scss/modules/lt600.scss */
+  /* line 94, ../../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(odd), #marctv .container.morph .box:nth-child(odd), #marctv .container.double .box.first {
     margin-left: 0;
     padding-left: 0;
   }
-  /* line 99, ../../scss/modules/lt600.scss */
+  /* line 98, ../../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(even), #marctv .container.morph .box:nth-child(even), #marctv .container.double .box.last {
     margin-right: 0;
     padding-right: 0;
   }
-  /* line 103, ../../scss/modules/lt600.scss */
+  /* line 102, ../../scss/modules/lt600.scss */
   #marctv .container.morph .box p {
     height: 6em;
   }
@@ -191,36 +169,64 @@
   }
 }
 @media only screen and (max-width: 900px) {
-  /* line 6, ../../scss/modules/lt900.scss */
+  /* line 7, ../../scss/modules/lt900.scss */
+  html #marctv .container.multi .box {
+    height: 13em;
+  }
+  /* line 11, ../../scss/modules/lt900.scss */
+  html .sitelogo {
+    width: 130px;
+    margin-top: 5px;
+  }
+  /* line 12, ../../scss/modules/lt900.scss */
+  html .sitelogo a {
+    background-size: 120px auto;
+    width: 135px;
+    margin-top: 3px;
+  }
+  /* line 22, ../../scss/modules/lt900.scss */
+  html .searchbox {
+    width: 60px;
+    margin-top: 5px;
+  }
+  /* line 23, ../../scss/modules/lt900.scss */
+  html .searchbox input {
+    width: 50px;
+    margin-top: 5px;
+  }
+  /* line 33, ../../scss/modules/lt900.scss */
   html .header {
     margin-top: 0;
   }
-  /* line 8, ../../scss/modules/lt900.scss */
+  /* line 35, ../../scss/modules/lt900.scss */
   html .header .searchbox {
     width: 100px;
     margin-right: 4px;
   }
-  /* line 13, ../../scss/modules/lt900.scss */
+  /* line 39, ../../scss/modules/lt900.scss */
+  html .header .innerheader {
+    padding: 0;
+  }
+  /* line 42, ../../scss/modules/lt900.scss */
   html .header .searchbox input {
     width: 95px;
   }
-  /* line 17, ../../scss/modules/lt900.scss */
+  /* line 46, ../../scss/modules/lt900.scss */
   html .header .searchbox {
-    padding-top: 1px;
+    padding-top: 2px;
   }
-  /* line 23, ../../scss/modules/lt900.scss */
+  /* line 52, ../../scss/modules/lt900.scss */
   html #navigation {
     padding-top: 0;
   }
-  /* line 27, ../../scss/modules/lt900.scss */
+  /* line 56, ../../scss/modules/lt900.scss */
   html #navigation .hamburger-icon {
-    background-color: #333333;
     z-index: 1000;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     font-size: 0;
     line-height: 0;
-    padding: 0.75rem 0.5rem;
+    padding: .75rem .5rem;
     margin-top: 0;
     -webkit-user-select: none;
     /* Chrome all / Safari all */
@@ -233,7 +239,7 @@
     user-select: none;
     border: none;
   }
-  /* line 46, ../../scss/modules/lt900.scss */
+  /* line 75, ../../scss/modules/lt900.scss */
   html #navigation .hamburger {
     background-color: #333333;
     position: absolute;
@@ -242,32 +248,32 @@
     z-index: 100;
     display: none;
   }
-  /* line 60, ../../scss/modules/lt900.scss */
+  /* line 89, ../../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu {
     display: block;
     position: relative;
     background: none;
     box-shadow: none;
   }
-  /* line 67, ../../scss/modules/lt900.scss */
+  /* line 96, ../../scss/modules/lt900.scss */
   html #navigation li:first-child {
     display: none !important;
   }
-  /* line 72, ../../scss/modules/lt900.scss */
+  /* line 101, ../../scss/modules/lt900.scss */
   html #navigation .hamburger a {
     border: none;
   }
-  /* line 77, ../../scss/modules/lt900.scss */
+  /* line 106, ../../scss/modules/lt900.scss */
   html #navigation ul {
     margin: 0;
     padding: 0.4em 0.4em 1em 0.4em;
     z-index: 1000;
   }
-  /* line 83, ../../scss/modules/lt900.scss */
+  /* line 112, ../../scss/modules/lt900.scss */
   html #navigation ul {
     display: none;
   }
-  /* line 88, ../../scss/modules/lt900.scss */
+  /* line 117, ../../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu li a,
   html #navigation .hamburger li a {
     font-size: 100%;
@@ -278,29 +284,29 @@
     font-weight: 300;
     background: #111;
   }
-  /* line 102, ../../scss/modules/lt900.scss */
+  /* line 131, ../../scss/modules/lt900.scss */
   html #navigation .menu.hamburger li:hover > a {
     background: #222;
   }
-  /* line 106, ../../scss/modules/lt900.scss */
+  /* line 135, ../../scss/modules/lt900.scss */
   html #navigation .menu.hamburger li:active > a {
     background: #000;
   }
-  /* line 110, ../../scss/modules/lt900.scss */
+  /* line 139, ../../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu {
     padding: 0 0 0.5em 1.5em;
   }
-  /* line 114, ../../scss/modules/lt900.scss */
+  /* line 143, ../../scss/modules/lt900.scss */
   html #navigation .hamburger li {
     float: none;
   }
-  /* line 118, ../../scss/modules/lt900.scss */
+  /* line 147, ../../scss/modules/lt900.scss */
   html #navigation .hamburger-icon {
     display: block;
   }
-  /* line 122, ../../scss/modules/lt900.scss */
+  /* line 151, ../../scss/modules/lt900.scss */
   html #navigation .hamburger-icon:after {
-    border-color: #efefef;
+    border-color: #333;
     border-style: solid none double;
     border-width: 4px 0 12px;
     content: " ";
@@ -310,7 +316,7 @@
   }
 }
 @media only screen and (max-width: 900px) and (max-width: 600px) {
-  /* line 46, ../../scss/modules/lt900.scss */
+  /* line 75, ../../scss/modules/lt900.scss */
   html #navigation .hamburger {
     right: 15px;
   }
@@ -321,13 +327,14 @@
     width: 32%;
     border: 0;
     padding: 0 1%;
+    height: 13em;
   }
-  /* line 6, ../../scss/modules/lt960.scss */
+  /* line 7, ../../scss/modules/lt960.scss */
   html .container.multi .box.first, html .container.multi .box.multi-first {
     margin-left: 0;
     padding-left: 0;
   }
-  /* line 10, ../../scss/modules/lt960.scss */
+  /* line 11, ../../scss/modules/lt960.scss */
   html .container.multi .box.last, html .container.multi .box.multi-last {
     margin-right: 0;
     padding-right: 0;

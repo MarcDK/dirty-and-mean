@@ -77,8 +77,6 @@ if (function_exists('related_posts')) {
       ?>
       <?php comments_template(); ?>
 
-      <?php echo get_marctv_last_commented_articles(); ?>
-
     </div>
   </div>
 </div> <!-- /site comments -->
@@ -86,7 +84,7 @@ if (function_exists('related_posts')) {
   <div class="site"> <!-- site -->
 
     <div class="section">
-
+      <?php echo get_marctv_last_commented_articles(); ?>
       <?php echo get_marctv_sticky_posts(); ?>
       <?php //echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"), FALSE, 'docked', FALSE); ?>
       <?php /*

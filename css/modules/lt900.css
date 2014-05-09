@@ -1,34 +1,62 @@
 @media only screen and (max-width: 900px) {
-  /* line 6, ../../scss/modules/lt900.scss */
+  /* line 7, ../../scss/modules/lt900.scss */
+  html #marctv .container.multi .box {
+    height: 13em;
+  }
+  /* line 11, ../../scss/modules/lt900.scss */
+  html .sitelogo {
+    width: 130px;
+    margin-top: 5px;
+  }
+  /* line 12, ../../scss/modules/lt900.scss */
+  html .sitelogo a {
+    background-size: 120px auto;
+    width: 135px;
+    margin-top: 3px;
+  }
+  /* line 22, ../../scss/modules/lt900.scss */
+  html .searchbox {
+    width: 60px;
+    margin-top: 5px;
+  }
+  /* line 23, ../../scss/modules/lt900.scss */
+  html .searchbox input {
+    width: 50px;
+    margin-top: 5px;
+  }
+  /* line 33, ../../scss/modules/lt900.scss */
   html .header {
     margin-top: 0;
   }
-  /* line 8, ../../scss/modules/lt900.scss */
+  /* line 35, ../../scss/modules/lt900.scss */
   html .header .searchbox {
     width: 100px;
     margin-right: 4px;
   }
-  /* line 13, ../../scss/modules/lt900.scss */
+  /* line 39, ../../scss/modules/lt900.scss */
+  html .header .innerheader {
+    padding: 0;
+  }
+  /* line 42, ../../scss/modules/lt900.scss */
   html .header .searchbox input {
     width: 95px;
   }
-  /* line 17, ../../scss/modules/lt900.scss */
+  /* line 46, ../../scss/modules/lt900.scss */
   html .header .searchbox {
-    padding-top: 1px;
+    padding-top: 2px;
   }
-  /* line 23, ../../scss/modules/lt900.scss */
+  /* line 52, ../../scss/modules/lt900.scss */
   html #navigation {
     padding-top: 0;
   }
-  /* line 27, ../../scss/modules/lt900.scss */
+  /* line 56, ../../scss/modules/lt900.scss */
   html #navigation .hamburger-icon {
-    background-color: #333333;
     z-index: 1000;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     font-size: 0;
     line-height: 0;
-    padding: 0.75rem 0.5rem;
+    padding: .75rem .5rem;
     margin-top: 0;
     -webkit-user-select: none;
     /* Chrome all / Safari all */
@@ -41,7 +69,7 @@
     user-select: none;
     border: none;
   }
-  /* line 46, ../../scss/modules/lt900.scss */
+  /* line 75, ../../scss/modules/lt900.scss */
   html #navigation .hamburger {
     background-color: #333333;
     position: absolute;
@@ -50,32 +78,32 @@
     z-index: 100;
     display: none;
   }
-  /* line 60, ../../scss/modules/lt900.scss */
+  /* line 89, ../../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu {
     display: block;
     position: relative;
     background: none;
     box-shadow: none;
   }
-  /* line 67, ../../scss/modules/lt900.scss */
+  /* line 96, ../../scss/modules/lt900.scss */
   html #navigation li:first-child {
     display: none !important;
   }
-  /* line 72, ../../scss/modules/lt900.scss */
+  /* line 101, ../../scss/modules/lt900.scss */
   html #navigation .hamburger a {
     border: none;
   }
-  /* line 77, ../../scss/modules/lt900.scss */
+  /* line 106, ../../scss/modules/lt900.scss */
   html #navigation ul {
     margin: 0;
     padding: 0.4em 0.4em 1em 0.4em;
     z-index: 1000;
   }
-  /* line 83, ../../scss/modules/lt900.scss */
+  /* line 112, ../../scss/modules/lt900.scss */
   html #navigation ul {
     display: none;
   }
-  /* line 88, ../../scss/modules/lt900.scss */
+  /* line 117, ../../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu li a,
   html #navigation .hamburger li a {
     font-size: 100%;
@@ -86,29 +114,29 @@
     font-weight: 300;
     background: #111;
   }
-  /* line 102, ../../scss/modules/lt900.scss */
+  /* line 131, ../../scss/modules/lt900.scss */
   html #navigation .menu.hamburger li:hover > a {
     background: #222;
   }
-  /* line 106, ../../scss/modules/lt900.scss */
+  /* line 135, ../../scss/modules/lt900.scss */
   html #navigation .menu.hamburger li:active > a {
     background: #000;
   }
-  /* line 110, ../../scss/modules/lt900.scss */
+  /* line 139, ../../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu {
     padding: 0 0 0.5em 1.5em;
   }
-  /* line 114, ../../scss/modules/lt900.scss */
+  /* line 143, ../../scss/modules/lt900.scss */
   html #navigation .hamburger li {
     float: none;
   }
-  /* line 118, ../../scss/modules/lt900.scss */
+  /* line 147, ../../scss/modules/lt900.scss */
   html #navigation .hamburger-icon {
     display: block;
   }
-  /* line 122, ../../scss/modules/lt900.scss */
+  /* line 151, ../../scss/modules/lt900.scss */
   html #navigation .hamburger-icon:after {
-    border-color: #efefef;
+    border-color: #333;
     border-style: solid none double;
     border-width: 4px 0 12px;
     content: " ";
@@ -118,7 +146,7 @@
   }
 }
 @media only screen and (max-width: 900px) and (max-width: 600px) {
-  /* line 46, ../../scss/modules/lt900.scss */
+  /* line 75, ../../scss/modules/lt900.scss */
   html #navigation .hamburger {
     right: 15px;
   }

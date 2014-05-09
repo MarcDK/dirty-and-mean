@@ -1,31 +1,60 @@
 @import 'vars';
 
 @media only screen and (max-width : 900px) {
-  
+
   html {
+    #marctv .container {
+      &.multi .box {
+        height: 13em;
+      }
+    }
+    .sitelogo {
+      a {
+        background-size: 120px auto;
+        width: 135px;
+        margin-top: 3px;
+      }
+
+      width: 130px;
+      margin-top: 5px;
+    }
+
+    .searchbox {
+      input {
+        width: 50px;
+        margin-top: 5px;
+      }
+
+      width: 60px;
+      margin-top: 5px;
+
+    } 
+
     .header { 
       margin-top: 0;
       .searchbox {
         width: 100px;
         margin-right: 4px;
       }
-      
+      .innerheader {
+        padding: 0;
+      }
       .searchbox input {
         width: 95px;
       }
-      
+
       .searchbox {
-        padding-top: 1px;
+        padding-top: 2px;
       }
     }
-    
-    
+
+
     #navigation {
-      
+
       padding-top:0;
-      
+
       .hamburger-icon {
-        background-color: $black;
+
         z-index: 1000;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
@@ -41,8 +70,8 @@
         user-select: none;
         border: none;
       }
-      
-      
+
+
       .hamburger {
         background-color: $black;
         position: absolute;
@@ -50,40 +79,40 @@
         right: $marctv-margin;
         z-index: 100;
         display: none;
-        
+
         @media screen and (max-width: 600px) {
           right: $marctv-margin/4;
         }
-        
+
       }
-      
+
       .hamburger .sub-menu {
         display: block;
         position: relative;
         background: none;
         box-shadow: none;
       }
-      
+
       li:first-child {
         display: none ! important;
       }
-      
-      
+
+
       .hamburger a {
         border: none;
-        
+
       }
-      
+
       ul {
         margin: 0;
         padding: 0.4em 0.4em 1em 0.4em;
         z-index: 1000;
       }
-      
+
       ul{
         display:none;
       }
-      
+
       .hamburger .sub-menu li a,
       .hamburger li a{
         font-size: 100%;
@@ -94,33 +123,33 @@
         font-weight: 300;
         background: #111;
       }
-      
+
       .hamburger li a:hover {
-        
+
       }
-      
+
       .menu.hamburger  li:hover > a {
         background: #222;
       }
-      
+
       .menu.hamburger  li:active > a {
         background: #000;
       }
-      
+
       .hamburger .sub-menu {
         padding: 0 0 0.5em 1.5em;
       }
-      
+
       .hamburger li {
         float: none;
       }
-      
+
       .hamburger-icon {
         display:block;
       }
-      
+
       .hamburger-icon:after {
-        border-color: #efefef;
+        border-color: #333;
         border-style: solid none double;
         border-width: 4px 0 12px;
         content: " ";
@@ -128,9 +157,9 @@
         height: 4px;
         width: 2rem;
       }
-      
+
     }
-    
+
   }
-  
+
 }

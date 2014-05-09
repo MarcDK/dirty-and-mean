@@ -14,7 +14,7 @@ get_header();
   <div class="entry">
     <h1 class="title">Suchergebnisse für '<span><?php echo get_search_query(); ?></span>'</h1>
   </div>
-  <ul class="container oneline">
+  <ul class="container">
     <?php if (have_posts()) : ?>
       <?php
       $key = 0;

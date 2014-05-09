@@ -482,7 +482,7 @@ function get_marctv_most_commented_articles() {
 
     $do_not_duplicate = get_option('do_not_duplicate');
 
-    $html = '<div class="container docked"><div class="col_title supertitle"><span><a rel="nofollow" href="http://feeds.feedburner.com/marctv/comments">Meistkommentiert</a></span></div></div>';
+    $html = '<div class="container most-commented docked"><div class="col_title supertitle"><span><a rel="nofollow" href="http://feeds.feedburner.com/marctv/comments">Meistkommentiert</a></span></div></div>';
 
     $args = array(
       'numberposts' => 3,

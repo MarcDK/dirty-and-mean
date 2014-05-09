@@ -1,10 +1,6 @@
 @media only screen and (max-width: 600px) {
   html {
-    .sitelogo a {
-      width: 130px;
-      height: 30px;
-      background-size: 130px;
-    }
+    
     body {
       font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
     }
@@ -85,6 +81,9 @@
     }
   }
   #marctv .container {
+    &.multi .box {
+      height: 13em;
+    }
     &.multi .box, &.double .box, &.morph .box {
       width: 48%;
       border: 0;

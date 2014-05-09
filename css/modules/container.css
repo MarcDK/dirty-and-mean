@@ -39,33 +39,34 @@
   width: 32%;
   border: 0;
   padding: 0 1%;
+  height: 20em;
 }
-/* line 36, ../../scss/modules/container.scss */
+/* line 37, ../../scss/modules/container.scss */
 .container.morph .box.first, .container.morph .box.multi-first {
   margin-left: 0;
   padding-left: 0;
 }
-/* line 40, ../../scss/modules/container.scss */
+/* line 41, ../../scss/modules/container.scss */
 .container.morph .box.last, .container.morph .box.multi-last {
   margin-right: 0;
   padding-right: 0;
 }
-/* line 44, ../../scss/modules/container.scss */
+/* line 45, ../../scss/modules/container.scss */
 .container.morph .box p {
   height: 6em;
 }
-/* line 49, ../../scss/modules/container.scss */
+/* line 50, ../../scss/modules/container.scss */
 .container .box {
   width: 32%;
   border: 0;
   padding: 0 1%;
 }
-/* line 53, ../../scss/modules/container.scss */
+/* line 54, ../../scss/modules/container.scss */
 .container .box.first {
   margin-left: 0;
   padding-left: 0;
 }
-/* line 57, ../../scss/modules/container.scss */
+/* line 58, ../../scss/modules/container.scss */
 .container .box.last {
   margin-right: 0;
   padding-right: 0;

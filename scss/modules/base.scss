@@ -17,8 +17,14 @@ strong {
   font-weight: 700;
 }
 
-em, cite {
+em {
   font-style: italic; 
+}
+
+cite {
+   font-style: italic; 
+   font-size:  90%;
+   color: $darkgrey;
 }
 
 small {
@@ -408,7 +414,11 @@ html .fullscreenicon {
 
 .commentbox {
   background: $grey;
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
 }
+
+
 
 /* article nav */
 
