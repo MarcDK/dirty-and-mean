@@ -9,6 +9,12 @@
   overflow: visible;
   font-size: 110%;
 
+  cite {
+    font-style: italic;
+    font-size:  90%;
+    color: $darkgrey;
+  }
+
   .wp-caption-text, .pictext {
     font-size: 85%;
     font-style: italic;
@@ -22,7 +28,7 @@
     background: $grey;
   }
   .title {
-    font-size: 260%; 
+    font-size: 260%;
     font-weight: 700;
     margin-top: 0.5em;
   }
@@ -61,7 +67,7 @@
     margin-right: 0.3%;
     width: 33%;
   }
-  
+
   .js .gallery-item {
     float: none;
     margin-right: 0;
@@ -89,8 +95,8 @@
   margin-bottom: 1em;
   color: $darkgrey;
   font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
-  
-  
+
+
   .hlist {
     font-size: 90%;
     list-style: none;
@@ -100,9 +106,9 @@
   }
 
   li {
-    
+
   }
-  
+
   .nav-article-tool {
     overflow: hidden;
   }
