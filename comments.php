@@ -63,24 +63,24 @@ if (post_password_required()) {
         '<p class="comment-form-author"><input type="text" name="author" id="author" value="' . esc_attr($commenter['comment_author']) . '" size="22"  required />
             <label for="author">' . __('Name', 'domainreference') . '*</label></p>',
         'email' =>
-        '<p class="comment-form-email"><label for="email">' . __('Email', 'domainreference') . '</label> ' .
+        '<p class="comment-form-email"><label for="email">' . __('E-Mail', 'domainreference') . '</label> ' .
         ( $req ? '<span class="required">*</span>' : '' ) .
         '<input id="email" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) .
         '" size="30" /></p>',
         'email' =>
         '<p class="comment-form-email"><input type="email" name="email" id="email" value="' . esc_attr($commenter['comment_author_email']) . '" size="22" required />
-            <label for="email">' . __('Email', 'domainreference') . '* </label></p>',
+            <label for="email">' . __('E-Mail', 'domainreference') . '* </label></p>',
         'url' =>
         '<p class="comment-form-url"><label for="url">' . __('Website URL', 'domainreference') . '</label>' .
         '<input id="url" name="url" type="text" value="' . esc_attr($commenter['comment_author_url']) .
         '" size="30" /></p>',
         'url' =>
         '<p class="comment-form-url"><input type="url" name="url" id="url" value="' . esc_attr($commenter['comment_author_url']) . '" size="22" />
-            <label for="url">' . __('Website URL', 'domainreference') . ' <small><em>(optional)</em></small></label></p>',
+            <label for="url">' . __('Deine Webseiten URL', 'domainreference') . ' <small><em>(optional)</em></small></label></p>',
       );
 
       $comments_args = array(
-        // change the title of send button 
+        // change the title of send button
         'fields' => $fields,
         'comment_notes_before' => '',
         'comment_notes_after' => '',

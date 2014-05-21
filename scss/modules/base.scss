@@ -117,7 +117,7 @@ a {
     color: $marctv-color;
     text-decoration: none;
     .title {
-      color: #007FBE;
+      color: $marctv-color;
     }
   }
   &:active {
@@ -163,7 +163,7 @@ a {
   padding: 0;
   text-indent: -5000em;
   width: 170px;
-  margin-top: 1px;
+  margin-top: 2px;
 }
 
 .title {
@@ -533,4 +533,8 @@ a[href*='=087022'] {
 
 .page-template-sortbyreview-php .container.morph .box {
   height: auto;
+}
+
+html .yarpp-related {
+  margin: 0 ! important;
 }

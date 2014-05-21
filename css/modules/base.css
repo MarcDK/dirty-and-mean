@@ -10,7 +10,7 @@ body {
   padding: 0;
   color: #333333;
   background: #fff;
-  font: 112.5% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+  font: 112.5%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
 
 /* line 17, ../../scss/modules/base.scss */
@@ -51,7 +51,7 @@ small {
   background-image: -moz-linear-gradient(#ffffff, #efefef);
   background-image: -o-linear-gradient(#ffffff, #efefef);
   background-image: linear-gradient(#ffffff, #efefef);
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #333333;
   width: 100%;
   z-index: 10000;
   padding-top: 0.5em;
@@ -128,18 +128,18 @@ small {
 /* line 111, ../../scss/modules/base.scss */
 a {
   position: relative;
-  color: #006ca2;
+  color: #007fff;
   text-decoration: none;
 }
 /* line 115, ../../scss/modules/base.scss */
 a.inverted:hover {
   position: relative;
-  color: #006ca2;
+  color: #007fff;
   text-decoration: none;
 }
 /* line 119, ../../scss/modules/base.scss */
 a.inverted:hover .title {
-  color: #007FBE;
+  color: #007fff;
 }
 /* line 123, ../../scss/modules/base.scss */
 a:active {
@@ -192,7 +192,7 @@ a:active {
   padding: 0;
   text-indent: -5000em;
   width: 170px;
-  margin-top: 1px;
+  margin-top: 2px;
 }
 
 /* line 169, ../../scss/modules/base.scss */
@@ -336,7 +336,7 @@ a:active {
   font-size: 150%;
   color: #EEE;
   line-height: 1.2;
-  background: #006ca2;
+  background: #007fff;
   opacity: 1;
   padding: 2px 7px;
   letter-spacing: -1px;
@@ -348,7 +348,7 @@ a:active {
 .hreview {
   overflow: hidden;
   padding: 0;
-  border-top: 2px solid #006ca2;
+  border-top: 2px solid #007fff;
 }
 /* line 303, ../../scss/modules/base.scss */
 .hreview .rating {
@@ -356,7 +356,7 @@ a:active {
   font-size: 300%;
   color: #EEE;
   line-height: 1.2;
-  background: #006ca2;
+  background: #007fff;
   padding: 2px;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
@@ -563,7 +563,7 @@ html .fullscreenicon {
 }
 /* line 490, ../../scss/modules/base.scss */
 .cat-more a:hover {
-  background-color: #006ca2;
+  background-color: #007fff;
   text-decoration: none;
   color: #fff;
 }
@@ -579,7 +579,7 @@ html .fullscreenicon {
 /* line 504, ../../scss/modules/base.scss */
 .warning {
   background: #eee;
-  border: 1px solid #bbb;
+  border: 1px solid #bbbbbb;
   padding: 1em;
   margin-bottom: 1em;
 }
@@ -610,4 +610,9 @@ a[href*='=087022'] {
 /* line 534, ../../scss/modules/base.scss */
 .page-template-sortbyreview-php .container.morph .box {
   height: auto;
+}
+
+/* line 538, ../../scss/modules/base.scss */
+html .yarpp-related {
+  margin: 0 !important;
 }

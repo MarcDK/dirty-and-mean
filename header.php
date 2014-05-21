@@ -12,7 +12,7 @@
     <title><?php wp_title('|', true, 'right'); ?></title>
     <?php if (is_singular() && get_option('thread_comments')) wp_enqueue_script('comment-reply'); ?>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    <?php wp_enqueue_style( 'style', get_stylesheet_uri() ); ?>
+    <?php wp_enqueue_style('style', get_stylesheet_uri()); ?>
     <?php wp_head(); ?>
     <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
@@ -20,7 +20,7 @@
 
   <body <?php body_class(); ?>>
     <div id=fig1><div class="figure"><div></div></div></div>
-    <div id=fig2><div class="figure"><div></div></div></div>   
+    <div id=fig2><div class="figure"><div></div></div></div>  
     <div class="header">
       <div id="header" class="innerheader">
         <div class="site">
