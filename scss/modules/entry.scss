@@ -11,7 +11,6 @@
 
   cite {
     font-style: italic;
-    font-size:  90%;
     color: $darkgrey;
   }
 
@@ -40,6 +39,15 @@
   }
   blockquote p {
     font-size: 120%;
+    color: #666;
+    font-family: Cambria, Georgia, "New Century Schoolbook", "Century Schoolbook L", "Times New Roman", serif;
+  }
+  blockquote p a {
+    color: #666;
+  }
+  blockquote {
+    border-left: 2px solid #333;
+    padding-left: 0.5em;
   }
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.3em;
@@ -125,6 +133,7 @@
     margin-bottom: 0.5em;
   }
 }
+
 
 
 body:not(.artdirected) {

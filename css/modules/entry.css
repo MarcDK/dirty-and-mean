@@ -12,10 +12,9 @@
 /* line 12, ../../scss/modules/entry.scss */
 .entry cite {
   font-style: italic;
-  font-size: 90%;
   color: #666666;
 }
-/* line 18, ../../scss/modules/entry.scss */
+/* line 17, ../../scss/modules/entry.scss */
 .entry .wp-caption-text, .entry .pictext {
   font-size: 85%;
   font-style: italic;
@@ -24,73 +23,84 @@
   padding: 0 0.5em 0.4em;
   display: block;
 }
-/* line 26, ../../scss/modules/entry.scss */
+/* line 25, ../../scss/modules/entry.scss */
 .entry .wp-caption {
   margin: 0;
   background: #f3f3f3;
 }
-/* line 30, ../../scss/modules/entry.scss */
+/* line 29, ../../scss/modules/entry.scss */
 .entry .title {
   font-size: 260%;
   font-weight: 700;
   margin-top: 0.5em;
 }
-/* line 35, ../../scss/modules/entry.scss */
+/* line 34, ../../scss/modules/entry.scss */
 .entry p, .entry ul, .entry ol, .entry .video, .entry .marctv-gallery, .entry .figure {
   margin-bottom: 1.5em;
 }
-/* line 38, ../../scss/modules/entry.scss */
+/* line 37, ../../scss/modules/entry.scss */
 .entry ol li, .entry ul li {
   margin-bottom: 0.5em;
 }
-/* line 41, ../../scss/modules/entry.scss */
+/* line 40, ../../scss/modules/entry.scss */
 .entry blockquote p {
   font-size: 120%;
+  color: #666;
+  font-family: Cambria, Georgia, "New Century Schoolbook", "Century Schoolbook L", "Times New Roman", serif;
 }
-/* line 44, ../../scss/modules/entry.scss */
+/* line 45, ../../scss/modules/entry.scss */
+.entry blockquote p a {
+  color: #666;
+}
+/* line 48, ../../scss/modules/entry.scss */
+.entry blockquote {
+  border-left: 2px solid #333;
+  padding-left: 0.5em;
+}
+/* line 52, ../../scss/modules/entry.scss */
 .entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
   margin-bottom: 0.3em;
   clear: both;
 }
-/* line 48, ../../scss/modules/entry.scss */
+/* line 56, ../../scss/modules/entry.scss */
 .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
   font-size: 140%;
   font-weight: 700;
   margin-top: 2em;
 }
-/* line 53, ../../scss/modules/entry.scss */
+/* line 61, ../../scss/modules/entry.scss */
 .entry h3 {
   font-size: 115%;
 }
-/* line 56, ../../scss/modules/entry.scss */
+/* line 64, ../../scss/modules/entry.scss */
 .entry ul {
   list-style: square;
   margin-left: 1.1em;
 }
-/* line 60, ../../scss/modules/entry.scss */
+/* line 68, ../../scss/modules/entry.scss */
 .entry ol {
   list-style: decimal;
   margin-left: 1.5em;
 }
-/* line 65, ../../scss/modules/entry.scss */
+/* line 73, ../../scss/modules/entry.scss */
 .entry .gallery-item {
   float: left;
   margin-right: 0.3%;
   width: 33%;
 }
-/* line 71, ../../scss/modules/entry.scss */
+/* line 79, ../../scss/modules/entry.scss */
 .entry .js .gallery-item {
   float: none;
   margin-right: 0;
 }
-/* line 76, ../../scss/modules/entry.scss */
+/* line 84, ../../scss/modules/entry.scss */
 .entry .alignright {
   float: right;
   margin: 0.3em 0 0.5em 1em !important;
   width: 33%;
   padding: 0;
 }
-/* line 83, ../../scss/modules/entry.scss */
+/* line 91, ../../scss/modules/entry.scss */
 .entry .alignleft {
   float: left;
   padding: 0;
@@ -98,15 +108,15 @@
   width: 33%;
 }
 
-/* line 92, ../../scss/modules/entry.scss */
+/* line 100, ../../scss/modules/entry.scss */
 .tools {
   border-top: 1px solid #333333;
   padding-top: 0.5em;
   margin-bottom: 1em;
   color: #666666;
-  font: 90%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+  font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
-/* line 100, ../../scss/modules/entry.scss */
+/* line 108, ../../scss/modules/entry.scss */
 .tools .hlist {
   font-size: 90%;
   list-style: none;
@@ -114,31 +124,31 @@
   overflow: hidden;
   margin: 0;
 }
-/* line 112, ../../scss/modules/entry.scss */
+/* line 120, ../../scss/modules/entry.scss */
 .tools .nav-article-tool {
   overflow: hidden;
 }
-/* line 116, ../../scss/modules/entry.scss */
+/* line 124, ../../scss/modules/entry.scss */
 .tools a {
   color: #666666;
 }
-/* line 120, ../../scss/modules/entry.scss */
+/* line 128, ../../scss/modules/entry.scss */
 .tools .breadcrumb span {
   font-style: italic;
 }
-/* line 124, ../../scss/modules/entry.scss */
+/* line 132, ../../scss/modules/entry.scss */
 .tools li {
   margin-bottom: 0.5em;
 }
 
-/* line 134, ../../scss/modules/entry.scss */
+/* line 143, ../../scss/modules/entry.scss */
 body:not(.artdirected) .entry .inner .figure,
 body:not(.artdirected) .entry .inner .marctv-gallery {
   margin-left: -60px;
   margin-right: -60px;
 }
 @media screen and (max-width: 600px) {
-  /* line 134, ../../scss/modules/entry.scss */
+  /* line 143, ../../scss/modules/entry.scss */
   body:not(.artdirected) .entry .inner .figure,
   body:not(.artdirected) .entry .inner .marctv-gallery {
     margin-left: 0;

@@ -57,8 +57,8 @@
   background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
   background-image: linear-gradient(top, #eeeeee, #cccccc);
-  border: 1px solid #cccccc;
-  border-bottom: 1px solid #bbbbbb;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -68,7 +68,7 @@
   line-height: 1;
   padding: 0.6em 1em;
   text-align: center;
-  text-shadow: 0 1px 0 #eeeeee;
+  text-shadow: 0 1px 0 #eee;
   width: auto;
 }
 
@@ -89,17 +89,17 @@
   background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
   background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
   background-image: linear-gradient(top, #dddddd, #bbbbbb);
-  border: 1px solid #bbbbbb;
-  border-bottom: 1px solid #999999;
+  border: 1px solid #bbb;
+  border-bottom: 1px solid #999;
   cursor: pointer;
-  text-shadow: 0 1px 0 #dddddd;
+  text-shadow: 0 1px 0 #ddd;
 }
 
 /* line 97, ../../scss/modules/comments.scss */
 .searchform .formbutton:active,
 #commentform #submit:active {
-  border: 1px solid #aaaaaa;
-  border-bottom: 1px solid #888888;
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #888;
   -webkit-box-shadow: #aaaaaa 0 0 5px 2px inset, #333333 0 1px 0 0;
   -moz-box-shadow: #aaaaaa 0 0 5px 2px inset, #333333 0 1px 0 0;
   box-shadow: #aaaaaa 0 0 5px 2px inset, #333333 0 1px 0 0;
@@ -186,7 +186,7 @@
 
 /* line 169, ../../scss/modules/comments.scss */
 #respond p.red {
-  border: 2px solid darkred;
+  border: 2px solid #8B0000;
   margin-left: 2px;
   padding: 2px;
 }
@@ -205,7 +205,7 @@
 
 /* line 185, ../../scss/modules/comments.scss */
 .bottom {
-  border-top: 1px dotted #cccccc;
+  border-top: 1px dotted #CCC;
 }
 
 /* line 189, ../../scss/modules/comments.scss */
@@ -239,7 +239,7 @@
 
 /* line 213, ../../scss/modules/comments.scss */
 .commentlist blockquote {
-  border-left: 2px solid #dddddd;
+  border-left: 2px solid #ddd;
   margin: 5px 0px;
   padding-bottom: 1px;
   padding-left: 5px;
@@ -307,7 +307,7 @@
 
 /* line 272, ../../scss/modules/comments.scss */
 .commentlist li .children .vcard .avatar {
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   height: 30px;
   left: 0;
   margin-top: 2px;
@@ -384,7 +384,7 @@
 
 /* line 337, ../../scss/modules/comments.scss */
 .commentlist li .vcard .avatar {
-  border: 2px solid #dddddd;
+  border: 2px solid #ddd;
   left: 0;
   position: absolute;
   margin-top: 2px;

@@ -42,8 +42,8 @@ small {
 
 
 .header {
-
   .innerheader {
+    background: #efefef;
     @include background-image(linear-gradient(white, #efefef));
     border-bottom: 1px solid #333;
     width: 100%;
@@ -345,7 +345,7 @@ a {
 /* pageination */
 
 .nav-paged {
-  margin: 0 0 0.5em 0;
+  margin: 1em 0 2em 0;
   padding: 0;
 
   a:hover {
@@ -360,7 +360,7 @@ a {
     font-size: 110%;
     background: $black;
     color: #fff;
-    padding: 2px 13px;
+    padding: 0.6em 1.6em;
     border: 1px solid $black;
   }
   a span:hover, .current span {
@@ -409,6 +409,14 @@ html .fullscreenicon {
 
 .relatedbox {
   background: #fff;
+
+  .container {
+    margin-bottom: 1em;
+  }
+  
+  .box {
+    margin-bottom: 0;
+  }
 }
 
 .commentbox {
@@ -510,7 +518,7 @@ html .fullscreenicon {
 
 /* jetpack */
 
-html div.sharedaddy {
+#marctv div.sharedaddy {
   .sd-title {
     display: none;
   }
@@ -520,6 +528,9 @@ html div.sharedaddy {
   }
   div.sd-block {
     border: none;
+  }
+  .share-count {
+    background-color: $marctv-color;
   }
 }
 
@@ -537,4 +548,8 @@ a[href*='=087022'] {
 
 html .yarpp-related {
   margin: 0 ! important;
+}
+
+.twitter-tweet-rendered {
+  width: 100% ! important;
 }
