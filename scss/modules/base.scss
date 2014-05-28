@@ -30,18 +30,16 @@ small {
   font-size: 90%;
 }
 
-.sitelogo {
-  width: 130px;
-  float: left;
-}
+
 
 .header {
   margin-bottom: 2em;
-}
 
+  .sitelogo {
+    width: 130px;
+    float: left;
+  }
 
-
-.header {
   .innerheader {
     background: #efefef;
     @include background-image(linear-gradient(white, #efefef));
@@ -135,13 +133,7 @@ a {
   }
 }
 
-.box a:hover {
-  color: $black;
-}
 
-.box .supertitle a:hover {
-  color: #fff;
-}
 
 .section {
   margin: 0 auto;
@@ -186,16 +178,6 @@ a {
 
 /* box */
 
-.box {
-  display: inline;
-  float: left;
-  overflow: hidden;
-  p {
-    margin-bottom: 2em;
-  }
-  display: block;
-  margin-bottom: 50px;
-}
 
 
 
@@ -413,9 +395,9 @@ html .fullscreenicon {
   .container {
     margin-bottom: 1em;
   }
-  
+
   .box {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 }
 
@@ -424,8 +406,6 @@ html .fullscreenicon {
   border-top: 1px solid $black;
   border-bottom: 1px solid $black;
 }
-
-
 
 /* article nav */
 

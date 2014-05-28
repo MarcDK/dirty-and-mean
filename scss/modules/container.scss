@@ -1,9 +1,36 @@
+@import 'vars';
+@import 'compass/css3';
+
 .container {
   margin-bottom: 3em;
   padding-left: 0;
   overflow: hidden;
 
-  &.bars.docked, &.docked, &.bars.docked .box {
+  .box {
+
+    display: inline;
+    float: left;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 50px;
+
+    a:hover {
+      color: $black;
+    }
+
+    .supertitle a:hover {
+      color: #fff;
+    }
+
+    p {
+      margin-bottom: 2em;
+    }
+
+  }
+
+  &.bars.docked,
+  &.docked,
+  &.bars.docked .box {
     margin-bottom: 0;
   }
   &.lead .box {
@@ -21,6 +48,7 @@
       border: 0;
       padding: 0 0.4%;
       font-size: 80%;
+      margin-bottom: 10px;
     }
     .title {
       height: 2em;
@@ -46,7 +74,7 @@
       height: 6em;
     }
   }
-  
+
   .box {
     width: 32%;
     border: 0;
