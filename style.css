@@ -1301,13 +1301,14 @@ body:not(.artdirected) .entry .inner .marctv-gallery {
 }
 /* line 6, ../scss/modules/socialbox.scss */
 .socialbox span {
-  display: none;
+  text-indent: -3000em;
+  display: block;
 }
-/* line 10, ../scss/modules/socialbox.scss */
+/* line 11, ../scss/modules/socialbox.scss */
 .socialbox a {
   font-size: 300%;
 }
-/* line 14, ../scss/modules/socialbox.scss */
+/* line 15, ../scss/modules/socialbox.scss */
 .socialbox a:hover {
   color: #0e7dc4;
   text-decoration: none;
