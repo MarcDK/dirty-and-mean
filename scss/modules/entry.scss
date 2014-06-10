@@ -14,6 +14,16 @@
     color: $darkgrey;
   }
 
+  dd {
+    margin-left: 2em;
+    margin-bottom: 2em;
+    color: $darkgrey;
+  }
+
+  dt {
+    border-bottom: 1px solid $darkgrey;
+  }
+
   .wp-caption-text, .pictext {
     font-size: 85%;
     font-style: italic;

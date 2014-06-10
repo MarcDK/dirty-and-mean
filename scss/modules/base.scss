@@ -30,8 +30,6 @@ small {
   font-size: 90%;
 }
 
-
-
 .header {
   margin-bottom: 2em;
 
@@ -200,16 +198,15 @@ a {
   background-image: none;
   font-size: 14px;
   padding-top: 2em;
-  color: $darkgrey;
+  color: #aaa;
 
   .container {
     margin-bottom: 0;
   }
 
-  .supertitle {
-    border-bottom: 2px solid $darkgrey;
-    font-size: 120%;
-    color: $darkgrey;
+  .imprint {
+    text-align: center;
+    padding-bottom: 1em;
   }
   .box {
     margin-bottom: 2em;
@@ -218,7 +215,11 @@ a {
     margin: 0 15px;
   }
   a {
-    color: $darkgrey;
+    color: #aaa;
+  }
+
+  a:hover {
+    color: #0e7dc4;
   }
 }
 
@@ -344,6 +345,7 @@ a {
     color: #fff;
     padding: 0.6em 1.6em;
     border: 1px solid $black;
+    line-height: 3em;
   }
   a span:hover, .current span {
     background: $black;

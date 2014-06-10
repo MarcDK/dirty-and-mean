@@ -1,7 +1,7 @@
 @media only screen and (max-width: 600px) {
   /* line 4, ../../scss/modules/lt600.scss */
   html body {
-    font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+    font: 90%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
   }
   /* line 7, ../../scss/modules/lt600.scss */
   html .lead .title {
@@ -57,7 +57,7 @@
   }
   /* line 53, ../../scss/modules/lt600.scss */
   html .commentlist li {
-    border-top: 1px dotted #333;
+    border-top: 1px dotted #333333;
     padding-left: 0;
   }
   /* line 56, ../../scss/modules/lt600.scss */

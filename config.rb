@@ -1,3 +1,4 @@
+
 http_path = "/"
 css_dir = "css"
 sass_dir = "scss"
@@ -7,6 +8,8 @@ javascripts_dir = "js"
 output_style = :uncompressed
 output_style = :expanded
 environment = :development
+
+relative_assets = true
 
 require 'fileutils'
 on_stylesheet_saved do |file|

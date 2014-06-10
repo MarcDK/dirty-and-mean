@@ -1,0 +1,18 @@
+@import "compass/css3/opacity";
+
+.socialbox {
+	text-align: center;
+
+	span {
+		display: none;
+	}
+
+	a {
+		font-size: 300%;
+	}
+
+	a:hover {
+		color: #0e7dc4;
+		text-decoration: none;
+	}
+}         
