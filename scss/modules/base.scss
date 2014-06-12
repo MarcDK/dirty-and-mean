@@ -40,13 +40,14 @@ small {
 
   .innerheader {
     background: #efefef;
-    @include background-image(linear-gradient(white, #efefef));
-    border-bottom: 1px solid #333;
+    @include background (linear-gradient(rgba(255,255,255,0.98), rgba(239,239,239,0.98)));
     width: 100%;
     z-index: 10000;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    @include box-shadow(#333 0 0 4px);
+    border-bottom: 1px solid #333;
+    @include box-shadow(#333 0 0 2px);
+
   }
 }
 
@@ -235,20 +236,30 @@ a {
     display: none;
   }
 }
-.infobox:hover .info, html .nohover .info {
+.infobox:hover .info, 
+html .nohover .info {
   opacity: 1;
   filter: alpha(opacity = 1);
 }
 
+
 .infobox {
+
+  &:hover .info {
+    background: $black;
+    color: $grey;
+  }
   .info {
     @include transition(all 0.05s linear);
     @include border-radius(0 2px 2px 2px);
-    @include text-shadow(0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7));
-    background: $black;
+    //@include box-shadow(#333 2px 2px 2px);
+    @include opacity(.9);
+    //@include text-shadow(0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7));
+    background: $grey;
+    background: rgba(243,243,243,0.95);
     top: 0;
     left: 0;
-    color: #FFFFFF;
+    color: #333;
     font-size: 80%;
     padding: 2px 5px;
     position: absolute;
