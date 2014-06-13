@@ -13,6 +13,7 @@
       /*
        * Print the <title> tag based on what is being viewed.
        */
+
       global $page, $paged;
 
       wp_title('-', true, 'right');

@@ -252,7 +252,7 @@ html .nohover .info {
   .info {
     @include transition(all 0.05s linear);
     @include border-radius(0 2px 2px 2px);
-    //@include box-shadow(#333 2px 2px 2px);
+    @include box-shadow(rgba(0,0,0,0.5) 2px 2px 2px);
     @include opacity(.9);
     //@include text-shadow(0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7));
     background: $grey;
