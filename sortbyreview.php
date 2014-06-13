@@ -35,13 +35,13 @@ get_header();
     $the_query = new WP_Query($args);
 
     $key = 0;
-    
-    
+
+
     while ($the_query->have_posts()) :
       $the_query->the_post();
       $key++;
-      // cfvalue:field 
-      if ($key % 6 == 0) {
+      // cfvalue:field
+ if ($key % 6 == 0) {
         echo '<li class="box last">';
       }
       else if (($key - 1) % 6 == 0) {
@@ -68,8 +68,8 @@ get_header();
   </ul>
 
   <?php
-  /* Restore original Post Data 
-   * NB: Because we are using new WP_Query we aren't stomping on the 
+  /* Restore original Post Data
+   * NB: Because we are using new WP_Query we aren't stomping on the
    * original $wp_query and it does not need to be reset.
    */
   wp_reset_postdata();
