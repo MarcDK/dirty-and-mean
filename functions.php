@@ -249,6 +249,7 @@ function get_marctv_last_commented_articles() {
 
 add_action( 'comment_post', 'flush_comments_cache' );
 function flush_comments_cache() {
+  wp_cache_clear_cache();
   delete_transient('marctv-purified-lastcom');
 }
 
@@ -625,11 +626,12 @@ function get_marctv_posts_container($duplicates = true, $docked = true) {
 function marctv_comment($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
 ?>
+    <span class="skiplink" id="comment-<?php
+    comment_ID(); ?>"></span>
   <li <?php
     comment_class(); ?> id="li-comment-<?php
     comment_ID() ?>">
-    <div id="comment-<?php
-    comment_ID(); ?>">
+    <div>
       <div class="comment-author vcard">
   <?php
     echo get_avatar($comment, $size = '100') ?>
