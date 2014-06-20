@@ -29,12 +29,7 @@ get_header();
                     Geschrieben von <span rel="vcard author"><span class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?> am <?php the_date(); ?></span></span>
                   <?php endif ?> am <time class="updated" datetime="<?php the_date('c'); ?>"><?php the_time(__('F j, Y')); ?> </time>
                 </li>
-                <li class="breadcrumb">Du bist hier: <?php
-                  if (function_exists('yoast_breadcrumb')) {
-                    yoast_breadcrumb();
-                  }
-                  ?>
-                </li>
+              
                 <li class="nav-article-tool">
                   <div class="nav-article">
                     <span class="nav-previous">
@@ -60,11 +55,7 @@ get_header();
 </div> <!-- / hentry -->
 </div> <!-- /site -->
 
-<?php
-if (function_exists('related_posts')) {
-  related_posts();
-}
-?>
+
 
 <div class="fullwidth commentbox">
   <div class="site">
@@ -83,23 +74,6 @@ if (function_exists('related_posts')) {
 <div class="appendix">
   <div class="site"> <!-- site -->
 
-    <div class="section">
-      <?php echo get_marctv_last_commented_articles(); ?>
-      <?php echo get_marctv_sticky_posts(); ?>
-      <?php //echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"), FALSE, 'docked', FALSE); ?>
-      <?php /*
-        <ul class="container bars">
-        <li class="box first cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat1")) ?>">Leben</a></li>
-        <li class="box middle cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat2")) ?>">Spiele</a></li>
-        <li class="box last cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat3")) ?>">Medien</a></li>
-        </ul>
-       */ ?>
-      <?php echo get_marctv_favourite_articles(); ?>
-
-      <?php //echo get_marctv_most_commented_articles(); ?>
-
-      <?php echo marctv_get_randompost(); ?>
-
-    </div>
+    
   </div>
   <?php get_footer(); ?>

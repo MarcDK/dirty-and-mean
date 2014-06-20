@@ -72,7 +72,7 @@ wp_footer(); ?>
         </ul>
       </li>
     </ul>
-    <p class="imprint">MarcTV <?php echo date('Y'); ?> - <a href="http://marctv.de/marc-toensing/#impressum">Impressum</a></p> 
+    <p class="imprint">MarcTV <?php echo date('Y'); ?> - <a href="/marc-toensing/#impressum">Impressum</a> - <a href="/blogfreunde">Blogfreunde</a></p>
   </div>
   <?php
   wp_reset_query();

@@ -1,0 +1,20 @@
+.logged-in {
+  .ac-comment-edit {
+    position: absolute;
+    right: 5em;
+    width: 25em;
+    top: 0;
+    a,span {
+      font-size: 14px ! important;
+    }
+
+
+    .comment-ac-save-link {
+      font-weight: 700;
+    }
+
+    .disabled {
+      display: none;
+    }
+  }
+}

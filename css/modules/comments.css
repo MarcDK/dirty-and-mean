@@ -106,7 +106,7 @@
 }
 
 /* line 102, ../../scss/modules/comments.scss */
-#commentform textarea {
+#comments textarea {
   border: none;
   font-family: Consolas,Monaco,monospace;
   line-height: 1.5;

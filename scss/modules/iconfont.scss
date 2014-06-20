@@ -1,19 +1,19 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "marctv-icons";
-  src:url("fonts/marctv-icons.eot");
-  src:url("fonts/marctv-icons.eot?#iefix") format("embedded-opentype"),
-    url("fonts/marctv-icons.woff") format("woff"),
-    url("fonts/marctv-icons.ttf") format("truetype"),
-    url("fonts/marctv-icons.svg#marctv-icons") format("svg");
+  font-family: "marctv-iconset";
+  src:url("fonts/marctv-iconset.eot");
+  src:url("fonts/marctv-iconset.eot?#iefix") format("embedded-opentype"),
+    url("fonts/marctv-iconset.woff") format("woff"),
+    url("fonts/marctv-iconset.ttf") format("truetype"),
+    url("fonts/marctv-iconset.svg#marctv-iconset") format("svg");
   font-weight: normal;
   font-style: normal;
 
 }
 
 [data-icon]:before {
-  font-family: "marctv-icons" !important;
+  font-family: "marctv-iconset" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -27,7 +27,7 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "marctv-icons" !important;
+  font-family: "marctv-iconset" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -39,20 +39,20 @@
 }
 
 .icon-facebook:before {
-  content: "c";
+  content: "T";
 }
 .icon-feed:before {
-  content: "d";
+  content: "M";
 }
 .icon-googleplus:before {
-  content: "e";
+  content: "V";
 }
 .icon-twitter:before {
-  content: "f";
-}
-.icon-youtube:before {
   content: "a";
 }
+.icon-youtube:before {
+  content: "c";
+}
 .icon-twitch:before {
-  content: "b";
+  content: "r";
 }

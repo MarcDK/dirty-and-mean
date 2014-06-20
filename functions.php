@@ -220,6 +220,8 @@ function get_marctv_last_commented_articles() {
 }
 
 add_action('comment_post', 'flush_comments_cache');
+add_action('deleted_comment', 'flush_comments_cache');
+add_action('edit_comment', 'flush_comments_cache');
 
 function flush_comments_cache() {
   delete_transient('marctv-purified-lastcom');
@@ -591,7 +593,7 @@ function get_parent_category_id($post_ID) {
 }
 
 function get_marctv_selected_categories($cat1, $cat2, $cat3) {
-  
+
 }
 
 function get_marctv_posts_container($duplicates = true, $docked = true) {

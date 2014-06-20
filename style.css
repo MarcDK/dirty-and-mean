@@ -658,7 +658,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 102, ../scss/modules/comments.scss */
-#commentform textarea {
+#comments textarea {
   border: none;
   font-family: Consolas,Monaco,monospace;
   line-height: 1.5;
@@ -1039,6 +1039,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding-right: 0;
 }
 
+/* line 2, ../scss/modules/plugins.scss */
+.logged-in .ac-comment-edit {
+  position: absolute;
+  right: 5em;
+  width: 25em;
+  top: 0;
+}
+/* line 7, ../scss/modules/plugins.scss */
+.logged-in .ac-comment-edit a, .logged-in .ac-comment-edit span {
+  font-size: 14px !important;
+}
+/* line 12, ../scss/modules/plugins.scss */
+.logged-in .ac-comment-edit .comment-ac-save-link {
+  font-weight: 700;
+}
+/* line 16, ../scss/modules/plugins.scss */
+.logged-in .ac-comment-edit .disabled {
+  display: none;
+}
+
 /* article */
 /* line 5, ../scss/modules/entry.scss */
 .entry.section {
@@ -1096,7 +1116,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 50, ../scss/modules/entry.scss */
 .entry blockquote p {
   font-size: 120%;
-  color: #666;
+  color: #333;
   font-family: Cambria, Georgia, "New Century Schoolbook", "Century Schoolbook L", "Times New Roman", serif;
 }
 /* line 55, ../scss/modules/entry.scss */
@@ -1321,16 +1341,16 @@ body:not(.artdirected) .entry .inner .marctv-gallery {
 }
 
 @font-face {
-  font-family: "marctv-icons";
-  src: url("fonts/marctv-icons.eot");
-  src: url("fonts/marctv-icons.eot?#iefix") format("embedded-opentype"), url("fonts/marctv-icons.woff") format("woff"), url("fonts/marctv-icons.ttf") format("truetype"), url("fonts/marctv-icons.svg#marctv-icons") format("svg");
+  font-family: "marctv-iconset";
+  src: url("fonts/marctv-iconset.eot");
+  src: url("fonts/marctv-iconset.eot?#iefix") format("embedded-opentype"), url("fonts/marctv-iconset.woff") format("woff"), url("fonts/marctv-iconset.ttf") format("truetype"), url("fonts/marctv-iconset.svg#marctv-iconset") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 /* line 15, ../scss/modules/iconfont.scss */
 [data-icon]:before {
-  font-family: "marctv-icons" !important;
+  font-family: "marctv-iconset" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -1345,7 +1365,7 @@ body:not(.artdirected) .entry .inner .marctv-gallery {
 /* line 29, ../scss/modules/iconfont.scss */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "marctv-icons" !important;
+  font-family: "marctv-iconset" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -1358,32 +1378,32 @@ body:not(.artdirected) .entry .inner .marctv-gallery {
 
 /* line 41, ../scss/modules/iconfont.scss */
 .icon-facebook:before {
-  content: "c";
+  content: "T";
 }
 
 /* line 44, ../scss/modules/iconfont.scss */
 .icon-feed:before {
-  content: "d";
+  content: "M";
 }
 
 /* line 47, ../scss/modules/iconfont.scss */
 .icon-googleplus:before {
-  content: "e";
+  content: "V";
 }
 
 /* line 50, ../scss/modules/iconfont.scss */
 .icon-twitter:before {
-  content: "f";
+  content: "a";
 }
 
 /* line 53, ../scss/modules/iconfont.scss */
 .icon-youtube:before {
-  content: "a";
+  content: "c";
 }
 
 /* line 56, ../scss/modules/iconfont.scss */
 .icon-twitch:before {
-  content: "b";
+  content: "r";
 }
 
 /* line 4, ../scss/modules/base.scss */
