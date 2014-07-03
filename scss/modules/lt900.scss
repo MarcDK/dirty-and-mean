@@ -28,9 +28,9 @@
       width: 60px;
       margin-top: 5px;
 
-    } 
+    }
 
-    .header { 
+    .header {
       margin-top: 0;
       .searchbox {
         width: 100px;
@@ -54,7 +54,6 @@
       padding-top:0;
 
       .hamburger-icon {
-
         z-index: 1000;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
@@ -71,7 +70,6 @@
         border: none;
       }
 
-
       .hamburger {
         background-color: $black;
         position: absolute;
@@ -82,9 +80,10 @@
 
         @media screen and (max-width: 600px) {
           right: $marctv-margin/4;
-        }
-
+       }
       }
+
+
 
       .hamburger .sub-menu {
         display: block;
@@ -115,7 +114,7 @@
 
       .hamburger .sub-menu li a,
       .hamburger li a{
-        font-size: 100%;
+        font-size: 120%;
         color: #efefef;
         padding: 0.6em 0.6em 0.6em 0.8em;
         margin: 0;
@@ -156,6 +155,14 @@
         display: block;
         height: 4px;
         width: 2rem;
+      }
+
+      .hamburger-icon.active:after {
+        border-color: white;
+      }
+
+      .hamburger-icon.active {
+        background-color: $black;
       }
 
     }

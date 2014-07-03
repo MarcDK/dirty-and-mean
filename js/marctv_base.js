@@ -3,7 +3,7 @@
     $("#navigation > ul").addClass("hamburger");
     $('<a class="hamburger-icon"></a>').prependTo('#navigation').click(
             function() {
-              $('#navigation .hamburger').fadeToggle('fast');
+              $('#navigation .hamburger').fadeToggle(70).parent().children('.hamburger-icon').toggleClass('active');
             }
     );
 
@@ -21,7 +21,7 @@
         undocked_callback: undocked
       });
     }
-    
+
     // detect touch device and adds body class
     function is_touch_device() {
       return 'ontouchstart' in window // works on most browsers

@@ -236,7 +236,7 @@ a {
     display: none;
   }
 }
-.infobox:hover .info, 
+.infobox:hover .info,
 html .nohover .info {
   opacity: 1;
   filter: alpha(opacity = 1);
@@ -244,7 +244,7 @@ html .nohover .info {
 
 
 .infobox {
-
+  overflow: hidden;
   &:hover .info {
     background: $black;
     color: $grey;

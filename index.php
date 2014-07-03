@@ -15,29 +15,34 @@
       $recent_arr = wp_get_recent_posts($args);
       $recent_pid = $recent_arr[0]['ID'];
 
-
       $lead_pid = $recent_pid;
-
 
       $do_not_duplicate = '';
       $do_not_duplicate[] = $lead_pid;
       update_option('do_not_duplicate', $do_not_duplicate);
       ?>
 
-      <li class="box first last">
+      <li class="box docked first last">
         <?php echo get_marctv_teaser($lead_pid, true, '', 'large'); ?>
       </li>
     </ul>
 
-    <?php echo get_marctv_last_commented_articles(); ?>
+
+    <?php
+    if (function_exists('get_last_commented_articles')) {
+      echo '<div class="container docked"><div class="supertitle"><span><a rel="nofollow" href="/letzte-kommentare">Zuletzt kommentiert</a></span></div></div>';
+      echo get_last_commented_articles(6, 'container last-commented multi nohover showontouch');
+    }
+    ?>
+
 
     <?php echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"), FALSE, 'docked'); ?>
 
 
     <ul class="container bars">
-      <li class="box first cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat1")) ?>">Leben</a></li>
-      <li class="box middle cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat2")) ?>">Spiele</a></li>
-      <li class="box last cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat3")) ?>">Medien</a></li>
+      <li class="box first cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat1")) ?>">Leben Archiv</a></li>
+      <li class="box middle cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat2")) ?>">Spiele Archiv</a></li>
+      <li class="box last cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat3")) ?>">Medien Archiv</a></li>
     </ul>
 
 
@@ -48,7 +53,7 @@
     <?php echo get_marctv_favourite_articles(); ?>
 
     <?php echo get_marctv_most_commented_articles(); ?>
-    
+
     <?php echo get_adb_article(); ?>
 
     <?php echo marctv_get_randompost(); ?>
@@ -70,16 +75,20 @@
       $key = 0;
       while (have_posts()) : the_post();
         $key++;
-        // cfvalue:field 
+        // cfvalue:field
         if ($key % 6 == 0) {
           echo '<li class="box last">';
-        } else if (($key - 1) % 6 == 0) {
+        }
+        else if (($key - 1) % 6 == 0) {
           echo '<li class="box first">';
-        } else if (($key - 4 ) % 6 == 0) {
+        }
+        else if (($key - 4 ) % 6 == 0) {
           echo '<li class="box multi-first">';
-        } else if (($key - 3 ) % 6 == 0) {
+        }
+        else if (($key - 3 ) % 6 == 0) {
           echo '<li class="box multi-last">';
-        } else {
+        }
+        else {
           echo '<li class="box">';
         }
 
@@ -97,7 +106,7 @@
         <span class="nav-next">&nbsp;<?php echo get_next_posts_link('Nächste »'); ?></span>
       </div>
 
-      <?php marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '6'); ?>
+  <?php marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '6'); ?>
   </div>
 <?php endif; ?>
 <?php get_footer(); ?>

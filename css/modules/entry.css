@@ -64,7 +64,7 @@
 }
 /* line 58, ../../scss/modules/entry.scss */
 .entry blockquote {
-  border-left: 2px solid #333;
+  border-left: 2px solid #333333;
   padding-left: 0.5em;
 }
 /* line 62, ../../scss/modules/entry.scss */
@@ -106,7 +106,7 @@
 /* line 94, ../../scss/modules/entry.scss */
 .entry .alignright {
   float: right;
-  margin: 0.3em 0 0.5em 1em !important;
+  margin: 0.3em 0 0.5em 1em;
   width: 33%;
   padding: 0;
 }
@@ -124,7 +124,7 @@
   padding-top: 0.5em;
   margin-bottom: 1em;
   color: #666666;
-  font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+  font: 90%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
 /* line 118, ../../scss/modules/entry.scss */
 .tools .hlist {
@@ -152,14 +152,14 @@
 }
 
 /* line 153, ../../scss/modules/entry.scss */
-body:not(.artdirected) .entry .inner .figure,
+body:not(.artdirected) .entry .inner .figure:not(.alignright):not(.alignleft),
 body:not(.artdirected) .entry .inner .marctv-gallery {
   margin-left: -60px;
   margin-right: -60px;
 }
 @media screen and (max-width: 600px) {
   /* line 153, ../../scss/modules/entry.scss */
-  body:not(.artdirected) .entry .inner .figure,
+  body:not(.artdirected) .entry .inner .figure:not(.alignright):not(.alignleft),
   body:not(.artdirected) .entry .inner .marctv-gallery {
     margin-left: 0;
     margin-right: 0;

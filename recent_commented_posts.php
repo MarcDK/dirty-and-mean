@@ -18,20 +18,14 @@ get_header();
       <?php
     endwhile;
   endif;
-  
-  $html = false;
-  
-  if (get_option('marctv-cache')) {
-    $html = get_transient('marctv-lastcom-page');
-  }
 
-  if (!$html) {
-    $results = query_posts_with_recent_comments(24);
-    $html = get_mostcommentlist($results,"");
-    set_transient('marctv-lastcom-page', $html, 60 * 60);
-  }
 
-  echo $html;
+
+    if (function_exists('get_last_commented_articles')) {
+      echo '<div class="container docked"><div class="supertitle"><span><a rel="nofollow" href="/letzte-kommentare">Zuletzt kommentiert</a></span></div></div>';
+      echo get_last_commented_articles(18, 'container last-commented multi nohover showontouch');
+    }
+
 
   /* Restore original Post Data
    * NB: Because we are using new WP_Query we aren't stomping on the

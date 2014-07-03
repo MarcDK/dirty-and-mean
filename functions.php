@@ -166,67 +166,10 @@ function display_max_pages($posts_per_page) {
   return $max_num_pages;
 }
 
-/**
- * Query for posts sorted by the last comment.
- *
- */
-function query_posts_with_recent_comments($limit = 6) {
 
-  global $wpdb;
 
-  $query = "select wp_posts.*, coalesce(
-            (
-                select max(comment_date)
-                from $wpdb->comments wpc
-                where wpc.comment_post_id = wp_posts.id
-                and comment_approved = '1' AND comment_type = '' AND post_password = ''
-                ),
-wp_posts.post_date
-) as mcomment_date
-from $wpdb->posts wp_posts
-where post_type = 'post'
-and post_status = 'publish'
-and comment_count > '0'
-order by mcomment_date desc
-limit $limit";
 
-  $query_result = $wpdb->get_results($query);
 
-  return $query_result;
-}
-
-/**
- * Display articles with last commented articles
- * depends on plugin 'filter-by-comments'
- *
- */
-function get_marctv_last_commented_articles() {
-
-  $html = false;
-
-  if (get_option('marctv-cache')) {
-    $html = get_transient('marctv-purified-lastcom');
-  }
-
-  if (!$html) {
-    $html = '<div class="container docked"><div class="supertitle"><span><a rel="nofollow" href="/letzte-kommentare">Zuletzt kommentiert</a></span></div></div>';
-    $results = query_posts_with_recent_comments();
-    $html .= get_mostcommentlist($results, "");
-
-    set_transient('marctv-purified-lastcom', $html, 60 * 60);
-  }
-
-  return $html;
-}
-
-add_action('comment_post', 'flush_comments_cache');
-add_action('deleted_comment', 'flush_comments_cache');
-add_action('edit_comment', 'flush_comments_cache');
-
-function flush_comments_cache() {
-  delete_transient('marctv-purified-lastcom');
-  delete_transient('marctv-lastcom-page');
-}
 
 /**
  * Display fav articles
@@ -454,57 +397,6 @@ function get_marctv_most_commented_articles() {
     $html.= '</ul>';
     set_transient('marctv-purified-mostcom', $html, 24 * 60 * 60);
   }
-  return $html;
-}
-
-function get_mostcommentlist($results, $classes = "") {
-  $html = '<ul class="container multi nohover showontouch '.$classes.'">';
-  $key = 0;
-  foreach ($results as $result) {
-
-    /* first-last classes. I know this could be done better. Don't talk about it. */
-    if ($key == 0) {
-      $html.= '<li class="box first">';
-    }
-    else if ($key == 5) {
-      $html.= '<li class="box last">';
-    }
-    else if ($key == 3) {
-      $html.= '<li class="box multi-last">';
-    }
-    else if ($key == 2) {
-      $html.= '<li class="box multi-first">';
-    }
-    else {
-      $html.= '<li class="box">';
-    }
-    $key++;
-
-    $comments = get_comments(array('post_id' => $result->ID, 'number' => 1));
-
-    foreach ($comments as $comment) {
-      $comment_url = get_comment_link($comment->comment_ID);
-
-      $authorname = $comment->comment_author;
-
-      if (strlen($authorname) > 12) {
-        $authorname = substr($authorname, 0, 9) . '...';
-      }
-
-      $comment_user = '<div class="comment-teaser">' . get_avatar($comment->comment_author_email, $size = '32') . '<div class="fn">von ' . $authorname . ' </div></div>';
-    }
-
-    $html.= get_marctv_teaser($result->ID, true, '', 'medium', true, $comment_user, $comment_url, false, FALSE);
-
-    $html.= '</li>';
-    if ($key == 6) {
-      $html .= '</ul><ul class="container multi nohover showontouch">';
-      $key = 0;
-    }
-  }
-
-  $html.= '</ul>';
-
   return $html;
 }
 

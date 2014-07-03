@@ -278,6 +278,7 @@ html .nohover .info {
 
 /* line 246, ../../scss/modules/base.scss */
 .infobox {
+  overflow: hidden;
   position: relative;
   display: block;
 }
