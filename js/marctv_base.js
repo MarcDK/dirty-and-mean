@@ -3,7 +3,7 @@
     $("#navigation > ul").addClass("hamburger");
     $('<a class="hamburger-icon"></a>').prependTo('#navigation').click(
             function() {
-              $('#navigation .hamburger').fadeToggle(70).parent().children('.hamburger-icon').toggleClass('active');
+              $('#navigation .hamburger').toggle().parent().children('.hamburger-icon').toggleClass('active');
             }
     );
 

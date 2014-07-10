@@ -41,24 +41,34 @@
     font-weight: 700;
     margin-top: 0.5em;
   }
+
   p, ul, ol, .video, .marctv-gallery, .figure {
     margin-bottom: 1.5em;
   }
+
   ol li, ul li {
     margin-bottom: 0.5em;
   }
+
   blockquote p {
     font-size: 120%;
     color: #333;
     font-family: Cambria, Georgia, "New Century Schoolbook", "Century Schoolbook L", "Times New Roman", serif;
   }
+
   blockquote p a {
     color: #666;
   }
+  
   blockquote {
     border-left: 2px solid #333;
     padding-left: 0.5em;
   }
+
+  blockquote cite:before {
+    content: " — ";
+  }
+
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.3em;
     clear: both;

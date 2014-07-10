@@ -10,6 +10,7 @@ body {
   padding: 0;
   color: #333333;
   background: #fff;
+  font-weight: 300 ! important;
   font: 112.5% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
 
