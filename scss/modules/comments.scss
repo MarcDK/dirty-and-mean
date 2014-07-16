@@ -7,14 +7,6 @@
 
 }
 
-.commentlist p,
-.commentlist em,
-.commentlist strong,
-.commentlist a{
-  font-size: 100%;
-  line-height: 1.6;
-}
-
 .commentlist .says{
   display: none;
 }
@@ -26,15 +18,14 @@
   width: 320px;
 }
 
+#commentform #submit {
+  float: right;
+}
+
 
 .promoted {
   margin-bottom: 3em;
   margin-top: 1em;
-}
-
-
-#commentform #submit {
-  float: right;
 }
 
 #comment_section .comment-reply-link{
@@ -44,8 +35,6 @@
 #comment_section .comment-reply-link:hover{
   text-decoration: underline;
 }
-
-
 
 .searchform .formbutton,
 #commentform #submit{
@@ -99,7 +88,7 @@
   border-bottom: 1px solid #888;
   @include box-shadow(#aaaaaa 0 0 5px 2px inset, $black 0 1px 0 0);
 }
-#comments textarea{
+#comments textarea {
   border: none;
   font-family: Consolas,Monaco,monospace;
   line-height: 1.5;
@@ -123,39 +112,50 @@
   color: #2E5393;
 }
 
-#respond {
+.comment-respond {
+
   background: #333;;
   padding: 2.5%;
   width: 95%;
   margin-bottom: 1.5em;
-}
 
-#respond .gravatar {
-  line-height:20px;
-}
+  .gravatar {
 
-#respond a{
-  color: #fff;
-  text-decoration: none;
-}
+    line-height:20px;
 
-#respond a:hover{
-  color: #fff;
-  text-decoration: underline;
-}
+  } a{
+    color: #fff;
+    text-decoration: none;
 
-#respond label em,
-#commentform .subscribe-to-comments label {
-  font-weight:300;
-}
+    &:hover{
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
 
-#respond label,
-#respond p {
-  color: #fff;
-}
+  label em,
+  #commentform .subscribe-to-comments label {
+    font-weight:300;
+  }
 
-#respond .inner{
-  margin: 1%
+  p {
+    margin-top: 10px;
+    color: #fff;
+
+    &.red {
+      border:2px solid #8B0000;
+      margin-left:2px;
+      padding:2px;
+    }
+  }
+
+  label {
+    color: #fff;
+  }
+
+  .inner {
+    margin: 1%
+  }
 }
 
 .subscribe-to-comments{
@@ -164,12 +164,6 @@
 
 .subscribe-to-comments input{
   margin-left: 0;
-}
-
-#respond p.red {
-  border:2px solid #8B0000;
-  margin-left:2px;
-  padding:2px;
 }
 
 .alignleft {
@@ -186,192 +180,218 @@
   border-top:1px dotted #CCC;
 }
 
+#commentform p input{
+  font-size: 100%;
+}
+
 .commentlist {
   list-style:none;
   margin:0;
   padding:0;
   text-indent:0;
-}
 
-#commentform p input{
-  font-size: 100%;
-}
+  p,
+  em,
+  strong,
+  a{
+    font-size: 100%;
+    line-height: 1.6;
+  }
 
-.commentlist #cancel-comment-reply {
-  display:block;
-  padding-top:5px;
-}
+  #cancel-comment-reply {
+    display:block;
+    padding-top:5px;
+  }
 
-.commentlist #respond {
-  margin-left: 0;
-}
+  pre {
+    margin-top: 10px;
+    font-family: monospace;
+  }
 
-.commentlist .comment {
-  min-height:100px;
-}
+  #respond {
+    margin-left: 0;
+  }
 
-.commentlist blockquote {
-  border-left:2px solid #ddd;
-  margin: 5px 0px;
-  padding-bottom:1px;
-  padding-left:5px;
-  padding-top:3px;
-  color: $black;
-  font-style:italic;
+  .comment {
+    min-height:100px;
+  }
+
+  blockquote {
+    background: #ddd;
+    margin: 5px 0px;
+    padding-bottom:1px;
+    padding-left:10px;
+    padding-top:7px;
+    color: $black;
+    font-style:italic;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      top: -70px;
+      left: -11px;
+      content: "„";
+      font-size: 66px;
+    }
+
+    p {
+      color: #000;
+      font-style:italic;
+      margin:0;
+    }
+
+  }
+
+  ul {
+    font-weight:400;
+    line-height:1.6;
+    list-style:square;
+    margin:0 0 1em;
+    padding:0;
+    text-indent:0;
+  }
+
+  li .children li ul{
+    border: 0;
+    padding:0;
+    margin:0 0 0 1.5em;
+  }
+  li .children li ul li {
+    border: 0;
+    margin: 0;
+    padding: 0 5px;
+  }
+
+
+
+  .skiplink {
+    display: block; position: relative; top: -50px; visibility: hidden;
+  }
+
+  .edit-comment-admin-links-no-icon {
+    margin-top: 10px;
+  }
+
+  li {
+    height:1%;
+    margin: 0.5em 0 1em;
+    padding:5px 7px 5px 130px;
+    position:relative;
+    border-top: 1px dotted #cfcfcf;
+
+    p {
+      line-height:1.6;
+      margin:0 0 10px 0;
+    }
+
+    .pingback{
+      padding: 5px 7px 5px 5px;
+    }
+
+    .avatar{
+      width: 100px;
+    }
+
+    .children {
+      list-style:none;
+      margin:1em 0 0;
+      text-indent:0;
+
+      li {
+        padding:5px 7px 5px 45px;
+      }
+
+      .depth-2,
+      .depth-3,
+      .depth-4 {
+        margin:0 0 5px;
+      }
+
+      .vcard .avatar {
+        border:1px solid #DDD;
+        height:30px;
+        left: 0;
+        margin-top: 2px;
+        width:30px;
+      }
+    }
+
+    .comment-author
+    , .pingback .vcard {
+      padding:0 170px 0 0;
+    }
+
+    .comment-author a {
+      color: $black;
+    }
+
+    .comment-meta {
+      line-height:1.4;
+      position:absolute;
+      right:10px;
+      text-align:right;
+      top:7px;
+      a {
+        color:$black;
+        font-size: 80%
+      }
+    }
+
+    .reply {
+      margin-bottom:15px;
+      margin-top:15px;
+    }
+
+    .reply a,
+    a#cancel-comment-reply-link {
+      text-decoration:none;
+    }
+
+
+    a#cancel-comment-reply-link:hover {
+      color: red;
+      text-decoration:none;
+    }
+
+    .vcard {
+      font-weight:700;
+      line-height:1.6;
+      margin-bottom: 10px;
+
+      .avatar {
+        border:2px solid #ddd;
+        left: 0;
+        position:absolute;
+        margin-top: 2px;
+        z-index: 1;
+      }
+
+      cite.fn {
+        font-style:normal;
+      }
+
+    }
+
+    a#cancel-comment-reply-link {
+      font-size: 80%;
+      font-weight: 300;
+    }
+
+  }
+
 }
 
 .quicktags-toolbar{
   margin-top: 1em;
-}
-
-.quicktags-toolbar input{
-  font-size: 90%;
-}
-
-.commentlist li .children li ul{
-  border: 0;
-  padding:0;
-  margin:0 0 0 1.5em;
-}
-.commentlist li .children li ul li {
-  border: 0;
-  margin: 0;
-  padding: 0 5px;
-}
-
-
-.commentlist li blockquote p {
-  color:$black;
-  font-style:italic;
-  margin:0;
-
-}
-
-.commentlist .skiplink {
-  display: block; position: relative; top: -50px; visibility: hidden;
-}
-
-.commentlist li {
-  height:1%;
-  margin: 0.5em 0 1em;
-  padding:5px 7px 5px 130px;
-  position:relative;
-  border-top: 1px dotted #cfcfcf;
-}
-.commentlist li.pingback{
-  padding: 5px 7px 5px 5px;
-}
-
-.commentlist li .children {
-  list-style:none;
-  margin:1em 0 0;
-  text-indent:0;
-
-}
-
-.commentlist li .children .depth-2,.commentlist li .children .depth-3,.commentlist li .children .depth-4 {
-  margin:0 0 5px;
-}
-
-.commentlist li .children .vcard .avatar {
-  border:1px solid #DDD;
-  height:30px;
-  left: 0;
-  margin-top: 2px;
-  width:30px;
-}
-
-.commentlist li .avatar{
-  width: 100px;
-}
-
-.wp-smiley{
-  display:none;
-}
-
-.commentlist .edit-comment-admin-links-no-icon {
-  margin-top: 10px;
-}
-
-.commentlist li .children li {
-  padding:5px 7px 5px 45px;
-}
-
-.commentlist li .comment-author,.commentlist .pingback .vcard {
-  padding:0 170px 0 0;
-}
-
-.commentlist li .comment-author a {
-  color: $black;
-}
-
-.commentlist li .comment-meta {
- line-height:1.4;
-  position:absolute;
-  right:10px;
-  text-align:right;
-  top:7px;
-}
-
-.commentlist li .comment-meta a {
-  color:$black;
-  font-size: 80%
-}
-
-.commentlist li .reply {
-  margin-bottom:15px;
-  margin-top:15px;
-}
-
-.commentlist li .reply a,.commentlist li a#cancel-comment-reply-link {
-  text-decoration:none;
-}
-
-
-.commentlist li a#cancel-comment-reply-link:hover {
-  color: red;
-  text-decoration:none;
-}
-
-.commentlist li .vcard {
-  font-weight:700;
-  line-height:1.6;
-}
-
-.commentlist li .vcard .avatar {
-  border:2px solid #ddd;
-  left: 0;
-  position:absolute;
-  margin-top: 2px;
-  z-index: 1;
-}
-
-.commentlist li .vcard cite.fn {
-  font-style:normal;
+  input{
+    font-size: 90%;
+  }
 }
 
 #cancel-comment-reply-link:hover{
   color: darkred;
 }
 
-.commentlist li a#cancel-comment-reply-link {
-  font-size: 80%;
-  font-weight: 300;
-}
-
-.commentlist li p,#respond p {
-  line-height:1.6;
-  margin:10px 0 0;
-}
-
-.commentlist li ul {
-  font-weight:400;
-  line-height:1.6;
-  list-style:square;
-  margin:0 0 1em;
-  padding:0;
-  text-indent:0;
-}
 
 .navigation {
   overflow:hidden;
@@ -382,8 +402,6 @@
 .navigation .alignright {
   margin-bottom:10px;
 }
-
-
 
 .navigation a,
 .navigation a:active {
