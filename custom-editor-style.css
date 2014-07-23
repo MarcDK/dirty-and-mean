@@ -1,10 +1,16 @@
 .alignright,
 .alignright img,
 .alignleft ,
-.alignleft img{ 
+.alignleft img{
   width: 200px ! important;
   height: 88px ! important;
   margin: 0;
+
+}
+
+.alignleft,
+.alignright {
+  overflow: hidden;
 }
 
 h2, h3, h4 {

@@ -1,12 +1,10 @@
 @media only screen and (max-width: 600px) {
   html {
-    
+
     body {
       font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
     }
-    .lead .title {
-      font-size: 120%;
-    }
+
     .hreview .text {
       width: 100%;
     }
@@ -23,7 +21,17 @@
       }
     }
     .lead {
+
       margin-bottom: 0;
+
+      .box {
+        margin-bottom: 0;
+      }
+
+      .title {
+        font-size: 120%;
+      }
+
       p {
         margin-bottom: 2em;
       }
@@ -44,10 +52,10 @@
 
     .comment-meta {
       a:first-child:before {
-        content: "# ";   
+        content: "# ";
       }
       span {
-        display:none; 
+        display:none;
       }
     }
     li {

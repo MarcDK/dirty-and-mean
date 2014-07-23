@@ -224,21 +224,19 @@
 }
 /* line 206, ../../scss/modules/comments.scss */
 .commentlist pre {
-  margin-top: 10px;
   font-family: monospace;
 }
-/* line 211, ../../scss/modules/comments.scss */
+/* line 210, ../../scss/modules/comments.scss */
 .commentlist #respond {
   margin-left: 0;
 }
-/* line 215, ../../scss/modules/comments.scss */
+/* line 214, ../../scss/modules/comments.scss */
 .commentlist .comment {
   min-height: 100px;
 }
-/* line 219, ../../scss/modules/comments.scss */
+/* line 218, ../../scss/modules/comments.scss */
 .commentlist blockquote {
   background: #ddd;
-  margin: 5px 0px;
   padding-bottom: 1px;
   padding-left: 10px;
   padding-top: 7px;
@@ -246,21 +244,22 @@
   font-style: italic;
   position: relative;
 }
-/* line 229, ../../scss/modules/comments.scss */
+/* line 227, ../../scss/modules/comments.scss */
 .commentlist blockquote:after {
   position: absolute;
-  top: -70px;
-  left: -11px;
-  content: "„";
+  top: -26px;
+  left: -18px;
+  content: "“";
   font-size: 66px;
+  color: #aaa;
 }
-/* line 237, ../../scss/modules/comments.scss */
+/* line 236, ../../scss/modules/comments.scss */
 .commentlist blockquote p {
   color: #000;
   font-style: italic;
   margin: 0;
 }
-/* line 245, ../../scss/modules/comments.scss */
+/* line 244, ../../scss/modules/comments.scss */
 .commentlist ul {
   font-weight: 400;
   line-height: 1.6;
@@ -269,30 +268,30 @@
   padding: 0;
   text-indent: 0;
 }
-/* line 254, ../../scss/modules/comments.scss */
+/* line 253, ../../scss/modules/comments.scss */
 .commentlist li .children li ul {
   border: 0;
   padding: 0;
   margin: 0 0 0 1.5em;
 }
-/* line 259, ../../scss/modules/comments.scss */
+/* line 258, ../../scss/modules/comments.scss */
 .commentlist li .children li ul li {
   border: 0;
   margin: 0;
   padding: 0 5px;
 }
-/* line 267, ../../scss/modules/comments.scss */
+/* line 266, ../../scss/modules/comments.scss */
 .commentlist .skiplink {
   display: block;
   position: relative;
   top: -50px;
   visibility: hidden;
 }
-/* line 271, ../../scss/modules/comments.scss */
+/* line 270, ../../scss/modules/comments.scss */
 .commentlist .edit-comment-admin-links-no-icon {
   margin-top: 10px;
 }
-/* line 275, ../../scss/modules/comments.scss */
+/* line 274, ../../scss/modules/comments.scss */
 .commentlist li {
   height: 1%;
   margin: 0.5em 0 1em;
@@ -300,10 +299,11 @@
   position: relative;
   border-top: 1px dotted #cfcfcf;
 }
-/* line 282, ../../scss/modules/comments.scss */
-.commentlist li p {
-  line-height: 1.6;
-  margin: 0 0 10px 0;
+/* line 283, ../../scss/modules/comments.scss */
+.commentlist li p,
+.commentlist li blockquote,
+.commentlist li pre {
+  margin-bottom: 0.5em;
 }
 /* line 287, ../../scss/modules/comments.scss */
 .commentlist li .pingback {
