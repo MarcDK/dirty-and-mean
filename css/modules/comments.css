@@ -247,10 +247,10 @@
 /* line 227, ../../scss/modules/comments.scss */
 .commentlist blockquote:after {
   position: absolute;
-  top: -26px;
-  left: -18px;
+  top: -21px;
+  left: -5px;
   content: "“";
-  font-size: 66px;
+  font-size: 46px;
   color: #aaa;
 }
 /* line 236, ../../scss/modules/comments.scss */

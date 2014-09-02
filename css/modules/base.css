@@ -10,8 +10,7 @@ body {
   padding: 0;
   color: #333333;
   background: #fff;
-  font-weight: 300 ! important;
-  font: 112.5% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+  font: 112.5%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
 
 /* line 17, ../../scss/modules/base.scss */
@@ -55,7 +54,7 @@ small {
   z-index: 10000;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #333333;
   -webkit-box-shadow: #333333 0 0 2px;
   -moz-box-shadow: #333333 0 0 2px;
   box-shadow: #333333 0 0 2px;
@@ -121,7 +120,7 @@ small {
 }
 
 /* line 103, ../../scss/modules/base.scss */
-.section img, .section video {
+.section img, .section video, .section iframe {
   width: 100%;
 }
 
@@ -580,7 +579,7 @@ html .fullscreenicon {
 /* line 505, ../../scss/modules/base.scss */
 .warning {
   background: #eee;
-  border: 1px solid #bbb;
+  border: 1px solid #bbbbbb;
   padding: 1em;
   margin-bottom: 1em;
 }

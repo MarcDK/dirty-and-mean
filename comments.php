@@ -18,13 +18,8 @@ if (post_password_required()) {
 <!-- You can start editing here. -->
 
 <?php if (have_comments()) : ?>
+
   <div class="comments-title title"><?php comments_number(__('Noch kein Kommentar'), __('Ein Kommentar'), __('% Kommentare')); ?></div>
-
-  <div class="nav-article">
-    <span class="nav-previous"><?php previous_comments_link() ?></span>
-    <span class="nav-next"><?php next_comments_link() ?></span>
-  </div>
-
   <ol class="commentlist">
     <?php wp_list_comments(array('avatar_size' => 80, 'callback' => 'marctv_comment')); ?>
   </ol>
@@ -98,4 +93,7 @@ if (post_password_required()) {
 
     <?php endif; // If registration required and not logged in   ?>
   </div>
-  <?php endif; // if you delete this the sky will fall on your head    ?>
+<?php else : ?>
+  <div class="comments-title title">Kommentare wurden geschlossen.</div>
+  <p>&nbsp;</p>
+<?php endif; // if you delete this the sky will fall on your head    ?>

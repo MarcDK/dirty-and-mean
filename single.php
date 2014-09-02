@@ -63,14 +63,15 @@ if (function_exists('related_posts')) {
 <div class="fullwidth commentbox">
   <div class="site">
     <div class="section" id="comments">
-
       <?php
-      if (function_exists('marctv_promoted_comments')) {
-        echo marctv_promoted_comments();
-      }
-      ?>
-      <?php comments_template(); ?>
 
+        if (function_exists('marctv_promoted_comments')) {
+          echo marctv_promoted_comments();
+        }
+        comments_template();
+      
+
+      ?>
     </div>
   </div>
 </div> <!-- /site comments -->
@@ -82,7 +83,7 @@ if (function_exists('related_posts')) {
       <?php
       if (function_exists('get_last_commented_articles')) {
         echo '<div class="container docked"><div class="supertitle"><span><a rel="nofollow" href="/letzte-kommentare">Zuletzt kommentiert</a></span></div></div>';
-        echo get_last_commented_articles(6,'container multi last-commented nohover showontouch');
+        echo get_last_commented_articles(6, 'container multi last-commented nohover showontouch');
       }
       ?>
       <?php // echo get_marctv_sticky_posts(); ?>
@@ -94,11 +95,11 @@ if (function_exists('related_posts')) {
         <li class="box last cat-more"><a href="<?php echo get_category_link(get_option("marctv_cat3")) ?>">Medien</a></li>
         </ul>
        */ ?>
-      <?php  echo get_marctv_favourite_articles(); ?>
+      <?php echo get_marctv_favourite_articles(); ?>
 
-      <?php //echo get_marctv_most_commented_articles(); ?>
+      <?php //echo get_marctv_most_commented_articles();  ?>
 
-      <?php echo marctv_get_randompost(); ?>
+<?php echo marctv_get_randompost(); ?>
 
     </div>
   </div>
