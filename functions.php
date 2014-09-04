@@ -552,7 +552,7 @@ function get_marctv_posts_container($duplicates = true, $docked = true) {
 function marctv_comment($comment, $args, $depth) {
   $GLOBALS['comment'] = $comment;
   ?>
-  <span class="skiplink" id="comment-<?php comment_ID(); ?>"></span>
+ 
   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
     <div>
       <div class="comment-author vcard">
@@ -571,6 +571,7 @@ function marctv_comment($comment, $args, $depth) {
         <?php comment_reply_link(array_merge($args, array('reply_text' => 'Antworten', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
       </div>
     </div>
+     <span class="skiplink" id="comment-<?php comment_ID(); ?>"></span>
     <?php
   }
 
