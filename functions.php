@@ -554,7 +554,7 @@ function marctv_comment($comment, $args, $depth) {
   ?>
  
   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
-    <div>
+    <div class="skiplink" id="comment-<?php comment_ID(); ?>">
       <div class="comment-author vcard">
         <?php echo get_avatar($comment, $size = '100') ?>
 
@@ -571,7 +571,6 @@ function marctv_comment($comment, $args, $depth) {
         <?php comment_reply_link(array_merge($args, array('reply_text' => 'Antworten', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
       </div>
     </div>
-     <span class="skiplink" id="comment-<?php comment_ID(); ?>"></span>
     <?php
   }
 
