@@ -342,15 +342,24 @@
       margin-top:15px;
     }
 
-    .reply a,
-    a#cancel-comment-reply-link {
+    .reply a {
       text-decoration:none;
     }
+    
 
-
-    a#cancel-comment-reply-link:hover {
-      color: red;
-      text-decoration:none;
+    #cancel-comment-reply-link {
+      font-size: 70%;
+      font-weight: 300;
+      float: right;
+      margin-top: 10px;
+      color: #aaa;
+      display: inline;
+      text-decoration: none;
+      
+      &:hover {
+        color: red;
+        text-decoration:none;
+      }
     }
 
     .vcard {
@@ -372,13 +381,12 @@
 
     }
 
-    a#cancel-comment-reply-link {
-      font-size: 80%;
-      font-weight: 300;
-    }
-
   }
 
+}
+
+#cancel-comment-reply-link {
+  display: none;
 }
 
 .quicktags-toolbar{
