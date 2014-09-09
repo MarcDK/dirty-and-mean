@@ -11,8 +11,8 @@
   display: block; 
   position: relative; 
   width: 0;
-  height: 2em; 
-  margin-top: 2em 
+  height: 3em; 
+  margin-top: -3em;
 }
 
 .commentlist .says{
@@ -341,8 +341,8 @@
     }
 
     .reply {
-      margin-bottom:15px;
-      margin-top:15px;
+      margin-bottom:3em;
+      margin-top:0.5em; 
     }
 
     .reply a {
