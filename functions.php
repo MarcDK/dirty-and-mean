@@ -243,7 +243,7 @@ function marctv_get_randompost($exclude = array(), $cat = "Reviews") {
 
     while (have_posts()):
       the_post();
-      $html.= get_marctv_teaser(get_the_ID(), true, '', '', true, '', '', false);
+      $html.= get_marctv_teaser(get_the_ID(), true, 'playagain', '', true, '', '', false);
     endwhile;
 
     $html.= '</li>';
