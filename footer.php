@@ -72,7 +72,7 @@ wp_footer(); ?>
         </ul>
       </li>
     </ul>
-    <p class="imprint">MarcTV <?php echo date('Y'); ?> - <a href="/marc-toensing/#impressum">Impressum</a> - <a href="/blogfreunde">Blogfreunde</a></p>
+    <p class="imprint">MarcTV <?php echo date('Y'); ?> - <a href="/marc-toensing/#impressum">Impressum</a> - <a href="/blogfreunde">Blogfreunde</a> - Theme: <a rel="nofollow" href="https://github.com/MarcDK/dirty-and-mean/">MarcTV's Dirty and Mean</a></p>
   </div>
   <?php
   wp_reset_query();

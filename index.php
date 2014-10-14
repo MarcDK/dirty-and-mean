@@ -5,17 +5,25 @@
     <ul class="container docked lead">
 
       <?php
-      $linkcat = get_option("marctv_linkcat");
-      $args = array(
-        'numberposts' => '1',
-        'post_status' => 'publish',
-        'category__not_in' => $linkcat
-      );
+      $sticky = get_option('sticky_posts');
 
-      $recent_arr = wp_get_recent_posts($args);
-      $recent_pid = $recent_arr[0]['ID'];
+      if (isset($sticky[0])) {
+        $lead_pid = $sticky[0];
+      }
+      else {
 
-      $lead_pid = $recent_pid;
+        $linkcat = get_option("marctv_linkcat");
+        $args = array(
+          'numberposts' => '1',
+          'post_status' => 'publish',
+          'category__not_in' => $linkcat
+        );
+
+        $recent_arr = wp_get_recent_posts($args);
+        $recent_pid = $recent_arr[0]['ID'];
+
+        $lead_pid = $recent_pid;
+      }
 
       $do_not_duplicate = '';
       $do_not_duplicate[] = $lead_pid;
@@ -46,7 +54,7 @@
     </ul>
 
 
-    <?php //echo get_marctv_sticky_posts(); ?>
+    <?php //echo get_marctv_sticky_posts();  ?>
 
     <div id="marctvflickrbar"></div>
 
@@ -106,7 +114,7 @@
         <span class="nav-next">&nbsp;<?php echo get_next_posts_link('Nächste »'); ?></span>
       </div>
 
-  <?php marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '6'); ?>
+      <?php marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '6'); ?>
   </div>
 <?php endif; ?>
 <?php get_footer(); ?>
