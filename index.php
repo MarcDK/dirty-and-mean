@@ -31,7 +31,7 @@
       ?>
 
       <li class="box docked first last">
-        <?php echo get_marctv_teaser($lead_pid, true, '', 'large'); ?>
+        <?php echo get_marctv_teaser($lead_pid, true, 'mainteaser', 'large'); ?>
       </li>
     </ul>
 
