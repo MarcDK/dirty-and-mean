@@ -45,7 +45,7 @@
 }
 /* line 42, ../../scss/modules/navigation.scss */
 #navigation a:hover {
-  color: #333333;
+  color: #333;
 }
 /* line 45, ../../scss/modules/navigation.scss */
 #navigation a:active {
@@ -57,7 +57,7 @@
 }
 /* line 52, ../../scss/modules/navigation.scss */
 #navigation #current a, #navigation .current-menu-item a, #navigation .current-menu-parent a {
-  color: #333333;
+  color: #333;
   font-weight: 700;
 }
 /* line 56, ../../scss/modules/navigation.scss */
@@ -73,7 +73,7 @@
   margin: 0;
   position: absolute;
   width: 170px;
-  background-color: #333333;
+  background-color: #333;
   z-index: 9999;
   padding: 3px 0 10px;
 }
@@ -110,7 +110,7 @@
 }
 /* line 98, ../../scss/modules/navigation.scss */
 #navigation .menu li:hover > a, #navigation ul ul *:hover > a {
-  background: #333333;
+  background: #333;
   color: #FFFFFF;
   text-decoration: none;
 }
@@ -123,12 +123,10 @@
 /* line 108, ../../scss/modules/navigation.scss */
 .menu .sub-menu {
   display: none;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px;
-  -webkit-border-radius: 0 2px 2px 2px;
   -moz-border-radius: 0 2px 2px 2px;
-  -ms-border-radius: 0 2px 2px 2px;
-  -o-border-radius: 0 2px 2px 2px;
+  -webkit-border-radius: 0;
   border-radius: 0 2px 2px 2px;
 }

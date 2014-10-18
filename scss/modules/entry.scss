@@ -60,7 +60,7 @@
   blockquote p a {
     color: #666;
   }
-  
+
   blockquote {
     border-left: 2px solid #333;
     padding-left: 0.5em;
@@ -107,6 +107,11 @@
     margin: 0.3em 0 0.5em 1em;
     width: 33%;
     padding: 0;
+
+  }
+
+  blockquote.alignright {
+    margin-top: 0;
   }
 
   .alignleft {
@@ -115,6 +120,13 @@
     margin: 0.3em 1em 0.5em 0 ! important;
     width: 33%;
   }
+
+  blockquote.alignleft {
+    margin-top: 0;
+  }
+
+
+
 
 }
 
@@ -161,7 +173,7 @@ body:not(.artdirected) {
   .entry {
     .inner {
       .figure:not(.alignright):not(.alignleft),
-      .marctv-gallery{
+        .marctv-gallery{
         margin-left: -$marctv-margin;
         margin-right: -$marctv-margin;
         @media screen and (max-width: 600px) {

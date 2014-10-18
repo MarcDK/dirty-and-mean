@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*
+/*!
 Theme Name: Dirty and Mean
 Theme URI: http://marctv.de
 Description: MarcTV Theme 2014
@@ -9,7 +9,7 @@ License: GPL v3
 License URI: license.txt
 Tags: marctv, simple, clean
 */
-/* line 17, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,46 +31,46 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+/* line 116, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
@@ -99,13 +99,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   html .hreview .text {
     width: 100%;
   }
-  /* line 24, ../scss/modules/lt320.scss */
+  /* line 23, ../scss/modules/lt320.scss */
   html .container.morph .box .title,
   html .container.double .box .title {
     font-size: 100%;
   }
 
-  /* line 31, ../scss/modules/lt320.scss */
+  /* line 30, ../scss/modules/lt320.scss */
   #marctv .entry .alignright,
   #marctv .entry .alignleft {
     float: none;
@@ -116,7 +116,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @media only screen and (max-width: 600px) {
   /* line 4, ../scss/modules/lt600.scss */
   html body {
-    font: 90%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+    font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
   }
   /* line 8, ../scss/modules/lt600.scss */
   html .hreview .text {
@@ -176,7 +176,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
   /* line 61, ../scss/modules/lt600.scss */
   html .commentlist li {
-    border-top: 1px dotted #333333;
+    border-top: 1px dotted #333;
     padding-left: 0;
   }
   /* line 64, ../scss/modules/lt600.scss */
@@ -238,7 +238,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 @media only screen and (max-width: 700px) {
-  /* line 3, ../scss/modules/lt700.scss */
+  /* line 2, ../scss/modules/lt700.scss */
   #marctv .entry .alignright,
   #marctv .entry .alignleft {
     float: none;
@@ -306,7 +306,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     border-top-right-radius: 0;
     font-size: 0;
     line-height: 0;
-    padding: 0.75rem 0.5rem;
+    padding: .75rem .5rem;
     margin-top: 0;
     -webkit-user-select: none;
     /* Chrome all / Safari all */
@@ -321,13 +321,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
   /* line 73, ../scss/modules/lt900.scss */
   html #navigation .hamburger {
-    background-color: #333333;
+    background-color: #333;
     position: absolute;
     position: absolute;
     right: 60px;
     z-index: 100;
     display: none;
   }
+}
+@media only screen and (max-width: 900px) and (max-width: 600px) {
+  /* line 73, ../scss/modules/lt900.scss */
+  html #navigation .hamburger {
+    right: 15px;
+  }
+}
+@media only screen and (max-width: 900px) {
   /* line 88, ../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu {
     display: block;
@@ -353,7 +361,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   html #navigation ul {
     display: none;
   }
-  /* line 116, ../scss/modules/lt900.scss */
+  /* line 115, ../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu li a,
   html #navigation .hamburger li a {
     font-size: 120%;
@@ -400,13 +408,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
   /* line 164, ../scss/modules/lt900.scss */
   html #navigation .hamburger-icon.active {
-    background-color: #333333;
-  }
-}
-@media only screen and (max-width: 900px) and (max-width: 600px) {
-  /* line 73, ../scss/modules/lt900.scss */
-  html #navigation .hamburger {
-    right: 15px;
+    background-color: #333;
   }
 }
 @media only screen and (max-width: 960px) {
@@ -475,7 +477,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /* line 42, ../scss/modules/navigation.scss */
 #navigation a:hover {
-  color: #333333;
+  color: #333;
 }
 /* line 45, ../scss/modules/navigation.scss */
 #navigation a:active {
@@ -487,7 +489,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /* line 52, ../scss/modules/navigation.scss */
 #navigation #current a, #navigation .current-menu-item a, #navigation .current-menu-parent a {
-  color: #333333;
+  color: #333;
   font-weight: 700;
 }
 /* line 56, ../scss/modules/navigation.scss */
@@ -503,7 +505,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin: 0;
   position: absolute;
   width: 170px;
-  background-color: #333333;
+  background-color: #333;
   z-index: 9999;
   padding: 3px 0 10px;
 }
@@ -540,7 +542,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /* line 98, ../scss/modules/navigation.scss */
 #navigation .menu li:hover > a, #navigation ul ul *:hover > a {
-  background: #333333;
+  background: #333;
   color: #FFFFFF;
   text-decoration: none;
 }
@@ -553,13 +555,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 108, ../scss/modules/navigation.scss */
 .menu .sub-menu {
   display: none;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px;
-  -webkit-border-radius: 0 2px 2px 2px;
   -moz-border-radius: 0 2px 2px 2px;
-  -ms-border-radius: 0 2px 2px 2px;
-  -o-border-radius: 0 2px 2px 2px;
+  -webkit-border-radius: 0;
   border-radius: 0 2px 2px 2px;
 }
 
@@ -613,7 +613,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-decoration: underline;
 }
 
-/* line 49, ../scss/modules/comments.scss */
+/* line 47, ../scss/modules/comments.scss */
 .searchform .formbutton,
 #commentform #submit,
 .reply a {
@@ -623,19 +623,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
-  background-image: linear-gradient(top, #eeeeee, #cccccc);
-  border: 1px solid #cccccc;
-  border-bottom: 1px solid #bbbbbb;
+  background-image: linear-gradient(to bottom, #eeeeee, #cccccc);
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  color: #333333;
+  color: #333;
   line-height: 1;
   padding: 0.6em 1em;
   text-align: center;
-  text-shadow: 0 1px 0 #eeeeee;
+  text-shadow: 0 1px 0 #eee;
   width: auto;
 }
 /* line 71, ../scss/modules/comments.scss */
@@ -648,11 +648,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
   background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
   background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
-  background-image: linear-gradient(top, #dddddd, #bbbbbb);
-  border: 1px solid #bbbbbb;
-  border-bottom: 1px solid #999999;
+  background-image: linear-gradient(to bottom, #dddddd, #bbbbbb);
+  border: 1px solid #bbb;
+  border-bottom: 1px solid #999;
   cursor: pointer;
-  text-shadow: 0 1px 0 #dddddd;
+  text-shadow: 0 1px 0 #ddd;
 }
 
 /* line 86, ../scss/modules/comments.scss */
@@ -662,14 +662,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: #bbb;
 }
 
-/* line 94, ../scss/modules/comments.scss */
+/* line 93, ../scss/modules/comments.scss */
 .searchform .formbutton:active,
 #commentform #submit:active {
-  border: 1px solid #aaaaaa;
-  border-bottom: 1px solid #888888;
-  -webkit-box-shadow: #aaaaaa 0 0 5px 2px inset, #333333 0 1px 0 0;
-  -moz-box-shadow: #aaaaaa 0 0 5px 2px inset, #333333 0 1px 0 0;
-  box-shadow: #aaaaaa 0 0 5px 2px inset, #333333 0 1px 0 0;
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #888;
+  -moz-box-shadow: #aaaaaa 0 0 5px 2px inset, #333 0 1px 0 0;
+  -webkit-box-shadow: #aaaaaa 0 0 5px 2px inset, #333 0 1px 0 0;
+  box-shadow: #aaaaaa 0 0 5px 2px inset, #333 0 1px 0 0;
 }
 
 /* line 99, ../scss/modules/comments.scss */
@@ -720,7 +720,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: #fff;
   text-decoration: underline;
 }
-/* line 145, ../scss/modules/comments.scss */
+/* line 144, ../scss/modules/comments.scss */
 .comment-respond label em,
 .comment-respond #commentform .subscribe-to-comments label {
   font-weight: 300;
@@ -732,7 +732,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /* line 153, ../scss/modules/comments.scss */
 .comment-respond p.red {
-  border: 2px solid darkred;
+  border: 2px solid #8B0000;
   margin-left: 2px;
   padding: 2px;
 }
@@ -769,7 +769,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 187, ../scss/modules/comments.scss */
 .bottom {
-  border-top: 1px dotted #cccccc;
+  border-top: 1px dotted #CCC;
 }
 
 /* line 191, ../scss/modules/comments.scss */
@@ -784,7 +784,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding: 0;
   text-indent: 0;
 }
-/* line 204, ../scss/modules/comments.scss */
+/* line 201, ../scss/modules/comments.scss */
 .commentlist p,
 .commentlist em,
 .commentlist strong,
@@ -815,7 +815,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding-bottom: 1px;
   padding-left: 10px;
   padding-top: 7px;
-  color: #333333;
+  color: #333;
   font-style: italic;
   position: relative;
 }
@@ -867,7 +867,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   position: relative;
   border-top: 1px dotted #cfcfcf;
 }
-/* line 286, ../scss/modules/comments.scss */
+/* line 284, ../scss/modules/comments.scss */
 .commentlist li p,
 .commentlist li blockquote,
 .commentlist li pre {
@@ -891,7 +891,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .commentlist li .children li {
   padding: 5px 7px 5px 45px;
 }
-/* line 309, ../scss/modules/comments.scss */
+/* line 307, ../scss/modules/comments.scss */
 .commentlist li .children .depth-2,
 .commentlist li .children .depth-3,
 .commentlist li .children .depth-4 {
@@ -899,20 +899,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /* line 313, ../scss/modules/comments.scss */
 .commentlist li .children .vcard .avatar {
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   height: 30px;
   left: 0;
   margin-top: 2px;
   width: 30px;
 }
-/* line 323, ../scss/modules/comments.scss */
+/* line 322, ../scss/modules/comments.scss */
 .commentlist li .comment-author
 , .commentlist li .pingback .vcard {
   padding: 0 170px 0 0;
 }
 /* line 327, ../scss/modules/comments.scss */
 .commentlist li .comment-author a {
-  color: #333333;
+  color: #333;
 }
 /* line 331, ../scss/modules/comments.scss */
 .commentlist li .comment-meta {
@@ -924,7 +924,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /* line 337, ../scss/modules/comments.scss */
 .commentlist li .comment-meta a {
-  color: #333333;
+  color: #333;
   font-size: 80%;
 }
 /* line 343, ../scss/modules/comments.scss */
@@ -960,7 +960,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /* line 375, ../scss/modules/comments.scss */
 .commentlist li .vcard .avatar {
-  border: 2px solid #dddddd;
+  border: 2px solid #ddd;
   left: 0;
   position: absolute;
   margin-top: 2px;
@@ -996,13 +996,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding: 0 10px;
 }
 
-/* line 415, ../scss/modules/comments.scss */
+/* line 414, ../scss/modules/comments.scss */
 .navigation .alignleft,
 .navigation .alignright {
   margin-bottom: 10px;
 }
 
-/* line 420, ../scss/modules/comments.scss */
+/* line 419, ../scss/modules/comments.scss */
 .navigation a,
 .navigation a:active {
   font-size: 90%;
@@ -1025,7 +1025,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding-bottom: 10px;
 }
 
-/* line 439, ../scss/modules/comments.scss */
+/* line 438, ../scss/modules/comments.scss */
 .commentlist li.byuser .vcard cite.fn:hover,
 .commentlist li.byuser .children li.byuser .vcard cite.fn:hover {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAMAAAAxmgQeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGBQTFRF29vbJSUltbW1AQEBxsbGGBgY9PT0WVlZ6enphYWFcnJyrq6uMjIys7Ozqqur9/f39fX29vb2nJyc8/PzwMDAfX19vr6+q6us5OTk0tLSPj4+zMzM7u7ujY2NYmJid3d3KWauyAAAAH1JREFUeNpk0NkSgjAMBdCE2BYEvFRcceH//9KUtlrwPiVnMplMCP+hsrGNmZ8bq1jM1a5MScQ0i93IfynaSG66KPWRDmHfcRLpKpumdJ2aCzW/FuJ2sF7tsZccbjHE++qM3CNbxu6En6F+B9qhNJBLVBju50jw2x+kfAQYAJagDQmTHztnAAAAAElFTkSuQmCC) no-repeat scroll right center transparent;
@@ -1033,7 +1033,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding-right: 20px;
 }
 
-/* line 447, ../scss/modules/comments.scss */
+/* line 446, ../scss/modules/comments.scss */
 .commentlist li.byuser .children li .vcard cite.fn,
 .commentlist li.byuser .children li .vcard cite.fn:hover {
   background: none;
@@ -1085,25 +1085,25 @@ html .last-commented {
 /* line 12, ../scss/modules/entry.scss */
 .entry cite {
   font-style: italic;
-  color: #666666;
+  color: #666;
   display: block;
 }
 /* line 18, ../scss/modules/entry.scss */
 .entry dd {
   margin-left: 2em;
   margin-bottom: 2em;
-  color: #666666;
+  color: #666;
 }
 /* line 24, ../scss/modules/entry.scss */
 .entry dt {
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #666;
 }
 /* line 28, ../scss/modules/entry.scss */
 .entry .wp-caption-text, .entry .pictext {
   font-size: 85%;
   font-style: italic;
   text-align: center;
-  color: #333333;
+  color: #333;
   padding: 0 0.5em 0.4em;
   display: block;
 }
@@ -1138,7 +1138,7 @@ html .last-commented {
 }
 /* line 64, ../scss/modules/entry.scss */
 .entry blockquote {
-  border-left: 2px solid #333333;
+  border-left: 2px solid #333;
   padding-left: 0.5em;
 }
 /* line 69, ../scss/modules/entry.scss */
@@ -1188,23 +1188,31 @@ html .last-commented {
   width: 33%;
   padding: 0;
 }
-/* line 112, ../scss/modules/entry.scss */
+/* line 113, ../scss/modules/entry.scss */
+.entry blockquote.alignright {
+  margin-top: 0;
+}
+/* line 117, ../scss/modules/entry.scss */
 .entry .alignleft {
   float: left;
   padding: 0;
   margin: 0.3em 1em 0.5em 0 !important;
   width: 33%;
 }
+/* line 124, ../scss/modules/entry.scss */
+.entry blockquote.alignleft {
+  margin-top: 0;
+}
 
-/* line 121, ../scss/modules/entry.scss */
+/* line 133, ../scss/modules/entry.scss */
 .tools {
-  border-top: 1px solid #333333;
+  border-top: 1px solid #333;
   padding-top: 0.5em;
   margin-bottom: 1em;
-  color: #666666;
-  font: 90%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+  color: #666;
+  font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
-/* line 129, ../scss/modules/entry.scss */
+/* line 141, ../scss/modules/entry.scss */
 .tools .hlist {
   font-size: 90%;
   list-style: none;
@@ -1212,31 +1220,31 @@ html .last-commented {
   overflow: hidden;
   margin: 0;
 }
-/* line 141, ../scss/modules/entry.scss */
+/* line 153, ../scss/modules/entry.scss */
 .tools .nav-article-tool {
   overflow: hidden;
 }
-/* line 145, ../scss/modules/entry.scss */
+/* line 157, ../scss/modules/entry.scss */
 .tools a {
-  color: #666666;
+  color: #666;
 }
-/* line 149, ../scss/modules/entry.scss */
+/* line 161, ../scss/modules/entry.scss */
 .tools .breadcrumb span {
   font-style: italic;
 }
-/* line 153, ../scss/modules/entry.scss */
+/* line 165, ../scss/modules/entry.scss */
 .tools li {
   margin-bottom: 0.5em;
 }
 
-/* line 164, ../scss/modules/entry.scss */
+/* line 175, ../scss/modules/entry.scss */
 body:not(.artdirected) .entry .inner .figure:not(.alignright):not(.alignleft),
 body:not(.artdirected) .entry .inner .marctv-gallery {
   margin-left: -60px;
   margin-right: -60px;
 }
 @media screen and (max-width: 600px) {
-  /* line 164, ../scss/modules/entry.scss */
+  /* line 175, ../scss/modules/entry.scss */
   body:not(.artdirected) .entry .inner .figure:not(.alignright):not(.alignleft),
   body:not(.artdirected) .entry .inner .marctv-gallery {
     margin-left: 0;
@@ -1260,7 +1268,7 @@ body:not(.artdirected) .entry .inner .marctv-gallery {
 }
 /* line 17, ../scss/modules/container.scss */
 .container .box a:hover {
-  color: #333333;
+  color: #333;
 }
 /* line 21, ../scss/modules/container.scss */
 .container .box .supertitle a:hover {
@@ -1270,7 +1278,7 @@ body:not(.artdirected) .entry .inner .marctv-gallery {
 .container .box p {
   margin-bottom: 2em;
 }
-/* line 33, ../scss/modules/container.scss */
+/* line 31, ../scss/modules/container.scss */
 .container.bars.docked, .container.docked, .container.bars.docked .box {
   margin-bottom: 0;
 }
@@ -1364,7 +1372,6 @@ body:not(.artdirected) .entry .inner .marctv-gallery {
   font-weight: normal;
   font-style: normal;
 }
-
 /* line 15, ../scss/modules/iconfont.scss */
 [data-icon]:before {
   font-family: "marctv-iconset" !important;
@@ -1379,7 +1386,7 @@ body:not(.artdirected) .entry .inner .marctv-gallery {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 29, ../scss/modules/iconfont.scss */
+/* line 28, ../scss/modules/iconfont.scss */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-family: "marctv-iconset" !important;
@@ -1433,9 +1440,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: #333333;
+  color: #333;
   background: #fff;
-  font: 112.5%/1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+  font: 112.5% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
 }
 
 /* line 17, ../scss/modules/base.scss */
@@ -1470,19 +1477,19 @@ small {
 /* line 41, ../scss/modules/base.scss */
 .header .innerheader {
   background: #efefef;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjk4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZWZlZmVmIiBzdG9wLW9wYWNpdHk9IjAuOTgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.98)), color-stop(100%, rgba(239, 239, 239, 0.98)));
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.98), rgba(239, 239, 239, 0.98));
   background: -moz-linear-gradient(rgba(255, 255, 255, 0.98), rgba(239, 239, 239, 0.98));
-  background: -o-linear-gradient(rgba(255, 255, 255, 0.98), rgba(239, 239, 239, 0.98));
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.98), rgba(239, 239, 239, 0.98));
   background: linear-gradient(rgba(255, 255, 255, 0.98), rgba(239, 239, 239, 0.98));
   width: 100%;
   z-index: 10000;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid #333333;
-  -webkit-box-shadow: #333333 0 0 2px;
-  -moz-box-shadow: #333333 0 0 2px;
-  box-shadow: #333333 0 0 2px;
+  border-bottom: 1px solid #333;
+  -moz-box-shadow: #333 0 0 2px;
+  -webkit-box-shadow: #333 0 0 2px;
+  box-shadow: #333 0 0 2px;
 }
 
 /* line 54, ../scss/modules/base.scss */
@@ -1490,7 +1497,7 @@ small {
   margin-bottom: 0.5em;
   margin-top: 0.2em;
   font-weight: 300;
-  border-bottom: 2px solid #333333;
+  border-bottom: 2px solid #333;
   padding: 0;
   font-size: 90%;
   text-transform: uppercase;
@@ -1499,7 +1506,7 @@ small {
 }
 /* line 64, ../scss/modules/base.scss */
 .supertitle span {
-  background: #333333;
+  background: #333;
   padding: 0 0.3em;
 }
 /* line 68, ../scss/modules/base.scss */
@@ -1576,7 +1583,7 @@ a:active {
 }
 /* line 128, ../scss/modules/base.scss */
 a.inverted {
-  color: #333333;
+  color: #333;
   outline: none;
 }
 /* line 132, ../scss/modules/base.scss */
@@ -1604,7 +1611,7 @@ a:active {
 /* line 153, ../scss/modules/base.scss */
 .sitelogo a {
   background: url("images/marctv_logo.png") no-repeat 0 0;
-  background: rgba(0, 0, 0, 0) url("images/marctv_logo.svg") no-repeat 0 0;
+  background: transparent url("images/marctv_logo.svg") no-repeat 0 0;
   display: block;
   height: 38px;
   margin: 0;
@@ -1624,15 +1631,13 @@ a:active {
 
 /* line 172, ../scss/modules/base.scss */
 .headline {
-  color: #333333;
+  color: #333;
   color: #fff;
   padding: 0.2em 0.3em;
   display: inline;
   font-weight: 300;
-  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   line-height: 1.2;
 }
@@ -1694,7 +1699,7 @@ a:active {
   display: none;
 }
 
-/* line 238, ../scss/modules/base.scss */
+/* line 237, ../scss/modules/base.scss */
 .infobox:hover .info,
 html .nohover .info {
   opacity: 1;
@@ -1709,22 +1714,20 @@ html .nohover .info {
 }
 /* line 246, ../scss/modules/base.scss */
 .infobox:hover .info {
-  background: #333333;
+  background: #333;
   color: #f3f3f3;
 }
 /* line 250, ../scss/modules/base.scss */
 .infobox .info {
-  -webkit-transition: all 0.05s linear;
   -moz-transition: all 0.05s linear;
   -o-transition: all 0.05s linear;
+  -webkit-transition: all 0.05s linear;
   transition: all 0.05s linear;
-  -webkit-border-radius: 0 2px 2px 2px;
   -moz-border-radius: 0 2px 2px 2px;
-  -ms-border-radius: 0 2px 2px 2px;
-  -o-border-radius: 0 2px 2px 2px;
+  -webkit-border-radius: 0;
   border-radius: 0 2px 2px 2px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
   box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
@@ -1742,10 +1745,8 @@ html .nohover .info {
 }
 /* line 272, ../scss/modules/base.scss */
 .infobox .info.rating {
-  -webkit-border-radius: 2px 0 2px 2px;
   -moz-border-radius: 2px 0 2px 2px;
-  -ms-border-radius: 2px 0 2px 2px;
-  -o-border-radius: 2px 0 2px 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px 0 2px 2px;
   right: 0;
   left: auto;
@@ -1829,20 +1830,20 @@ html .nohover .info {
 .nav-paged a span {
   background: #fff;
   color: #333;
-  border: 1px solid #333333;
+  border: 1px solid #333;
 }
 /* line 351, ../scss/modules/base.scss */
 .nav-paged span {
   font-size: 110%;
-  background: #333333;
+  background: #333;
   color: #fff;
   padding: 0.6em 1.6em;
-  border: 1px solid #333333;
+  border: 1px solid #333;
   line-height: 3em;
 }
 /* line 359, ../scss/modules/base.scss */
 .nav-paged a span:hover, .nav-paged .current span {
-  background: #333333;
+  background: #333;
   color: #fff;
   text-decoration: none;
 }
@@ -1907,8 +1908,8 @@ html .fullscreenicon {
 /* line 415, ../scss/modules/base.scss */
 .commentbox {
   background: #f3f3f3;
-  border-top: 1px solid #333333;
-  border-bottom: 1px solid #333333;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
 }
 
 /* article nav */
@@ -1975,7 +1976,7 @@ html .fullscreenicon {
 
 /* line 478, ../scss/modules/base.scss */
 .cat-more a {
-  background-color: #333333;
+  background-color: #333;
   display: block;
   color: #fff;
   padding: 0.5em 0;
@@ -2004,7 +2005,7 @@ html .fullscreenicon {
 /* line 503, ../scss/modules/base.scss */
 .warning {
   background: #eee;
-  border: 1px solid #bbbbbb;
+  border: 1px solid #bbb;
   padding: 1em;
   margin-bottom: 1em;
 }

@@ -14,7 +14,7 @@
 }
 /* line 17, ../../scss/modules/container.scss */
 .container .box a:hover {
-  color: #333333;
+  color: #333;
 }
 /* line 21, ../../scss/modules/container.scss */
 .container .box .supertitle a:hover {
@@ -24,7 +24,7 @@
 .container .box p {
   margin-bottom: 2em;
 }
-/* line 33, ../../scss/modules/container.scss */
+/* line 31, ../../scss/modules/container.scss */
 .container.bars.docked, .container.docked, .container.bars.docked .box {
   margin-bottom: 0;
 }
