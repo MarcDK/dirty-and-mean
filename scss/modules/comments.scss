@@ -2,20 +2,21 @@
 @import 'compass/css3';
 
 #cancel-comment-reply {
-  display:none;
-  padding-bottom:10px;
+  display: none;
+  padding-bottom: 10px;
 
 }
-.skiplink:before { 
-  content: ''; 
-  display: block; 
-  position: relative; 
+
+.skiplink:before {
+  content: '';
+  display: block;
+  position: relative;
   width: 0;
-  height: 3em; 
+  height: 3em;
   margin-top: -3em;
 }
 
-.commentlist .says{
+.commentlist .says {
   display: none;
 }
 
@@ -26,21 +27,25 @@
   width: 320px;
 }
 
+#commentform .readnetiquette {
+  margin-top: -20px;
+  display: block;
+}
+
 #commentform #submit {
   float: right;
 }
-
 
 .promoted {
   margin-bottom: 3em;
   margin-top: 1em;
 }
 
-#comment_section .comment-reply-link{
+#comment_section .comment-reply-link {
   font-size: 85%;
 }
 
-#comment_section .comment-reply-link:hover{
+#comment_section .comment-reply-link:hover {
   text-decoration: underline;
 }
 
@@ -83,12 +88,11 @@
   }
 }
 
-.move-wordpress-comments{
+.move-wordpress-comments {
   margin-top: 1em;
   font-size: 90%;
   color: #bbb;
 }
-
 
 .searchform .formbutton:active,
 #commentform #submit:active {
@@ -96,9 +100,10 @@
   border-bottom: 1px solid #888;
   @include box-shadow(#aaaaaa 0 0 5px 2px inset, $black 0 1px 0 0);
 }
+
 #comments textarea {
   border: none;
-  font-family: Consolas,Monaco,monospace;
+  font-family: Consolas, Monaco, monospace;
   line-height: 1.5;
   padding: 0;
   resize: vertical;
@@ -112,11 +117,11 @@
   margin-bottom: 1em;
 }
 
-.promoted .reply:hover{
+.promoted .reply:hover {
   text-decoration: underline;
 }
 
-.promoted .reply{
+.promoted .reply {
   color: #2E5393;
 }
 
@@ -129,13 +134,14 @@
 
   .gravatar {
 
-    line-height:20px;
+    line-height: 20px;
 
-  } a{
+  }
+  a {
     color: #fff;
     text-decoration: none;
 
-    &:hover{
+    &:hover {
       color: #fff;
       text-decoration: underline;
     }
@@ -143,7 +149,7 @@
 
   label em,
   #commentform .subscribe-to-comments label {
-    font-weight:300;
+    font-weight: 300;
   }
 
   p {
@@ -151,9 +157,9 @@
     color: #fff;
 
     &.red {
-      border:2px solid #8B0000;
-      margin-left:2px;
-      padding:2px;
+      border: 2px solid #8B0000;
+      margin-left: 2px;
+      padding: 2px;
     }
   }
 
@@ -166,37 +172,37 @@
   }
 }
 
-.subscribe-to-comments{
+.subscribe-to-comments {
   margin-bottom: 10px;
 }
 
-.subscribe-to-comments input{
+.subscribe-to-comments input {
   margin-left: 0;
 }
 
 .alignleft {
-  float:left;
-  padding:10px 0;
+  float: left;
+  padding: 10px 0;
 }
 
 .alignright {
-  float:right;
-  padding:10px 0;
+  float: right;
+  padding: 10px 0;
 }
 
 .bottom {
-  border-top:1px dotted #CCC;
+  border-top: 1px dotted #CCC;
 }
 
-#commentform p input{
+#commentform p input {
   font-size: 100%;
 }
 
 .commentlist {
-  list-style:none;
-  margin:0;
-  padding:0;
-  text-indent:0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
 
   p,
   em,
@@ -207,8 +213,8 @@
   }
 
   #cancel-comment-reply {
-    display:block;
-    padding-top:5px;
+    display: block;
+    padding-top: 5px;
   }
 
   pre {
@@ -220,16 +226,16 @@
   }
 
   .comment {
-    min-height:100px;
+    min-height: 100px;
   }
 
   blockquote {
     background: #ddd;
-    padding-bottom:1px;
-    padding-left:10px;
-    padding-top:7px;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    padding-top: 7px;
     color: $black;
-    font-style:italic;
+    font-style: italic;
     position: relative;
 
     &:after {
@@ -243,25 +249,25 @@
 
     p {
       color: #000;
-      font-style:italic;
-      margin:0;
+      font-style: italic;
+      margin: 0;
     }
 
   }
 
   ul {
-    font-weight:400;
-    line-height:1.6;
-    list-style:square;
-    margin:0 0 1em;
-    padding:0;
-    text-indent:0;
+    font-weight: 400;
+    line-height: 1.6;
+    list-style: square;
+    margin: 0 0 1em;
+    padding: 0;
+    text-indent: 0;
   }
 
-  li .children li ul{
+  li .children li ul {
     border: 0;
-    padding:0;
-    margin:0 0 0 1.5em;
+    padding: 0;
+    margin: 0 0 0 1.5em;
   }
   li .children li ul li {
     border: 0;
@@ -269,16 +275,15 @@
     padding: 0 5px;
   }
 
-
   .edit-comment-admin-links-no-icon {
     margin-top: 10px;
   }
 
   li {
-    height:1%;
+    height: 1%;
     margin: 0.5em 0 1em;
-    padding:5px 7px 5px 130px;
-    position:relative;
+    padding: 5px 7px 5px 130px;
+    position: relative;
     border-top: 1px dotted #cfcfcf;
 
     p,
@@ -287,41 +292,40 @@
       margin-bottom: 0.5em;
     }
 
-    .pingback{
+    .pingback {
       padding: 5px 7px 5px 5px;
     }
 
-    .avatar{
+    .avatar {
       width: 100px;
     }
 
     .children {
-      list-style:none;
-      margin:1em 0 0;
-      text-indent:0;
+      list-style: none;
+      margin: 1em 0 0;
+      text-indent: 0;
 
       li {
-        padding:5px 7px 5px 45px;
+        padding: 5px 7px 5px 45px;
       }
 
       .depth-2,
       .depth-3,
       .depth-4 {
-        margin:0 0 5px;
+        margin: 0 0 5px;
       }
 
       .vcard .avatar {
-        border:1px solid #DDD;
-        height:30px;
+        border: 1px solid #DDD;
+        height: 30px;
         left: 0;
         margin-top: 2px;
-        width:30px;
+        width: 30px;
       }
     }
 
-    .comment-author
-    , .pingback .vcard {
-      padding:0 170px 0 0;
+    .comment-author, .pingback .vcard {
+      padding: 0 170px 0 0;
     }
 
     .comment-author a {
@@ -329,27 +333,26 @@
     }
 
     .comment-meta {
-      line-height:1.4;
-      position:absolute;
-      right:10px;
-      text-align:right;
-      top:7px;
+      line-height: 1.4;
+      position: absolute;
+      right: 10px;
+      text-align: right;
+      top: 7px;
       a {
-        color:$black;
+        color: $black;
         font-size: 80%
       }
     }
 
     .reply {
       margin-bottom: 3em;
-      margin-top: 1em; 
+      margin-top: 1em;
     }
 
     .reply a {
-      text-decoration:none;
+      text-decoration: none;
       padding: 0.3em 1em;
     }
-
 
     #cancel-comment-reply-link {
       font-size: 70%;
@@ -359,29 +362,28 @@
       color: #aaa;
       display: inline;
       text-decoration: none;
-      
 
       &:hover {
         color: red;
-        text-decoration:none;
+        text-decoration: none;
       }
     }
 
     .vcard {
-      font-weight:700;
-      line-height:1.6;
+      font-weight: 700;
+      line-height: 1.6;
       margin-bottom: 10px;
 
       .avatar {
-        border:2px solid #ddd;
+        border: 2px solid #ddd;
         left: 0;
-        position:absolute;
+        position: absolute;
         margin-top: 2px;
         z-index: 1;
       }
 
       cite.fn {
-        font-style:normal;
+        font-style: normal;
       }
 
     }
@@ -394,26 +396,25 @@
   display: none;
 }
 
-.quicktags-toolbar{
+.quicktags-toolbar {
   margin-top: 1em;
-  input{
+  input {
     font-size: 90%;
   }
 }
 
-#cancel-comment-reply-link:hover{
+#cancel-comment-reply-link:hover {
   color: darkred;
 }
 
-
 .navigation {
-  overflow:hidden;
+  overflow: hidden;
   padding: 0 10px;
 }
 
 .navigation .alignleft,
 .navigation .alignright {
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
 .navigation a,
@@ -427,12 +428,12 @@
 }
 
 #commentform p {
-  overflow:hidden;
+  overflow: hidden;
 }
 
 #cancel-comment-reply {
-  display:none;
-  padding-bottom:10px;
+  display: none;
+  padding-bottom: 10px;
 }
 
 .commentlist li.byuser .vcard cite.fn:hover,
@@ -442,14 +443,13 @@
   padding-right: 20px;
 }
 
-
 .commentlist li.byuser .children li .vcard cite.fn,
 .commentlist li.byuser .children li .vcard cite.fn:hover {
   background: none;
   padding-right: 0;
 }
 
-.commentlist li.byuser .children li.byuser .vcard cite.fn{
+.commentlist li.byuser .children li.byuser .vcard cite.fn {
   background: none;
   padding-right: 0;
 }
