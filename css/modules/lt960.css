@@ -7,12 +7,12 @@
     height: 13em;
   }
   /* line 7, ../../scss/modules/lt960.scss */
-  html .container.multi .box.first, html .container.multi .box.multi-first {
+  html .container.multi .box.first, html .container.multi .box.multi-last {
     margin-left: 0;
     padding-left: 0;
   }
   /* line 11, ../../scss/modules/lt960.scss */
-  html .container.multi .box.last, html .container.multi .box.multi-last {
+  html .container.multi .box.last, html .container.multi .box.multi-first {
     margin-right: 0;
     padding-right: 0;
   }

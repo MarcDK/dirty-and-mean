@@ -5,6 +5,7 @@
 .entry.section {
   overflow: initial;
 }
+
 .entry {
   overflow: visible;
   font-size: 110%;
@@ -41,8 +42,17 @@
     font-size: 260%;
     font-weight: 700;
     margin-top: 0.5em;
+    margin-bottom: 0;
   }
 
+  .meta {
+    margin-bottom: 1em;
+    color: #999;
+
+    a {
+      color: #999;
+    }
+  }
   p, ul, ol, .video, .marctv-gallery, .figure {
     margin-bottom: 1.5em;
   }
@@ -125,9 +135,6 @@
     margin-top: 0;
   }
 
-
-
-
 }
 
 .tools {
@@ -136,7 +143,6 @@
   margin-bottom: 1em;
   color: $darkgrey;
   font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
-
 
   .hlist {
     font-size: 90%;
@@ -167,13 +173,11 @@
   }
 }
 
-
-
 body:not(.artdirected) {
   .entry {
     .inner {
       .figure:not(.alignright):not(.alignleft),
-        .marctv-gallery{
+      .marctv-gallery {
         margin-left: -$marctv-margin;
         margin-right: -$marctv-margin;
         @media screen and (max-width: 600px) {

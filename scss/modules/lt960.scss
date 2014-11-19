@@ -4,11 +4,11 @@
     border: 0;
     padding: 0 1%;
     height: 13em;
-    &.first, &.multi-first {
+    &.first,&.multi-last {
       margin-left: 0;
       padding-left: 0;
     }
-    &.last, &.multi-last {
+    &.last, &.multi-first  {
       margin-right: 0;
       padding-right: 0;
     }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="de-DE" id="marctv">
+<html dir="ltr" <?php language_attributes(); ?> id="marctv">
   <!--
 
   Grüße an alle Quelltextleser!
@@ -46,9 +46,9 @@
         <div class="site">
           <div class="section">
             <?php if (is_home()) : ?>
-              <h1 class="sitelogo"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
+              <h1 class="sitelogo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
             <?php else : ?>
-              <div class="sitelogo"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></div>
+              <div class="sitelogo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></div>
             <?php endif ?>
             <nav id="primary-navigation"><div id="navigation"><?php wp_nav_menu(array('theme_location' => 'mainnav', 'container' => '')); ?></div></nav>
             <?php get_search_form(); ?>
