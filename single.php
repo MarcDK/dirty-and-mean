@@ -9,7 +9,7 @@ get_header();
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <div id="post-<?php the_ID(); ?>" <?php post_class('entry article section'); ?>>
       <div class="article-wrapper">
-        <h1 class="entry-title title "><span><?php esc_html(the_title()); ?></span></h1>
+        <h1 class="entry-title title "><span><?php esc_html(the_title()); ?><?php edit_post_link('edit', '<small> ', '</small>'); ?></span></h1>
           <div class="meta"><small>
                       <?php if (get_the_author_meta('user_url') != "") : ?>
                           Geschrieben von <a class="vcard author" href="<?php the_author_meta('user_url'); ?>"><span class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?></span></a>

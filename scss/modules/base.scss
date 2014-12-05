@@ -11,7 +11,7 @@ body {
   padding: 0;
   color: $black;
   background: #fff;
-  font: 112.5% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+  font: 112.5% / 1.6 Verdana, Geneva, sans-serif;
 }
 
 ul, ol {
@@ -224,16 +224,6 @@ a {
 
 /* infobox */
 
-.is-touch {
-  .infobox .info {
-    opacity: 1;
-    filter: alpha(opacity = 1);
-  }
-
-  .galleria-image-nav {
-    display: none;
-  }
-}
 .infobox:hover .info,
 html .nohover .info {
   opacity: 1;

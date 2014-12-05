@@ -12,7 +12,10 @@
       $("body").addClass("svg");
     }
 
+
+    /*
     if (is_touch_device()) {
+
       $('body').addClass('is-touch');
     } else if ($(window).width() > 640) {
       $(".header .innerheader").sticky({
@@ -36,7 +39,7 @@
       el.animate({padding: '0.5em 0'});
     }
 
-
+*/
 
   });
 })(jQuery);

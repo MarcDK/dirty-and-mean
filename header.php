@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" <?php language_attributes(); ?> id="marctv">
+<html dir="ltr" lang="de-DE" id="marctv">
   <!--
 
   Grüße an alle Quelltextleser!
@@ -35,7 +35,6 @@
     <?php wp_enqueue_style('style', get_stylesheet_uri()); ?>
     <?php wp_head(); ?>
     <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:700,300' rel='stylesheet' type='text/css'>
   </head>
 
   <body <?php body_class(); ?>>
@@ -46,9 +45,9 @@
         <div class="site">
           <div class="section">
             <?php if (is_home()) : ?>
-              <h1 class="sitelogo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+              <h1 class="sitelogo"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>
             <?php else : ?>
-              <div class="sitelogo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></div>
+              <div class="sitelogo"><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></div>
             <?php endif ?>
             <nav id="primary-navigation"><div id="navigation"><?php wp_nav_menu(array('theme_location' => 'mainnav', 'container' => '')); ?></div></nav>
             <?php get_search_form(); ?>

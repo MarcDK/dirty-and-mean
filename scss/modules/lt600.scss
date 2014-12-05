@@ -92,6 +92,13 @@
     &.multi .box {
       height: 13em;
     }
+
+    &.multi {
+      .title {
+        font-size: 120%;
+      }
+    }
+
     &.multi .box, &.double .box, &.morph .box {
       width: 48%;
       border: 0;

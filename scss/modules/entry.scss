@@ -38,19 +38,22 @@
     margin: 0;
     background: $grey;
   }
+
   .title {
     font-size: 260%;
     font-weight: 700;
     margin-top: 0.5em;
-    margin-bottom: 0;
+    letter-spacing: -1px;
   }
 
   .meta {
-    margin-bottom: 1em;
-    color: #999;
+    margin-bottom: 0.7em;
+    color: $darkgrey;
+    margin-top: -0.7em;
+    font-size: 80%;
 
     a {
-      color: #999;
+      color: $darkgrey;
     }
   }
   p, ul, ol, .video, .marctv-gallery, .figure {
@@ -72,7 +75,6 @@
   }
 
   blockquote {
-    border-left: 2px solid #333;
     padding-left: 0.5em;
   }
 
@@ -142,7 +144,7 @@
   padding-top: 0.5em;
   margin-bottom: 1em;
   color: $darkgrey;
-  font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+  font: 90% / 1.6 Verdana, Geneva, sans-serif;
 
   .hlist {
     font-size: 90%;
