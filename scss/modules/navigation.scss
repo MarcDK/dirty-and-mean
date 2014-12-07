@@ -2,7 +2,8 @@
 @import 'compass/css3';
 
 #navigation {
-  
+  font-family: $fonts-title;
+
   line-height: normal;
   overflow: hidden;
   float: right;
@@ -63,7 +64,7 @@
   .menu .sub-menu {
     margin: 0;
     position: absolute;
-    width: 170px;
+    width: 200px;
     background-color: $black;
     z-index: 9999;
     padding: 3px 0 10px;

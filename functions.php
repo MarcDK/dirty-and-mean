@@ -728,8 +728,8 @@ function marctv_comment($comment, $args, $depth) {
   add_theme_support('post-thumbnails');
 
   function marctv_load_basejs() {
-    wp_enqueue_script("marctv.base", get_template_directory_uri() . "/js/marctv_base.js", array("jquery"), "1.1", 1);
-    //wp_enqueue_script("jquery.sticky", get_template_directory_uri() . "/js/jquery.sticky.js", array("jquery"), "1.1", 0);
+    wp_enqueue_script("marctv.base", get_template_directory_uri() . "/js/marctv_base.js", array("jquery"), "1.1", true);
+    wp_enqueue_script("jquery.sticky", get_template_directory_uri() . "/js/jquery.sticky.js", array("jquery"), "1.1", true);
   }
 
   add_action('wp_enqueue_scripts', 'marctv_load_basejs');

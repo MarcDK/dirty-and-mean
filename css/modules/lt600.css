@@ -1,7 +1,7 @@
 @media only screen and (max-width: 600px) {
   /* line 4, ../../scss/modules/lt600.scss */
   html body {
-    font: 90% / 1.6 "Roboto", "Lucida Grande", "Lucida Sans Unicode", Arial, FreeSans, sans-serif;
+    font-size: 90%;
   }
   /* line 8, ../../scss/modules/lt600.scss */
   html .hreview .text {
@@ -99,7 +99,11 @@
   #marctv .container.multi .box {
     height: 13em;
   }
-  /* line 95, ../../scss/modules/lt600.scss */
+  /* line 97, ../../scss/modules/lt600.scss */
+  #marctv .container.multi .title {
+    font-size: 120%;
+  }
+  /* line 102, ../../scss/modules/lt600.scss */
   #marctv .container.multi .box, #marctv .container.double .box, #marctv .container.morph .box {
     width: 48%;
     border: 0;
@@ -107,17 +111,17 @@
     float: left;
     font-size: 80%;
   }
-  /* line 102, ../../scss/modules/lt600.scss */
+  /* line 109, ../../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(odd), #marctv .container.morph .box:nth-child(odd), #marctv .container.double .box.first {
     margin-left: 0;
     padding-left: 0;
   }
-  /* line 106, ../../scss/modules/lt600.scss */
+  /* line 113, ../../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(even), #marctv .container.morph .box:nth-child(even), #marctv .container.double .box.last {
     margin-right: 0;
     padding-right: 0;
   }
-  /* line 110, ../../scss/modules/lt600.scss */
+  /* line 117, ../../scss/modules/lt600.scss */
   #marctv .container.morph .box p {
     height: 6em;
   }

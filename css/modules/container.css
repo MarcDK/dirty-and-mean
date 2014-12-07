@@ -49,45 +49,46 @@
 }
 /* line 53, ../../scss/modules/container.scss */
 .container.multi .title {
-  height: 2em;
+  height: 3em;
+  font-size: 100%;
 }
-/* line 57, ../../scss/modules/container.scss */
+/* line 58, ../../scss/modules/container.scss */
 .container.morph .title {
   height: 2em;
 }
-/* line 60, ../../scss/modules/container.scss */
+/* line 61, ../../scss/modules/container.scss */
 .container.morph .box {
   width: 32%;
   border: 0;
   padding: 0 1%;
   height: 20em;
 }
-/* line 65, ../../scss/modules/container.scss */
+/* line 66, ../../scss/modules/container.scss */
 .container.morph .box.first, .container.morph .box.multi-first {
   margin-left: 0;
   padding-left: 0;
 }
-/* line 69, ../../scss/modules/container.scss */
+/* line 70, ../../scss/modules/container.scss */
 .container.morph .box.last, .container.morph .box.multi-last {
   margin-right: 0;
   padding-right: 0;
 }
-/* line 73, ../../scss/modules/container.scss */
+/* line 74, ../../scss/modules/container.scss */
 .container.morph .box p {
   height: 6em;
 }
-/* line 78, ../../scss/modules/container.scss */
+/* line 79, ../../scss/modules/container.scss */
 .container .box {
   width: 32%;
   border: 0;
   padding: 0 1%;
 }
-/* line 82, ../../scss/modules/container.scss */
+/* line 83, ../../scss/modules/container.scss */
 .container .box.first {
   margin-left: 0;
   padding-left: 0;
 }
-/* line 86, ../../scss/modules/container.scss */
+/* line 87, ../../scss/modules/container.scss */
 .container .box.last {
   margin-right: 0;
   padding-right: 0;

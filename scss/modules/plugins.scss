@@ -1,3 +1,4 @@
+@import 'vars';
 .logged-in {
   .ac-comment-edit {
     position: absolute;
@@ -21,4 +22,14 @@
 
 html .last-commented  {
   margin-bottom: 2em;
+}
+
+.comment-teaser,
+.marctv-moderate-links,
+ .cat-more,
+.rating,
+.nav-article,
+.nav-paged,
+#bottom {
+  font-family: $fonts-title;
 }

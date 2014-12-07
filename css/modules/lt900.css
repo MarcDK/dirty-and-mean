@@ -71,13 +71,21 @@
   }
   /* line 73, ../../scss/modules/lt900.scss */
   html #navigation .hamburger {
-    background-color: #333333;
+    background-color: #333;
     position: absolute;
     position: absolute;
     right: 60px;
     z-index: 100;
     display: none;
   }
+}
+@media only screen and (max-width: 900px) and (max-width: 600px) {
+  /* line 73, ../../scss/modules/lt900.scss */
+  html #navigation .hamburger {
+    right: 15px;
+  }
+}
+@media only screen and (max-width: 900px) {
   /* line 88, ../../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu {
     display: block;
@@ -103,7 +111,7 @@
   html #navigation ul {
     display: none;
   }
-  /* line 116, ../../scss/modules/lt900.scss */
+  /* line 115, ../../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu li a,
   html #navigation .hamburger li a {
     font-size: 120%;
@@ -150,12 +158,6 @@
   }
   /* line 164, ../../scss/modules/lt900.scss */
   html #navigation .hamburger-icon.active {
-    background-color: #333333;
-  }
-}
-@media only screen and (max-width: 900px) and (max-width: 600px) {
-  /* line 73, ../../scss/modules/lt900.scss */
-  html #navigation .hamburger {
-    right: 15px;
+    background-color: #333;
   }
 }

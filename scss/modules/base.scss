@@ -11,7 +11,9 @@ body {
   padding: 0;
   color: $black;
   background: #fff;
-  font: 112.5% / 1.6 Verdana, Geneva, sans-serif;
+  font-size: 112.5%;
+  line-height: $lineheight;
+  font-family: $fonts;
 }
 
 ul, ol {
@@ -60,7 +62,8 @@ small {
   font-size: 90%;
   text-transform: uppercase;
   color: #fff;
-  line-height: 1.2;
+  line-height: $lineheight-title;
+  font-family: $fonts-title;
   span {
     background: $black;
     padding: 0 0.3em;
@@ -152,7 +155,7 @@ a {
 
 .sitelogo a {
   background: url('images/marctv_logo.png') no-repeat 0 0;
-  background: rgba(0, 0, 0, 0) url('images/marctv_logo.svg') no-repeat 0 0;
+  /* background: rgba(0, 0, 0, 0) url('images/marctv_logo.svg') no-repeat 0 0; */
   display: block;
   height: 38px;
   margin: 0;
@@ -162,11 +165,23 @@ a {
   margin-top: 2px;
 }
 
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .sitelogo a {
+    background: url('images/marctv_logo-2x.png') no-repeat 0 0;
+    background-size: 136px 29px;
+    background-repeat: no-repeat;
+  }
+}
+
 .title {
-  line-height: 1.2;
+  line-height: $lineheight-title;
   font-weight: 700;
   margin-bottom: 8px;
   font-size: 120%;
+  font-family: $fonts-title;
 }
 
 .headline {
@@ -176,7 +191,7 @@ a {
   display: inline;
   font-weight: 300;
   @include border-radius(2px);
-  line-height: 1.2;
+  line-height: $lineheight-title;
 }
 
 
