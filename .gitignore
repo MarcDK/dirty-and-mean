@@ -1,5 +1,7 @@
 **/.sass-cache
 **/css/
 compass/.sass-cache
-/images
-css/*
+images
+css/
+.sass-cache/
+.DS_Store

@@ -37,9 +37,9 @@
     width: 100%;
   }
   &.double .box {
-    width: 49%;
+    width: 48.4%;
     margin: 0%;
-    padding: 0 1%;
+    padding: 0 1.6%;
     border: 0;
   }
   &.multi {
@@ -59,9 +59,9 @@
     height: 2em;
   }
   &.morph .box {
-    width: 32%;
+    width: 31.2%;
     border: 0;
-    padding: 0 1%;
+    padding: 0 1.6%;
     height: 20em;
     &.first, &.multi-first {
       margin-left: 0;
@@ -77,9 +77,9 @@
   }
 
   .box {
-    width: 32%;
+    width: 31.2%;
     border: 0;
-    padding: 0 1%;
+    padding: 0 1.6%;
     &.first {
       margin-left: 0;
       padding-left: 0;

@@ -21,8 +21,6 @@ echo '<div class="section tagcloud"><div class="col_title supertitle"><span>Weit
 <?php
 endif
 ?>
-<?php
-wp_footer(); ?>
 </div> <!-- /site -->
 <div id="bottom">
   <div class="inner">
@@ -78,7 +76,7 @@ wp_footer(); ?>
   wp_reset_query();
   ?>
   </div>
-
+<?php wp_footer(); ?>
 </body>
 </html>
 <!-- <?php

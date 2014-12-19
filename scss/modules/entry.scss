@@ -183,11 +183,11 @@ body:not(.artdirected) {
     .inner {
       .figure:not(.alignright):not(.alignleft),
       .marctv-gallery {
-        margin-left: -$marctv-margin;
-        margin-right: -$marctv-margin;
+        // margin-left: -$marctv-margin;
+        // margin-right: -$marctv-margin;
         @media screen and (max-width: 600px) {
-          margin-left: 0;
-          margin-right: 0;
+          // margin-left: 0;
+          // margin-right: 0;
         }
       }
     }

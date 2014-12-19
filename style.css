@@ -1278,21 +1278,6 @@ html .last-commented {
   margin-bottom: 0.5em;
 }
 
-/* line 184, ../scss/modules/entry.scss */
-body:not(.artdirected) .entry .inner .figure:not(.alignright):not(.alignleft),
-body:not(.artdirected) .entry .inner .marctv-gallery {
-  margin-left: -60px;
-  margin-right: -60px;
-}
-@media screen and (max-width: 600px) {
-  /* line 184, ../scss/modules/entry.scss */
-  body:not(.artdirected) .entry .inner .figure:not(.alignright):not(.alignleft),
-  body:not(.artdirected) .entry .inner .marctv-gallery {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
 /* line 4, ../scss/modules/container.scss */
 .container {
   margin-bottom: 3em;
@@ -1329,9 +1314,9 @@ body:not(.artdirected) .entry .inner .marctv-gallery {
 }
 /* line 39, ../scss/modules/container.scss */
 .container.double .box {
-  width: 49%;
+  width: 48.4%;
   margin: 0%;
-  padding: 0 1%;
+  padding: 0 1.6%;
   border: 0;
 }
 /* line 46, ../scss/modules/container.scss */
@@ -1353,9 +1338,9 @@ body:not(.artdirected) .entry .inner .marctv-gallery {
 }
 /* line 61, ../scss/modules/container.scss */
 .container.morph .box {
-  width: 32%;
+  width: 31.2%;
   border: 0;
-  padding: 0 1%;
+  padding: 0 1.6%;
   height: 20em;
 }
 /* line 66, ../scss/modules/container.scss */
@@ -1374,9 +1359,9 @@ body:not(.artdirected) .entry .inner .marctv-gallery {
 }
 /* line 79, ../scss/modules/container.scss */
 .container .box {
-  width: 32%;
+  width: 31.2%;
   border: 0;
-  padding: 0 1%;
+  padding: 0 1.6%;
 }
 /* line 83, ../scss/modules/container.scss */
 .container .box.first {
