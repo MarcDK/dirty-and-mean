@@ -305,15 +305,6 @@ function get_adb_article()
     return $html;
 }
 
-function get_marctv_tags($ids)
-{
-
-    $args = array('numberposts' => 1, 'offset' => '', 'orderby' => '', 'order' => 'DESC', 'tax_query' => array('taxonomy' => 'tags', 'field' => 'slug', 'terms' => 'bestof'), 'meta_key' => '', 'meta_value' => '', 'post_type' => 'post', 'post_status' => 'publish');
-
-    $postlist = get_posts($args);
-
-    return $html;
-}
 
 function get_marctv_sticky_posts()
 {
@@ -695,9 +686,9 @@ function marctv_theme_options()
 
 function marctv_custom_login_logo()
 {
-    echo '<style type="text/css">
-    h1 a { background-image:url(' . get_bloginfo('template_directory') . '/images/wp_login.png) !important; }
-  </style>';
+    echo '<style type="text/css">';
+    echo 'h1 a { background-image:url(' . get_bloginfo('template_directory') . '/images/wp_login.png) !important; }';
+    echo '</style>';
 }
 
 function register_marctv_menus()

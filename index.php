@@ -10,7 +10,7 @@
 
             if (count($sticky) > 0) {
                 $lead_pid = $sticky;
-                
+
             } else {
 
                 $linkcat = get_option("marctv_linkcat");
@@ -33,9 +33,8 @@
                 echo '</li>';
             }
 
-
             $do_not_duplicate = '';
-            $do_not_duplicate[] = $lead_pid;
+            $do_not_duplicate = $lead_pid;
             update_option('do_not_duplicate', $do_not_duplicate);
             ?>
 
