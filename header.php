@@ -13,7 +13,9 @@
       <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
       <?php wp_enqueue_style('style', get_stylesheet_uri()); ?>
       <?php wp_head(); ?>
-      <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1, maximum-scale=1">
+      <meta name="viewport" content="user-scalable=1, width=device-width, initial-scale=1, maximum-scale=1">
+      <link href='http://fonts.googleapis.com/css?family=Noto Serif:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Noto Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
   </head>
 
   <body <?php body_class(); ?>>

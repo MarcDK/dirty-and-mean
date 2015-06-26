@@ -23,6 +23,8 @@ if (function_exists('add_image_size')) {
     add_image_size('EOS', 4000, 1750);
 }
 
+add_filter( 'searchwp_index_comments', '__return_false' );
+
 add_filter('image_size_names_choose', 'my_custom_sizes');
 
 function my_custom_sizes($sizes)
@@ -128,7 +130,7 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
           }
          */
 
-        $teaser .= '<p>' . $excerpt . '</p>';
+        $teaser .= '<p>' . $excerpt . ' [mehr]</p>';
     }
 
     if ($show_info) {
@@ -586,7 +588,7 @@ function marctv_pagination($seperator = ' | ', $after_previous = '&nbsp;&nbsp;',
 
     if ($max_num_pages > 1) {
 
-        $offset = "3";
+        $offset = "2";
 
         for ($cnt = 1; $cnt <= $max_num_pages; $cnt++) {
             $classname = "hidden";

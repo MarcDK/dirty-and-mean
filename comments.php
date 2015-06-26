@@ -24,10 +24,6 @@ if (post_password_required()) {
     <?php wp_list_comments(array('avatar_size' => 80, 'callback' => 'marctv_comment')); ?>
   </ol>
 
-  <div class="nav-article">
-    <span class="nav-previous"><?php previous_comments_link() ?></span>
-    <span class="nav-next"><?php next_comments_link() ?></span>
-  </div>
 
 <?php else : // this is displayed if there are no comments so far ?>
 
@@ -92,6 +88,10 @@ if (post_password_required()) {
 
 
     <?php endif; // If registration required and not logged in   ?>
+      <div class="nav-article">
+          <span class="nav-previous"><?php previous_comments_link() ?></span>
+          <span class="nav-next"><?php next_comments_link() ?></span>
+      </div>
   </div>
 <?php else : ?>
   <div class="comments-title title">Kommentare wurden geschlossen.</div>

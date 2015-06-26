@@ -49,8 +49,28 @@
   text-decoration: underline;
 }
 
+#hsc-btn-hideshow,
+#hsc-btn-loadmore{
+  margin-left: 0;
+  font-family: $fonts-title;
+  color: $black;
+  font-size: 100%;
+  text-decoration: none;
+ }
+
+#hsc-btn-hideshow span,
+#hsc-btn-loadmore span{
+  padding: 0;
+}
+
+.hsc-button.hsc-button-hideshow {
+  margin-bottom: 2em;
+}
+
 .searchform .formbutton,
 #commentform #submit,
+#hsc-btn-hideshow,
+#hsc-btn-loadmore,
 .reply a {
   background-color: #eeeeee;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
@@ -241,9 +261,10 @@
 
     &:after {
       position: absolute;
-      top: -21px;
+      top: -19px;
       left: -5px;
       content: "“";
+      font-family: serif;
       font-size: 46px;
       color: #aaa;
     }
