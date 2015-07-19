@@ -21,27 +21,34 @@ if (is_home()): ?>
 <?php
 endif
 ?>
-<div class="container most-commented section docked">
-    <div class="col_title supertitle"><span>Andere Projekte</span></div>
-</div>
-<ul class="container showontouch section">
-    <li class="box first"><a class="inverted infobox " href="http://verschlichtern.de"
-                             rel="bookmark">
-            <img width="300" src="http://marctv.de/media/2015/03/verschlichtern-300x131.jpg">
 
-            <h2 class="title">verschlichtern.de</h2></a></li>
-    <li class="box"><a class="inverted infobox " href="http://shortscore.org"
-                       rel="bookmark">
-            <img width="300" src="http://marctv.de/media/2015/01/shortscore-logo-300x131.png">
 
-            <h2 class="title">SHORTSCORE.org</h2></a></li>
-    <li class="box last"><a class="inverted infobox " href="http://kunstpixel.de"
-                            rel="bookmark">
-            <img width="300" src="http://marctv.de/media/2015/03/kunstpixel-300x130.jpg">
 
-            <h2 class="title">kunstpixel.de</h2></a></li>
-</ul>
+    <div class="container most-commented section docked">
+        <div class="col_title supertitle"><span>Andere Projekte</span></div>
+
+        <ul class="container showontouch section">
+            <li class="box first"><a class="inverted infobox " href="http://verschlichtern.de"
+                                     rel="bookmark">
+                    <img width="300" alt="Verschlichtern" src="http://marctv.de/media/2015/03/verschlichtern-300x131.jpg">
+
+                    <h2 class="title">verschlichtern.de</h2></a></li>
+            <li class="box"><a class="inverted infobox " href="http://shortscore.org"
+                               rel="bookmark">
+                    <img width="300" alt="Shortscore" src="http://marctv.de/media/2015/01/shortscore-logo-300x131.png">
+
+                    <h2 class="title">SHORTSCORE.org</h2></a></li>
+            <li class="box last"><a class="inverted infobox " href="http://kunstpixel.de"
+                                    rel="bookmark">
+                    <img width="300" alt="Kunstpixel.de" src="http://marctv.de/media/2015/03/kunstpixel-300x130.jpg">
+
+                    <h2 class="title">kunstpixel.de</h2></a></li>
+        </ul>
+    </div>
+
+
 </div> <!-- /site -->
+
 <div id="bottom">
     <div class="inner">
 
