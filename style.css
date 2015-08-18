@@ -4,10 +4,10 @@ Theme Name: Dirty and Mean
 Theme URI: http://marctv.de
 Description: MarcTV Theme 2014
 Author: MarcDK
-Version: 1.0
+Version: 1.2
 License: GPL v3
 License URI: license.txt
-Tags: responsive
+Tags: responsive, MarcTV
 */
 /* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -1135,6 +1135,17 @@ html .jqvideo .sprite {
     background-image: url("images/video_icons2x.png");
   }
 }
+/* bigpicture */
+@media only screen and (min-width: 1400px) {
+  /* line 9, ../scss/modules/big.scss */
+  body:not(.artdirected) .entry-content .figure img,
+  body:not(.artdirected) .entry-content .marctv-gallery,
+  body:not(.artdirected) .entry-content .jqvideo {
+    margin: 0 -5% !important;
+    width: 110% !important;
+  }
+}
+
 /* article */
 /* line 5, ../scss/modules/entry.scss */
 .entry.section {
@@ -1174,7 +1185,7 @@ html .jqvideo .sprite {
 /* line 37, ../scss/modules/entry.scss */
 .entry .wp-caption {
   margin: 0;
-  background: #f3f3f3;
+  /* background: $grey; */
 }
 /* line 42, ../scss/modules/entry.scss */
 .entry .title {
@@ -1429,6 +1440,11 @@ html .jqvideo .sprite {
   text-decoration: none;
 }
 
+/* line 20, ../scss/modules/socialbox.scss */
+html .projects {
+  background: white;
+}
+
 @font-face {
   font-family: "marctv-iconset";
   src: url("fonts/marctv-iconset.eot");
@@ -1680,12 +1696,12 @@ a:active {
   background: url("images/marctv_logo.png") no-repeat 0 0;
   /* background: rgba(0, 0, 0, 0) url('images/marctv_logo.svg') no-repeat 0 0; */
   display: block;
-  height: 38px;
+  height: 34px;
   margin: 0;
   padding: 0;
   text-indent: -5000em;
   width: 170px;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {

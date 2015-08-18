@@ -1,4 +1,6 @@
+<div class="site projects">
 <?php
+
 if (is_home()): ?>
 
     <?php
@@ -23,8 +25,7 @@ endif
 ?>
 
 
-
-    <div class="container most-commented section docked">
+    <div class="container section docked">
         <div class="col_title supertitle"><span>Andere Projekte</span></div>
 
         <ul class="container showontouch section">
@@ -45,9 +46,9 @@ endif
                     <h2 class="title">kunstpixel.de</h2></a></li>
         </ul>
     </div>
+    </div>
 
 
-</div> <!-- /site -->
 
 <div id="bottom">
     <div class="inner">

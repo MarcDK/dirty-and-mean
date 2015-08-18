@@ -54,6 +54,8 @@ get_header();
     <p>Leider wurde kein Artikel gefunden.</p>
   <?php endif; ?>
 </div> <!-- / hentry -->
+
+
 </div> <!-- /site -->
 
 <?php
@@ -71,7 +73,7 @@ if (function_exists('related_posts')) {
           echo marctv_promoted_comments();
         }
         comments_template();
-      
+
 
       ?>
     </div>
