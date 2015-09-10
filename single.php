@@ -12,9 +12,9 @@ get_header();
         <h1 class="entry-title title "><span><?php esc_html(the_title()); ?></span></h1>
           <div class="meta"><small>
                       <?php if (get_the_author_meta('user_url') != "") : ?>
-                          Geschrieben von <a class="vcard author" href="<?php the_author_meta('user_url'); ?>"><span class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?></span></a>
+                         Von <a class="vcard author" href="<?php the_author_meta('user_url'); ?>"><span class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?></span></a>
                       <?php else: ?>
-                          Geschrieben von <span rel="vcard author"><span class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?> am <?php the_date(); ?></span></span>
+                         Von <span rel="vcard author"><span class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?> am <?php the_date(); ?></span></span>
                       <?php endif ?> am <time class="updated" datetime="<?php the_date('c'); ?>"><?php the_time(__('F j, Y')); ?> </time>
 
 
@@ -105,6 +105,5 @@ if (function_exists('related_posts')) {
 
 <?php echo marctv_get_randompost(); ?>
 
-    </div>
   </div>
   <?php get_footer(); ?>

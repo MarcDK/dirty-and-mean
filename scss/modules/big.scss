@@ -1,0 +1,17 @@
+@import 'vars';
+
+/* bigpicture */
+
+
+body:not(.artdirected) {
+  @media only screen and (min-width: 1400px) {
+    .entry-content {
+      .figure img,
+      .marctv-gallery,
+      .jqvideo {
+        margin: 0 -9% ! important;
+        width: 118% ! important;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import 'vars';
+@import 'compass/css3';
+
+/* infobox */
+
+.infobox:hover .info,
+html .nohover .info {
+  opacity: 1;
+  filter: alpha(opacity = 1);
+}
+
+.page-template-sortbyreview .info {display: block;}
+.info {display: none;}
+
+.infobox {
+  overflow: hidden;
+  &:hover .info {
+    background: $black;
+    color: $grey;
+  }
+  .info {
+    @include transition(all 0.05s linear);
+    @include border-radius(0 0px 2px 0px);
+    //@include box-shadow(rgba(0,0,0,0.5) 2px 2px 2px);
+    @include opacity(.9);
+    //@include text-shadow(0px 1px 0px rgba(255, 255, 255, 0.3), 0px 1px 0px rgba(0, 0, 0, 0.7));
+    background: $grey;
+    background: rgba(243,243,243,0.95);
+    top: 0;
+    left: 0;
+    color: #333;
+    font-size: 80%;
+    padding: 2px 5px;
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    zoom: 1;
+  }
+  .info.comment-count {
+
+  }
+
+  .info.rating {
+    @include border-radius(0px 0px 0px 2px);
+    right: 0;
+    left: auto;
+    font-size: 100%;
+    color: black;
+    line-height: 1.2;
+    background: white;
+    opacity: 1;
+    padding: 2px 7px;
+    letter-spacing: -1px;
+    filter: alpha(opacity = 1);
+  }
+  position: relative;
+  display: block;
+}

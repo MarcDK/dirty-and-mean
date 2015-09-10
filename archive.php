@@ -11,45 +11,11 @@ get_header();
   <?php if (have_posts()) : ?>
    
     <div class="entry">
-      <?php /* If this is a category archive */ if (is_category()) {
-        ?>
-        <h1 class="title"><?php printf('%s', single_cat_title('', false)); ?></h1>
-        <?php
-        /* If this is a tag archive */
-      } elseif (is_tag()) {
-        ?>
-        <h1 class="title"><?php printf('%s', single_tag_title('', false)); ?></h1>
-        <?php
-        /* If this is a daily archive */
-      } elseif (is_day()) {
-        ?>
-        <h1 class="title"><?php printf('Archiv für %s | Tagesansicht', get_the_time(__('F jS, Y'))); ?></h1>
-        <?php
-        /* If this is a monthly archive */
-      } elseif (is_month()) {
-        ?>
-        <h1 class="title"><?php printf('Archiv für %s | Monatsansicht', get_the_time(__('F, Y'))); ?></h1>
-        <?php
-        /* If this is a yearly archive */
-      } elseif (is_year()) {
-        ?>
-        <h1 class="title"><?php printf('Archiv für %s | Jahresansicht', get_the_time(__('Y'))); ?></h1>
-        <?php
-        /* If this is an author archive */
-      } elseif (is_author()) {
-        ?>
-        <h1 class="title">Author Archive</h1>
-        <?php
-        /* If this is a paged archive */
-      } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {
-        ?>
-        <h1 class="title">Blog Archives</h1>
-      <?php } ?>
-
+      <?php the_archive_title( '<h1 class="title">', '</h1>' ); ?>
       <?php
       global $paged;
       if ($paged == 0) {
-        echo tag_description();
+         the_archive_description( '', '' );
       }
       ?>
     </div>
@@ -71,10 +37,10 @@ get_header();
           echo '<li class="box">';
         }
 
-        echo get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', true);
+        echo get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', false);
 
-        if ($key % 3 == 0) {
-          echo '</ul><ul class="container">';
+        if ($key % 3 == 0 && $key < 6) {
+          echo '</ul><ul class="container docked">';
         }
         
         echo '</li>';
@@ -97,13 +63,10 @@ get_header();
     endif;
     ?>
 
-
     <div class="nav-article">
-      <span class="nav-previous"><?php echo get_previous_posts_link('« Vorherige'); ?>&nbsp;</span>
-      <span class="nav-next">&nbsp;<?php echo get_next_posts_link('Nächste »'); ?></span>
+        <?php the_posts_navigation(); ?>
     </div>
 
-    <?php marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '6'); ?>
 
 </div>
 

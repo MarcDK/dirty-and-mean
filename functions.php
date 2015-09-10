@@ -19,6 +19,7 @@ if (function_exists('add_image_size')) {
     add_image_size('fullhd', 1920, 836);
     add_image_size('legacy_m', 460, 200);
     add_image_size('legacy_s', 300, 130);
+    add_image_size('legacy_b', 960, 418);
     add_image_size('4k', 3840, 1680);
     add_image_size('EOS', 4000, 1750);
 }

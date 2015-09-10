@@ -122,5 +122,5 @@
             <?php marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '6'); ?>
     </div>
 <?php endif; ?>
-</div>
+
 <?php get_footer(); ?>
