@@ -131,7 +131,7 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
           }
          */
 
-        $teaser .= '<p>' . $excerpt . ' [mehr]</p>';
+        $teaser .= '<p>' . $excerpt . ' <span class="more_link">[mehr]</span></p>';
     }
 
     if ($show_info) {

@@ -9,8 +9,9 @@ body:not(.artdirected) {
       .figure img,
       .marctv-gallery,
       .jqvideo {
-        margin: 0 -9% ! important;
-        width: 118% ! important;
+        margin-left: -$marctv-margin*2 ! important;
+        margin-right: -$marctv-margin*2 ! important;
+        width: 100% + $marctv-margin*4 ! important;
       }
     }
   }

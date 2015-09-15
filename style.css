@@ -4,7 +4,7 @@ Theme Name: Dirty and Mean
 Theme URI: http://marctv.de
 Description: MarcTV Theme 2014
 Author: MarcDK
-Version: 1.4.1
+Version: 1.4.6
 License: GPL v3
 License URI: license.txt
 Tags: responsive, MarcTV
@@ -114,111 +114,141 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 4, ../scss/modules/lt600.scss */
+  /* line 5, ../scss/modules/lt600.scss */
   html body {
     font-size: 90%;
   }
-  /* line 8, ../scss/modules/lt600.scss */
+  /* line 9, ../scss/modules/lt600.scss */
   html .hreview .text {
     width: 100%;
   }
 
-  /* line 12, ../scss/modules/lt600.scss */
+  /* line 13, ../scss/modules/lt600.scss */
   #marctv .article-wrapper {
     width: 100%;
     margin: 0 auto;
   }
 
-  /* line 18, ../scss/modules/lt600.scss */
+  /* line 20, ../scss/modules/lt600.scss */
+  body:not(.artdirected) .entry-content .figure img,
+  body:not(.artdirected) .entry-content .marctv-gallery,
+  body:not(.artdirected) .entry-content .jqvideo {
+    margin-left: -1.25% !important;
+    margin-right: -1.25% !important;
+    width: 102.5% !important;
+  }
+
+  /* line 33, ../scss/modules/lt600.scss */
+  .commentbox .comments-title {
+    margin: 1.25%;
+  }
+  /* line 37, ../scss/modules/lt600.scss */
+  .commentbox .site {
+    margin: 0;
+  }
+  /* line 41, ../scss/modules/lt600.scss */
+  .commentbox .commentlist .comment {
+    margin: 1.25%;
+  }
+  /* line 44, ../scss/modules/lt600.scss */
+  .commentbox .commentlist .children {
+    margin: -1.25%;
+  }
+  /* line 47, ../scss/modules/lt600.scss */
+  .commentbox .commentlist .children .comment {
+    margin: -1.25%;
+  }
+
+  /* line 56, ../scss/modules/lt600.scss */
   html .archive .nav-article .nav-next, html .archive .nav-article .nav-previous {
     width: 50%;
     margin-bottom: 20px;
   }
-  /* line 23, ../scss/modules/lt600.scss */
+  /* line 61, ../scss/modules/lt600.scss */
   html .lead {
     margin-bottom: 0;
   }
-  /* line 27, ../scss/modules/lt600.scss */
+  /* line 65, ../scss/modules/lt600.scss */
   html .lead .box {
     margin-bottom: 0;
   }
-  /* line 31, ../scss/modules/lt600.scss */
+  /* line 69, ../scss/modules/lt600.scss */
   html .lead .title {
     font-size: 120%;
   }
-  /* line 35, ../scss/modules/lt600.scss */
+  /* line 73, ../scss/modules/lt600.scss */
   html .lead p {
     margin-bottom: 2em;
   }
-  /* line 39, ../scss/modules/lt600.scss */
+  /* line 77, ../scss/modules/lt600.scss */
   html .entry .title {
     font-size: 170%;
   }
-  /* line 42, ../scss/modules/lt600.scss */
+  /* line 80, ../scss/modules/lt600.scss */
   html .box .title {
     font-size: 140%;
   }
 
-  /* line 46, ../scss/modules/lt600.scss */
+  /* line 84, ../scss/modules/lt600.scss */
   #marctv .container .box {
     width: 100%;
     float: none;
     padding: 0;
   }
 
-  /* line 54, ../scss/modules/lt600.scss */
+  /* line 92, ../scss/modules/lt600.scss */
   html .commentlist .comment-meta a:first-child:before {
     content: "# ";
   }
-  /* line 57, ../scss/modules/lt600.scss */
+  /* line 95, ../scss/modules/lt600.scss */
   html .commentlist .comment-meta span {
     display: none;
   }
-  /* line 61, ../scss/modules/lt600.scss */
+  /* line 99, ../scss/modules/lt600.scss */
   html .commentlist li {
     border-top: 1px dotted #333;
     padding-left: 0;
   }
-  /* line 64, ../scss/modules/lt600.scss */
+  /* line 102, ../scss/modules/lt600.scss */
   html .commentlist li .vcard {
     padding-left: 2.5em;
   }
-  /* line 65, ../scss/modules/lt600.scss */
+  /* line 103, ../scss/modules/lt600.scss */
   html .commentlist li .vcard .avatar {
     width: 2em;
     height: 2em;
   }
-  /* line 71, ../scss/modules/lt600.scss */
+  /* line 109, ../scss/modules/lt600.scss */
   html .commentlist li .comment-author {
     padding-bottom: 0.5em;
   }
-  /* line 75, ../scss/modules/lt600.scss */
+  /* line 113, ../scss/modules/lt600.scss */
   html .commentlist .pingback .vcard {
     padding-bottom: 0.5em;
   }
-  /* line 78, ../scss/modules/lt600.scss */
+  /* line 116, ../scss/modules/lt600.scss */
   html .commentlist li .children {
     background-image: url("images/left-stroke.gif");
     background-repeat: repeat-y;
   }
-  /* line 83, ../scss/modules/lt600.scss */
+  /* line 121, ../scss/modules/lt600.scss */
   html .commentlist li .children .vcard .avatar {
     left: 1em;
   }
-  /* line 86, ../scss/modules/lt600.scss */
+  /* line 124, ../scss/modules/lt600.scss */
   html .commentlist li .children li {
     padding-left: 1em;
   }
 
-  /* line 92, ../scss/modules/lt600.scss */
+  /* line 130, ../scss/modules/lt600.scss */
   #marctv .container.multi .box {
     height: 13em;
   }
-  /* line 97, ../scss/modules/lt600.scss */
+  /* line 135, ../scss/modules/lt600.scss */
   #marctv .container.multi .title {
     font-size: 120%;
   }
-  /* line 102, ../scss/modules/lt600.scss */
+  /* line 140, ../scss/modules/lt600.scss */
   #marctv .container.multi .box, #marctv .container.double .box, #marctv .container.morph .box {
     width: 48%;
     border: 0;
@@ -226,17 +256,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     float: left;
     font-size: 80%;
   }
-  /* line 109, ../scss/modules/lt600.scss */
+  /* line 147, ../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(odd), #marctv .container.morph .box:nth-child(odd), #marctv .container.double .box.first {
     margin-left: 0;
     padding-left: 0;
   }
-  /* line 113, ../scss/modules/lt600.scss */
+  /* line 151, ../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(even), #marctv .container.morph .box:nth-child(even), #marctv .container.double .box.last {
     margin-right: 0;
     padding-right: 0;
   }
-  /* line 117, ../scss/modules/lt600.scss */
+  /* line 155, ../scss/modules/lt600.scss */
   #marctv .container.morph .box p {
     height: 6em;
   }
@@ -328,7 +358,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-color: #333;
     position: absolute;
     position: absolute;
-    right: 60px;
+    right: 5%;
     z-index: 100;
     display: none;
   }
@@ -336,7 +366,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @media only screen and (max-width: 900px) and (max-width: 600px) {
   /* line 73, ../scss/modules/lt900.scss */
   html #navigation .hamburger {
-    right: 15px;
+    right: 1.25%;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -1145,8 +1175,9 @@ html .jqvideo .sprite {
   body:not(.artdirected) .entry-content .figure img,
   body:not(.artdirected) .entry-content .marctv-gallery,
   body:not(.artdirected) .entry-content .jqvideo {
-    margin: 0 -9% !important;
-    width: 118% !important;
+    margin-left: -10% !important;
+    margin-right: -10% !important;
+    width: 120% !important;
   }
 }
 
@@ -1691,14 +1722,14 @@ small {
 
 /* line 92, ../scss/modules/base.scss */
 .site {
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 @media screen and (max-width: 600px) {
   /* line 92, ../scss/modules/base.scss */
   .site {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 1.25%;
+    margin-right: 1.25%;
   }
 }
 
@@ -2073,11 +2104,12 @@ html .fullscreenicon {
 }
 
 /* line 435, ../scss/modules/base.scss */
-.cat-more a {
+.container .cat-more a {
   background-color: #333;
   display: block;
   color: #fff;
-  padding: 0.5em 0;
+  padding: 0.2em 0;
+  text-transform: uppercase;
   border-radius: 2px 2px 2px 2px;
   -moz-border-radius: 2px 2px 2px 2px;
   -webkit-border-radius: 2px 2px 2px 2px;
@@ -2085,10 +2117,9 @@ html .fullscreenicon {
   -o-border-radius: 2px 2px 2px 2px;
   margin-bottom: 1em;
 }
-/* line 446, ../scss/modules/base.scss */
-.cat-more a:hover {
-  background-color: #0e7dc4;
-  text-decoration: none;
+/* line 447, ../scss/modules/base.scss */
+.container .cat-more a:hover {
+  text-decoration: underline;
   color: #fff;
 }
 
@@ -2148,4 +2179,14 @@ html .yarpp-related {
 /* line 501, ../scss/modules/base.scss */
 .twitter-tweet-rendered {
   width: 100% !important;
+}
+
+/* line 505, ../scss/modules/base.scss */
+.more_link {
+  text-decoration: underline;
+}
+
+/* line 509, ../scss/modules/base.scss */
+a:hover .more_link {
+  color: #0e7dc4;
 }

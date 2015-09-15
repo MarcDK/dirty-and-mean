@@ -432,11 +432,12 @@ html .fullscreenicon {
   }
 }
 
-.cat-more a {
+.container .cat-more a {
   background-color: $black;
   display: block;
   color: #fff;
-  padding: 0.5em 0;
+  padding: 0.2em 0;
+  text-transform: uppercase;
   border-radius: 2px 2px 2px 2px;
   -moz-border-radius: 2px 2px 2px 2px;
   -webkit-border-radius: 2px 2px 2px 2px;
@@ -444,8 +445,7 @@ html .fullscreenicon {
   -o-border-radius: 2px 2px 2px 2px;
   margin-bottom: 1em;
   &:hover {
-    background-color: $marctv-color;
-    text-decoration: none;
+    text-decoration: underline;
     color: #fff;
   }
 }
@@ -500,4 +500,12 @@ html .yarpp-related {
 
 .twitter-tweet-rendered {
   width: 100% ! important;
+}
+
+.more_link {
+  text-decoration: underline;
+}
+
+a:hover .more_link {
+  color: $marctv-color;
 }
