@@ -4,6 +4,11 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+
+  .dashicons {
+    height: 1em;
+    width: 0.85em;
+  }
 }
 
 .screen-reader-text {
@@ -46,7 +51,7 @@ small {
 
   .innerheader {
     background: #efefef;
-    @include background (linear-gradient(rgba(255,255,255,0.98), rgba(239,239,239,0.98)));
+    @include background (linear-gradient(rgba(255, 255, 255, 0.98), rgba(239, 239, 239, 0.98)));
     width: 100%;
     z-index: 10000;
     padding-top: 0.5em;
@@ -54,6 +59,21 @@ small {
     border-bottom: 1px solid #333;
     @include box-shadow(#333 0 0 2px);
 
+  }
+
+  .searchbox {
+    float: right;
+    width: 140px;
+    padding-top: 6px;
+  }
+
+  .searchbox input {
+    font-size: 90%;
+    width: 140px;
+    padding: 1px;
+    float: right;
+    margin-top: 0px;
+    margin-right: 4px;
   }
 }
 
@@ -111,7 +131,7 @@ small {
   img, video, iframe {
     width: 100%;
   }
-  
+
   img {
     height: auto;
   }
@@ -143,8 +163,6 @@ a {
     color: #444;
   }
 }
-
-
 
 .section {
   margin: 0 auto;
@@ -198,7 +216,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
   line-height: $lineheight-title;
 }
 
-
 /* box */
 
 .lead .title {
@@ -240,8 +257,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
     color: #0e7dc4;
   }
 }
-
-
 
 /* hreview */
 
@@ -289,6 +304,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .hreview .inner {
   padding: 0.1em 0.3em 0.2em;
   display: block;
+  text-align: center;
 }
 
 /* pageination */
@@ -325,23 +341,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
   margin-bottom: 2em;
 }
 
-.header .searchbox {
-  float: right;
-  width: 140px;
-  padding-top: 6px;
-}
 
 .searchbox input {
   font-size: 90%;
   width: 120px;
-}
-
-.header .searchbox input {
-  font-size: 90%;
-  width: 120px;
-  padding: 1px;
-  float: right;
-  margin-right: 4px;
 }
 
 #content .searchbox input {
@@ -485,9 +488,20 @@ html .fullscreenicon {
 /* amazon */
 
 a[href*='=087022'] {
-  padding-left: 27px;
-  background-repeat: no-repeat;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABCVJREFUeNq0VV9IZFUY/525d2bUdK7O5KaZf7BwLCOwXQMV2RJ90GqXcAmi8sEefPFlsSeRMBKMEHoJUcTQjcRFhIEskHrSaJyQgnBVdPNBbUnF1VHnz507d27fOXr1OjtSsXXgzNxz7jm/7/t+3+/7LjMMA//nYDk5Oay6uvrp7u7uz10uVw3taY+JaT88PPypt7f3tt/vfyDbbLYns7KyrhcVFd1yOBzsv/A6Ozv7FmH6CPt72W63e8jziry8PBaNRpFIJB4LnEDhdrsZxyTsX2S+xyfPBQdPNsAYgyzLYvLLfPAz8XhczFQ5PN0TuLJ105zm4KA8qkAggPn5eWxubgrwgoIC1NbWoqqqCpIkXXDqEYwkq2eDXwyFQhgcHMTExARUVRUeczDKFSYnJ9He3o7W1lYRmfW+9dmWUlpECzcwNTWFkZERhMNheL1edHR0oKWlBZRAHB0dYWxsDCsrK3A6nZfmRDYBrRRxj46Pj7G0tCQOlZaWoqurCzU1Ndjb20MsFoPP5xPPq6urgirTaxODY16gyDo4DZz/trY2NDQ0gBSGiooKRCIRYTw9PV2AcAq5I2byL40glQq4B+Xl5SgsLMTi4iIGBgawvr6Og4MDseZndF3/W1nLycBmqKRhbG9vo6+vDzMzMwgGg1AUBcXFxdA07WyaBqwUXaiLVDLlIXN5UrljeHgYGxsbaGpqwujoKIaGhgTn+/v7giJOW/L9lDK9EBbxv7CwgOnpabEuKytDZ2cnKisrRSQ8B1Y5/2OKrOW+tbWFnZ0dseaAfJq1sba2dnaWn4lTLpjkQIIIMZK6mc2qfauKqGEhMzNTrJeXlzE+Pi6quaenB7Ozs2dnJ+7eRcDvR5q6CcefP0A6WLyAlUJfjCpWx9Wr11Bf3yB2uO77+/vR2Ngoqrq5+Q2UlJSId1E1LpIthX6HvPsj0u71AXpE4KQ0wBIx6FoI2Z5cfNz7GW6+9TZcWS6iTcKVp57BRz2f4M5Xd3D7w25cf/V1fPuND9cqX4QaCUEtuAEj61nC0C6RKaOEaUHYyZOEPQfPXSnHl8NfYPcgioiqI9ftQqbiJg81vP/Om3iv2Qsl/DP0wKdQc1+jD8FL0PLq4ZAyONqjBphBhePMRdz9CuwPvoP8hw9OxJCZng/DoSBxTMe1MPHyEHL4PiRtF1qGF5HSD6Dn0sfQILoy8uE4b9LnBswGxxgVjlIKXemAcbgKef9XyMF7kB/+Bhbb5WEi8QQVW34zou5K6J6Xieg0SIkovbPDJjDOkyxTAo+o/O/z7sjb8ImMNG4RCcULVXkBMUMTtNCLU2nYaTpOEkk5O0mqKRGITssxOTajopI9Ho9SV1f3LkXwPElUT1aV9e88YWc/yTUkUY9anpub+5q6bZCdXmWnp40UUP92GFbMvwQYAMN9CxPEMYHgAAAAAElFTkSuQmCC);
+  &:before {
+    content: "\f174";
+    display: inline-block;
+    width: 1em;
+    font-family: dashicons;
+    text-decoration: inherit;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-transition: color .1s ease-in 0;
+    transition: color .1s ease-in 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
 }
 
 .page-template-sortbyreview-php .container.morph .box {
@@ -509,3 +523,4 @@ html .yarpp-related {
 a:hover .more_link {
   color: $marctv-color;
 }
+

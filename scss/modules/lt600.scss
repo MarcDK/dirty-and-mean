@@ -1,4 +1,5 @@
 @import 'vars';
+
 @media only screen and (max-width: 600px) {
   html {
 
@@ -6,51 +7,61 @@
       font-size: 90%;
     }
 
-    .hreview .text {
-      width: 100%;
+    .dashicons {
+      font-size: 130%;
+    }
+
+    .hreview {
+      .rating {
+        width: 100%;
+      }
+      .text {
+        width: 100%;
+      }
     }
   }
   #marctv .article-wrapper {
     width: 100%;
     margin: 0 auto;
   }
-/*
-  body:not(.artdirected) {
-      .entry-content {
-        .figure img,
-        .marctv-gallery,
-        .jqvideo {
-          margin-left: -$marctv-margin/4 ! important;
-          margin-right: -$marctv-margin/4 ! important;
-          width: 100% + ($marctv-margin/4)*2 ! important;
 
+  /*
+    body:not(.artdirected) {
+        .entry-content {
+          .figure img,
+          .marctv-gallery,
+          .jqvideo {
+            margin-left: -$marctv-margin/4 ! important;
+            margin-right: -$marctv-margin/4 ! important;
+            width: 100% + ($marctv-margin/4)*2 ! important;
+
+          }
         }
-      }
-  }
-
-  .commentbox {
-
-    .comments-title{
-      margin: $marctv-margin/4;
     }
 
-    .site {
-      margin: 0;
-    }
-    .commentlist {
-      .comment {
+    .commentbox {
+
+      .comments-title{
         margin: $marctv-margin/4;
       }
-      .children
-      {
-        margin: -$marctv-margin/4;
+
+      .site {
+        margin: 0;
+      }
+      .commentlist {
         .comment {
+          margin: $marctv-margin/4;
+        }
+        .children
+        {
           margin: -$marctv-margin/4;
+          .comment {
+            margin: -$marctv-margin/4;
+          }
         }
       }
     }
-  }
-  */
+    */
 
   html {
     .archive .nav-article {

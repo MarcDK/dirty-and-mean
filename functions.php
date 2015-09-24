@@ -135,7 +135,7 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
     }
 
     if ($show_info) {
-        $comment_count = get_comments_number($post_id);
+        $comment_count = number_format(get_comments_number($post_id), 0, '', '.' );
 
         if ($comment_count == 0) {
             $comment_count = "Keine ";
@@ -147,11 +147,11 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
             $teaser .= '<div class="info">' . $extra . ' </div>';
         } else if ($score) {
 
-            //$teaser .= '<span class="info comment-count">' . $comment_count . ' Kommentare</span>';
+            $teaser .= '<span class="info comment-count"><span class="dashicons dashicons-admin-comments"></span> ' . $comment_count . '</span>';
             $teaser .= '<span class="info rating">' . $score[0] . '/10</span>';
         } else {
 
-            //$teaser .= '<span class="info comment-count">' . $comment_count . ' Kommentare</span>';
+            $teaser .= '<span class="info comment-count"><span class="dashicons dashicons-admin-comments"></span> ' . $comment_count . '</span>';
         }
     }
 
@@ -733,7 +733,7 @@ add_theme_support('post-thumbnails');
 function marctv_load_basejs()
 {
     wp_enqueue_script("marctv.base", get_template_directory_uri() . "/js/marctv_base.js", array("jquery"), "1.1", true);
-    wp_enqueue_script("jquery.sticky", get_template_directory_uri() . "/js/jquery.sticky.js", array("jquery"), "1.1", true);
+    wp_enqueue_script("jquery.sticky", get_template_directory_uri() . "/js/jquery.sticky.1.0.3.js", array("jquery"), "1.1", true);
 }
 
 add_action('wp_enqueue_scripts', 'marctv_load_basejs');
@@ -865,5 +865,10 @@ function theme_slug_setup()
 }
 
 add_action('after_setup_theme', 'theme_slug_setup');
+
+add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
+function load_dashicons_front_end() {
+    wp_enqueue_style( 'dashicons' );
+}
 
 ?>

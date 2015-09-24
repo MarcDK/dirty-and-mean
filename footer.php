@@ -61,14 +61,14 @@ endif
                 <ul class="rows">
                     <li>
                         <ul>
-                            <li><a class="icon-feed" rel="nofollow" target="_blank" href="http://marctv.de/feed"><span>Abonniere MarcTV als Feed</span></a>
+                            <li><a class="dashicons dashicons-rss"" rel="nofollow" target="_blank" href="http://marctv.de/feed"><span>Abonniere MarcTV als Feed</span></a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <ul>
-                            <li><a class="icon-twitter" rel="nofollow" target="_blank"
-                                   href="http://www.twitter.com/MarcTV"><span>Folge mir auf Twitter</span></a></li>
+                            <li><a class="dashicons dashicons-twitter" rel="nofollow" target="_blank"
+                                   href="http://www.twitter.com/MarcTV"><span>Folge MarcTV auf Twitter</span></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -77,14 +77,14 @@ endif
                 <ul class="rows">
                     <li>
                         <ul>
-                            <li><a class="icon-twitch" rel="nofollow" target="_blank" href="https://twitch.tv/marctvde"><span>Folge mir auf Twitch</span></a>
+                            <li><a class="dashicons dashicons-wordpress-alt" rel="nofollow" target="_blank" href="https://profiles.wordpress.org/marcdk/#content-plugins"><span>Wordpress</span></a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <ul>
-                            <li><a class="icon-youtube" rel="nofollow" target="_blank"
-                                   href="http://www.youtube.com/MarcDK"><span>Folge mir auf YouTube</span></a></li>
+                            <li><a class="dashicons dashicons-video-alt3" rel="nofollow" target="_blank"
+                                   href="http://www.youtube.com/MarcDK"><span>Folge MarcTV auf YouTube</span></a></li>
 
                         </ul>
                     </li>
@@ -94,15 +94,15 @@ endif
                 <ul class="rows">
                     <li>
                         <ul>
-                            <li><a class="icon-facebook" rel="nofollow" target="_blank"
-                                   href="https://www.facebook.com/MarcTV.de"><span>Folge mir auf Facebook</span></a>
+                            <li><a class="dashicons dashicons-facebook" rel="nofollow" target="_blank"
+                                   href="https://www.facebook.com/MarcTV.de"><span>Folge Marc auf Facebook</span></a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <ul>
-                            <li><a class="icon-googleplus" target="_blank"
-                                   href="https://plus.google.com/113333812119791259931?rel=author"><span>Folge mir auf Google Plus</span></a>
+                            <li><a class="dashicons dashicons-googleplus" target="_blank"
+                                   href="https://plus.google.com/113333812119791259931?rel=author"><span>Folge Marc auf Google Plus</span></a>
                             </li>
                         </ul>
                     </li>
@@ -113,8 +113,7 @@ endif
         <p class="imprint">MarcTV <?php echo date('Y'); ?> - <a href="/marc-toensing/#impressum">Impressum</a> - <a
                 rel="nofollow" href="/netiquette/">Netiquette</a> - <a rel="nofollow"
                                                                        href="/blogfreunde">Blogfreunde</a> - Theme: <a
-                rel="nofollow" href="https://github.com/MarcDK/dirty-and-mean/">MarcTV's Dirty and Mean</a> - <a
-                rel="nofollow" href="/blog/marctv-wordpress-plugins/">MarcTV Wordpress Plugins</a></p>
+                rel="nofollow" href="https://github.com/MarcDK/dirty-and-mean/">MarcTV's Dirty and Mean</a>
     </div>
     <?php
     wp_reset_query();
