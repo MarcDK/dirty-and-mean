@@ -1,9 +1,9 @@
 (function ($) {
     $(document).ready(function ($) {
         $("#navigation > ul").addClass("hamburger");
-        $('<a class="hamburger-icon"></a>').prependTo('#navigation').click(
+        $('<a class="dashicons hamburger-icon dashicons-menu"></a>').prependTo('#navigation').click(
             function () {
-                $('#navigation .hamburger').toggle().parent().children('.hamburger-icon').toggleClass('active');
+                $('#navigation .hamburger').toggle().parent().children('.hamburger-icon').toggleClass('active dashicons-no-alt');
             }
         );
 
