@@ -4,7 +4,7 @@ Theme Name: Dirty and Mean
 Theme URI: http://marctv.de
 Description: MarcTV Theme 2014
 Author: MarcDK
-Version: 1.8.5
+Version: 1.8.6
 License: GPL v3
 License URI: license.txt
 Tags: responsive, MarcTV
@@ -1159,6 +1159,38 @@ html .jqvideo .sprite {
     background-image: url("images/video_icons2x.png");
   }
 }
+/* line 52, ../scss/modules/plugins.scss */
+html .pgntn-page-pagination {
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 120%;
+  margin-bottom: 3em;
+}
+/* line 56, ../scss/modules/plugins.scss */
+html .pgntn-page-pagination a {
+  background: #333 !important;
+  color: white !important;
+  padding: 0.1rem 0.9rem !important;
+}
+/* line 61, ../scss/modules/plugins.scss */
+html .pgntn-page-pagination a:hover {
+  color: white !important;
+  text-decoration: underline !important;
+}
+/* line 65, ../scss/modules/plugins.scss */
+html .pgntn-page-pagination .current {
+  background-color: #cccccc !important;
+  padding: 0.1rem 0.9rem !important;
+}
+/* line 69, ../scss/modules/plugins.scss */
+html .pgntn-page-pagination .prev.page-numbers {
+  margin-left: 0 !important;
+}
+/* line 73, ../scss/modules/plugins.scss */
+html .pgntn-page-pagination .pgntn-page-pagination-intro {
+  background-color: transparent !important;
+  border: none !important;
+}
+
 /* bigpicture */
 @media only screen and (min-width: 1400px) {
   /* line 9, ../scss/modules/big.scss */

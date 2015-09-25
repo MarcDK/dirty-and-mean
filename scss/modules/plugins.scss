@@ -47,3 +47,32 @@ only screen and (min-device-pixel-ratio: 1.5) {
     background-image: url('images/video_icons2x.png');
   }
 }
+
+
+html .pgntn-page-pagination {
+  font-family: $fonts-title;
+  font-size: 120%;
+  margin-bottom: 3em;
+  a {
+    background: $black ! important;
+    color: white ! important;
+    padding: 0.1rem 0.9rem !important;
+  }
+  a:hover {
+    color: white ! important;
+    text-decoration: underline ! important;
+  }
+  .current {
+    background-color: #cccccc !important;
+    padding: 0.1rem 0.9rem !important;
+  }
+  .prev.page-numbers {
+    margin-left: 0 !important;
+  }
+
+  .pgntn-page-pagination-intro {
+    background-color: transparent ! important;
+    border: none ! important;
+  }
+
+}

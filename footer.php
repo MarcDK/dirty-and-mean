@@ -110,10 +110,9 @@ endif
             </li>
         </ul>
 
-        <p class="imprint">MarcTV <?php echo date('Y'); ?> - <a href="/marc-toensing/#impressum">Impressum</a> - <a
-                rel="nofollow" href="/netiquette/">Netiquette</a> - <a rel="nofollow"
-                                                                       href="/blogfreunde">Blogfreunde</a> - Theme: <a
-                rel="nofollow" href="https://github.com/MarcDK/dirty-and-mean/">MarcTV's Dirty and Mean</a>
+        <p class="imprint"><a href="/impressum/">Impressum</a> -
+        <a rel="nofollow" href="/netiquette/">Netiquette</a> - <a rel="nofollow" href="/blogfreunde">Blogfreunde</a> -
+        <a rel="nofollow" href="/marc-toensing/">Über mich</a>
     </div>
     <?php
     wp_reset_query();

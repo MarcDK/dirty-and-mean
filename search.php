@@ -31,7 +31,7 @@ get_header();
           echo '<li class="box">';
         }
 
-        echo get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', true);
+        echo get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', false);
 
         if ($key % 3 == 0) {
           echo '</ul><ul class="container">';
@@ -52,6 +52,6 @@ get_header();
 
   <?php endif; ?>
 
-  <?php marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '6'); ?>
+  <?php //marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '6'); ?>
 </div>
 <?php get_footer(); ?>

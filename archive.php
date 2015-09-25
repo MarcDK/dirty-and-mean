@@ -14,7 +14,7 @@ get_header();
       <?php the_archive_title( '<h1 class="title">', '</h1>' ); ?>
       <?php
       global $paged;
-      if ($paged == 0) {
+      if ($paged == 0 || empty($paged)) {
          the_archive_description( '', '' );
       }
       ?>
@@ -63,9 +63,11 @@ get_header();
     endif;
     ?>
 
-    <div class="nav-article">
-        <?php the_posts_navigation(); ?>
-    </div>
+      <?php if ( function_exists( 'pgntn_display_pagination' ) ) pgntn_display_pagination( 'posts' ); ?>
+
+      <!-- <div class="nav-article">
+        <?php //the_posts_navigation(); ?>
+    </div> -->
 
 
 </div>
