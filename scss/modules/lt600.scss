@@ -72,8 +72,6 @@
     }
     .lead {
 
-      margin-bottom: 0;
-
       .box {
         margin-bottom: 0;
       }
@@ -93,11 +91,34 @@
       font-size: 140%;
     }
   }
+
   #marctv .container .box {
     width: 100%;
     float: none;
     padding: 0;
   }
+
+  #marctv .container.small .box {
+    width: 31.2%;
+    border: 0;
+    padding: 0 1.6%;
+    float: left;
+
+    &.first {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    &.last {
+      margin-right: 0;
+      padding-right: 0;
+    }
+
+    .title {
+      font-size: 80%;
+    }
+
+  }
+
   html .commentlist {
 
     .comment-meta {

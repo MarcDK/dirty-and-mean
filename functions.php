@@ -240,7 +240,7 @@ function marctv_get_randompost($exclude = array(), $cat = "Reviews")
         ));
 
         $html = '<div class="container docked"><div class="supertitle"><span><a href="' . get_category_link(get_cat_ID($cat)) . '">Spiel doch mal wieder…</a></span></div></div> ';
-        $html .= '<ul class="container lead nomargin">';
+        $html .= '<ul class="container lead">';
         $html .= '<li class="box first last">';
 
         while (have_posts()):

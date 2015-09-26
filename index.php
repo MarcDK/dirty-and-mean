@@ -114,12 +114,8 @@
             echo '</ul>';
             ?>
 
-            <div class="nav-article">
-                <span class="nav-previous"><?php echo get_previous_posts_link('« Vorherige'); ?>&nbsp;</span>
-                <span class="nav-next">&nbsp;<?php echo get_next_posts_link('Nächste »'); ?></span>
-            </div>
+            <?php if ( function_exists( 'pgntn_display_pagination' ) ) pgntn_display_pagination( 'posts' ); ?>
 
-            <?php marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '6'); ?>
     </div>
 <?php endif; ?>
 

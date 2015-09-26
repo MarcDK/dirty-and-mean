@@ -4,7 +4,7 @@ Theme Name: Dirty and Mean
 Theme URI: http://marctv.de
 Description: MarcTV Theme 2014
 Author: MarcDK
-Version: 1.8.6
+Version: 1.8.7
 License: GPL v3
 License URI: license.txt
 Tags: responsive, MarcTV
@@ -179,91 +179,109 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     width: 50%;
     margin-bottom: 20px;
   }
-  /* line 73, ../scss/modules/lt600.scss */
-  html .lead {
-    margin-bottom: 0;
-  }
-  /* line 77, ../scss/modules/lt600.scss */
+  /* line 75, ../scss/modules/lt600.scss */
   html .lead .box {
     margin-bottom: 0;
   }
-  /* line 81, ../scss/modules/lt600.scss */
+  /* line 79, ../scss/modules/lt600.scss */
   html .lead .title {
     font-size: 120%;
   }
-  /* line 85, ../scss/modules/lt600.scss */
+  /* line 83, ../scss/modules/lt600.scss */
   html .lead p {
     margin-bottom: 2em;
   }
-  /* line 89, ../scss/modules/lt600.scss */
+  /* line 87, ../scss/modules/lt600.scss */
   html .entry .title {
     font-size: 170%;
   }
-  /* line 92, ../scss/modules/lt600.scss */
+  /* line 90, ../scss/modules/lt600.scss */
   html .box .title {
     font-size: 140%;
   }
 
-  /* line 96, ../scss/modules/lt600.scss */
+  /* line 95, ../scss/modules/lt600.scss */
   #marctv .container .box {
     width: 100%;
     float: none;
     padding: 0;
   }
 
-  /* line 104, ../scss/modules/lt600.scss */
+  /* line 101, ../scss/modules/lt600.scss */
+  #marctv .container.small .box {
+    width: 31.2%;
+    border: 0;
+    padding: 0 1.6%;
+    float: left;
+  }
+  /* line 107, ../scss/modules/lt600.scss */
+  #marctv .container.small .box.first {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  /* line 111, ../scss/modules/lt600.scss */
+  #marctv .container.small .box.last {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  /* line 116, ../scss/modules/lt600.scss */
+  #marctv .container.small .box .title {
+    font-size: 80%;
+  }
+
+  /* line 125, ../scss/modules/lt600.scss */
   html .commentlist .comment-meta a:first-child:before {
     content: "# ";
   }
-  /* line 107, ../scss/modules/lt600.scss */
+  /* line 128, ../scss/modules/lt600.scss */
   html .commentlist .comment-meta span {
     display: none;
   }
-  /* line 111, ../scss/modules/lt600.scss */
+  /* line 132, ../scss/modules/lt600.scss */
   html .commentlist li {
     border-top: 1px dotted #333;
     padding-left: 0;
   }
-  /* line 114, ../scss/modules/lt600.scss */
+  /* line 135, ../scss/modules/lt600.scss */
   html .commentlist li .vcard {
     padding-left: 2.5em;
   }
-  /* line 115, ../scss/modules/lt600.scss */
+  /* line 136, ../scss/modules/lt600.scss */
   html .commentlist li .vcard .avatar {
     width: 2em;
     height: 2em;
   }
-  /* line 121, ../scss/modules/lt600.scss */
+  /* line 142, ../scss/modules/lt600.scss */
   html .commentlist li .comment-author {
     padding-bottom: 0.5em;
   }
-  /* line 125, ../scss/modules/lt600.scss */
+  /* line 146, ../scss/modules/lt600.scss */
   html .commentlist .pingback .vcard {
     padding-bottom: 0.5em;
   }
-  /* line 128, ../scss/modules/lt600.scss */
+  /* line 149, ../scss/modules/lt600.scss */
   html .commentlist li .children {
     background-image: url("images/left-stroke.gif");
     background-repeat: repeat-y;
   }
-  /* line 133, ../scss/modules/lt600.scss */
+  /* line 154, ../scss/modules/lt600.scss */
   html .commentlist li .children .vcard .avatar {
     left: 1em;
   }
-  /* line 136, ../scss/modules/lt600.scss */
+  /* line 157, ../scss/modules/lt600.scss */
   html .commentlist li .children li {
     padding-left: 1em;
   }
 
-  /* line 142, ../scss/modules/lt600.scss */
+  /* line 163, ../scss/modules/lt600.scss */
   #marctv .container.multi .box {
     height: 13em;
   }
-  /* line 147, ../scss/modules/lt600.scss */
+  /* line 168, ../scss/modules/lt600.scss */
   #marctv .container.multi .title {
     font-size: 120%;
   }
-  /* line 152, ../scss/modules/lt600.scss */
+  /* line 173, ../scss/modules/lt600.scss */
   #marctv .container.multi .box, #marctv .container.double .box, #marctv .container.morph .box {
     width: 48%;
     border: 0;
@@ -271,17 +289,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     float: left;
     font-size: 80%;
   }
-  /* line 159, ../scss/modules/lt600.scss */
+  /* line 180, ../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(odd), #marctv .container.morph .box:nth-child(odd), #marctv .container.double .box.first {
     margin-left: 0;
     padding-left: 0;
   }
-  /* line 163, ../scss/modules/lt600.scss */
+  /* line 184, ../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(even), #marctv .container.morph .box:nth-child(even), #marctv .container.double .box.last {
     margin-right: 0;
     padding-right: 0;
   }
-  /* line 167, ../scss/modules/lt600.scss */
+  /* line 188, ../scss/modules/lt600.scss */
   #marctv .container.morph .box p {
     height: 6em;
   }
