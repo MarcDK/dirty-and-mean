@@ -44,7 +44,7 @@
 
         <?php
         if (function_exists('get_last_commented_articles')) {
-            echo '<div class="container docked"><div class="supertitle"><span><a rel="nofollow" href="/letzte-kommentare/">Zuletzt kommentiert</a></span></div></div>';
+            echo '<div class="container docked"><div class="supertitle"><span><a rel="nofollow" href="/letzte-kommentare/"><span class="dashicons dashicons-admin-comments"></span>Zuletzt kommentiert</a></span></div></div>';
             echo get_last_commented_articles(6, 'container last-commented multi nohover showontouch');
         }
         ?>
