@@ -56,7 +56,8 @@ html .pgntn-page-pagination {
   a {
     background: $black ! important;
     color: white ! important;
-    padding: 0.1rem 0.9rem !important;
+    padding: 0.3rem 1rem !important;
+    border: 0 ! important;
   }
   a:hover {
     color: white ! important;
@@ -64,7 +65,8 @@ html .pgntn-page-pagination {
   }
   .current {
     background-color: #cccccc !important;
-    padding: 0.1rem 0.9rem !important;
+    padding: 0.3rem 1rem !important;
+    border: 0 ! important;
   }
   .prev.page-numbers {
     margin-left: 0 !important;

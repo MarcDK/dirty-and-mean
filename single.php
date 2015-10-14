@@ -18,7 +18,7 @@ get_header();
                       <?php endif ?> am <time class="updated" datetime="<?php the_date('c'); ?>"><?php the_time(__('F j, Y')); ?> </time>
 
 
-                  — <a href="#commentbox"><?php comments_number( 'Noch kein Kommentar', 'Ein Kommentar', '% Kommentare' ); ?></a></small><?php edit_post_link('edit', ' | <small> ', '</small>'); ?></div>
+                  — <a class="link_to_comments" href="#commentbox"><span class="dashicons dashicons-admin-comments"></span><?php comments_number( 'Noch kein Kommentar', 'Ein Kommentar', '% Kommentare' ); ?></a></small><?php edit_post_link('edit', ' | <small> ', '</small>'); ?></div>
         <div class="content-body">
           <div class="inner entry-content">
             <?php the_content(); ?>

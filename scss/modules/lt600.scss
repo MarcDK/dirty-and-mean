@@ -170,12 +170,17 @@
       }
     }
 
-    &.multi .box, &.double .box, &.morph .box {
+    &.multi .box,
+    &.double .box,
+    &.morph .box {
+      .title {
+        font-size:110%;
+      }
       width: 48%;
       border: 0;
       padding: 0 2%;
       float: left;
-      font-size: 80%;
+
     }
     &.multi .box:nth-child(odd), &.morph .box:nth-child(odd), &.double .box.first {
       margin-left: 0;

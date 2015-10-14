@@ -30,16 +30,17 @@ endif
         <div class="col_title supertitle"><span>Andere Projekte</span></div>
 
         <ul class="container showontouch small section">
-            <li class="box first"><a class="inverted infobox " href="http://verschlichtern.de"
-                                     rel="bookmark">
-                    <img src="http://marctv.de/media/2015/03/verschlichtern-960x418.jpg" alt="verschlichtern" width="960" height="418" class="alignnone size-large wp-image-20704" srcset="http://marctv.de/media/2015/03/verschlichtern-130x57.jpg 130w, http://marctv.de/media/2015/03/verschlichtern-300x130.jpg 300w, http://marctv.de/media/2015/03/verschlichtern-960x418.jpg 960w, http://marctv.de/media/2015/03/verschlichtern.jpg 1920w, http://marctv.de/media/2015/03/verschlichtern-460x200.jpg 460w" sizes="(max-width: 960px) 100vw, 960px">
 
-                    <h2 class="title">verschlichtern.de</h2></a></li>
-            <li class="box"><a class="inverted infobox " href="http://shortscore.org"
+            <li class="box first"><a class="inverted infobox " href="http://shortscore.org"
                                rel="bookmark">
                     <img src="http://marctv.de/media/2015/01/shortscore-logo-960x418.png" alt="Alle Spiele, Deine Scores. Dein Spielebewertungsportal" width="960" height="418" class="size-large wp-image-20650" srcset="http://marctv.de/media/2015/01/shortscore-logo-130x57.png 130w, http://marctv.de/media/2015/01/shortscore-logo-300x130.png 300w, http://marctv.de/media/2015/01/shortscore-logo.png 960w, http://marctv.de/media/2015/01/shortscore-logo-460x200.png 460w" sizes="(max-width: 960px) 100vw, 960px" />
 
                     <h2 class="title">SHORTSCORE.org</h2></a></li>
+            <li class="box "><a class="inverted infobox " href="http://verschlichtern.de"
+                                     rel="bookmark">
+                    <img src="http://marctv.de/media/2015/03/verschlichtern-960x418.jpg" alt="verschlichtern" width="960" height="418" class="alignnone size-large wp-image-20704" srcset="http://marctv.de/media/2015/03/verschlichtern-130x57.jpg 130w, http://marctv.de/media/2015/03/verschlichtern-300x130.jpg 300w, http://marctv.de/media/2015/03/verschlichtern-960x418.jpg 960w, http://marctv.de/media/2015/03/verschlichtern.jpg 1920w, http://marctv.de/media/2015/03/verschlichtern-460x200.jpg 460w" sizes="(max-width: 960px) 100vw, 960px">
+
+                    <h2 class="title">verschlichtern.de</h2></a></li>
             <li class="box last"><a class="inverted infobox " href="http://kunstpixel.de"
                                     rel="bookmark">
                     <img src="http://marctv.de/media/2015/03/kunstpixel-960x418.jpg" alt="kunstpixel" width="960" height="418" class="alignnone size-large wp-image-20740" srcset="http://marctv.de/media/2015/03/kunstpixel-130x57.jpg 130w, http://marctv.de/media/2015/03/kunstpixel-300x130.jpg 300w, http://marctv.de/media/2015/03/kunstpixel-960x418.jpg 960w, http://marctv.de/media/2015/03/kunstpixel.jpg 1920w, http://marctv.de/media/2015/03/kunstpixel-460x200.jpg 460w" sizes="(max-width: 960px) 100vw, 960px" />
