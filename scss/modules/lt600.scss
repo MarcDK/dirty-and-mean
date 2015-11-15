@@ -160,8 +160,11 @@
     }
   }
   #marctv .container {
-    &.multi .box {
-      height: 13em;
+
+    &.multi {
+      .box {
+        height: 13em;
+      }
     }
 
     &.multi {
@@ -174,7 +177,7 @@
     &.double .box,
     &.morph .box {
       .title {
-        font-size:110%;
+        font-size: 110%;
       }
       width: 48%;
       border: 0;
@@ -192,6 +195,40 @@
     }
     &.morph .box p {
       height: 6em;
+    }
+  }
+
+  /* last comments */
+  #marctv {
+    .container.last-commented.multi {
+      img {
+        display: none;
+      }
+
+      .box,
+      .box.first,
+      .box.last,
+      .box.multi-first,
+      .box.multi-last {
+        height: auto;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-left: 0.5em;
+        border-left: 1px solid $black;
+        margin-bottom: 1em;
+        white-space: normal;
+
+      }
+
+      .title {
+        height:auto;
+      }
+
+      a{
+        font-size: 130%;
+      }
+
     }
   }
 }

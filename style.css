@@ -4,7 +4,7 @@ Theme Name: Dirty and Mean
 Theme URI: http://marctv.de
 Description: MarcTV Theme 2014
 Author: MarcDK
-Version: 1.9.4
+Version: 1.9.5
 License: GPL v3
 License URI: license.txt
 Tags: responsive, MarcTV
@@ -273,38 +273,67 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 1em;
   }
 
-  /* line 163, ../scss/modules/lt600.scss */
+  /* line 165, ../scss/modules/lt600.scss */
   #marctv .container.multi .box {
     height: 13em;
   }
-  /* line 168, ../scss/modules/lt600.scss */
+  /* line 171, ../scss/modules/lt600.scss */
   #marctv .container.multi .title {
     font-size: 120%;
   }
-  /* line 173, ../scss/modules/lt600.scss */
+  /* line 176, ../scss/modules/lt600.scss */
   #marctv .container.multi .box, #marctv .container.double .box, #marctv .container.morph .box {
     width: 48%;
     border: 0;
     padding: 0 2%;
     float: left;
   }
-  /* line 176, ../scss/modules/lt600.scss */
+  /* line 179, ../scss/modules/lt600.scss */
   #marctv .container.multi .box .title, #marctv .container.double .box .title, #marctv .container.morph .box .title {
     font-size: 110%;
   }
-  /* line 185, ../scss/modules/lt600.scss */
+  /* line 188, ../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(odd), #marctv .container.morph .box:nth-child(odd), #marctv .container.double .box.first {
     margin-left: 0;
     padding-left: 0;
   }
-  /* line 189, ../scss/modules/lt600.scss */
+  /* line 192, ../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(even), #marctv .container.morph .box:nth-child(even), #marctv .container.double .box.last {
     margin-right: 0;
     padding-right: 0;
   }
-  /* line 193, ../scss/modules/lt600.scss */
+  /* line 196, ../scss/modules/lt600.scss */
   #marctv .container.morph .box p {
     height: 6em;
+  }
+
+  /* last comments */
+  /* line 204, ../scss/modules/lt600.scss */
+  #marctv .container.last-commented.multi img {
+    display: none;
+  }
+  /* line 208, ../scss/modules/lt600.scss */
+  #marctv .container.last-commented.multi .box,
+  #marctv .container.last-commented.multi .box.first,
+  #marctv .container.last-commented.multi .box.last,
+  #marctv .container.last-commented.multi .box.multi-first,
+  #marctv .container.last-commented.multi .box.multi-last {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 0.5em;
+    border-left: 1px solid #333;
+    margin-bottom: 1em;
+    white-space: normal;
+  }
+  /* line 224, ../scss/modules/lt600.scss */
+  #marctv .container.last-commented.multi .title {
+    height: auto;
+  }
+  /* line 228, ../scss/modules/lt600.scss */
+  #marctv .container.last-commented.multi a {
+    font-size: 130%;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -454,6 +483,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   html #navigation .hamburger-icon.active {
     color: white;
     background-color: #333;
+  }
+
+  /* last comments */
+  /* line 140, ../scss/modules/lt900.scss */
+  #marctv .container.last-commented.multi img {
+    display: none;
+  }
+  /* line 144, ../scss/modules/lt900.scss */
+  #marctv .container.last-commented.multi .box,
+  #marctv .container.last-commented.multi .box.first,
+  #marctv .container.last-commented.multi .box.last,
+  #marctv .container.last-commented.multi .box.multi-first,
+  #marctv .container.last-commented.multi .box.multi-last {
+    height: auto;
+    margin-bottom: 1em;
+    white-space: normal;
+  }
+  /* line 156, ../scss/modules/lt900.scss */
+  #marctv .container.last-commented.multi .title {
+    font-size: 130%;
   }
 }
 @media only screen and (max-width: 960px) {

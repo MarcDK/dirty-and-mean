@@ -212,7 +212,7 @@ function get_marctv_favourite_articles()
                 }
 
                 $key++;
-                $html .= get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', true);
+                $html .= get_marctv_teaser(get_the_ID(), true, '', 'large', true, '', '', true);
                 $html .= '</li>';
             endwhile;
             $html .= '</ul>';
@@ -294,7 +294,7 @@ function get_adb_article()
                     $html .= '<li class="box">';
                 }
                 $key++;
-                $html .= get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', true);
+                $html .= get_marctv_teaser(get_the_ID(), true, '', 'larges', true, '', '', true);
 
                 $html .= '</li>';
             endwhile;

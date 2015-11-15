@@ -132,7 +132,36 @@
       }
 
     }
+  }
 
+  /* last comments */
+  #marctv {
+    .container.last-commented.multi {
+      img {
+        display: none;
+      }
+
+      .box,
+      .box.first,
+      .box.last,
+      .box.multi-first,
+      .box.multi-last {
+        height: auto;
+
+        margin-bottom: 1em;
+        white-space: normal;
+
+      }
+
+      .title {
+        font-size: 130%;
+      }
+
+      a{
+
+      }
+
+    }
   }
 
 }
