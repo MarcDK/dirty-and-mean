@@ -24,7 +24,7 @@ if (function_exists('add_image_size')) {
     add_image_size('EOS', 4000, 1750);
 }
 
-add_filter( 'searchwp_index_comments', '__return_false' );
+add_filter('searchwp_index_comments', '__return_false');
 
 add_filter('image_size_names_choose', 'my_custom_sizes');
 
@@ -135,7 +135,7 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
     }
 
     if ($show_info) {
-        $comment_count = number_format(get_comments_number($post_id), 0, '', '.' );
+        $comment_count = number_format(get_comments_number($post_id), 0, '', '.');
 
         if ($comment_count == 0) {
             $comment_count = "Keine ";
@@ -423,19 +423,27 @@ function get_marctv_teaserblock()
  * @param integer $cat_id3 The third post_id of the post to display the teaser.
  * @param integer $offset Optional. The offset to the next post
  */
-function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $offset = false, $classes, $check_duplicates = true)
+function get_marctv_category_container($cat_id1, $cat_id2, $cat_id3, $count = 1, $classes, $check_duplicates = true)
 {
 
-    $teaser = '<ul class="container morph ' . $classes . '">';
-    $teaser .= get_marctv_category_container_box($cat_id1, 'first ', 0, $check_duplicates);
-    $teaser .= get_marctv_category_container_box($cat_id2, '', 0, $check_duplicates);
-    $teaser .= get_marctv_category_container_box($cat_id3, 'multi-last', 0, $check_duplicates);
+    update_option('do_not_duplicate', false);
+    $teaser = '';
 
-    $teaser .= get_marctv_category_container_box($cat_id1, 'multi-first', 0, $check_duplicates);
-    $teaser .= get_marctv_category_container_box($cat_id2, '', 0, $check_duplicates);
-    $teaser .= get_marctv_category_container_box($cat_id3, 'last', 0, $check_duplicates);
+    while ($count > 0) {
 
-    $teaser .= '</ul>';
+        $teaser .= '<ul class="container morph ' . $classes . '">';
+        $teaser .= get_marctv_category_container_box($cat_id1, 'first ', 0, $check_duplicates);
+        $teaser .= get_marctv_category_container_box($cat_id2, '', 0, $check_duplicates);
+        $teaser .= get_marctv_category_container_box($cat_id3, 'multi-last', 0, $check_duplicates);
+
+        $teaser .= get_marctv_category_container_box($cat_id1, 'multi-first', 0, $check_duplicates);
+        $teaser .= get_marctv_category_container_box($cat_id2, '', 0, $check_duplicates);
+        $teaser .= get_marctv_category_container_box($cat_id3, 'last', 0, $check_duplicates);
+
+        $teaser .= '</ul>';
+
+        $count--;
+    }
 
     return $teaser;
 }
@@ -463,6 +471,59 @@ function get_marctv_category_container_box($cat_id, $class, $offset = false, $ch
     return $teaser;
 }
 
+function get_marctv_category_box($cat_id, $count = 6)
+{
+
+    $teaser = '<div class="supertitle"><span><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></span></div>';
+
+    $args = array(
+        'posts_per_page' => $count,
+        'category' => $cat_id,
+        'category_name' => '',
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'include' => '',
+        'exclude' => '',
+        'meta_key' => '',
+        'meta_value' => '',
+        'post_type' => 'post',
+        'post_mime_type' => '',
+        'post_parent' => '',
+        'author' => '',
+        'post_status' => 'publish',
+        'suppress_filters' => true
+    );
+
+    $postlist = get_posts($args);
+
+    $key = 1;
+    $teaser .= '<ul class="container docked six">';
+
+    foreach ($postlist as $post) {
+        /* first-last classes */
+        if ($key == 1) {
+            $teaser .= '<li class="box first">';
+        } else if ($key % 6 == 0) {
+            $teaser .= '<li class="box last">';
+        } else if ($key == 3) {
+            $teaser .= '<li class="box multi-last">';
+        } else if ($key == 4) {
+            $teaser .= '<li class="box multi-first">';
+        } else {
+            $teaser .= '<li class="box">';
+        }
+        $teaser .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
+        $teaser .= '</li>';
+        $key++;
+    }
+
+    $teaser .= '</ul>';
+
+    $teaser .= '<p class="cat-more" ><a href="' . get_category_link($cat_id) . '">Mehr aus Kategorie ' . get_cat_name($cat_id) .'</a></p>';
+
+    return $teaser;
+}
+
 function get_parent_category_id($post_ID)
 {
 
@@ -479,10 +540,6 @@ function get_parent_category_id($post_ID)
     return $category_id;
 }
 
-function get_marctv_selected_categories($cat1, $cat2, $cat3)
-{
-
-}
 
 function get_marctv_posts_container($duplicates = true, $docked = true)
 {
@@ -571,7 +628,7 @@ function marctv_comment($comment, $args, $depth)
             <?php comment_reply_link(array_merge($args, array('reply_text' => 'Antworten', 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
         </div>
     </div>
-<?php
+    <?php
 }
 
 function marctv_pagination($seperator = ' | ', $after_previous = '&nbsp;&nbsp;', $before_next = '&nbsp;&nbsp;', $prelabel = 'Vorherige', $nxtlabel = 'Nächste', $current_page_tag = 'strong', $posts_per_page = '9')
@@ -866,9 +923,10 @@ function theme_slug_setup()
 
 add_action('after_setup_theme', 'theme_slug_setup');
 
-add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
-function load_dashicons_front_end() {
-    wp_enqueue_style( 'dashicons' );
+add_action('wp_enqueue_scripts', 'load_dashicons_front_end');
+function load_dashicons_front_end()
+{
+    wp_enqueue_style('dashicons');
 }
 
 ?>

@@ -19,7 +19,7 @@
             $(".header .innerheader").sticky({
                 topSpacing: 0
             }).on('sticky-start', function () {
-                $(".header .innerheader").animate({padding: '0 0'});
+                $(".header .innerheader").animate({padding: '0.1em 0'});
             }).on('sticky-end', function () {
                 $(".header .innerheader").animate({padding: '0.5em 0'});
             });

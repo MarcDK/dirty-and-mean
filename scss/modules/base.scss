@@ -83,7 +83,7 @@ small {
   font-weight: 300;
   border-bottom: 2px solid $black;
   padding: 0;
-  font-size: 100%;
+  font-size: 110%;
   text-transform: uppercase;
   color: #fff;
   line-height: $lineheight-title;
@@ -113,13 +113,13 @@ small {
   margin-left: $marctv-margin;
   margin-right: $marctv-margin;
   @media screen and (max-width: 600px) {
-    margin-left: $marctv-margin/4;
-    margin-right: $marctv-margin/4;
+    margin-left: $marctv-margin/2;
+    margin-right: $marctv-margin/2;
   }
 }
 
 .appendix {
-  padding: 1em 0 0 0;
+  padding: 3em 0 0 0;
   background: #fff;
 }
 
@@ -176,10 +176,10 @@ a {
 }
 
 .sitelogo a {
-  background: url('images/marctv_logo.png') no-repeat 0 0;
+  background: url('images/marctv-logo.png') no-repeat 0 0;
   /* background: rgba(0, 0, 0, 0) url('images/marctv_logo.svg') no-repeat 0 0; */
   display: block;
-  height: 34px;
+  height: 36px;
   margin: 0;
   padding: 0;
   text-indent: -5000em;
@@ -192,8 +192,8 @@ only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
   .sitelogo a {
-    background: url('images/marctv_logo-2x.png') no-repeat 0 0;
-    background-size: 136px 29px;
+    background: url('images/marctv-logo-2x.png') no-repeat 0 0;
+    background-size: 155px 36px;
     background-repeat: no-repeat;
   }
 }
@@ -374,8 +374,6 @@ html .fullscreenicon {
 
 .commentbox {
   background: $grey;
-  border-top: 1px solid $black;
-  border-bottom: 1px solid $black;
 }
 
 /* article nav */
@@ -435,10 +433,10 @@ html .fullscreenicon {
   }
 }
 
-.container .cat-more a {
-  background-color: $black;
+.cat-more a {
+  background-color: $grey;
   display: block;
-  color: #fff;
+  color: $black;
   padding: 0.2em 0;
   text-transform: uppercase;
   border-radius: 2px 2px 2px 2px;
@@ -446,10 +444,11 @@ html .fullscreenicon {
   -webkit-border-radius: 2px 2px 2px 2px;
   -khtml-border-radius: 2px 2px 2px 2px;
   -o-border-radius: 2px 2px 2px 2px;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
+  margin-top: 1em;
   &:hover {
     text-decoration: underline;
-    color: #fff;
+    color: $black;
   }
 }
 

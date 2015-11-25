@@ -33,7 +33,7 @@
     .header {
       margin-top: 0;
       .searchbox {
-        width: 100px;
+        width: 95px;
         margin-right: 4px;
       }
       .innerheader {
@@ -44,7 +44,7 @@
       }
 
       .searchbox {
-        padding-top: 2px;
+        padding-top: 4px;
       }
     }
 
@@ -111,7 +111,7 @@
 
       .hamburger-icon {
         z-index: 5000;
-        width: 36px;
+        width: 30px;
         display: block;
         font-size: 38px;
         line-height: 1;
@@ -134,8 +134,36 @@
     }
   }
 
-  /* last comments */
+
   #marctv {
+
+    .container {
+      &.six {
+
+        .box{
+          width: 48%;
+          border: 0;
+          padding: 0 2%;
+          float: left;
+
+        }
+
+       .box:nth-child(odd) {
+          margin-left: 0;
+          padding-left: 0;
+        }
+        .box:nth-child(even) {
+          margin-right: 0;
+          padding-right: 0;
+        }
+
+
+      }
+
+
+    }
+
+    /* last comments */
     .container.last-commented.multi {
       img {
         display: none;
@@ -147,7 +175,6 @@
       .box.multi-first,
       .box.multi-last {
         height: auto;
-
         margin-bottom: 1em;
         white-space: normal;
 
@@ -157,9 +184,6 @@
         font-size: 130%;
       }
 
-      a{
-
-      }
 
     }
   }

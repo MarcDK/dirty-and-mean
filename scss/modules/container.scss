@@ -42,6 +42,32 @@
     padding: 0 1.6%;
     border: 0;
   }
+  &.six {
+    .title {
+      font-size: 100%;
+    }
+
+    .box {
+      width: 31.2%;
+      margin: 0%;
+      padding: 0 1.6%;
+      border: 0;
+      height: 19em;
+    }
+
+    .box.multi-first,
+    .box.first {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .box.multi-last,
+    .box.last {
+      margin-right: 0;
+      padding-right: 0;
+    }
+
+  }
   &.multi {
     .box {
       width: 14%;

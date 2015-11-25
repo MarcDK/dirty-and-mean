@@ -7,7 +7,6 @@ get_header();
 ?>
 <div id="content" class="section">
 
-
   <?php if (have_posts()) : ?>
    
     <div class="entry">
@@ -20,33 +19,32 @@ get_header();
       ?>
     </div>
 
-    <ul class="container docked">
+    <ul class="container six docked">
       
       <?php
       $key = 0;
       while (have_posts()) : the_post();
       $key++;
         // cfvalue:field 
-        if ($key % 3 == 0) {
-          echo '<li class="box last">';
-        }
-        else if (($key - 1) % 3 == 0) {
+        if ($key == 1) {
           echo '<li class="box first">';
-        }
-        else {
+        } else if ($key % 6 == 0) {
+          echo '<li class="box last">';
+        } else if ($key == 3) {
+          echo '<li class="box multi-last">';
+        } else if ($key == 4) {
+          echo '<li class="box multi-first">';
+        } else {
           echo '<li class="box">';
         }
 
-        echo get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', false);
-
-        if ($key % 3 == 0 && $key < 6) {
-          echo '</ul><ul class="container docked">';
-        }
+        echo get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', true);
         
         echo '</li>';
       endwhile;
 
       echo '</ul>';
+
 
     else :
       if (is_category()) { // If this is a category archive
@@ -54,7 +52,7 @@ get_header();
       } else if (is_date()) { // If this is a date archive
         echo("<h1>Sorry, but there aren't any posts with this date.</h1>");
       } else if (is_author()) { // If this is a category archive
-        $userdata = get_userdatabylogin(get_query_var('author_name'));
+        $userdata = get_user_by('login', get_query_var('author_name'));
         printf("<h1 class='center'>Sorry, but there aren't any posts by %s yet.</h1>", $userdata->display_name);
       } else {
         echo("<h1 class='center'>No posts found.</h1>");
