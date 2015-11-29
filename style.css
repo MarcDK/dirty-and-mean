@@ -4,7 +4,7 @@ Theme Name: Dirty and Mean
 Theme URI: http://marctv.de
 Description: MarcTV Theme 2014
 Author: MarcDK
-Version: 1.9.9.1
+Version: 1.9.9.2
 License: GPL v3
 License URI: license.txt
 Tags: responsive, MarcTV
@@ -1500,22 +1500,22 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
 .container.bars.docked, .container.docked, .container.bars.docked .box {
   margin-bottom: 0;
 }
-/* line 36, ../scss/modules/container.scss */
+/* line 37, ../scss/modules/container.scss */
 .container.lead .box {
   width: 100%;
 }
-/* line 39, ../scss/modules/container.scss */
+/* line 40, ../scss/modules/container.scss */
 .container.double .box {
   width: 48.4%;
   margin: 0%;
   padding: 0 1.6%;
   border: 0;
 }
-/* line 46, ../scss/modules/container.scss */
+/* line 47, ../scss/modules/container.scss */
 .container.six .title {
   font-size: 100%;
 }
-/* line 50, ../scss/modules/container.scss */
+/* line 51, ../scss/modules/container.scss */
 .container.six .box {
   width: 31.2%;
   margin: 0%;
@@ -1523,19 +1523,19 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
   border: 0;
   height: 19em;
 }
-/* line 58, ../scss/modules/container.scss */
+/* line 59, ../scss/modules/container.scss */
 .container.six .box.multi-first,
 .container.six .box.first {
   margin-left: 0;
   padding-left: 0;
 }
-/* line 64, ../scss/modules/container.scss */
+/* line 65, ../scss/modules/container.scss */
 .container.six .box.multi-last,
 .container.six .box.last {
   margin-right: 0;
   padding-right: 0;
 }
-/* line 72, ../scss/modules/container.scss */
+/* line 73, ../scss/modules/container.scss */
 .container.multi .box {
   width: 14%;
   border: 0;
@@ -1543,48 +1543,48 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
   font-size: 80%;
   margin-bottom: 10px;
 }
-/* line 79, ../scss/modules/container.scss */
+/* line 80, ../scss/modules/container.scss */
 .container.multi .title {
   height: 3em;
   font-size: 100%;
 }
-/* line 84, ../scss/modules/container.scss */
+/* line 85, ../scss/modules/container.scss */
 .container.morph .title {
   height: 2em;
 }
-/* line 87, ../scss/modules/container.scss */
+/* line 88, ../scss/modules/container.scss */
 .container.morph .box {
   width: 31.2%;
   border: 0;
   padding: 0 1.6%;
   height: 20em;
 }
-/* line 92, ../scss/modules/container.scss */
+/* line 93, ../scss/modules/container.scss */
 .container.morph .box.first, .container.morph .box.multi-first {
   margin-left: 0;
   padding-left: 0;
 }
-/* line 96, ../scss/modules/container.scss */
+/* line 97, ../scss/modules/container.scss */
 .container.morph .box.last, .container.morph .box.multi-last {
   margin-right: 0;
   padding-right: 0;
 }
-/* line 100, ../scss/modules/container.scss */
+/* line 101, ../scss/modules/container.scss */
 .container.morph .box p {
   height: 6em;
 }
-/* line 105, ../scss/modules/container.scss */
+/* line 106, ../scss/modules/container.scss */
 .container .box {
   width: 31.2%;
   border: 0;
   padding: 0 1.6%;
 }
-/* line 109, ../scss/modules/container.scss */
+/* line 110, ../scss/modules/container.scss */
 .container .box.first {
   margin-left: 0;
   padding-left: 0;
 }
-/* line 113, ../scss/modules/container.scss */
+/* line 114, ../scss/modules/container.scss */
 .container .box.last {
   margin-right: 0;
   padding-right: 0;
@@ -2204,7 +2204,6 @@ html .fullscreenicon {
 .cat-more a {
   background-color: #f3f3f3;
   display: block;
-  color: #333;
   padding: 0.2em 0;
   text-transform: uppercase;
   border-radius: 2px 2px 2px 2px;
@@ -2218,7 +2217,6 @@ html .fullscreenicon {
 /* line 449, ../scss/modules/base.scss */
 .cat-more a:hover {
   text-decoration: underline;
-  color: #333;
 }
 
 /* line 455, ../scss/modules/base.scss */

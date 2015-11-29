@@ -29,7 +29,7 @@
 
             foreach ($lead_pid as $id) {
                 echo '<li class="box docked first">';
-                echo get_marctv_teaser($id, true, 'mainteaser', 'large');
+                echo get_marctv_teaser($id, true, 'mainteaser', 'large',true,'','',true,true );
                 echo '</li>';
             }
 
@@ -49,14 +49,9 @@
         }
         ?>
 
-
-        <?php //echo get_marctv_category_container(get_option("marctv_cat1"), get_option("marctv_cat2"), get_option("marctv_cat3"), 2, 'docked'); ?>
-
         <?php echo get_marctv_category_box(get_option("marctv_cat1")); ?>
         <?php echo get_marctv_category_box(get_option("marctv_cat2")); ?>
         <?php echo get_marctv_category_box(get_option("marctv_cat3")); ?>
-
-        <?php //echo get_marctv_sticky_posts();  ?>
 
         <div id="marctvflickrbar"></div>
 

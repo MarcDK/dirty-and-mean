@@ -436,7 +436,7 @@ html .fullscreenicon {
 .cat-more a {
   background-color: $grey;
   display: block;
-  color: $black;
+
   padding: 0.2em 0;
   text-transform: uppercase;
   border-radius: 2px 2px 2px 2px;
@@ -448,7 +448,7 @@ html .fullscreenicon {
   margin-top: 1em;
   &:hover {
     text-decoration: underline;
-    color: $black;
+
   }
 }
 

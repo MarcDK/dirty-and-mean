@@ -60,9 +60,8 @@ function marctv_posted_on()
  * @param string $link override link.
  * @param bool $exerpt show exerpt.
  */
-function get_marctv_teaser($post_id, $show_info = true, $additional_classes = '', $imgsize = false, $headline_bottom = true, $extra = '', $link = false, $show_excerpt = true)
+function get_marctv_teaser($post_id, $show_info = true, $additional_classes = '', $imgsize = false, $headline_bottom = true, $extra = '', $link = false, $show_excerpt = true, $skip_thumbnail = false)
 {
-
     if (!$post_id) {
         $post_id = get_the_ID();
     }
@@ -102,10 +101,11 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
     }
 
     if (has_post_thumbnail($post_id)) {
-        $img_html = wp_get_attachment_image(get_post_thumbnail_id($post_id), $imgsize);
-        $html = preg_replace('/(height)=\"\d*\"\s/', "", $img_html);
-
-        $teaser .= $html;
+        if ($skip_thumbnail) {
+            $teaser .= wp_get_attachment_image(get_post_thumbnail_id($post_id), $imgsize);
+        } else {
+            $teaser .= get_the_post_thumbnail($post_id, $imgsize);
+        }
     } else {
         $teaser .= '<img src="/media/dummy.jpg" alt="' . (get_the_title($post_id)) . '" />';
     }
@@ -889,15 +889,6 @@ function my_theme_add_editor_styles()
 
 add_action('init', 'my_theme_add_editor_styles');
 
-add_filter('wp_get_attachment_link', 'remove_img_width_height', 10, 4);
-
-function remove_img_width_height($html, $post_id, $post_image_id, $post_thumbnail)
-{
-
-    $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
-
-    return $html;
-}
 
 //add this to your functions.php
 
@@ -928,5 +919,9 @@ function load_dashicons_front_end()
 {
     wp_enqueue_style('dashicons');
 }
+
+
+
+
 
 ?>
