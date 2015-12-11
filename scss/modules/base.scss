@@ -50,21 +50,21 @@ small {
   }
 
   .innerheader {
-    background: #efefef;
-    @include background (linear-gradient(rgba(255, 255, 255, 0.98), rgba(239, 239, 239, 0.98)));
+    background: $black;
+    @include background (linear-gradient(tint($black,10),$black ));
     width: 100%;
     z-index: 10000;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid #333;
-    @include box-shadow(#333 0 0 2px);
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    border-bottom: shade($black,30);
+    //@include box-shadow(#333 0 0 2px);
 
   }
 
   .searchbox {
     float: right;
     width: 140px;
-    padding-top: 6px;
+    padding-top: 2px;
   }
 
   .searchbox input {
@@ -83,7 +83,7 @@ small {
   font-weight: 300;
   border-bottom: 2px solid $black;
   padding: 0;
-  font-size: 110%;
+  font-size: 120%;
   text-transform: uppercase;
   color: #fff;
   line-height: $lineheight-title;
@@ -176,7 +176,7 @@ a {
 }
 
 .sitelogo a {
-  background: url('images/marctv-logo.png') no-repeat 0 0;
+  background: url('images/marctv-logo-bw.png') no-repeat 0 0;
   /* background: rgba(0, 0, 0, 0) url('images/marctv_logo.svg') no-repeat 0 0; */
   display: block;
   height: 36px;
@@ -184,7 +184,7 @@ a {
   padding: 0;
   text-indent: -5000em;
   width: 170px;
-  margin-top: 4px;
+  margin-top: 1px;
 }
 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
@@ -192,9 +192,10 @@ only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
   .sitelogo a {
-    background: url('images/marctv-logo-2x.png') no-repeat 0 0;
+    background: url('images/marctv-logo-bw-2x.png') no-repeat 0 0;
     background-size: 155px 36px;
     background-repeat: no-repeat;
+    margin-top: 5px;
   }
 }
 
@@ -229,7 +230,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 #bottom {
 
-  background-color: #111;
+  background-color: $black;
   background-image: none;
   font-size: 14px;
   padding-top: 2em;
@@ -318,7 +319,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
   }
   a span {
     background: #fff;
-    color: #333;
+    color: $black;
     border: 1px solid $black;
   }
   span {
@@ -373,7 +374,8 @@ html .fullscreenicon {
 }
 
 .commentbox {
-  background: $grey;
+  background: $black;
+  color: #fff;
 }
 
 /* article nav */
@@ -417,6 +419,16 @@ html .fullscreenicon {
 .tagcloud {
   padding-bottom: 3em;
   text-align: justify;
+  font-family: $fonts-title;
+
+  a{
+    color: $black;
+    text-decoration: underline;
+
+    &:hover{
+      color: $marctv-color;
+    }
+  }
 }
 
 .solid {
@@ -504,7 +516,7 @@ a[href*='=087022'] {
 }
 
 .page-template-sortbyreview-php .container.morph .box {
-  height: auto;
+  height: 10em;
 }
 
 html .yarpp-related {

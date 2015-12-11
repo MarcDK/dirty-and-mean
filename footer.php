@@ -15,7 +15,7 @@ if (is_home()): ?>
     }
 
     if (!$tagcache) {
-        $tagcache = wp_tag_cloud(array('smallest' => 8, 'largest' => 14, 'number' => 50, 'format' => 'flat', 'echo' => false));
+        $tagcache = wp_tag_cloud(array('smallest' => 10, 'largest' => 18, 'number' => 50, 'format' => 'flat', 'echo' => false));
         set_transient('taghtml', $tagcache, 24 * 60 * 60);
     }
 

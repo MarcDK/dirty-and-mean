@@ -13,7 +13,7 @@
   line-height: normal;
   overflow: hidden;
   float: right;
-  padding-top: 3px;
+  padding-top: 0px;
   
   ul {
     list-style: none;
@@ -27,7 +27,7 @@
     padding: 0;
   }
   a {
-    color: #555;
+    color: #fff;
     display: block;
     font-size: 110%;
     font-weight: 300;
@@ -47,7 +47,8 @@
   a {
     float: none;
     &:hover {
-      color: $black;
+      color: white;
+
     }
     &:active {
       color: #2200C1;
@@ -57,8 +58,8 @@
     border-width: 0;
   }
   #current a, .current-menu-item a, .current-menu-parent a {
-    color: $black;
-    font-weight: 700;
+    font-weight: 300;
+    color: shade(white,10);
   }
   #current a:hover, .current-menu-item a:hover, .current-menu-parent a:hover {
     color: #444;
@@ -71,7 +72,7 @@
     margin: 0;
     position: absolute;
     width: 200px;
-    background-color: $black;
+    background-color: $submenu-color;
     z-index: 9999;
     padding: 3px 0 10px;
   }
@@ -94,6 +95,7 @@
     }
     a:hover {
       color: #fff;
+
     }
   }
   
@@ -103,7 +105,7 @@
     padding: 0;
   }
   .menu li:hover > a, ul ul *:hover > a {
-    background: $black;
+    background-color: $submenu-color;
     color: #FFFFFF;
     text-decoration: none;
   }
@@ -114,8 +116,8 @@
 .menu {
   .sub-menu {
     display: none;
-    @include box-shadow(rgba(0, 0, 0, 0.2) 0px 3px 3px);
-    @include border-radius(0 2px 2px 2px);
+    //@include box-shadow(rgba(0, 0, 0, 0.2) 0px 3px 3px);
+    //@include border-radius(0 2px 2px 2px);
   }
   margin-left: 10px;
 }

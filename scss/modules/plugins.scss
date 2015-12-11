@@ -53,23 +53,41 @@ html .pgntn-page-pagination {
   font-family: $fonts-title;
   font-size: 120%;
   margin-bottom: 3em;
+  padding-top: 1em;
   a {
-    background: $black ! important;
-    color: white ! important;
+    background: $grey ! important;
+    color: $black ! important;
     padding: 0.3rem 1rem !important;
     border: 0 ! important;
   }
   a:hover {
-    color: white ! important;
+    color: $black ! important;
     text-decoration: underline ! important;
   }
   .current {
-    background-color: #cccccc !important;
+    background-color: $black !important;
+    color: white !important;
     padding: 0.3rem 1rem !important;
     border: 0 ! important;
   }
   .prev.page-numbers {
     margin-left: 0 !important;
+  }
+
+  @media only screen and  (max-width : 600px)  {
+    .prev.page-numbers,
+    .next.page-numbers {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .page-numbers {
+
+    }
   }
 
   .pgntn-page-pagination-intro {

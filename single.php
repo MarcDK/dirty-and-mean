@@ -16,10 +16,10 @@ the_post(); ?>
             <small>
                 <?php if (get_the_author_meta('user_url') != "") : ?>
                     Von <a class="vcard author" href="<?php the_author_meta('user_url'); ?>"><span
-                            class="fn"><?php the_author_meta('first_name'); ?><?php the_author_meta('last_name'); ?></span></a>
+                            class="fn"><?php the_author_meta('display_name'); ?></span></a>
                 <?php else: ?>
                     Von <span rel="vcard author"><span
-                            class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?>
+                            class="fn"><?php the_author_meta('display_name'); ?>
                             am <?php the_date(); ?></span></span>
                 <?php endif ?> am
                 <time class="updated" datetime="<?php the_date('c'); ?>"><?php the_time(__('F j, Y')); ?> </time>
@@ -32,7 +32,7 @@ the_post(); ?>
             <div class="inner entry-content">
                 <?php the_content(); ?>
                 <div class="tools">
-                    <ul class="hlist tags">
+                    <ul class="hlist">
                         <li class="tag tags"><?php
                             if (function_exists('marctv_post_tags')) {
                                 echo marctv_post_tags(get_the_tags());

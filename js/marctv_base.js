@@ -18,11 +18,14 @@
         } else if ($(window).width() > 640) {
             $(".header .innerheader").sticky({
                 topSpacing: 0
-            }).on('sticky-start', function () {
+            })
+
+            /*.on('sticky-start', function () {
                 $(".header .innerheader").animate({padding: '0.1em 0'});
             }).on('sticky-end', function () {
                 $(".header .innerheader").animate({padding: '0.5em 0'});
             });
+            */
         }
 
         // detect touch device and adds body class

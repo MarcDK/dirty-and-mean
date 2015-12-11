@@ -12,7 +12,7 @@
       a {
         background-size: 120px auto;
         width: 135px;
-        margin-top: 3px;
+        margin-top: 6px;
       }
 
       width: 130px;
@@ -53,7 +53,7 @@
       padding-top: 0;
 
       .hamburger {
-        @include box-shadow(#000 0 10px 30px);
+        //@include box-shadow(#000 0 10px 30px);
         background-color: $black;
         position: absolute;
         position: absolute;
@@ -73,6 +73,7 @@
           background: none;
           box-shadow: none;
           padding: 0 0 0.5em 1.5em;
+          margin: 0;
         }
 
         li:first-child {
@@ -115,7 +116,7 @@
         display: block;
         font-size: 38px;
         line-height: 1;
-        color: $black;
+        color: white;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -moz-user-select: none;
@@ -126,6 +127,10 @@
           color: white;
         }
         &.active {
+          color: white;
+          background-color: $black;
+        }
+        &:active {
           color: white;
           background-color: $black;
         }
@@ -163,29 +168,6 @@
 
     }
 
-    /* last comments */
-    .container.last-commented.multi {
-      img {
-        display: none;
-      }
-
-      .box,
-      .box.first,
-      .box.last,
-      .box.multi-first,
-      .box.multi-last {
-        height: auto;
-        margin-bottom: 1em;
-        white-space: normal;
-
-      }
-
-      .title {
-        font-size: 130%;
-      }
-
-
-    }
   }
 
 }
