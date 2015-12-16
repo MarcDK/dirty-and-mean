@@ -7,6 +7,25 @@
 
 }
 
+.commentbox {
+  background: $black;
+  color: $white-text;
+  font-family: $fonts-title;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  a.marctv-moderate-report {
+    color: shade(#fff, $shade_ammount);
+  }
+
+  a:hover {
+    color: $marctv-color;
+  }
+}
+
 .skiplink:before {
   content: '';
   display: block;
@@ -73,15 +92,18 @@
 #hsc-btn-hideshow,
 #hsc-btn-loadmore,
 .reply a {
-  background-color: white;
+  background-color: shade(#ccc,$shade_ammount);
+  @include background-image(linear-gradient(shade(#eee,$shade_ammount), shade(#ddd,$shade_ammount)));
+  /*
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
   background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
   background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
   background-image: linear-gradient(top, #eeeeee, #cccccc);
-  border: 1px solid #ccc;
-  border-bottom: 1px solid #bbb;
+  */
+  border: 1px solid shade(#ccc,$shade_ammount);
+  border-bottom: 1px solid shade(#bbb,$shade_ammount);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -91,22 +113,26 @@
   line-height: 1;
   padding: 0.6em 1em;
   text-align: center;
-  text-shadow: 0 1px 0 #eee;
+  text-shadow: 0 1px 0 shade(#eee,$shade_ammount);
   width: auto;
   font-family: $fonts-title;
 
   &:hover {
-    background-color: #dddddd;
+    background-color: shade(#ddd,$shade_ammount);
+    @include background-image(linear-gradient(shade(#dddddd,$shade_ammount), shade(#bbbbbb,$shade_ammount)));
+    /*
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
     background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
     background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
     background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
     background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
     background-image: linear-gradient(top, #dddddd, #bbbbbb);
-    border: 1px solid #bbb;
-    border-bottom: 1px solid #999;
+    */
+    color: $black;
+    border: 1px solid shade(#bbb,$shade_ammount);
+    border-bottom: 1px solid shade(#999,$shade_ammount);
     cursor: pointer;
-    text-shadow: 0 1px 0 #ddd;
+    text-shadow: 0 1px 0 shade(#ddd,$shade_ammount);
   }
 }
 
@@ -147,8 +173,7 @@
 .comment-respond {
   font-family: $fonts-title;
   background: $black;
-  padding: 2.5%;
-  width: 95%;
+  width: 100%;
   margin-bottom: 1.5em;
 
   .gravatar {
@@ -253,7 +278,7 @@
     padding-bottom: 1px;
     padding-left: 10px;
     padding-top: 7px;
-    color: white;
+    color: $white-text;
     font-style: italic;
     position: relative;
 
@@ -264,11 +289,11 @@
       content: "“";
       font-family: serif;
       font-size: 46px;
-      color: white;
+      color: $white-text;
     }
 
     p {
-      color: white;
+      color: $white-text;
       font-style: italic;
       margin: 0;
     }
@@ -304,7 +329,7 @@
     margin: 0.5em 0 1em;
     padding: 5px 7px 5px 130px;
     position: relative;
-    border-top: 1px dotted #cfcfcf;
+    border-top: 1px dotted shade(#cfcfcf, 50);
 
     p,
     blockquote,
@@ -348,7 +373,7 @@
     }
 
     .comment-author a {
-      color: white;
+      color: $white-text;
     }
 
     .comment-author, .comment-meta {
@@ -362,8 +387,9 @@
       text-align: right;
       top: 7px;
       a {
-        color: white;
-        font-size: 80%
+        color: $white-text;
+        font-size: 80%;
+        text-decoration: none;
       }
     }
 
@@ -408,6 +434,10 @@
       cite.fn {
         font-style: normal;
         font-size: 110%;
+
+        a {
+          text-decoration: none;
+        }
       }
 
     }

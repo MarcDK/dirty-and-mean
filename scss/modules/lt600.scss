@@ -20,6 +20,22 @@
       }
     }
   }
+
+  #commentform {
+    .comment-form-email,
+    .comment-form-author,
+    .comment-form-url {
+      input {
+        width: 97%;
+
+      }
+    }
+
+    label {
+      display: block;
+    }
+  }
+
   #marctv .article-wrapper {
     width: 100%;
     margin: 0 auto;
@@ -39,29 +55,8 @@
         }
     }
 
-    .commentbox {
+*/
 
-      .comments-title{
-        margin: $marctv-margin/4;
-      }
-
-      .site {
-        margin: 0;
-      }
-      .commentlist {
-        .comment {
-          margin: $marctv-margin/4;
-        }
-        .children
-        {
-          margin: -$marctv-margin/4;
-          .comment {
-            margin: -$marctv-margin/4;
-          }
-        }
-      }
-    }
-    */
 
   html {
     .archive .nav-article {
@@ -200,10 +195,12 @@
     }
   }
 
-  /* last comments */
+  /* last comments and related */
   #marctv {
-    .container.last-commented.multi {
-      img {
+    .container.last-commented.multi,
+    .relatedbox .container {
+      img,
+      .info {
         display: none;
       }
 

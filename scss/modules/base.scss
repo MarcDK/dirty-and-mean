@@ -41,47 +41,11 @@ small {
   font-size: 90%;
 }
 
-.header {
-  margin-bottom: 2em;
-
-  .sitelogo {
-    width: 130px;
-    float: left;
-  }
-
-  .innerheader {
-    background: $black;
-    @include background (linear-gradient(tint($black,10),$black ));
-    width: 100%;
-    z-index: 10000;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    border-bottom: shade($black,30);
-    //@include box-shadow(#333 0 0 2px);
-
-  }
-
-  .searchbox {
-    float: right;
-    width: 140px;
-    padding-top: 2px;
-  }
-
-  .searchbox input {
-    font-size: 90%;
-    width: 140px;
-    padding: 1px;
-    float: right;
-    margin-top: 3px;
-    margin-right: 4px;
-  }
-}
-
 .supertitle {
   margin-bottom: 0.5em;
   margin-top: 0.2em;
   font-weight: 300;
-  border-bottom: 2px solid $black;
+  border-bottom: 3px solid $black;
   padding: 0;
   font-size: 120%;
   text-transform: uppercase;
@@ -175,33 +139,10 @@ a {
   margin: 0;
 }
 
-.sitelogo a {
-  background: url('images/marctv-logo-bw.png') no-repeat 0 0;
-  /* background: rgba(0, 0, 0, 0) url('images/marctv_logo.svg') no-repeat 0 0; */
-  display: block;
-  height: 36px;
-  margin: 0;
-  padding: 0;
-  text-indent: -5000em;
-  width: 170px;
-  margin-top: 1px;
-}
-
-@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
-only screen and (-moz-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min-device-pixel-ratio: 1.5) {
-  .sitelogo a {
-    background: url('images/marctv-logo-bw-2x.png') no-repeat 0 0;
-    background-size: 155px 36px;
-    background-repeat: no-repeat;
-    margin-top: 5px;
-  }
-}
 
 .title {
   line-height: $lineheight-title;
-  font-weight: 700;
+  font-weight: 300;
   margin-bottom: 8px;
   font-size: 120%;
   font-family: $fonts-title;
@@ -343,16 +284,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 
-.searchbox input {
-  font-size: 90%;
-  width: 120px;
-}
-
-#content .searchbox input {
-  font-size: 140%;
-  margin-top: 0.5em;
-}
-
 html .fullscreenicon {
   opacity: 0.6;
 }
@@ -371,11 +302,6 @@ html .fullscreenicon {
   .box {
     margin-bottom: 10px;
   }
-}
-
-.commentbox {
-  background: $black;
-  color: #fff;
 }
 
 /* article nav */
@@ -417,7 +343,7 @@ html .fullscreenicon {
 }
 
 .tagcloud {
-  padding-bottom: 3em;
+  padding-bottom: 6em;
   text-align: justify;
   font-family: $fonts-title;
 

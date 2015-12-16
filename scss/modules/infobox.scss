@@ -23,13 +23,18 @@ html .nohover .info {
 
 }
 
+a:hover .info{
+  @include opacity(1);
+}
+
 .infobox {
   overflow: hidden;
   &:hover .info.comment-count {
-    color: $marctv-color;
+    color: $black;
+
   }
   .info {
-    @include transition(all 0.05s linear);
+    @include transition(all 0.1s linear);
     @include border-radius(0 0px 2px 0px);
     //@include box-shadow(rgba(0,0,0,0.5) 2px 2px 2px);
     //@include text-shadow(0px 1px 0px rgba(255, 255, 255, 0.3), 0px 1px 0px rgba(0, 0, 0, 0.7));
@@ -41,6 +46,7 @@ html .nohover .info {
     position: absolute;
     zoom: 1;
     background: white;
+    @include opacity(0);
   }
   .info.comment-count {
     line-height: 1;
