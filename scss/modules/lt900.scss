@@ -53,6 +53,11 @@
       padding-top: 0;
 
       .hamburger {
+
+        li {
+          float: none;
+        }
+
         //@include box-shadow(#000 0 10px 30px);
         background-color: $black;
         position: absolute;
@@ -106,9 +111,6 @@
         }
       }
 
-      .hamburger li {
-        float: none;
-      }
 
       .hamburger-icon {
         z-index: 5000;

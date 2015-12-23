@@ -14,10 +14,6 @@ Grüße an alle Quelltextleser!
     <?php wp_enqueue_style('style', get_stylesheet_uri()); ?>
     <?php wp_head(); ?>
     <meta name="viewport" content="user-scalable=1, width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Noto Serif:400italic,700italic,400,700' rel='stylesheet'
-          type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Noto Sans:400italic,700italic,400,700' rel='stylesheet'
-          type='text/css'>
 </head>
 
 <body <?php body_class(); ?>>
@@ -42,8 +38,14 @@ Grüße an alle Quelltextleser!
                     </div>
                 <?php endif ?>
                 <nav id="primary-navigation">
-                    <div
-                        id="navigation"><?php wp_nav_menu(array('theme_location' => 'mainnav', 'container' => '')); ?></div>
+                    <div id="navigation">
+                        <a class="dashicons hamburger-icon dashicons-menu"></a>
+                        <?php wp_nav_menu(array(
+                            'theme_location' => 'mainnav',
+                            'container' => '',
+                            'menu_class'      => 'hamburger menu',
+                        )); ?>
+                    </div>
                 </nav>
                 <?php get_search_form(); ?>
             </div>

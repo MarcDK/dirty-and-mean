@@ -33,15 +33,15 @@ endif
 
             <li class="box first"><a class="inverted infobox " href="http://shortscore.org"
                                rel="bookmark">
-                    <?php echo get_the_post_thumbnail(20648); ?>
+                    <?php echo get_the_post_thumbnail(20648,'medium'); ?>
                     <h2 class="title">SHORTSCORE.org</h2></a></li>
             <li class="box "><a class="inverted infobox " href="http://verschlichtern.de"
                                      rel="bookmark">
-                    <?php echo get_the_post_thumbnail(20695); ?>
+                    <?php echo get_the_post_thumbnail(20695,'medium'); ?>
                     <h2 class="title">verschlichtern.de</h2></a></li>
             <li class="box last"><a class="inverted infobox " href="http://kunstpixel.de"
                                     rel="bookmark">
-                    <?php echo get_the_post_thumbnail(21168); ?>
+                    <?php echo get_the_post_thumbnail(21168,'medium'); ?>
                     <h2 class="title">kunstpixel.de</h2></a></li>
         </ul>
     </div>

@@ -52,7 +52,7 @@
   }
 
   .innerheader {
-    background: $black;
+    background-color: $black;
     @include background (linear-gradient(tint($black,10),$black ));
     width: 100%;
     z-index: 10000;

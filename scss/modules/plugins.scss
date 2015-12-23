@@ -1,14 +1,14 @@
 @import 'vars';
+
 .logged-in {
   .ac-comment-edit {
     position: absolute;
     right: 5em;
     width: 25em;
     top: 0;
-    a,span {
+    a, span {
       font-size: 14px ! important;
     }
-
 
     .comment-ac-save-link {
       font-weight: 700;
@@ -20,13 +20,13 @@
   }
 }
 
-html .last-commented  {
+html .last-commented {
   margin-bottom: 2em;
 }
 
 .comment-teaser,
 .marctv-moderate-links,
- .cat-more,
+.cat-more,
 .rating,
 .nav-article,
 .nav-paged,
@@ -34,20 +34,27 @@ html .last-commented  {
   font-family: $fonts-title;
 }
 
+html {
+  /* video player */
+  .mejs-container, .mejs-embed, .mejs-embed body, .mejs-container .mejs-controls {
+    background: white;
+  }
+
+  .mejs-controls {
+    display: none !important;
+  }
+}
 
 html .jqvideo .sprite {
   background-image: url('images/video_icons.png');
 }
 
-@media only screen
-and (-Webkit-min-device-pixel-ratio: 1.5), only screen
-and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2),
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
   html .jqvideo .sprite {
     background-image: url('images/video_icons2x.png');
   }
 }
-
 
 html .pgntn-page-pagination {
   font-family: $fonts-title;
@@ -74,7 +81,7 @@ html .pgntn-page-pagination {
     margin-left: 0 !important;
   }
 
-  @media only screen and  (max-width : 600px)  {
+  @media only screen and (max-width: 600px) {
     .prev.page-numbers,
     .next.page-numbers {
       display: block;

@@ -1,11 +1,14 @@
 (function ($) {
     $(document).ready(function ($) {
-        $("#navigation > ul").addClass("hamburger");
-        $('<a class="dashicons hamburger-icon dashicons-menu"></a>').prependTo('#navigation').click(
+
+
+        $('.hamburger-icon').click(
             function () {
+                console.debug(2);
                 $('#navigation .hamburger').toggle().parent().children('.hamburger-icon').toggleClass('active dashicons-no-alt');
             }
         );
+
 
         // detect svg and add body class
         if (document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Shape", "1.1")) {
@@ -28,7 +31,7 @@
             */
         }
 
-        // detect touch device and adds body class
+        // detect touch device
         function is_touch_device() {
             return 'ontouchstart' in window // works on most browsers
                 || 'onmsgesturechange' in window; // works on ie10
