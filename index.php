@@ -29,7 +29,7 @@
 
             foreach ($lead_pid as $id) {
                 echo '<li class="box docked first">';
-                echo get_marctv_teaser($id, true, 'mainteaser', 'large',true,'','',true );
+                echo get_marctv_teaser($id, true, 'mainteaser', 'legacy_b',true,'','',true );
                 echo '</li>';
             }
 

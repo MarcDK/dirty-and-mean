@@ -60,7 +60,7 @@ function marctv_posted_on()
  * @param string $link override link.
  * @param bool $exerpt show exerpt.
  */
-function get_marctv_teaser($post_id, $show_info = true, $additional_classes = '', $imgsize = false, $headline_bottom = true, $extra = '', $link = false, $show_excerpt = true, $skip_thumbnail = false)
+function get_marctv_teaser($post_id, $show_info = true, $additional_classes = '', $imgsize = 'full', $headline_bottom = true, $extra = '', $link = false, $show_excerpt = true, $skip_thumbnail = false)
 {
     if (!$post_id) {
         $post_id = get_the_ID();
@@ -77,27 +77,6 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
     $teaser = '<a class="inverted infobox ' . $additional_classes . '" href="' . $link . '" rel="bookmark">';
     if (!$headline_bottom) {
         $teaser .= '<div class="title">' . esc_html(get_the_title($post_id)) . '</div>';
-    }
-
-    switch ($imgsize) {
-        case "org":
-            $imgsize = "full";
-            break;
-
-        case "medium":
-            $imgsize = "medium";
-            break;
-
-        case "small":
-            $imgsize = "thumbnail";
-            break;
-
-        case "large":
-            $imgsize = "large";
-            break;
-
-        default:
-            $imgsize = "full";
     }
 
     if (has_post_thumbnail($post_id)) {
