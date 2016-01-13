@@ -16,10 +16,20 @@ function echo_memory_usage()
 if (function_exists('add_image_size')) {
     add_image_size('facebookimage', 403, 403, true);
     //(cropped)
-    add_image_size('fullhd', 1920, 836);
-    add_image_size('legacy_m', 460, 200);
-    add_image_size('legacy_s', 300, 130);
-    add_image_size('legacy_b', 960, 418);
+    add_image_size('fullhd', 1920, 0);
+    add_image_size('legacy_m', 460, 0);
+    add_image_size('legacy_s', 300, 0);
+    add_image_size('legacy_b', 960, 0);
+    add_image_size('legacy_l', 1200, 0);
+
+    add_image_size('large_x2', 2048, 0);
+
+    //(cropped)
+    add_image_size('fullhd', 1920, 0);
+    add_image_size('medium_x2', 600, 0);
+    add_image_size('large_x2', 2048, 0);
+
+
     add_image_size('4k', 3840, 1680);
     add_image_size('EOS', 4000, 1750);
 }
@@ -60,7 +70,7 @@ function marctv_posted_on()
  * @param string $link override link.
  * @param bool $exerpt show exerpt.
  */
-function get_marctv_teaser($post_id, $show_info = true, $additional_classes = '', $imgsize = 'full', $headline_bottom = true, $extra = '', $link = false, $show_excerpt = true, $skip_thumbnail = false)
+function get_marctv_teaser($post_id, $show_info = true, $additional_classes = '', $imgsize = 'large', $headline_bottom = true, $extra = '', $link = false, $show_excerpt = true, $skip_thumbnail = false)
 {
     if (!$post_id) {
         $post_id = get_the_ID();
@@ -191,7 +201,7 @@ function get_marctv_favourite_articles()
                 }
 
                 $key++;
-                $html .= get_marctv_teaser(get_the_ID(), true, '', 'large', true, '', '', true);
+                $html .= get_marctv_teaser(get_the_ID(), true, '', 'legacy_m', true, '', '', true);
                 $html .= '</li>';
             endwhile;
             $html .= '</ul>';

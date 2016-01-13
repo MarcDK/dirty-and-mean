@@ -96,7 +96,7 @@
   #marctv .container.small .box {
     width: 31.2%;
     border: 0;
-    padding: 0 1.6%;
+    margin: 0 1.6%;
     float: left;
 
     &.first {
@@ -143,7 +143,7 @@
     }
     li .children {
 
-      background-image: url('images/left-stroke.gif');
+      background-image: url('images/left-stroke.png');
       background-repeat: repeat-y;
 
       .vcard .avatar {
@@ -178,7 +178,7 @@
       }
       width: 48%;
       border: 0;
-      padding: 0 2%;
+      margin: 0 2%;
       float: left;
 
     }

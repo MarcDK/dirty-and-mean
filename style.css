@@ -4,7 +4,7 @@ Theme Name: Dirty and Mean
 Theme URI: http://marctv.de
 Description: MarcTV Theme 2014
 Author: MarcDK
-Version: 2.3.5
+Version: 2.3.8
 License: GPL v3
 License URI: license.txt
 Tags: responsive, MarcTV
@@ -191,7 +191,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #marctv .container.small .box {
     width: 31.2%;
     border: 0;
-    padding: 0 1.6%;
+    margin: 0 1.6%;
     float: left;
   }
   /* line 102, ../scss/modules/lt600.scss */
@@ -241,7 +241,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
   /* line 144, ../scss/modules/lt600.scss */
   html .commentlist li .children {
-    background-image: url("images/left-stroke.gif");
+    background-image: url("images/left-stroke.png");
     background-repeat: repeat-y;
   }
   /* line 149, ../scss/modules/lt600.scss */
@@ -267,7 +267,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #marctv .container.multi .box, #marctv .container.double .box, #marctv .container.morph .box {
     width: 48%;
     border: 0;
-    padding: 0 2%;
+    margin: 0 2%;
     float: left;
   }
   /* line 176, ../scss/modules/lt600.scss */
@@ -484,7 +484,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #marctv .container.six .box {
     width: 48%;
     border: 0;
-    padding: 0 2%;
+    margin: 0 2%;
     float: left;
   }
   /* line 158, ../scss/modules/lt900.scss */
@@ -503,7 +503,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   html .container.multi .box {
     width: 32%;
     border: 0;
-    padding: 0 1%;
+    margin: 0 1%;
     height: 13em;
   }
   /* line 7, ../scss/modules/lt960.scss */
@@ -1279,53 +1279,54 @@ html .mejs-container, html .mejs-embed, html .mejs-embed body, html .mejs-contai
   background: white;
 }
 /* line 43, ../scss/modules/plugins.scss */
-html .mejs-controls {
+html .mejs-controls,
+html .mejs-overlay-loading {
   display: none !important;
 }
 
-/* line 48, ../scss/modules/plugins.scss */
+/* line 50, ../scss/modules/plugins.scss */
 html .jqvideo .sprite {
   background-image: url("images/video_icons.png");
 }
 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 54, ../scss/modules/plugins.scss */
+  /* line 56, ../scss/modules/plugins.scss */
   html .jqvideo .sprite {
     background-image: url("images/video_icons2x.png");
   }
 }
-/* line 59, ../scss/modules/plugins.scss */
+/* line 61, ../scss/modules/plugins.scss */
 html .pgntn-page-pagination {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 120%;
   margin-bottom: 3em;
   padding-top: 1em;
 }
-/* line 64, ../scss/modules/plugins.scss */
+/* line 66, ../scss/modules/plugins.scss */
 html .pgntn-page-pagination a {
   background: #f3f3f3 !important;
   color: #23282d !important;
   padding: 0.3rem 1rem !important;
   border: 0 !important;
 }
-/* line 70, ../scss/modules/plugins.scss */
+/* line 72, ../scss/modules/plugins.scss */
 html .pgntn-page-pagination a:hover {
   color: #23282d !important;
   text-decoration: underline !important;
 }
-/* line 74, ../scss/modules/plugins.scss */
+/* line 76, ../scss/modules/plugins.scss */
 html .pgntn-page-pagination .current {
   background-color: #23282d !important;
   color: white !important;
   padding: 0.3rem 1rem !important;
   border: 0 !important;
 }
-/* line 80, ../scss/modules/plugins.scss */
+/* line 82, ../scss/modules/plugins.scss */
 html .pgntn-page-pagination .prev.page-numbers {
   margin-left: 0 !important;
 }
 @media only screen and (max-width: 600px) {
-  /* line 85, ../scss/modules/plugins.scss */
+  /* line 87, ../scss/modules/plugins.scss */
   html .pgntn-page-pagination .prev.page-numbers,
   html .pgntn-page-pagination .next.page-numbers {
     display: block;
@@ -1336,10 +1337,15 @@ html .pgntn-page-pagination .prev.page-numbers {
     padding-right: 0;
   }
 }
-/* line 100, ../scss/modules/plugins.scss */
+/* line 102, ../scss/modules/plugins.scss */
 html .pgntn-page-pagination .pgntn-page-pagination-intro {
   background-color: transparent !important;
   border: none !important;
+}
+
+/* line 109, ../scss/modules/plugins.scss */
+.social-buttons .box {
+  background: red;
 }
 
 /* article */
@@ -1549,7 +1555,7 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
 /* line 4, ../scss/modules/container.scss */
 .container {
   margin-bottom: 3em;
-  padding-left: 0;
+  margin-left: 0;
   overflow: hidden;
 }
 /* line 9, ../scss/modules/container.scss */
@@ -1582,9 +1588,9 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
 }
 /* line 40, ../scss/modules/container.scss */
 .container.double .box {
-  width: 48.4%;
-  margin: 0%;
-  padding: 0 1.6%;
+  width: 47.9%;
+  padding: 0%;
+  margin: 0 2%;
   border: 0;
 }
 /* line 47, ../scss/modules/container.scss */
@@ -1594,8 +1600,8 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
 /* line 51, ../scss/modules/container.scss */
 .container.six .box {
   width: 31.2%;
-  margin: 0%;
-  padding: 0 1.6%;
+  padding: 0%;
+  margin: 0 1.6%;
   border: 0;
   height: 20em;
 }
@@ -1615,7 +1621,7 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
 .container.multi .box {
   width: 14%;
   border: 0;
-  padding: 0 1.6%;
+  margin: 0 1.6%;
   font-size: 80%;
   margin-bottom: 10px;
 }
@@ -1632,7 +1638,7 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
 .container.morph .box {
   width: 31.2%;
   border: 0;
-  padding: 0 1.6%;
+  margin: 0 1.6%;
   height: 20em;
 }
 /* line 93, ../scss/modules/container.scss */
@@ -1653,7 +1659,7 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
 .container .box {
   width: 31.2%;
   border: 0;
-  padding: 0 1.6%;
+  margin: 0 1.6%;
 }
 /* line 110, ../scss/modules/container.scss */
 .container .box.first {

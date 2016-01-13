@@ -40,9 +40,11 @@ html {
     background: white;
   }
 
-  .mejs-controls {
+  .mejs-controls,
+  .mejs-overlay-loading {
     display: none !important;
   }
+
 }
 
 html .jqvideo .sprite {
@@ -102,4 +104,8 @@ html .pgntn-page-pagination {
     border: none ! important;
   }
 
+}
+
+.social-buttons .box {
+  background: red;
 }

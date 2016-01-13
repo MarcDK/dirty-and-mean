@@ -3,7 +3,7 @@
 
 .container {
   margin-bottom: 3em;
-  padding-left: 0;
+  margin-left: 0;
   overflow: hidden;
 
   .box {
@@ -38,9 +38,9 @@
     width: 100%;
   }
   &.double .box {
-    width: 48.4%;
-    margin: 0%;
-    padding: 0 1.6%;
+    width: 47.9%;
+    padding: 0%;
+    margin: 0 2%;
     border: 0;
   }
   &.six {
@@ -50,8 +50,8 @@
 
     .box {
       width: 31.2%;
-      margin: 0%;
-      padding: 0 1.6%;
+      padding: 0%;
+      margin: 0 1.6%;
       border: 0;
       height: 20em;
     }
@@ -73,7 +73,7 @@
     .box {
       width: 14%;
       border: 0;
-      padding: 0 1.6%;
+      margin: 0 1.6%;
       font-size: 80%;
       margin-bottom: 10px;
     }
@@ -88,7 +88,7 @@
   &.morph .box {
     width: 31.2%;
     border: 0;
-    padding: 0 1.6%;
+    margin: 0 1.6%;
     height: 20em;
     &.first, &.multi-first {
       margin-left: 0;
@@ -106,7 +106,7 @@
   .box {
     width: 31.2%;
     border: 0;
-    padding: 0 1.6%;
+    margin: 0 1.6%;
     &.first {
       margin-left: 0;
       padding-left: 0;
