@@ -4,7 +4,7 @@ Theme Name: Dirty and Mean
 Theme URI: http://marctv.de
 Description: MarcTV Theme 2014
 Author: MarcDK
-Version: 2.3.8
+Version: 2.4.8
 License: GPL v3
 License URI: license.txt
 Tags: responsive, MarcTV
@@ -184,120 +184,123 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #marctv .container .box {
     width: 100%;
     float: none;
-    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
   }
 
-  /* line 96, ../scss/modules/lt600.scss */
+  /* line 97, ../scss/modules/lt600.scss */
   #marctv .container.small .box {
     width: 31.2%;
     border: 0;
-    margin: 0 1.6%;
+    margin-left: 1.6%;
+    margin-right: 1.6%;
     float: left;
   }
-  /* line 102, ../scss/modules/lt600.scss */
+  /* line 104, ../scss/modules/lt600.scss */
   #marctv .container.small .box.first {
     margin-left: 0;
     padding-left: 0;
   }
-  /* line 106, ../scss/modules/lt600.scss */
+  /* line 108, ../scss/modules/lt600.scss */
   #marctv .container.small .box.last {
     margin-right: 0;
     padding-right: 0;
   }
-  /* line 111, ../scss/modules/lt600.scss */
+  /* line 113, ../scss/modules/lt600.scss */
   #marctv .container.small .box .title {
     font-size: 80%;
   }
 
-  /* line 120, ../scss/modules/lt600.scss */
+  /* line 122, ../scss/modules/lt600.scss */
   html .commentlist .comment-meta a:first-child:before {
     content: "# ";
   }
-  /* line 123, ../scss/modules/lt600.scss */
+  /* line 125, ../scss/modules/lt600.scss */
   html .commentlist .comment-meta span {
     display: none;
   }
-  /* line 127, ../scss/modules/lt600.scss */
+  /* line 129, ../scss/modules/lt600.scss */
   html .commentlist li {
     border-top: 1px dotted #23282d;
     padding-left: 0;
   }
-  /* line 130, ../scss/modules/lt600.scss */
+  /* line 132, ../scss/modules/lt600.scss */
   html .commentlist li .vcard {
     padding-left: 2.5em;
   }
-  /* line 131, ../scss/modules/lt600.scss */
+  /* line 133, ../scss/modules/lt600.scss */
   html .commentlist li .vcard .avatar {
     width: 2em;
     height: 2em;
   }
-  /* line 137, ../scss/modules/lt600.scss */
+  /* line 139, ../scss/modules/lt600.scss */
   html .commentlist li .comment-author {
     padding-bottom: 0.5em;
   }
-  /* line 141, ../scss/modules/lt600.scss */
+  /* line 143, ../scss/modules/lt600.scss */
   html .commentlist .pingback .vcard {
     padding-bottom: 0.5em;
   }
-  /* line 144, ../scss/modules/lt600.scss */
+  /* line 146, ../scss/modules/lt600.scss */
   html .commentlist li .children {
     background-image: url("images/left-stroke.png");
     background-repeat: repeat-y;
   }
-  /* line 149, ../scss/modules/lt600.scss */
+  /* line 151, ../scss/modules/lt600.scss */
   html .commentlist li .children .vcard .avatar {
     left: 1em;
     width: 2em;
     height: 2em;
   }
-  /* line 154, ../scss/modules/lt600.scss */
+  /* line 156, ../scss/modules/lt600.scss */
   html .commentlist li .children li {
     padding-left: 1em;
   }
 
-  /* line 162, ../scss/modules/lt600.scss */
+  /* line 164, ../scss/modules/lt600.scss */
   #marctv .container.multi .box {
     height: 13em;
   }
-  /* line 168, ../scss/modules/lt600.scss */
+  /* line 170, ../scss/modules/lt600.scss */
   #marctv .container.multi .title {
     font-size: 120%;
   }
-  /* line 173, ../scss/modules/lt600.scss */
+  /* line 175, ../scss/modules/lt600.scss */
   #marctv .container.multi .box, #marctv .container.double .box, #marctv .container.morph .box {
     width: 48%;
     border: 0;
-    margin: 0 2%;
+    margin-right: 2%;
+    margin-left: 2%;
     float: left;
   }
-  /* line 176, ../scss/modules/lt600.scss */
+  /* line 178, ../scss/modules/lt600.scss */
   #marctv .container.multi .box .title, #marctv .container.double .box .title, #marctv .container.morph .box .title {
     font-size: 110%;
   }
-  /* line 185, ../scss/modules/lt600.scss */
+  /* line 188, ../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(odd), #marctv .container.morph .box:nth-child(odd), #marctv .container.double .box.first {
     margin-left: 0;
     padding-left: 0;
   }
-  /* line 189, ../scss/modules/lt600.scss */
+  /* line 192, ../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(even), #marctv .container.morph .box:nth-child(even), #marctv .container.double .box.last {
     margin-right: 0;
     padding-right: 0;
   }
-  /* line 193, ../scss/modules/lt600.scss */
+  /* line 196, ../scss/modules/lt600.scss */
   #marctv .container.morph .box p {
     height: 6em;
   }
 
   /* last comments and related */
-  /* line 202, ../scss/modules/lt600.scss */
+  /* line 205, ../scss/modules/lt600.scss */
   #marctv .container.last-commented.multi img,
   #marctv .container.last-commented.multi .info,
   #marctv .relatedbox .container img,
   #marctv .relatedbox .container .info {
     display: none;
   }
-  /* line 207, ../scss/modules/lt600.scss */
+  /* line 210, ../scss/modules/lt600.scss */
   #marctv .container.last-commented.multi .box,
   #marctv .container.last-commented.multi .box.first,
   #marctv .container.last-commented.multi .box.last,
@@ -310,19 +313,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #marctv .relatedbox .container .box.multi-last {
     height: auto;
     width: 100%;
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
     padding: 0;
     padding-left: 0.5em;
     border-left: 1px solid #23282d;
     margin-bottom: 1em;
     white-space: normal;
   }
-  /* line 223, ../scss/modules/lt600.scss */
+  /* line 227, ../scss/modules/lt600.scss */
   #marctv .container.last-commented.multi .title,
   #marctv .relatedbox .container .title {
     height: auto;
   }
-  /* line 227, ../scss/modules/lt600.scss */
+  /* line 231, ../scss/modules/lt600.scss */
   #marctv .container.last-commented.multi a,
   #marctv .relatedbox .container a {
     font-size: 130%;
@@ -1457,58 +1461,57 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
 /* line 112, ../scss/modules/entry.scss */
 .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
   font-size: 140%;
-  font-weight: 700;
   margin-top: 2em;
 }
-/* line 118, ../scss/modules/entry.scss */
+/* line 117, ../scss/modules/entry.scss */
 .entry h3 {
   font-size: 115%;
 }
-/* line 122, ../scss/modules/entry.scss */
+/* line 121, ../scss/modules/entry.scss */
 .entry ul {
   list-style: square;
   margin-left: 1.1em;
 }
-/* line 127, ../scss/modules/entry.scss */
+/* line 126, ../scss/modules/entry.scss */
 .entry ol {
   list-style: decimal;
   margin-left: 1.5em;
 }
-/* line 132, ../scss/modules/entry.scss */
+/* line 131, ../scss/modules/entry.scss */
 .entry .gallery-item {
   float: left;
   margin-right: 0.3%;
   width: 10%;
 }
-/* line 138, ../scss/modules/entry.scss */
+/* line 137, ../scss/modules/entry.scss */
 .entry .js .gallery-item {
   float: none;
   margin-right: 0;
 }
-/* line 143, ../scss/modules/entry.scss */
+/* line 142, ../scss/modules/entry.scss */
 .entry .alignright {
   float: right;
   margin: 0.3em 0 0.5em 1em;
   width: 33%;
   padding: 0;
 }
-/* line 151, ../scss/modules/entry.scss */
+/* line 150, ../scss/modules/entry.scss */
 .entry blockquote.alignright {
   margin-top: 0;
 }
-/* line 155, ../scss/modules/entry.scss */
+/* line 154, ../scss/modules/entry.scss */
 .entry .alignleft {
   float: left;
   padding: 0;
   margin: 0.3em 1em 0.5em 0 !important;
   width: 33%;
 }
-/* line 162, ../scss/modules/entry.scss */
+/* line 161, ../scss/modules/entry.scss */
 .entry blockquote.alignleft {
   margin-top: 0;
 }
 
-/* line 168, ../scss/modules/entry.scss */
+/* line 167, ../scss/modules/entry.scss */
 .tools {
   border-top: 1px solid #23282d;
   padding-top: 0.5em;
@@ -1518,16 +1521,16 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
   line-height: 1.45;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 178, ../scss/modules/entry.scss */
+/* line 177, ../scss/modules/entry.scss */
 .tools .tags a {
   color: #23282d;
   text-decoration: underline;
 }
-/* line 182, ../scss/modules/entry.scss */
+/* line 181, ../scss/modules/entry.scss */
 .tools .tags a:hover {
   color: #0e7dc4;
 }
-/* line 188, ../scss/modules/entry.scss */
+/* line 187, ../scss/modules/entry.scss */
 .tools .hlist {
   font-size: 90%;
   list-style: none;
@@ -1535,19 +1538,19 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
   overflow: hidden;
   margin: 0;
 }
-/* line 200, ../scss/modules/entry.scss */
+/* line 199, ../scss/modules/entry.scss */
 .tools .nav-article-tool {
   overflow: hidden;
 }
-/* line 204, ../scss/modules/entry.scss */
+/* line 203, ../scss/modules/entry.scss */
 .tools a {
   color: #666;
 }
-/* line 208, ../scss/modules/entry.scss */
+/* line 207, ../scss/modules/entry.scss */
 .tools .breadcrumb span {
   font-style: italic;
 }
-/* line 212, ../scss/modules/entry.scss */
+/* line 211, ../scss/modules/entry.scss */
 .tools li {
   margin-bottom: 0.5em;
 }
@@ -1564,7 +1567,7 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
   float: left;
   overflow: hidden;
   display: block;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 /* line 17, ../scss/modules/container.scss */
 .container .box a:hover {
@@ -1590,83 +1593,88 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
 .container.double .box {
   width: 47.9%;
   padding: 0%;
-  margin: 0 2%;
+  margin-left: 2%;
+  margin-right: 2%;
   border: 0;
 }
-/* line 47, ../scss/modules/container.scss */
+/* line 48, ../scss/modules/container.scss */
 .container.six .title {
   font-size: 130%;
 }
-/* line 51, ../scss/modules/container.scss */
+/* line 52, ../scss/modules/container.scss */
 .container.six .box {
   width: 31.2%;
   padding: 0%;
-  margin: 0 1.6%;
+  margin-left: 1.6%;
+  margin-right: 1.6%;
   border: 0;
-  height: 20em;
+  height: 16em;
 }
-/* line 59, ../scss/modules/container.scss */
+/* line 61, ../scss/modules/container.scss */
 .container.six .box.multi-first,
 .container.six .box.first {
   margin-left: 0;
   padding-left: 0;
 }
-/* line 65, ../scss/modules/container.scss */
+/* line 67, ../scss/modules/container.scss */
 .container.six .box.multi-last,
 .container.six .box.last {
   margin-right: 0;
   padding-right: 0;
 }
-/* line 73, ../scss/modules/container.scss */
+/* line 75, ../scss/modules/container.scss */
 .container.multi .box {
   width: 14%;
   border: 0;
-  margin: 0 1.6%;
+  margin-left: 1.6%;
+  margin-right: 1.6%;
   font-size: 80%;
   margin-bottom: 10px;
 }
-/* line 80, ../scss/modules/container.scss */
+/* line 83, ../scss/modules/container.scss */
 .container.multi .title {
   height: 3em;
   font-size: 100%;
 }
-/* line 85, ../scss/modules/container.scss */
+/* line 88, ../scss/modules/container.scss */
 .container.morph .title {
   height: 2em;
 }
-/* line 88, ../scss/modules/container.scss */
+/* line 91, ../scss/modules/container.scss */
 .container.morph .box {
   width: 31.2%;
   border: 0;
-  margin: 0 1.6%;
+  margin-left: 1.6%;
+  margin-right: 1.6%;
   height: 20em;
 }
-/* line 93, ../scss/modules/container.scss */
+/* line 97, ../scss/modules/container.scss */
 .container.morph .box.first, .container.morph .box.multi-first {
   margin-left: 0;
   padding-left: 0;
 }
-/* line 97, ../scss/modules/container.scss */
+/* line 101, ../scss/modules/container.scss */
 .container.morph .box.last, .container.morph .box.multi-last {
   margin-right: 0;
   padding-right: 0;
 }
-/* line 101, ../scss/modules/container.scss */
+/* line 105, ../scss/modules/container.scss */
 .container.morph .box p {
   height: 6em;
 }
-/* line 106, ../scss/modules/container.scss */
+/* line 110, ../scss/modules/container.scss */
 .container .box {
   width: 31.2%;
   border: 0;
-  margin: 0 1.6%;
+  margin-left: 1.6%;
+  margin-right: 1.6%;
 }
-/* line 110, ../scss/modules/container.scss */
+/* line 115, ../scss/modules/container.scss */
 .container .box.first {
   margin-left: 0;
   padding-left: 0;
 }
-/* line 114, ../scss/modules/container.scss */
+/* line 119, ../scss/modules/container.scss */
 .container .box.last {
   margin-right: 0;
   padding-right: 0;
@@ -1905,7 +1913,7 @@ body {
   background: #fff;
   font-size: 120%;
   line-height: 1.45;
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* line 28, ../scss/modules/base.scss */
@@ -2320,21 +2328,16 @@ html .fullscreenicon {
   display: block;
   padding: 0.2em 0;
   text-transform: uppercase;
-  border-radius: 2px 2px 2px 2px;
-  -moz-border-radius: 2px 2px 2px 2px;
-  -webkit-border-radius: 2px 2px 2px 2px;
-  -khtml-border-radius: 2px 2px 2px 2px;
-  -o-border-radius: 2px 2px 2px 2px;
-  margin-bottom: 3em;
+  margin-bottom: 6em;
   margin-top: 1em;
 }
-/* line 402, ../scss/modules/base.scss */
+/* line 397, ../scss/modules/base.scss */
 .cat-more a:hover {
   text-decoration: underline;
   color: white;
 }
 
-/* line 408, ../scss/modules/base.scss */
+/* line 403, ../scss/modules/base.scss */
 .lastwords {
   /* last but not least */
   background: #111;
@@ -2342,7 +2345,7 @@ html .fullscreenicon {
   padding: 0 10px;
 }
 
-/* line 415, ../scss/modules/base.scss */
+/* line 410, ../scss/modules/base.scss */
 .warning {
   background: #eee;
   border: 1px solid #bbb;
@@ -2351,26 +2354,26 @@ html .fullscreenicon {
 }
 
 /* jetpack */
-/* line 425, ../scss/modules/base.scss */
+/* line 420, ../scss/modules/base.scss */
 #marctv div.sharedaddy .sd-title {
   display: none;
 }
-/* line 428, ../scss/modules/base.scss */
+/* line 423, ../scss/modules/base.scss */
 #marctv div.sharedaddy .sd-content {
   float: none;
   width: 100%;
 }
-/* line 432, ../scss/modules/base.scss */
+/* line 427, ../scss/modules/base.scss */
 #marctv div.sharedaddy div.sd-block {
   border: none;
 }
-/* line 435, ../scss/modules/base.scss */
+/* line 430, ../scss/modules/base.scss */
 #marctv div.sharedaddy .share-count {
   background-color: #0e7dc4;
 }
 
 /* amazon */
-/* line 443, ../scss/modules/base.scss */
+/* line 438, ../scss/modules/base.scss */
 a[href*='=087022']:before {
   content: "\f174";
   display: inline-block;
@@ -2385,27 +2388,27 @@ a[href*='=087022']:before {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 459, ../scss/modules/base.scss */
+/* line 454, ../scss/modules/base.scss */
 .page-template-sortbyreview-php .container.morph .box {
   height: 10em;
 }
 
-/* line 463, ../scss/modules/base.scss */
+/* line 458, ../scss/modules/base.scss */
 html .yarpp-related {
   margin: 0 !important;
 }
 
-/* line 467, ../scss/modules/base.scss */
+/* line 462, ../scss/modules/base.scss */
 .twitter-tweet-rendered {
   width: 100% !important;
 }
 
-/* line 471, ../scss/modules/base.scss */
+/* line 466, ../scss/modules/base.scss */
 .more_link {
   text-decoration: underline;
 }
 
-/* line 475, ../scss/modules/base.scss */
+/* line 470, ../scss/modules/base.scss */
 a:hover .more_link {
   color: #0e7dc4;
 }

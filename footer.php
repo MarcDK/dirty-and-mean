@@ -1,8 +1,4 @@
-</div>
-<div class="site projects">
-<?php
-
-if (is_home()): ?>
+<?php if (is_home()): ?>
 
     <?php
     $tagcache = false;
@@ -21,41 +17,37 @@ if (is_home()): ?>
 
     echo '<div class="section tagcloud"><div class="col_title supertitle"><span>Weitere Themen</span></div>' . $tagcache . '</div>';
     ?>
-<?php
-endif
-?>
+<?php endif ?>
+</div>
 
+<div class="site projects">
 
-    <div class="container section docked ">
+    <div class="container section ">
         <div class="col_title supertitle"><span>Andere Projekte</span></div>
 
         <ul class="container showontouch small section">
 
             <li class="box first"><a class="inverted infobox " href="http://shortscore.org"
-                               rel="bookmark">
-                    <?php echo get_the_post_thumbnail(20648,'medium'); ?>
+                                     rel="bookmark">
+                    <?php echo get_the_post_thumbnail(20648, 'medium'); ?>
                     <h2 class="title">SHORTSCORE.org</h2></a></li>
             <li class="box "><a class="inverted infobox " href="http://verschlichtern.de"
-                                     rel="bookmark">
-                    <?php echo get_the_post_thumbnail(20695,'medium'); ?>
+                                rel="bookmark">
+                    <?php echo get_the_post_thumbnail(20695, 'medium'); ?>
                     <h2 class="title">verschlichtern.de</h2></a></li>
             <li class="box last"><a class="inverted infobox " href="http://kunstpixel.de"
                                     rel="bookmark">
-                    <?php echo get_the_post_thumbnail(21168,'medium'); ?>
+                    <?php echo get_the_post_thumbnail(21168, 'medium'); ?>
                     <h2 class="title">kunstpixel.de</h2></a></li>
         </ul>
     </div>
-    </div>
-
+</div>
 
 
 <div id="bottom">
     <div class="inner">
-
-
         <ul class="site socialbox container section">
             <li class="box first">
-
                 <ul class="rows">
                     <li>
                         <ul>
@@ -75,7 +67,8 @@ endif
                 <ul class="rows">
                     <li>
                         <ul>
-                            <li><a class="dashicons dashicons-wordpress-alt" rel="nofollow" target="_blank" href="https://profiles.wordpress.org/marcdk/#content-plugins"><span>Wordpress</span></a>
+                            <li><a class="dashicons dashicons-wordpress-alt" rel="nofollow" target="_blank"
+                                   href="https://profiles.wordpress.org/marcdk/#content-plugins"><span>Wordpress</span></a>
                             </li>
                         </ul>
                     </li>
@@ -109,8 +102,9 @@ endif
         </ul>
 
         <p class="imprint"><a href="/impressum/">Impressum</a> -
-        <a rel="nofollow" href="/netiquette/">Netiquette</a> - <a rel="nofollow" href="/blogfreunde">Blogfreunde</a> -
-        <a rel="nofollow" href="/marc-toensing/">Über mich</a>
+            <a rel="nofollow" href="/netiquette/">Netiquette</a> - <a rel="nofollow" href="/blogfreunde">Blogfreunde</a>
+            -
+            <a rel="nofollow" href="/marc-toensing/">Über mich</a>
     </div>
     <?php
     wp_reset_query();
