@@ -4,12 +4,12 @@ Theme Name: Dirty and Mean
 Theme URI: http://marctv.de
 Description: MarcTV Theme 2014
 Author: MarcDK
-Version: 2.4.8
+Version: 2.5.4
 License: GPL v3
 License URI: license.txt
 Tags: responsive, MarcTV
 */
-/* line 5, ../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,45 +31,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../../../usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -420,7 +420,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 @media only screen and (max-width: 900px) {
   /* line 75, ../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu {
-    display: block;
+    display: none;
     position: relative;
     background: none;
     box-shadow: none;
@@ -448,7 +448,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   /* line 102, ../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu li a,
   html #navigation .hamburger li a {
-    font-size: 100%;
+    font-size: 160%;
     color: #efefef;
     padding: 0.6em 0.6em 0.6em 0.8em;
     margin: 0;
@@ -541,13 +541,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     font-size: 130%;
   }
 }
-/* line 5, ../scss/modules/navigation.scss */
+/* line 4, ../scss/modules/navigation.scss */
 .posts-navigation {
   margin-bottom: 3em;
   overflow: hidden;
 }
 
-/* line 10, ../scss/modules/navigation.scss */
+/* line 9, ../scss/modules/navigation.scss */
 #navigation {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: normal;
@@ -555,71 +555,71 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   float: right;
   padding-top: 0px;
 }
-/* line 18, ../scss/modules/navigation.scss */
+/* line 17, ../scss/modules/navigation.scss */
 #navigation ul {
   list-style: none;
   margin: 0;
   overflow: hidden;
   padding: 0;
 }
-/* line 24, ../scss/modules/navigation.scss */
+/* line 23, ../scss/modules/navigation.scss */
 #navigation li {
   float: left;
   margin: 0;
   padding: 0;
 }
-/* line 29, ../scss/modules/navigation.scss */
+/* line 28, ../scss/modules/navigation.scss */
 #navigation a {
   color: #d3d3d3;
   display: block;
   font-size: 110%;
   font-weight: 300;
   line-height: 1.1;
-  padding: 6px 0.5em;
+  padding: 6px 0.8em;
   text-decoration: none;
   white-space: nowrap;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-/* line 41, ../scss/modules/navigation.scss */
+/* line 39, ../scss/modules/navigation.scss */
 #navigation li:last-child a {
   border-right: none;
 }
-/* line 44, ../scss/modules/navigation.scss */
+/* line 42, ../scss/modules/navigation.scss */
 #navigation > ul a {
   width: auto;
 }
-/* line 47, ../scss/modules/navigation.scss */
+/* line 45, ../scss/modules/navigation.scss */
 #navigation a {
   float: none;
 }
-/* line 49, ../scss/modules/navigation.scss */
+/* line 47, ../scss/modules/navigation.scss */
 #navigation a:hover {
   color: white;
 }
-/* line 53, ../scss/modules/navigation.scss */
+/* line 51, ../scss/modules/navigation.scss */
 #navigation a:active {
   color: #2200C1;
 }
-/* line 57, ../scss/modules/navigation.scss */
+/* line 55, ../scss/modules/navigation.scss */
 #navigation #current, #navigation .current-menu-item, #navigation .current-menu-parent {
   border-width: 0;
 }
-/* line 60, ../scss/modules/navigation.scss */
+/* line 58, ../scss/modules/navigation.scss */
 #navigation #current a, #navigation .current-menu-item a, #navigation .current-menu-parent a {
   font-weight: 300;
-  color: #e6e6e6;
+  color: #fff;
 }
-/* line 64, ../scss/modules/navigation.scss */
+/* line 62, ../scss/modules/navigation.scss */
 #navigation #current a:hover, #navigation .current-menu-item a:hover, #navigation .current-menu-parent a:hover {
   color: #444;
 }
-/* line 67, ../scss/modules/navigation.scss */
+/* line 65, ../scss/modules/navigation.scss */
 #navigation #current a:active, #navigation .current-menu-item a:active, #navigation .current-menu-parent a:active {
   color: darkred;
 }
-/* line 71, ../scss/modules/navigation.scss */
+/* line 69, ../scss/modules/navigation.scss */
 #navigation .menu .sub-menu {
+  display: none;
   margin: 0;
   position: absolute;
   width: 200px;
@@ -627,12 +627,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   z-index: 9999;
   padding: 3px 0 10px;
 }
-/* line 79, ../scss/modules/navigation.scss */
+/* line 78, ../scss/modules/navigation.scss */
 #navigation .sub-menu li {
   float: none;
   position: relative;
 }
-/* line 82, ../scss/modules/navigation.scss */
+/* line 81, ../scss/modules/navigation.scss */
 #navigation .sub-menu li a {
   border: none;
   padding: 10px 5px 6px 10px;
@@ -644,21 +644,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 90%;
   text-transform: inherit;
 }
-/* line 93, ../scss/modules/navigation.scss */
+/* line 92, ../scss/modules/navigation.scss */
 #navigation .sub-menu li.current-menu-item a {
   color: #eee;
 }
-/* line 96, ../scss/modules/navigation.scss */
+/* line 95, ../scss/modules/navigation.scss */
 #navigation .sub-menu li a:hover {
   color: #fff;
 }
-/* line 102, ../scss/modules/navigation.scss */
+/* line 101, ../scss/modules/navigation.scss */
 #navigation ul li:hover > ul {
   display: block;
   margin: 0;
   padding: 0;
 }
-/* line 107, ../scss/modules/navigation.scss */
+/* line 106, ../scss/modules/navigation.scss */
 #navigation .menu li:hover > a, #navigation ul ul *:hover > a {
   background-color: #202429;
   color: #FFFFFF;
@@ -666,13 +666,40 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* Subnav */
-/* line 116, ../scss/modules/navigation.scss */
+/* line 115, ../scss/modules/navigation.scss */
 .menu {
   margin-left: 10px;
 }
-/* line 117, ../scss/modules/navigation.scss */
+/* line 116, ../scss/modules/navigation.scss */
 .menu .sub-menu {
   display: none;
+}
+
+/* line 124, ../scss/modules/navigation.scss */
+.sister-pages {
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+/* line 134, ../scss/modules/navigation.scss */
+.sister-pages li.current-menu-item a {
+  color: #23282d;
+  text-decoration: underline;
+}
+/* line 139, ../scss/modules/navigation.scss */
+.sister-pages li a {
+  float: left;
+  margin: 0 .25em .5em 0;
+  padding: .5em 1em;
+  background-color: #f3f3f3;
+  color: #23282d;
+  font-weight: 300;
+}
+@media only screen and (max-width: 600px) {
+  /* line 139, ../scss/modules/navigation.scss */
+  .sister-pages li a {
+    width: 100%;
+    margin: 0 5% 0.5em 0;
+  }
 }
 
 /* line 4, ../scss/modules/comments.scss */
@@ -1329,8 +1356,12 @@ html .pgntn-page-pagination .current {
 html .pgntn-page-pagination .prev.page-numbers {
   margin-left: 0 !important;
 }
+/* line 86, ../scss/modules/plugins.scss */
+html .pgntn-page-pagination .page-numbers {
+  font-weight: 300;
+}
 @media only screen and (max-width: 600px) {
-  /* line 87, ../scss/modules/plugins.scss */
+  /* line 91, ../scss/modules/plugins.scss */
   html .pgntn-page-pagination .prev.page-numbers,
   html .pgntn-page-pagination .next.page-numbers {
     display: block;
@@ -1608,7 +1639,7 @@ html .pgntn-page-pagination .pgntn-page-pagination-intro {
   margin-left: 1.6%;
   margin-right: 1.6%;
   border: 0;
-  height: 16em;
+  height: 20em;
 }
 /* line 61, ../scss/modules/container.scss */
 .container.six .box.multi-first,

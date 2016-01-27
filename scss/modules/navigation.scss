@@ -1,7 +1,6 @@
 @import 'vars';
 @import 'compass/css3';
 
-
 .posts-navigation {
   margin-bottom: 3em;
   overflow: hidden;
@@ -14,7 +13,7 @@
   overflow: hidden;
   float: right;
   padding-top: 0px;
-  
+
   ul {
     list-style: none;
     margin: 0;
@@ -32,10 +31,9 @@
     font-size: 110%;
     font-weight: 300;
     line-height: 1.1;
-    padding: 6px 0.5em;
+    padding: 6px 0.8em;
     text-decoration: none;
     white-space: nowrap;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
   }
   li:last-child a {
@@ -59,7 +57,7 @@
   }
   #current a, .current-menu-item a, .current-menu-parent a {
     font-weight: 300;
-    color: shade(white,10);
+    color: #fff;
   }
   #current a:hover, .current-menu-item a:hover, .current-menu-parent a:hover {
     color: #444;
@@ -67,8 +65,9 @@
   #current a:active, .current-menu-item a:active, .current-menu-parent a:active {
     color: darkred;
   }
-  
+
   .menu .sub-menu {
+    display: none;
     margin: 0;
     position: absolute;
     width: 200px;
@@ -98,7 +97,7 @@
 
     }
   }
-  
+
   ul li:hover > ul {
     display: block;
     margin: 0;
@@ -109,7 +108,7 @@
     color: #FFFFFF;
     text-decoration: none;
   }
-  
+
 }
 
 /* Subnav */
@@ -122,3 +121,37 @@
   margin-left: 10px;
 }
 
+.sister-pages {
+  overflow: hidden;
+  margin-bottom: 2em;
+
+  li {
+
+    &:first-child a {
+
+    }
+
+    &.current-menu-item a {
+      color: $black;
+      text-decoration: underline;
+    }
+
+    a {
+      float: left;
+      margin: 0 .25em .5em 0;
+      padding: .5em 1em;
+      background-color: $grey;
+      color: $black;
+      font-weight: 300;
+      @media only screen and (max-width: 600px) {
+        width: 100%;
+        margin: 0 $marctv-margin .5em 0;
+      }
+    }
+
+
+
+
+  }
+
+}
