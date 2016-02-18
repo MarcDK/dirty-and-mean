@@ -1,0 +1,38 @@
+@import 'vars';
+
+#bottom {
+
+  background-color: $black;
+  background-image: none;
+  font-size: 90%;
+  padding-top: 2em;
+  color: #aaa;
+
+  .container {
+    margin-bottom: 0;
+  }
+
+  .imprint {
+    text-align: center;
+    padding-bottom: 1em;
+  }
+  .box {
+    margin-bottom: 2em;
+  }
+  .inner {
+    margin: 0 15px;
+  }
+  a {
+    color: #aaa;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 120%;
+    margin-bottom: 1em;
+  }
+}
