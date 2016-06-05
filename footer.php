@@ -15,7 +15,7 @@
         set_transient('taghtml', $tagcache, 24 * 60 * 60);
     }
 
-    echo '<div class="section tagcloud"><div class="col_title supertitle"><span>Weitere Themen</span></div>' . $tagcache . '</div>';
+    echo '<div class="section tagcloud"><div class="col_title supertitle"><span>Weitere Themen</span></div><p>' . $tagcache . '</p></div>';
     ?>
 <?php endif ?>
 </div>
@@ -46,18 +46,21 @@
 
 <div id="bottom">
     <div class="inner">
+        <div class="section">
+            <div class="title">MarcTV abonnieren und folgen:</div>
+        </div>
         <ul class="site socialbox container section">
             <li class="box first">
                 <ul class="rows">
                     <li>
                         <ul>
-                            <li><a class="dashicons dashicons-rss"" rel="nofollow" target="_blank" href="/feed"><span>Abonniere MarcTV als Feed</span></a>
+                            <li><a class="dashicons dashicons-rss"" target="_blank" href="/feed"><span>Abonniere MarcTV als Feed</span></a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <ul>
-                            <li><a class="dashicons dashicons-twitter" rel="nofollow" target="_blank"
+                            <li><a class="dashicons dashicons-twitter" target="_blank"
                                    href="http://www.twitter.com/MarcTV"><span>Folge MarcTV auf Twitter</span></a></li>
                         </ul>
                     </li>
@@ -67,14 +70,14 @@
                 <ul class="rows">
                     <li>
                         <ul>
-                            <li><a class="dashicons dashicons-wordpress-alt" rel="nofollow" target="_blank"
-                                   href="https://profiles.wordpress.org/marcdk/#content-plugins"><span>Wordpress</span></a>
+                            <li><a class="dashicons dashicons-facebook" target="_blank"
+                                   href="https://www.facebook.com/MarcTV.de"><span>Folge Marc auf Facebook</span></a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <ul>
-                            <li><a class="dashicons dashicons-video-alt3" rel="nofollow" target="_blank"
+                            <li><a class="dashicons dashicons-video-alt3" target="_blank"
                                    href="http://www.youtube.com/MarcDK"><span>Folge MarcTV auf YouTube</span></a></li>
 
                         </ul>
@@ -85,8 +88,8 @@
                 <ul class="rows">
                     <li>
                         <ul>
-                            <li><a class="dashicons dashicons-facebook" rel="nofollow" target="_blank"
-                                   href="https://www.facebook.com/MarcTV.de"><span>Folge Marc auf Facebook</span></a>
+                            <li><a class="dashicons dashicons-wordpress-alt" target="_blank"
+                                   href="https://profiles.wordpress.org/marcdk/#content-plugins"><span>Wordpress</span></a>
                             </li>
                         </ul>
                     </li>
@@ -102,13 +105,14 @@
         </ul>
 
         <p class="imprint"><a href="/impressum/">Impressum</a> -
-            <a rel="nofollow" href="/netiquette/">Netiquette</a> - <a rel="nofollow" href="/blogfreunde">Blogfreunde</a>
+            <a href="/netiquette/">Netiquette</a> - <a href="/blogfreunde">Blogfreunde</a>
             -
-            <a rel="nofollow" href="/marc-toensing/">Über mich</a>
+            <a href="/marc-toensing/">Über mich</a>
     </div>
     <?php
     wp_reset_query();
     ?>
+
 </div>
 <?php wp_footer(); ?>
 </body>

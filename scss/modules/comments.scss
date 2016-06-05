@@ -7,18 +7,32 @@
 
 }
 
+#commentformbox {
+  padding: 0.5em;
+  //background-color: shade($commentbox-color, 10);
+  margin-bottom: 1em;
+}
+
+
+
 .commentbox {
-  background: $black;
-  color: $white-text;
+  background: $commentbox-color;
+  color: $commentbox-fontcolor;
   font-family: $fonts-title;
 
+  .comment-reply-title {
+    color: $commentbox-fontcolor;
+    font-size: 140%;
+    overflow: hidden;
+  }
+
   a {
-    color: #fff;
+    color: $commentbox-fontcolor;
     text-decoration: underline;
   }
 
   a.marctv-moderate-report {
-    color: shade(#fff, $shade_ammount);
+    color: shade($commentbox-fontcolor, $shade_ammount);
   }
 
   a:hover {
@@ -70,16 +84,16 @@
 }
 
 #hsc-btn-hideshow,
-#hsc-btn-loadmore{
+#hsc-btn-loadmore {
   margin-left: 0;
   font-family: $fonts-title;
   color: $black;
   font-size: 100%;
   text-decoration: none;
- }
+}
 
 #hsc-btn-hideshow span,
-#hsc-btn-loadmore span{
+#hsc-btn-loadmore span {
   padding: 0;
 }
 
@@ -87,13 +101,17 @@
   margin-bottom: 2em;
 }
 
+p.comment-subscription-form {
+  font-size: 90%;
+}
+
 .searchform .formbutton,
 #commentform #submit,
 #hsc-btn-hideshow,
 #hsc-btn-loadmore,
 .reply a {
-  background-color: shade(#ccc,$shade_ammount);
-  @include background-image(linear-gradient(shade(#eee,$shade_ammount), shade(#ddd,$shade_ammount)));
+  background-color: shade(#eee, $shade_ammount);
+  @include background-image(linear-gradient(shade(#eee, $shade_ammount), shade(#ddd, $shade_ammount)));
   /*
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
   background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
@@ -102,24 +120,24 @@
   background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
   background-image: linear-gradient(top, #eeeeee, #cccccc);
   */
-  border: 1px solid shade(#ccc,$shade_ammount);
-  border-bottom: 1px solid shade(#bbb,$shade_ammount);
+  border: 1px solid shade(#ccc, $shade_ammount);
+  border-bottom: 1px solid shade(#bbb, $shade_ammount);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  color: $black;
+  color: $font-color;
   line-height: 1;
   padding: 0.6em 1em;
   text-align: center;
-  text-shadow: 0 1px 0 shade(#eee,$shade_ammount);
+  text-shadow: 0 1px 0 shade(#eee, $shade_ammount);
   width: auto;
   font-family: $fonts-title;
 
   &:hover {
-    background-color: shade(#ddd,$shade_ammount);
-    @include background-image(linear-gradient(shade(#dddddd,$shade_ammount), shade(#bbbbbb,$shade_ammount)));
+    background-color: shade(#ddd, $shade_ammount);
+    @include background-image(linear-gradient(shade(#dddddd, $shade_ammount), shade(#bbbbbb, $shade_ammount)));
     /*
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
     background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
@@ -129,10 +147,10 @@
     background-image: linear-gradient(top, #dddddd, #bbbbbb);
     */
     color: $black;
-    border: 1px solid shade(#bbb,$shade_ammount);
-    border-bottom: 1px solid shade(#999,$shade_ammount);
+    border: 1px solid shade(#bbb, $shade_ammount);
+    border-bottom: 1px solid shade(#999, $shade_ammount);
     cursor: pointer;
-    text-shadow: 0 1px 0 shade(#ddd,$shade_ammount);
+    text-shadow: 0 1px 0 shade(#ddd, $shade_ammount);
   }
 }
 
@@ -172,7 +190,6 @@
 
 .comment-respond {
   font-family: $fonts-title;
-  background: $black;
   width: 100%;
   margin-bottom: 1.5em;
 
@@ -182,11 +199,11 @@
 
   }
   a {
-    color: #fff;
+    color: $commentbox-fontcolor;
     text-decoration: none;
 
     &:hover {
-      color: #fff;
+      color: $commentbox-fontcolor;
       text-decoration: underline;
     }
   }
@@ -198,7 +215,7 @@
 
   p {
     margin-top: 10px;
-    color: #fff;
+    color: $commentbox-fontcolor;
 
     &.red {
       border: 2px solid #8B0000;
@@ -208,7 +225,7 @@
   }
 
   label {
-    color: #fff;
+    color: $commentbox-fontcolor;
   }
 
   .inner {
@@ -267,6 +284,8 @@
 
   #respond {
     margin-left: 0;
+    //background-color: shade($commentbox-color, 10);
+    padding: 0.3em;
   }
 
   .comment {
@@ -274,11 +293,11 @@
   }
 
   blockquote {
-    background: tint($black,5);
+    background: darken($commentbox-color, 5);
     padding-bottom: 1px;
     padding-left: 10px;
     padding-top: 7px;
-    color: $white-text;
+    color: $commentbox-fontcolor;
     font-style: italic;
     position: relative;
 
@@ -289,11 +308,11 @@
       content: "“";
       font-family: serif;
       font-size: 46px;
-      color: $white-text;
+      color: $commentbox-fontcolor;
     }
 
     p {
-      color: $white-text;
+      color: $commentbox-fontcolor;
       font-style: italic;
       margin: 0;
     }
@@ -373,7 +392,7 @@
     }
 
     .comment-author a {
-      color: $white-text;
+      color: $commentbox-fontcolor;
     }
 
     .comment-author, .comment-meta {
@@ -387,7 +406,7 @@
       text-align: right;
       top: 7px;
       a {
-        color: $white-text;
+        color: $commentbox-fontcolor;
         font-size: 80%;
         text-decoration: none;
       }
@@ -407,17 +426,20 @@
       font-size: 70%;
       font-weight: 300;
       float: right;
-      margin-top: 10px;
-      color: #aaa;
+      margin-top: 0;
+      color: $font-color;
       display: inline;
       text-decoration: none;
+      text-indent: -1000em;
 
-      /*
-      &:before{
-        font-family: "dashicons";
+      &:after {
         content: "\f335";
+        font-size: 200%;
+        font-family: dashicons;
+        text-indent: 0;
+        float:right;
+        line-height: 1;
       }
-      */
 
       &:hover {
         color: red;
@@ -468,7 +490,6 @@
 #cancel-comment-reply-link:hover {
   color: darkred;
 }
-
 
 /*
 .navigation {

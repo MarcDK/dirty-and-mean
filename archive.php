@@ -72,8 +72,9 @@ get_header();
                 get_search_form();
             endif;
             ?>
-
-            <?php if (function_exists('pgntn_display_pagination')) pgntn_display_pagination('posts'); ?>
+            <div class="dd" id="navigation">
+                <?php if (function_exists('pgntn_display_pagination')) pgntn_display_pagination('posts'); ?>
+            </div>
 
             <!-- <div class="nav-article">
         <?php //the_posts_navigation(); ?>

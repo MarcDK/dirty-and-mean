@@ -14,10 +14,15 @@
             } else {
 
                 $linkcat = get_option("marctv_linkcat");
+
+                $tag = get_term_by('slug', 'mini', 'post_tag');
+                $mini_tag_id =  $tag->term_id;
+
                 $args = array(
                     'numberposts' => '1',
                     'post_status' => 'publish',
-                    'category__not_in' => $linkcat
+                    'category__not_in' => $linkcat,
+                    'tag__not_in' => $mini_tag_id
                 );
 
                 $recent_arr = wp_get_recent_posts($args);
@@ -44,16 +49,17 @@
 
         <?php
         if (function_exists('get_last_commented_articles')) {
-            echo '<div class="container docked"><div class="supertitle"><span><a rel="nofollow" href="/letzte-kommentare/">Zuletzt kommentiert</a></span></div></div>';
+            echo '<div class="container docked"><div class="supertitle"><span><a href="/letzte-kommentare/">Zuletzt kommentiert</a></span><a class="cat-link" href="/letzte-kommentare/">mehr</a></div></div>';
             echo get_last_commented_articles(6, 'container last-commented multi nohover showontouch');
         }
         ?>
 
-        <?php echo get_marctv_category_box(get_option("marctv_cat1")); ?>
-        <?php echo get_marctv_category_box(get_option("marctv_cat2")); ?>
-        <?php echo get_marctv_category_box(get_option("marctv_cat3")); ?>
+        <?php echo get_marctv_category_box(get_option("marctv_cat1"),6); ?>
+        <?php echo get_marctv_category_box(get_option("marctv_cat2"),6); ?>
+        <?php echo get_marctv_category_box(get_option("marctv_cat3"),6); ?>
+        <?php echo get_marctv_category_box(get_option("marctv_cat4"),6); ?>
 
-        <div id="marctvflickrbar"></div>
+        <?php echo get_marctv_mini_articles(); ?>
 
         <?php echo get_marctv_favourite_articles(); ?>
 

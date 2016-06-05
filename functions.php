@@ -120,7 +120,8 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
           }
          */
 
-        $teaser .= '<p>' . $excerpt . ' <span class="more_link">[mehr]</span></p>';
+        //$teaser .= '<p>' . $excerpt . ' <span class="more_link">mehr…</span></p>';
+        $teaser .= '<p>' . $excerpt . '</p>';
     }
 
     if ($show_info) {
@@ -161,6 +162,57 @@ function display_max_pages($posts_per_page)
     return $max_num_pages;
 }
 
+/**
+ * Display mini articles
+ *
+ */
+function get_marctv_mini_articles()
+{
+    $html = false;
+
+    $tag_slug = 'mini';
+
+    if (get_option('marctv-cache')) {
+        $html = get_transient('marctv-purified-' . $tag_slug);
+    }
+
+    //if (!$html) {
+
+        $do_not_duplicate = get_option('do_not_duplicate');
+
+        $tagobj = get_term_by('slug', $tag_slug, 'post_tag');
+
+        if ($tagobj->name) {
+
+            query_posts(array('tag' => $tag_slug, 'showposts' => 6, 'post__not_in' => $do_not_duplicate));
+
+            $html = '<div class="container docked"><div class="supertitle"><span><a rel="tag" href="/blog/tag/' . $tag_slug . '/">' . $tagobj->name . '</a></span><a class="cat-link" href="/blog/tag/' . $tag_slug . '/">mehr</a></div></div>';
+            $html .= '<ul class="container multi">';
+
+            $key = 1;
+
+            while (have_posts()):
+                the_post();
+
+                /* first-last classes */
+                if ($key == 1) {
+                    $html .= '<li class="box first">';
+                } else if ($key % 3 == 0) {
+                    $html .= '<li class="box last">';
+                } else {
+                    $html .= '<li class="box">';
+                }
+                $key++;
+                $html .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', false);
+                $html .= '</li>';
+            endwhile;
+            $html .= '</ul>';
+        }
+        set_transient('marctv-purified-' . $tag_slug, $html, 24 * 60 * 60);
+    //}
+    return $html;
+}
+
 
 /**
  * Display fav articles
@@ -184,7 +236,7 @@ function get_marctv_favourite_articles()
 
             query_posts(array('tag' => get_option("marctv_catfav"), 'showposts' => 2, 'post__not_in' => $do_not_duplicate, 'orderby' => 'rand'));
 
-            $html = '<div class="container docked"><div class="supertitle"><span><a rel="tag" href="/blog/tag/' . get_option("marctv_catfav") . '/">' . $tagobj->name . '</a></span></div></div>';
+            $html = '<div class="container docked"><div class="supertitle"><span><a rel="tag" href="/blog/tag/' . get_option("marctv_catfav") . '/">' . $tagobj->name . '</a></span><a class="cat-link" href="/blog/tag/' . get_option("marctv_catfav") . '/">mehr</a></div></div>';
             $html .= '<ul class="container double">';
 
             $key = 1;
@@ -201,7 +253,7 @@ function get_marctv_favourite_articles()
                 }
 
                 $key++;
-                $html .= get_marctv_teaser(get_the_ID(), true, '', 'legacy_m', true, '', '', true);
+                $html .= get_marctv_teaser(get_the_ID(), true, '', 'legacy_m', true, '', '', false);
                 $html .= '</li>';
             endwhile;
             $html .= '</ul>';
@@ -258,7 +310,7 @@ function get_adb_article()
     }
     if (!$html) {
 
-        $the_tag = 'art-directed-blogging';
+        $the_tag = 'art-directed';
         $do_not_duplicate = get_option('do_not_duplicate');
         $do_not_duplicate[] = 7928;
 
@@ -268,7 +320,7 @@ function get_adb_article()
 
             query_posts(array('tag' => $the_tag, 'showposts' => 2, 'post__not_in' => $do_not_duplicate, 'orderby' => 'rand'));
 
-            $html = '<div class="container docked"><div class="col_title supertitle"><span><a rel="tag" href="/blog/tag/' . $the_tag . '/">' . $tagobj->name . '</a></span></div></div>';
+            $html = '<div class="container docked"><div class="col_title supertitle"><span><a rel="tag" href="/blog/tag/' . $the_tag . '/">' . $tagobj->name . '</a></span><a class="cat-link" href="/blog/tag/' . $the_tag . '/">mehr</a></div></div>';
             $html .= '<ul class="container double">';
             $key = 1;
             while (have_posts()):
@@ -283,7 +335,7 @@ function get_adb_article()
                     $html .= '<li class="box">';
                 }
                 $key++;
-                $html .= get_marctv_teaser(get_the_ID(), true, '', 'larges', true, '', '', true);
+                $html .= get_marctv_teaser(get_the_ID(), true, '', 'larges', true, '', '', false);
 
                 $html .= '</li>';
             endwhile;
@@ -350,7 +402,7 @@ function get_marctv_most_commented_articles()
 
         $do_not_duplicate = get_option('do_not_duplicate');
 
-        $html = '<div class="container most-commented docked"><div class="col_title supertitle"><span><a rel="nofollow" href="http://feeds.feedburner.com/marctv/comments">Meistkommentiert</a></span></div></div>';
+        $html = '<div class="container most-commented docked"><div class="col_title supertitle"><span>Meistkommentiert</span></div></div>';
 
         $args = array('numberposts' => 3, 'offset' => '', 'orderby' => 'comment_count', 'order' => 'DESC', 'include' => '', 'post__not_in' => array($do_not_duplicate), 'meta_key' => '', 'meta_value' => '', 'post_type' => 'post', 'post_status' => 'publish');
 
@@ -463,7 +515,10 @@ function get_marctv_category_container_box($cat_id, $class, $offset = false, $ch
 function get_marctv_category_box($cat_id, $count = 6)
 {
 
-    $teaser = '<div class="supertitle"><span><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></span></div>';
+    $teaser = '<div class="supertitle"><span><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></span><a class="cat-link" href="' . get_category_link($cat_id) . '">mehr</a></span></div>';
+
+    $tag = get_term_by('slug', 'mini', 'post_tag');
+    $mini_tag_id =  $tag->term_id;
 
     $args = array(
         'posts_per_page' => $count,
@@ -474,6 +529,7 @@ function get_marctv_category_box($cat_id, $count = 6)
         'include' => '',
         'exclude' => '',
         'meta_key' => '',
+        'tag__not_in' => $mini_tag_id,
         'meta_value' => '',
         'post_type' => 'post',
         'post_mime_type' => '',
@@ -508,7 +564,7 @@ function get_marctv_category_box($cat_id, $count = 6)
 
     $teaser .= '</ul>';
 
-    $teaser .= '<p class="cat-more" ><a href="' . get_category_link($cat_id) . '">Mehr aus Kategorie ' . get_cat_name($cat_id) .'</a></p>';
+    //$teaser .= '<p class="cat-more" ><a href="' . get_category_link($cat_id) . '">mehr zu „' . get_cat_name($cat_id) .'“</a></p>';
 
     return $teaser;
 }
@@ -697,6 +753,9 @@ function marctv_theme_options()
         if (update_option('marctv_cat3', trim(stripslashes($_POST['marctv-cat3'])))) {
             $msg = '<p> cat3 saved.</p>';
         }
+        if (update_option('marctv_cat4', trim(stripslashes($_POST['marctv-cat4'])))) {
+            $msg = '<p> cat4 saved.</p>';
+        }
         if (update_option('marctv_catfav', trim(stripslashes($_POST['marctv-catfav'])))) {
             $msg = '<p> catfav saved.</p>';
         }
@@ -718,6 +777,7 @@ function marctv_theme_options()
     echo '<p>Category ID 1:  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_cat1')))) . '" name="marctv-cat1" id="marctv-cat1" class="form_elem" size="30" type="text" /></p>';
     echo '<p>Category ID 2:  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_cat2')))) . '" name="marctv-cat2" id="marctv-cat2" class="form_elem" size="30" type="text" /></p>';
     echo '<p>Category ID 3:  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_cat3')))) . '" name="marctv-cat3" id="marctv-cat3" class="form_elem" size="30" type="text" /></p>';
+    echo '<p>Category ID 4:  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_cat4')))) . '" name="marctv-cat4" id="marctv-cat4" class="form_elem" size="30" type="text" /></p>';
     echo '<p>Category Linkcat:  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_linkcat')))) . '" name="marctv-linkcat" id="marctv-linkcat" class="form_elem" size="30" type="text" /></p>';
     echo '<p>Cache  <input  value="' . htmlentities(trim(stripslashes(get_option('marctv-cache')))) . '" name="marctv-cache" id="marctv-cache" class="form_elem" size="30" type="text" /></p>';
     echo '<p>Favorite tag slug (optional): <input  value="' . htmlentities(trim(stripslashes(get_option('marctv_catfav')))) . '" name="marctv-catfav" id="marctv-catfav" class="form_elem" size="30" type="text" /></p>';
@@ -743,7 +803,10 @@ function marctv_custom_login_logo()
 function register_marctv_menus()
 {
     register_nav_menus(array('mainnav' => __('Main Navigation')));
+    register_nav_menus(array('tagnav' => __('hot tags')));
 }
+
+
 
 function marctv_post_tags($posttags)
 {
@@ -759,9 +822,9 @@ function marctv_post_tags($posttags)
             } else if ($i > 1) {
                 $divider = ', ';
             }
-            $the_tags .= $divider . '<a rel="tag" href="' . get_tag_link($tag->term_id) . '"><strong>' . $tag->name . '</strong></a>';
+            $the_tags .= $divider . '<a class="tag-link" rel="tag" href="' . get_tag_link($tag->term_id) . '"><strong>' . $tag->name . '</strong></a>';
         }
-
+        $the_tags .= '.';
         return $the_tags;
     }
 }
@@ -980,6 +1043,20 @@ class sub_nav_walker extends Walker_Nav_Menu {
             $output .= "$indent</ul>\n";
         }
     }
+}
+
+add_filter('body_class','add_category_to_single');
+
+function add_category_to_single($classes) {
+    if (!is_admin() && is_single() ) {
+        global $post;
+        foreach((get_the_category($post->ID)) as $category) {
+            // add category slug to the $classes array
+            $classes[] = 'category-'.$category->category_nicename;
+        }
+    }
+    // return the $classes array
+    return $classes;
 }
 
 ?>

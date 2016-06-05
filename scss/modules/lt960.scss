@@ -1,16 +1,21 @@
 @media only screen and (max-width: 960px) {
-  html .container.multi .box {
-    width: 32%;
-    border: 0;
-    margin: 0 1%;
-    height: 13em;
-    &.first,&.multi-last {
-      margin-left: 0;
-      padding-left: 0;
+  html {
+    .container.multi .box {
+      width: 32%;
+      border: 0;
+      margin: 0 1%;
+      height: 13em;
+      &.first,&.multi-last {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      &.last, &.multi-first  {
+        margin-right: 0;
+        padding-right: 0;
+      }
     }
-    &.last, &.multi-first  {
-      margin-right: 0;
-      padding-right: 0;
+    .supertitle {
+      font-size: 120%;
     }
   }
 

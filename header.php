@@ -8,6 +8,7 @@ Grüße an alle Quelltextleser!
 
 -->
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <?php if (is_singular() && get_option('thread_comments')) wp_enqueue_script('comment-reply'); ?>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
@@ -43,11 +44,12 @@ Grüße an alle Quelltextleser!
                         <?php wp_nav_menu(array(
                             'theme_location' => 'mainnav',
                             'container' => '',
-                            'menu_class'      => 'hamburger menu',
+                            'menu_class' => 'hamburger menu',
                         )); ?>
                     </div>
                 </nav>
                 <?php get_search_form(); ?>
+
             </div>
         </div>
     </div>

@@ -31,6 +31,12 @@
             */
         }
 
+        //var imageUrl = "/wp-content/themes/dirty-and-mean/images/header/mario2.jpg";
+        // $('#header').
+        // css('background-image', 'url(' + imageUrl + ')').
+        // css('background-size', '100%').
+        //fadeIn();
+
         // detect touch device
         function is_touch_device() {
             return 'ontouchstart' in window // works on most browsers

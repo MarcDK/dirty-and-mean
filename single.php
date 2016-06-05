@@ -16,10 +16,10 @@ the_post(); ?>
             <small>
                 <?php if (get_the_author_meta('user_url') != "") : ?>
                     Von <a class="vcard author" href="<?php the_author_meta('user_url'); ?>"><span
-                            class="fn"><?php the_author_meta('display_name'); ?></span></a>
+                            class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?></span></a>
                 <?php else: ?>
                     Von <span rel="vcard author"><span
-                            class="fn"><?php the_author_meta('display_name'); ?>
+                            class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?>
                             am <?php the_date(); ?></span></span>
                 <?php endif ?> am
                 <time class="updated" datetime="<?php the_date('c'); ?>"><?php the_time(__('F j, Y')); ?> </time>
@@ -40,7 +40,7 @@ the_post(); ?>
                             ?>
                         </li>
                         <?php wp_link_pages(array('before' => ' <li class="article_pagination"><div class="nav-paged"><span class="first">Artikelseiten:</span> ', 'after' => '</div></li>', 'next_or_number' => 'number', 'pagelink' => '<span>%</span>')); ?>
-                        <li class="nav-article-tool">
+                       <!-- <li class="nav-article-tool">
                             <div class="nav-article">
                     <span class="nav-previous">
                       <?php previous_post_link(); ?>
@@ -49,8 +49,7 @@ the_post(); ?>
                       <?php next_post_link(); ?>
                     </span>
                             </div>
-                        </li>
-
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -76,15 +75,7 @@ if (function_exists('related_posts')) {
 <div id="commentbox" class="fullwidth commentbox">
     <div class="site">
         <div class="section" id="comments">
-            <?php
-
-            if (function_exists('marctv_promoted_comments')) {
-                echo marctv_promoted_comments();
-            }
-            comments_template();
-
-
-            ?>
+            <?php comments_template(); ?>
         </div>
     </div>
 </div> <!-- /site comments -->
@@ -93,7 +84,7 @@ if (function_exists('related_posts')) {
         <div class="section">
             <?php
             if (function_exists('get_last_commented_articles')) {
-                echo '<div class="container docked"><div class="supertitle"><span><a rel="nofollow" href="/letzte-kommentare">Zuletzt kommentiert</a></span></div></div>';
+                echo '<div class="container docked"><div class="supertitle"><span><a href="/letzte-kommentare">Zuletzt kommentiert</a></span></div></div>';
                 echo get_last_commented_articles(6, 'container multi last-commented nohover showontouch');
             }
 

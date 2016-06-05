@@ -64,23 +64,33 @@ html .pgntn-page-pagination {
   margin-bottom: 3em;
   padding-top: 1em;
   a {
-    background: $grey ! important;
-    color: $black ! important;
+    background: white ! important;
+    color: $font-color ! important;
     padding: 0.3rem 1rem !important;
-    border: 0 ! important;
+    border: 2px solid $black ! important;
   }
   a:hover {
-    color: $black ! important;
-    text-decoration: underline ! important;
+    background-color: $black !important;
+    color: white !important;
+    padding: 0.3rem 1rem !important;
+    border: 2px solid $black ! important;
   }
   .current {
     background-color: $black !important;
     color: white !important;
     padding: 0.3rem 1rem !important;
-    border: 0 ! important;
+    border: 2px solid $black ! important;
+
   }
   .prev.page-numbers {
     margin-left: 0 !important;
+  }
+
+  .prev.page-numbers,
+  .next.page-numbers {
+    background-color: $black !important;
+    color: white ! important;
+    border: 2px solid $black ! important;
   }
 
   .page-numbers {
@@ -108,4 +118,14 @@ html .pgntn-page-pagination {
 
 .social-buttons .box {
   background: red;
+}
+
+a[class^="tag-link-"]::before,
+a[rel="tag"]::before,
+.tags a::before {
+  content: '#';
+}
+
+.entry blockquote.promoted-comment p {
+  font-size: inherit;
 }

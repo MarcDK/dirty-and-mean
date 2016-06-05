@@ -42,17 +42,20 @@ get_header();
             endwhile;
 
             else : ?>
+                <div class="article-wrapper">
+                    <h1 class="entry-title title "><span>Nichts gefunden</span></h1>
 
-                <article id="post-0" class="post no-results not-found">
-                    <h1 class="entry-title">Nichts gefunden</h1>
 
-                    <div class="entry-content">
-                        <p>Entschuldige, aber es konnte nichts gefunden werden. Versuche es mit anderen Schlüsselwörtern
-                            erneut.</p>
-                        <?php get_search_form(); ?>
-                    </div><!-- .entry-content -->
-                </article><!-- #post-0 -->
+                    <div class="content-body">
+                        <div class="entry-content">
+                            <p>Entschuldige, aber es konnte nichts gefunden werden. Versuche es mit anderen
+                                Schlüsselwörtern
+                                erneut.</p>
 
+                        </div><!-- .entry-content -->
+
+                    </div>
+                </div>
             <?php endif; ?>
 
             <?php //marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '6'); ?>

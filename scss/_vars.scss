@@ -1,12 +1,14 @@
 $marctv-margin: 5%;
 $marctv-color: #0e7dc4;
-$grey: #f3f3f3;
 $black: #23282d;
-$white-text: #EEEEEE;
-$shade_ammount: 20;
-$darkgrey: #666;
-$submenu-color: shade($black,10);
+$light-background: lighten($black,15);
+$commentbox-color: lighten($black,75);
+$commentbox-fontcolor: #000;
+$font-color: #333;
+
+$shade_ammount: 10;
+$submenu-color: $light-background;
 $lineheight: 1.45;
 $lineheight-title: 1.2;
-$fonts:  'Helvetica Neue', Helvetica, Arial, sans-serif;
-$fonts-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$fonts: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$fonts-title: 'Lato','Helvetica Neue', Helvetica, Arial, sans-serif;

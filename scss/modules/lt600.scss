@@ -11,12 +11,49 @@
       font-size: 130%;
     }
 
+    body.single,
+    body.page {
+
+      .site.main-content {
+
+        margin-left: 0;
+        margin-right: 0;
+        .hreview,
+        .childIMG,
+        .jqvideoplayer {
+
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        ol li,
+        ul li{
+          margin-left: $marctv-margin;
+          margin-right: $marctv-margin;
+        }
+
+        ul.hlist li {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        p, h1, h2, h3, h4, h5, .tools, .hreview .text, .meta, .sharedaddy {
+          margin-left: $marctv-margin/2;
+          margin-right: $marctv-margin/2;
+        }
+
+        blockquote {
+          padding-left: 0;
+        }
+      }
+    }
+
     .hreview {
       .rating {
         width: 100%;
       }
       .text {
-        width: 100%;
+        width: 90%;
       }
     }
   }
@@ -40,23 +77,6 @@
     width: 100%;
     margin: 0 auto;
   }
-
-  /*
-    body:not(.artdirected) {
-        .entry-content {
-          .figure img,
-          .marctv-gallery,
-          .jqvideo {
-            margin-left: -$marctv-margin/4 ! important;
-            margin-right: -$marctv-margin/4 ! important;
-            width: 100% + ($marctv-margin/4)*2 ! important;
-
-          }
-        }
-    }
-
-*/
-
 
   html {
     .archive .nav-article {
@@ -217,7 +237,7 @@
         margin-left: 0;
         margin-right: 0;
         padding: 0;
-        padding-left: 0.5em;
+        padding-left: $marctv-margin/2;
         border-left: 1px solid $black;
         margin-bottom: 1em;
         white-space: normal;
@@ -225,10 +245,10 @@
       }
 
       .title {
-        height:auto;
+        height: auto;
       }
 
-      a{
+      a {
         font-size: 130%;
       }
 

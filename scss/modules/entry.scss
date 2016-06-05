@@ -12,18 +12,19 @@
 
   cite {
     font-style: italic;
-    color: $darkgrey;
+    color: lighten($font-color, 25);
     display: block;
+    font-size: 70%;
   }
 
   dd {
     margin-left: 2em;
     margin-bottom: 2em;
-    color: $darkgrey;
+    color: $font-color;
   }
 
   dt {
-    border-bottom: 1px solid $darkgrey;
+    border-bottom: 1px solid $font-color;
   }
 
   .gallery-item {
@@ -59,13 +60,13 @@
 
   .meta {
     margin-bottom: 0.7em;
-    color: $darkgrey;
+    color: lighten($font-color, 25);
     margin-top: -0.7em;
     font-size: 80%;
     font-family: $fonts-title;
 
     a {
-      color: $darkgrey;
+      color: lighten($font-color, 25);
     }
   }
 
@@ -85,22 +86,25 @@
     margin-bottom: 0.5em;
   }
 
-  blockquote p {
-    font-size: 140%;
-    color: $black;
-    font-family: Cambria, Georgia, "New Century Schoolbook", "Century Schoolbook L", "Times New Roman", serif;
-  }
-
-  blockquote p a {
-    color: #666;
-  }
-
   blockquote {
-    padding-left: 0.5em;
-  }
 
-  blockquote cite:before {
-    content: " — ";
+    p {
+      font-size: 140%;
+      color: $font-color;
+      font-family: Cambria, Georgia, "New Century Schoolbook", "Century Schoolbook L", "Times New Roman", serif;
+
+      a {
+        color: $font-color;
+      }
+      cite a {
+        color: #666;
+      }
+
+    }
+    cite:before {
+      content: " — ";
+    }
+
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -112,6 +116,7 @@
   h2, h3, h4, h5, h6 {
     font-size: 140%;
     margin-top: 2em;
+    font-weight: 700;
   }
 
   h3 {
@@ -126,6 +131,10 @@
   ol {
     list-style: decimal;
     margin-left: 1.5em;
+  }
+
+  table {
+    font-size: 85%;
   }
 
   .gallery-item {
@@ -167,18 +176,17 @@
 .tools {
   border-top: 1px solid $black;
   padding-top: 0.5em;
-  margin-bottom: 1em;
-  color: $darkgrey;
+  margin-bottom: 0;
+  color: $font-color;
   font-size: 90%;
   line-height: $lineheight;
   font-family: $fonts-title;
 
   .tags {
-    a{
-      color: $black;
-      text-decoration: underline;
+    a {
+      color: $font-color;
 
-      &:hover{
+      &:hover {
         color: $marctv-color;
       }
     }
@@ -201,7 +209,7 @@
   }
 
   a {
-    color: $darkgrey;
+    color: $font-color;
   }
 
   .breadcrumb span {

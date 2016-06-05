@@ -1,6 +1,6 @@
 @import 'vars';
 @import 'compass/css3';
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1050px) {
 
   html {
     #marctv .container {
@@ -22,7 +22,7 @@
     .searchbox {
       input {
         width: 50px;
-        margin-top: 5px;
+        margin-top: 6px;
       }
 
       width: 60px;
@@ -124,6 +124,9 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        padding-left: 0;
+        padding-right: 0;
+        width: 1em;
 
         &.active:hover {
           color: white;

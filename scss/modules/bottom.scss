@@ -1,5 +1,13 @@
 @import 'vars';
 
+html .projects {
+  background: white;
+}
+
+html .category .projects {
+  margin-top: 2em;
+}
+
 #bottom {
 
   background-color: $black;

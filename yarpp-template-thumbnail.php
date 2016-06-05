@@ -13,7 +13,7 @@
       <div class="section">
        
           <?php
-          $mostcom = '<div class="supertitle"><span>Mehr zum Thema</span></div>';
+          //$mostcom = '<div class="supertitle"><span>Mehr zum Thema</span></div>';
           $mostcom .= '<ul class="container">';
           $key = 1;
           ?>
