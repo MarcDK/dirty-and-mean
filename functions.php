@@ -197,7 +197,11 @@ function get_marctv_mini_articles()
                 /* first-last classes */
                 if ($key == 1) {
                     $html .= '<li class="box first">';
-                } else if ($key % 3 == 0) {
+                } else if ($key == 3) {
+                    $html .= '<li class="box multi-first">';
+                } else if ($key % 4 == 0) {
+                    $html .= '<li class="box multi-last">';
+                } else if ($key == 6) {
                     $html .= '<li class="box last">';
                 } else {
                     $html .= '<li class="box">';
@@ -542,7 +546,7 @@ function get_marctv_category_box($cat_id, $count = 6)
     $postlist = get_posts($args);
 
     $key = 1;
-    $teaser .= '<ul class="container docked six">';
+    $teaser .= '<ul class="container six">';
 
     foreach ($postlist as $post) {
         /* first-last classes */
@@ -1043,20 +1047,6 @@ class sub_nav_walker extends Walker_Nav_Menu {
             $output .= "$indent</ul>\n";
         }
     }
-}
-
-add_filter('body_class','add_category_to_single');
-
-function add_category_to_single($classes) {
-    if (!is_admin() && is_single() ) {
-        global $post;
-        foreach((get_the_category($post->ID)) as $category) {
-            // add category slug to the $classes array
-            $classes[] = 'category-'.$category->category_nicename;
-        }
-    }
-    // return the $classes array
-    return $classes;
 }
 
 ?>

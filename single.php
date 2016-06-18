@@ -10,7 +10,7 @@ get_header();
 the_post(); ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class('entry article section'); ?>>
     <div class="article-wrapper">
-        <h1 class="entry-title title "><span><?php esc_html(the_title()); ?></span></h1>
+
 
         <div class="meta">
             <small>
@@ -27,7 +27,11 @@ the_post(); ?>
 
                 — <a class="link_to_comments" href="#commentbox"><span
                         class="dashicons dashicons-admin-comments"></span><?php comments_number('Noch kein Kommentar', 'Ein Kommentar', '% Kommentare'); ?>
-                </a></small><?php edit_post_link('edit', ' | <small> ', '</small>'); ?></div>
+                </a></small><?php edit_post_link('edit', ' | <small> ', '</small>'); ?>
+        </div>
+
+        <h1 class="entry-title title "><span><?php esc_html(the_title()); ?></span></h1>
+
         <div class="content-body">
             <div class="inner entry-content">
                 <?php the_content(); ?>

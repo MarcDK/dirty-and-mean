@@ -1,0 +1,15 @@
+@mixin header-gradient($endcolor) {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9f9f9+0,ecebf4+7,3e75ac+61,2c171f+100 */
+  background: #f9f9f9; /* Old browsers */
+  background: -moz-linear-gradient(left,  #f9f9f9 0%, #ecebf4 7%, #3e75ac 61%, $endcolor 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #f9f9f9 0%,#ecebf4 7%,#3e75ac 61%,$endcolor 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #f9f9f9 0%,#ecebf4 7%,#3e75ac 61%,$endcolor 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='$endcolor',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin header-dark-gradient($endcolor) {
+  background: #05080e; /* Old browsers */
+  background: -moz-linear-gradient(left, #05080e 0%, #14162d 4%, $endcolor 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #05080e 0%, #14162d 4%, $endcolor 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #05080e 0%, #14162d 4%,  $endcolor 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}

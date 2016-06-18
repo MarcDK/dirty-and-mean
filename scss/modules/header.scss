@@ -1,37 +1,29 @@
 @import 'vars';
 @import 'compass/css3';
+@import 'mixins';
 
+.header .innerheader {
+  //@include header-dark-gradient(#0e7dc4);
+}
 
+/*
 .category-leben .header .innerheader {
-  background-color: #87A941;
+  @include header-dark-gradient(#3e4c1e);
 }
 
 .category-spiele .header .innerheader {
-  background-color: #A91E1F;
+  @include header-dark-gradient(#FF2624);
 }
 
 .category-tech .header .innerheader {
-  background-color: #2F4F4F;
-
+  @include header-dark-gradient(#2F4F4F);
 }
 
 .category-medien .header .innerheader {
-  background-color: #6A2870;
+  @include header-dark-gradient(#400945);
 }
-
+*/
 .header {
-
-  .searchbox {
-    .dashicons-search {
-      color: #fff;
-      font-size: 130%;
-    }
-
-    input {
-    font-size: 90%;
-    width: 140px;
-  }
-  }
 
   #content .searchbox input {
     font-size: 140%;
@@ -44,8 +36,8 @@
     width: 160px;
     float: left;
 
-   a {
-      background: url('images/marctv-logo-bw-outline.png') no-repeat 0 0;
+    a {
+      background: url('images/marctv-logo.png') no-repeat 0 0;
       /* background: rgba(0, 0, 0, 0) url('images/marctv_logo.svg') no-repeat 0 0; */
       display: block;
       height: 38px;
@@ -56,13 +48,13 @@
       margin-top: 0px;
     }
 
-    @media
-    (-Webkit-min-device-pixel-ratio: 1.5),
+    @media(-Webkit-min-device-pixel-ratio: 1.5),
     (min-device-pixel-ratio: 1.5),
     (min-resolution: 2dppx), /* The standard way */
-    (min-resolution: 192dpi) /* dppx fallback */  {
-     a {
-        background: url('images/marctv-logo-bw-2x-outline.png') no-repeat 0 0;
+    (min-resolution: 192dpi) /* dppx fallback */
+    {
+      a {
+        background: url('images/marctv-logo-2x.png') no-repeat 0 0;
         background-size: 155px 36px;
       }
 
@@ -70,36 +62,57 @@
   }
 
   .innerheader {
-    background-color: $black;
+    background-color: white;
     width: 100%;
     z-index: 10000;
-    padding-top: .4em;
+    padding-top: .5em;
     padding-bottom: .3em;
-    border-bottom: shade($black,30);
-    //@include box-shadow(#333 0 0 2px);
+    border-bottom: none;
+    border-bottom: 1px solid white;
+    border-color: white;
 
+    transition: border-color 200ms ease-out;
+    //@include box-shadow(#333 0 0 2px);
+  }
+
+  .is-sticky .innerheader {
+    border-bottom: 1px solid #d2d2d2;
+    border-color: #d2d2d2;
   }
 
   .searchbox {
     float: right;
     width: 140px;
-    padding-top: 2px;
+    padding-top: 3px;
   }
 
-  .searchbox input {
-    width: 140px;
-    padding: 1px;
-    float: right;
-    margin-right: 4px;
-    padding: 0 10px;
-    height: 30px;
-    color: #bbb;
-    //text-shadow: 1px 1px 1px black;
-    //background: rgba(0, 0, 0, 0.16);
-    background: #fff;
-    border: 0;
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
-    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+  .search {
+
+    position: relative;
+    color: #aaa;
+    font-size: 16px;
+
+    input {
+      width: 140px;
+      font-size: 90%;
+      height: 32px;
+      background: #fcfcfc;
+      border: 1px solid #d2d2d2;
+      border-radius: 5px;
+     // box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+      text-indent: 32px;
+      transition: width  200ms ease-out;
+
+      &:focus {
+        width: 500px;
+      }
+    }
+
+    .dashicons-search {
+      position: absolute;
+      top: 6px;
+      left: 10px;
+      color: #aaa;
+    }
   }
 }

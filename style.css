@@ -1,10 +1,10 @@
 @charset "UTF-8";
-/*!
+/*
 Theme Name: Dirty and Mean
 Theme URI: http://marctv.de
 Description: MarcTV Theme 2014
 Author: MarcDK
-Version: 3.9.8
+Version: 5.1
 License: GPL v3
 License URI: license.txt
 Tags: responsive, MarcTV
@@ -379,60 +379,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media only screen and (max-width: 1050px) {
-  /* line 7, ../scss/modules/lt900.scss */
+  /* line 8, ../scss/modules/lt900.scss */
   html #marctv .container.multi .box {
     height: 13em;
   }
-  /* line 11, ../scss/modules/lt900.scss */
+  /* line 13, ../scss/modules/lt900.scss */
+  html .header {
+    margin-top: 0;
+  }
+  /* line 17, ../scss/modules/lt900.scss */
+  html .header .searchbox {
+    float: left;
+    padding-top: 0px;
+  }
+  /* line 25, ../scss/modules/lt900.scss */
+  html .header .searchbox .search {
+    width: 60px;
+    margin-top: 3px;
+  }
+  /* line 29, ../scss/modules/lt900.scss */
+  html .header .searchbox .search .dashicons-search {
+    top: 12px;
+  }
+  /* line 33, ../scss/modules/lt900.scss */
+  html .header .searchbox .search input {
+    margin-top: 6px;
+  }
+  /* line 36, ../scss/modules/lt900.scss */
+  html .header .searchbox .search input:focus {
+    width: 140px;
+  }
+  /* line 44, ../scss/modules/lt900.scss */
+  html .header .innerheader {
+    padding: 0;
+  }
+  /* line 48, ../scss/modules/lt900.scss */
   html .header .sitelogo {
     width: 130px;
     margin-top: 5px;
   }
-  /* line 12, ../scss/modules/lt900.scss */
+  /* line 53, ../scss/modules/lt900.scss */
   html .header .sitelogo a {
     background-size: 120px auto;
     width: 135px;
     margin-top: 6px;
   }
-  /* line 22, ../scss/modules/lt900.scss */
-  html .searchbox {
-    width: 60px;
-    margin-top: 3px;
-  }
-  /* line 23, ../scss/modules/lt900.scss */
-  html .searchbox input {
-    width: 50px;
-    margin-top: 6px;
-  }
-  /* line 33, ../scss/modules/lt900.scss */
-  html .header {
-    margin-top: 0;
-  }
-  /* line 35, ../scss/modules/lt900.scss */
-  html .header .searchbox {
-    width: 95px;
-    margin-right: 4px;
-  }
-  /* line 39, ../scss/modules/lt900.scss */
-  html .header .innerheader {
-    padding: 0;
-  }
-  /* line 42, ../scss/modules/lt900.scss */
-  html .header .searchbox input {
-    width: 95px;
-  }
-  /* line 46, ../scss/modules/lt900.scss */
-  html .header .searchbox {
-    padding-top: 0px;
-  }
-  /* line 51, ../scss/modules/lt900.scss */
+  /* line 64, ../scss/modules/lt900.scss */
   html #navigation {
     padding-top: 0;
   }
-  /* line 55, ../scss/modules/lt900.scss */
+  /* line 68, ../scss/modules/lt900.scss */
   html #navigation .hamburger {
     background-color: #23282d;
-    position: absolute;
     position: absolute;
     right: 0;
     width: 100%;
@@ -441,19 +439,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-bottom: 5em;
     padding-top: 1em;
   }
-  /* line 57, ../scss/modules/lt900.scss */
+  /* line 70, ../scss/modules/lt900.scss */
   html #navigation .hamburger li {
     float: none;
   }
 }
 @media only screen and (max-width: 1050px) and (max-width: 600px) {
-  /* line 55, ../scss/modules/lt900.scss */
+  /* line 68, ../scss/modules/lt900.scss */
   html #navigation .hamburger {
     right: 0;
   }
 }
 @media only screen and (max-width: 1050px) {
-  /* line 75, ../scss/modules/lt900.scss */
+  /* line 87, ../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu {
     display: none;
     position: relative;
@@ -462,42 +460,48 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding: 0 0 0.5em 1.5em;
     margin: 0;
   }
-  /* line 84, ../scss/modules/lt900.scss */
+  /* line 96, ../scss/modules/lt900.scss */
   html #navigation .hamburger li:first-child {
     display: none !important;
   }
-  /* line 88, ../scss/modules/lt900.scss */
+  /* line 100, ../scss/modules/lt900.scss */
   html #navigation .hamburger a {
     border: none;
   }
-  /* line 92, ../scss/modules/lt900.scss */
+  /* line 104, ../scss/modules/lt900.scss */
   html #navigation .hamburger ul {
     margin: 0;
     padding: 0.4em 0.4em 1em 0.4em;
     z-index: 1000;
   }
-  /* line 98, ../scss/modules/lt900.scss */
+  /* line 110, ../scss/modules/lt900.scss */
   html #navigation .hamburger ul {
     display: none;
   }
-  /* line 102, ../scss/modules/lt900.scss */
+  /* line 114, ../scss/modules/lt900.scss */
   html #navigation .hamburger .sub-menu li a,
   html #navigation .hamburger li a {
     font-size: 160%;
-    color: #efefef;
+    color: white;
     padding: 0.6em 0.6em 0.6em 0.8em;
     margin: 0;
     text-decoration: none;
     font-weight: 300;
   }
-  /* line 115, ../scss/modules/lt900.scss */
+  /* line 125, ../scss/modules/lt900.scss */
+  html #navigation .hamburger li:hover > a, html #navigation .hamburger ul *:hover > a {
+    color: white;
+    text-decoration: none;
+    text-decoration: underline;
+  }
+  /* line 132, ../scss/modules/lt900.scss */
   html #navigation .hamburger-icon {
     z-index: 5000;
     width: 30px;
     display: block;
     font-size: 38px;
     line-height: 1;
-    color: white;
+    color: #23282d;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -507,34 +511,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-right: 0;
     width: 1em;
   }
-  /* line 131, ../scss/modules/lt900.scss */
+  /* line 148, ../scss/modules/lt900.scss */
   html #navigation .hamburger-icon.active:hover {
     color: white;
   }
-  /* line 134, ../scss/modules/lt900.scss */
+  /* line 151, ../scss/modules/lt900.scss */
   html #navigation .hamburger-icon.active {
     color: white;
     background-color: #23282d;
   }
-  /* line 138, ../scss/modules/lt900.scss */
+  /* line 155, ../scss/modules/lt900.scss */
   html #navigation .hamburger-icon:active {
     color: white;
     background-color: #23282d;
   }
 
-  /* line 153, ../scss/modules/lt900.scss */
+  /* line 169, ../scss/modules/lt900.scss */
   #marctv .container.six .box {
     width: 48%;
     border: 0;
     margin: 0 2%;
     float: left;
   }
-  /* line 161, ../scss/modules/lt900.scss */
+  /* line 177, ../scss/modules/lt900.scss */
   #marctv .container.six .box:nth-child(odd) {
     margin-left: 0;
     padding-left: 0;
   }
-  /* line 165, ../scss/modules/lt900.scss */
+  /* line 181, ../scss/modules/lt900.scss */
   #marctv .container.six .box:nth-child(even) {
     margin-right: 0;
     padding-right: 0;
@@ -608,7 +612,7 @@ html #tagnav a {
 /* line 24, ../scss/modules/navigation.scss */
 html #tagnav a:active,
 html #tagnav a:hover {
-  color: #fff;
+  color: #23282d;
 }
 
 /* line 30, ../scss/modules/navigation.scss */
@@ -620,7 +624,7 @@ html #tagnav a:hover {
   float: right;
   padding-top: 0px;
 }
-/* line 39, ../scss/modules/navigation.scss */
+/* line 40, ../scss/modules/navigation.scss */
 #navigation ul,
 #tagnav ul {
   list-style: none;
@@ -628,18 +632,17 @@ html #tagnav a:hover {
   overflow: hidden;
   padding: 0;
 }
-/* line 45, ../scss/modules/navigation.scss */
+/* line 46, ../scss/modules/navigation.scss */
 #navigation li,
 #tagnav li {
   float: left;
   margin: 0;
   padding: 0;
 }
-/* line 50, ../scss/modules/navigation.scss */
+/* line 51, ../scss/modules/navigation.scss */
 #navigation a,
 #tagnav a {
-  color: #fff;
-  text-shadow: 0px 0px 1px #000;
+  color: #23282d;
   display: block;
   font-size: 110%;
   font-weight: 300;
@@ -667,7 +670,7 @@ html #tagnav a:hover {
 /* line 70, ../scss/modules/navigation.scss */
 #navigation a:hover,
 #tagnav a:hover {
-  color: white;
+  color: #23282d;
 }
 /* line 74, ../scss/modules/navigation.scss */
 #navigation a:active,
@@ -686,24 +689,25 @@ html #tagnav a:hover {
 #tagnav #current a,
 #tagnav .current-menu-item a,
 #tagnav .current-menu-parent a {
-  font-weight: 300;
-  color: #fff;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
 }
-/* line 85, ../scss/modules/navigation.scss */
+/* line 86, ../scss/modules/navigation.scss */
 #navigation #current a:hover, #navigation .current-menu-item a:hover, #navigation .current-menu-parent a:hover,
 #tagnav #current a:hover,
 #tagnav .current-menu-item a:hover,
 #tagnav .current-menu-parent a:hover {
   color: #444;
 }
-/* line 89, ../scss/modules/navigation.scss */
+/* line 90, ../scss/modules/navigation.scss */
 #navigation #current a:active, #navigation .current-menu-item a:active, #navigation .current-menu-parent a:active,
 #tagnav #current a:active,
 #tagnav .current-menu-item a:active,
 #tagnav .current-menu-parent a:active {
   color: darkred;
 }
-/* line 93, ../scss/modules/navigation.scss */
+/* line 94, ../scss/modules/navigation.scss */
 #navigation .menu .sub-menu,
 #tagnav .menu .sub-menu {
   display: none;
@@ -714,13 +718,13 @@ html #tagnav a:hover {
   z-index: 9999;
   padding: 3px 0 10px;
 }
-/* line 102, ../scss/modules/navigation.scss */
+/* line 103, ../scss/modules/navigation.scss */
 #navigation .sub-menu li,
 #tagnav .sub-menu li {
   float: none;
   position: relative;
 }
-/* line 105, ../scss/modules/navigation.scss */
+/* line 106, ../scss/modules/navigation.scss */
 #navigation .sub-menu li a,
 #tagnav .sub-menu li a {
   border: none;
@@ -733,66 +737,66 @@ html #tagnav a:hover {
   font-size: 90%;
   text-transform: inherit;
 }
-/* line 116, ../scss/modules/navigation.scss */
+/* line 117, ../scss/modules/navigation.scss */
 #navigation .sub-menu li.current-menu-item a,
 #tagnav .sub-menu li.current-menu-item a {
   color: #eee;
 }
-/* line 119, ../scss/modules/navigation.scss */
+/* line 120, ../scss/modules/navigation.scss */
 #navigation .sub-menu li a:hover,
 #tagnav .sub-menu li a:hover {
-  color: #fff;
+  color: #eee;
 }
-/* line 125, ../scss/modules/navigation.scss */
+/* line 126, ../scss/modules/navigation.scss */
 #navigation ul li:hover > ul,
 #tagnav ul li:hover > ul {
   display: block;
   margin: 0;
   padding: 0;
 }
-/* line 130, ../scss/modules/navigation.scss */
+/* line 131, ../scss/modules/navigation.scss */
 #navigation .menu li:hover > a, #navigation ul ul *:hover > a,
 #tagnav .menu li:hover > a,
 #tagnav ul ul *:hover > a {
-  color: #FFFFFF;
-  text-decoration: none;
+  color: #23282d;
   text-decoration: underline;
 }
 
 /* Subnav */
-/* line 139, ../scss/modules/navigation.scss */
+/* line 140, ../scss/modules/navigation.scss */
 .menu {
   margin-left: 10px;
 }
-/* line 140, ../scss/modules/navigation.scss */
+/* line 141, ../scss/modules/navigation.scss */
 .menu .sub-menu {
   display: none;
 }
 
-/* line 148, ../scss/modules/navigation.scss */
+/* line 149, ../scss/modules/navigation.scss */
 .sister-pages {
   overflow: hidden;
   margin-bottom: 2em;
-  background: #444e58;
+  background: white;
+  border-bottom: 1px solid #23282d;
 }
-/* line 159, ../scss/modules/navigation.scss */
+/* line 161, ../scss/modules/navigation.scss */
 .sister-pages li.current-menu-item a, .sister-pages li a:hover {
   color: white;
   background-color: #23282d;
 }
-/* line 166, ../scss/modules/navigation.scss */
+/* line 168, ../scss/modules/navigation.scss */
 .sister-pages li a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
-/* line 170, ../scss/modules/navigation.scss */
+/* line 172, ../scss/modules/navigation.scss */
 .sister-pages li a {
   float: left;
   padding: .5em 1em;
-  color: #eee;
+  color: #23282d;
   font-weight: 300;
 }
 @media only screen and (max-width: 600px) {
-  /* line 170, ../scss/modules/navigation.scss */
+  /* line 172, ../scss/modules/navigation.scss */
   .sister-pages li a {
     width: 100%;
     margin: 0 5% 0.5em 0;
@@ -1456,21 +1460,21 @@ html .pgntn-page-pagination a {
   background: white !important;
   color: #333 !important;
   padding: 0.3rem 1rem !important;
-  border: 2px solid #23282d !important;
+  border: 1px solid #23282d !important;
 }
 /* line 72, ../scss/modules/plugins.scss */
 html .pgntn-page-pagination a:hover {
   background-color: #23282d !important;
   color: white !important;
   padding: 0.3rem 1rem !important;
-  border: 2px solid #23282d !important;
+  border: 1px solid #23282d !important;
 }
 /* line 78, ../scss/modules/plugins.scss */
 html .pgntn-page-pagination .current {
   background-color: #23282d !important;
   color: white !important;
   padding: 0.3rem 1rem !important;
-  border: 2px solid #23282d !important;
+  border: 1px solid #23282d !important;
 }
 /* line 85, ../scss/modules/plugins.scss */
 html .pgntn-page-pagination .prev.page-numbers {
@@ -1575,25 +1579,24 @@ a[rel="tag"]::before,
 /* line 56, ../scss/modules/entry.scss */
 .entry .title {
   font-size: 260%;
-  margin-top: 0.5em;
+  margin-top: 0;
 }
 /* line 61, ../scss/modules/entry.scss */
 .entry .meta {
-  margin-bottom: 0.7em;
+  margin-bottom: 0;
   color: #737373;
-  margin-top: -0.7em;
   font-size: 80%;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 68, ../scss/modules/entry.scss */
+/* line 67, ../scss/modules/entry.scss */
 .entry .meta a {
   color: #737373;
 }
-/* line 73, ../scss/modules/entry.scss */
+/* line 72, ../scss/modules/entry.scss */
 .entry p, .entry ul, .entry ol, .entry .video, .entry .marctv-gallery, .entry .wp-video, .entry .figure, .entry pre {
   margin-bottom: 1.5em;
 }
-/* line 77, ../scss/modules/entry.scss */
+/* line 76, ../scss/modules/entry.scss */
 .entry pre, .entry code {
   font-family: "Courier New", Monospace;
   white-space: normal;
@@ -1601,93 +1604,93 @@ a[rel="tag"]::before,
   color: #fff;
   padding: 0.5em;
 }
-/* line 85, ../scss/modules/entry.scss */
+/* line 84, ../scss/modules/entry.scss */
 .entry ol li, .entry ul li {
   margin-bottom: 0.5em;
 }
-/* line 91, ../scss/modules/entry.scss */
+/* line 90, ../scss/modules/entry.scss */
 .entry blockquote p {
   font-size: 140%;
   color: #333;
   font-family: Cambria, Georgia, "New Century Schoolbook", "Century Schoolbook L", "Times New Roman", serif;
 }
-/* line 96, ../scss/modules/entry.scss */
+/* line 95, ../scss/modules/entry.scss */
 .entry blockquote p a {
   color: #333;
 }
-/* line 99, ../scss/modules/entry.scss */
+/* line 98, ../scss/modules/entry.scss */
 .entry blockquote p cite a {
   color: #666;
 }
-/* line 104, ../scss/modules/entry.scss */
+/* line 103, ../scss/modules/entry.scss */
 .entry blockquote cite:before {
   content: " — ";
 }
-/* line 110, ../scss/modules/entry.scss */
+/* line 109, ../scss/modules/entry.scss */
 .entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
-  margin-bottom: 0.4em;
+  margin-bottom: 0.2em;
   clear: both;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 116, ../scss/modules/entry.scss */
+/* line 115, ../scss/modules/entry.scss */
 .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
   font-size: 140%;
   margin-top: 2em;
   font-weight: 700;
 }
-/* line 122, ../scss/modules/entry.scss */
+/* line 121, ../scss/modules/entry.scss */
 .entry h3 {
   font-size: 115%;
 }
-/* line 126, ../scss/modules/entry.scss */
+/* line 125, ../scss/modules/entry.scss */
 .entry ul {
   list-style: square;
   margin-left: 1.1em;
 }
-/* line 131, ../scss/modules/entry.scss */
+/* line 130, ../scss/modules/entry.scss */
 .entry ol {
   list-style: decimal;
   margin-left: 1.5em;
 }
-/* line 136, ../scss/modules/entry.scss */
+/* line 135, ../scss/modules/entry.scss */
 .entry table {
   font-size: 85%;
 }
-/* line 140, ../scss/modules/entry.scss */
+/* line 139, ../scss/modules/entry.scss */
 .entry .gallery-item {
   float: left;
   margin-right: 0.3%;
   width: 10%;
 }
-/* line 146, ../scss/modules/entry.scss */
+/* line 145, ../scss/modules/entry.scss */
 .entry .js .gallery-item {
   float: none;
   margin-right: 0;
 }
-/* line 151, ../scss/modules/entry.scss */
+/* line 150, ../scss/modules/entry.scss */
 .entry .alignright {
   float: right;
   margin: 0.3em 0 0.5em 1em;
   width: 33%;
   padding: 0;
 }
-/* line 159, ../scss/modules/entry.scss */
+/* line 158, ../scss/modules/entry.scss */
 .entry blockquote.alignright {
   margin-top: 0;
 }
-/* line 163, ../scss/modules/entry.scss */
+/* line 162, ../scss/modules/entry.scss */
 .entry .alignleft {
   float: left;
   padding: 0;
   margin: 0.3em 1em 0.5em 0 !important;
   width: 33%;
 }
-/* line 170, ../scss/modules/entry.scss */
+/* line 169, ../scss/modules/entry.scss */
 .entry blockquote.alignleft {
   margin-top: 0;
 }
 
-/* line 176, ../scss/modules/entry.scss */
+/* line 175, ../scss/modules/entry.scss */
 .tools {
   border-top: 1px solid #23282d;
   padding-top: 0.5em;
@@ -1697,15 +1700,15 @@ a[rel="tag"]::before,
   line-height: 1.45;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 186, ../scss/modules/entry.scss */
+/* line 185, ../scss/modules/entry.scss */
 .tools .tags a {
   color: #333;
 }
-/* line 189, ../scss/modules/entry.scss */
+/* line 188, ../scss/modules/entry.scss */
 .tools .tags a:hover {
   color: #0e7dc4;
 }
-/* line 195, ../scss/modules/entry.scss */
+/* line 194, ../scss/modules/entry.scss */
 .tools .hlist {
   font-size: 90%;
   list-style: none;
@@ -1713,19 +1716,19 @@ a[rel="tag"]::before,
   overflow: hidden;
   margin: 0;
 }
-/* line 207, ../scss/modules/entry.scss */
+/* line 206, ../scss/modules/entry.scss */
 .tools .nav-article-tool {
   overflow: hidden;
 }
-/* line 211, ../scss/modules/entry.scss */
+/* line 210, ../scss/modules/entry.scss */
 .tools a {
   color: #333;
 }
-/* line 215, ../scss/modules/entry.scss */
+/* line 214, ../scss/modules/entry.scss */
 .tools .breadcrumb span {
   font-style: italic;
 }
-/* line 219, ../scss/modules/entry.scss */
+/* line 218, ../scss/modules/entry.scss */
 .tools li {
   margin-bottom: 0.5em;
 }
@@ -1733,14 +1736,15 @@ a[rel="tag"]::before,
 /* line 3, ../scss/modules/bottom.scss */
 html .projects {
   background: white;
+  margin-top: 1em;
 }
 
-/* line 7, ../scss/modules/bottom.scss */
+/* line 8, ../scss/modules/bottom.scss */
 html .category .projects {
   margin-top: 2em;
 }
 
-/* line 11, ../scss/modules/bottom.scss */
+/* line 12, ../scss/modules/bottom.scss */
 #bottom {
   background-color: #23282d;
   background-image: none;
@@ -1748,32 +1752,32 @@ html .category .projects {
   padding-top: 2em;
   color: #aaa;
 }
-/* line 19, ../scss/modules/bottom.scss */
+/* line 20, ../scss/modules/bottom.scss */
 #bottom .container {
   margin-bottom: 0;
 }
-/* line 23, ../scss/modules/bottom.scss */
+/* line 24, ../scss/modules/bottom.scss */
 #bottom .imprint {
   text-align: center;
   padding-bottom: 1em;
 }
-/* line 27, ../scss/modules/bottom.scss */
+/* line 28, ../scss/modules/bottom.scss */
 #bottom .box {
   margin-bottom: 2em;
 }
-/* line 30, ../scss/modules/bottom.scss */
+/* line 31, ../scss/modules/bottom.scss */
 #bottom .inner {
   margin: 0 15px;
 }
-/* line 33, ../scss/modules/bottom.scss */
+/* line 34, ../scss/modules/bottom.scss */
 #bottom a {
   color: #aaa;
 }
-/* line 37, ../scss/modules/bottom.scss */
+/* line 38, ../scss/modules/bottom.scss */
 #bottom a:hover {
   color: #fff;
 }
-/* line 41, ../scss/modules/bottom.scss */
+/* line 42, ../scss/modules/bottom.scss */
 #bottom .title {
   text-align: center;
   font-size: 120%;
@@ -2031,53 +2035,40 @@ a:hover .info {
   letter-spacing: -1px;
 }
 
-/* line 5, ../scss/modules/header.scss */
+/*
 .category-leben .header .innerheader {
-  background-color: #87A941;
+  @include header-dark-gradient(#3e4c1e);
 }
 
-/* line 9, ../scss/modules/header.scss */
 .category-spiele .header .innerheader {
-  background-color: #A91E1F;
+  @include header-dark-gradient(#FF2624);
 }
 
-/* line 13, ../scss/modules/header.scss */
 .category-tech .header .innerheader {
-  background-color: #2F4F4F;
+  @include header-dark-gradient(#2F4F4F);
 }
 
-/* line 18, ../scss/modules/header.scss */
 .category-medien .header .innerheader {
-  background-color: #6A2870;
+  @include header-dark-gradient(#400945);
 }
-
-/* line 22, ../scss/modules/header.scss */
+*/
+/* line 26, ../scss/modules/header.scss */
 .header {
   margin-bottom: 2em;
 }
-/* line 25, ../scss/modules/header.scss */
-.header .searchbox .dashicons-search {
-  color: #fff;
-  font-size: 130%;
-}
-/* line 30, ../scss/modules/header.scss */
-.header .searchbox input {
-  font-size: 90%;
-  width: 140px;
-}
-/* line 36, ../scss/modules/header.scss */
+/* line 28, ../scss/modules/header.scss */
 .header #content .searchbox input {
   font-size: 140%;
   margin-top: 0.5em;
 }
-/* line 43, ../scss/modules/header.scss */
+/* line 35, ../scss/modules/header.scss */
 .header .sitelogo {
   width: 160px;
   float: left;
 }
-/* line 47, ../scss/modules/header.scss */
+/* line 39, ../scss/modules/header.scss */
 .header .sitelogo a {
-  background: url("images/marctv-logo-bw-outline.png") no-repeat 0 0;
+  background: url("images/marctv-logo.png") no-repeat 0 0;
   /* background: rgba(0, 0, 0, 0) url('images/marctv_logo.svg') no-repeat 0 0; */
   display: block;
   height: 38px;
@@ -2088,41 +2079,62 @@ a:hover .info {
   margin-top: 0px;
 }
 @media (-Webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 2dppx), (min-resolution: 192dpi) {
-  /* line 64, ../scss/modules/header.scss */
+  /* line 56, ../scss/modules/header.scss */
   .header .sitelogo a {
-    background: url("images/marctv-logo-bw-2x-outline.png") no-repeat 0 0;
+    background: url("images/marctv-logo-2x.png") no-repeat 0 0;
     background-size: 155px 36px;
   }
 }
-/* line 72, ../scss/modules/header.scss */
+/* line 64, ../scss/modules/header.scss */
 .header .innerheader {
-  background-color: #23282d;
+  background-color: white;
   width: 100%;
   z-index: 10000;
-  padding-top: .4em;
+  padding-top: .5em;
   padding-bottom: .3em;
-  border-bottom: #191c20;
+  border-bottom: none;
+  border-bottom: 1px solid white;
+  border-color: white;
+  transition: border-color 200ms ease-out;
+}
+/* line 78, ../scss/modules/header.scss */
+.header .is-sticky .innerheader {
+  border-bottom: 1px solid #d2d2d2;
+  border-color: #d2d2d2;
 }
 /* line 83, ../scss/modules/header.scss */
 .header .searchbox {
   float: right;
   width: 140px;
-  padding-top: 2px;
+  padding-top: 3px;
 }
 /* line 89, ../scss/modules/header.scss */
-.header .searchbox input {
+.header .search {
+  position: relative;
+  color: #aaa;
+  font-size: 16px;
+}
+/* line 95, ../scss/modules/header.scss */
+.header .search input {
   width: 140px;
-  padding: 1px;
-  float: right;
-  margin-right: 4px;
-  padding: 0 10px;
-  height: 30px;
-  color: #bbb;
-  background: #fff;
-  border: 0;
+  font-size: 90%;
+  height: 32px;
+  background: #fcfcfc;
+  border: 1px solid #d2d2d2;
   border-radius: 5px;
-  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
-  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+  text-indent: 32px;
+  transition: width  200ms ease-out;
+}
+/* line 106, ../scss/modules/header.scss */
+.header .search input:focus {
+  width: 500px;
+}
+/* line 111, ../scss/modules/header.scss */
+.header .search .dashicons-search {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  color: #aaa;
 }
 
 /* line 4, ../scss/modules/base.scss */

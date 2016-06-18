@@ -6,8 +6,6 @@
         $tagcache = get_transient('taghtml');
 
         // If it wasn't there regenerate the data and save the transient
-
-
     }
 
     if (!$tagcache) {
