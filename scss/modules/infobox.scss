@@ -29,6 +29,9 @@ a:hover .info{
 
 .infobox {
   overflow: hidden;
+  position: relative;
+  display: block;
+
   &:hover .info.comment-count {
     color: $font-color;
 
@@ -63,6 +66,4 @@ a:hover .info{
     padding: 2px 7px;
     letter-spacing: -1px;
   }
-  position: relative;
-  display: block;
 }

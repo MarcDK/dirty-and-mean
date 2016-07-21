@@ -1,0 +1,65 @@
+@import 'vars';
+@import 'compass/css3';
+
+.gallery {
+  margin-bottom: 1.6em;
+
+  .gallery-item {
+    display: inline-block;
+    padding: 1.79104477%;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+
+    .gallery-icon img {
+      margin: 0 auto;
+    }
+
+    .wp-caption-text {
+      font-size: 70%;
+    }
+
+    .infobox {
+
+      .info {
+        opacity: 1;
+        .dashicons {
+          transition: color 0.3s ease;
+        }
+      }
+
+      &:hover .info {
+        opacity: 1;
+
+        .dashicons {
+          color: $marctv-color;
+        }
+      }
+    }
+  }
+}
+
+.gallery-item .infobox
+.is-touch .gallery-item .infobox .info {
+  opacity: 1;
+}
+
+.gallery-columns-2,
+.gallery-columns-3,
+.gallery-columns-4,
+.gallery-columns-5
+.gallery-columns-6,
+.gallery-columns-7,
+.gallery-columns-8 {
+  .gallery-item {
+    max-width: 29%;
+  }
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+  display: none;
+}
+

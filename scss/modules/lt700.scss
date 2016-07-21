@@ -1,3 +1,5 @@
+@import 'vars';
+
 @media only screen and  (max-width : 700px)  {
   #marctv .entry .alignright,
   #marctv .entry .alignleft {
@@ -7,4 +9,42 @@
     margin: 0;
     margin-bottom: 1.5em;
   }
+
+
+
+  #marctv .article-header {
+
+    overflow: hidden;
+    position: static;
+
+    .article-box {
+
+      position: static;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin-left: $marctv-margin;
+      margin-right: $marctv-margin;
+
+      .article-title {
+        text-shadow: none;
+        color: $font-color;
+        font-size: 60%;
+      }
+    }
+
+    .meta {
+      text-shadow: none;
+
+      color: lighten($font-color, 25);
+
+      a {
+        color: lighten($font-color, 25);
+        text-shadow: none;
+      }
+    }
+
+  }
+
 }

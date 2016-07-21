@@ -1,6 +1,30 @@
 @import 'vars';
 
 @media only screen and (max-width: 600px) {
+
+  html#marctv .article-header {
+
+
+    .article-box {
+
+      margin-left: $marctv-margin/2;
+      margin-right: $marctv-margin/2;
+
+      .article-title {
+
+      }
+    }
+
+    .meta {
+
+
+      a {
+
+      }
+    }
+
+  }
+
   html {
 
     body {

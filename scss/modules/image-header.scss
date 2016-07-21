@@ -1,0 +1,48 @@
+@import "compass/css3";
+
+html .article-header {
+
+  overflow: hidden;
+  position: relative;
+  display: block;
+
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  .article-box {
+
+    position: absolute;
+    zoom: 1;
+    font-size: 400%;
+    bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 960px;
+    color: white;
+    background: none;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    @include text-shadow(black 1px 1px 6px);
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .meta {
+    font-size: 27%;
+    color: white;
+    a {
+      color: white;
+    }
+  }
+
+}
+

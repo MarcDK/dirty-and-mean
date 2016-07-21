@@ -8,6 +8,12 @@
   html .section{
     width: 100%;
   }
+
+  html .article-header .article-box {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100%;
+  }
 }
 
 @import 'modules/lt320.scss';

@@ -6,6 +6,21 @@
   overflow: initial;
 }
 
+.main-content {
+  margin-top: 2em;
+}
+
+.meta {
+  margin-bottom: 0;
+  color: lighten($font-color, 25);
+  font-size: 80%;
+  font-family: $fonts-title;
+
+  a {
+    color: lighten($font-color, 25);
+  }
+}
+
 .entry {
   overflow: visible;
   font-size: 110%;
@@ -27,17 +42,7 @@
     border-bottom: 1px solid $font-color;
   }
 
-  .gallery-item {
 
-    dt {
-      border-bottom: 0;
-    }
-
-    .wp-caption-text.gallery-caption {
-      display: none;
-    }
-
-  }
 
   .wp-caption-text, .pictext {
     font-size: 85%;
@@ -56,17 +61,6 @@
   .title {
     font-size: 260%;
     margin-top:0;
-  }
-
-  .meta {
-    margin-bottom: 0;
-    color: lighten($font-color, 25);
-    font-size: 80%;
-    font-family: $fonts-title;
-
-    a {
-      color: lighten($font-color, 25);
-    }
   }
 
   p, ul, ol, .video, .marctv-gallery, .wp-video, .figure, pre {
@@ -136,16 +130,7 @@
     font-size: 85%;
   }
 
-  .gallery-item {
-    float: left;
-    margin-right: 0.3%;
-    width: 10%;
-  }
 
-  .js .gallery-item {
-    float: none;
-    margin-right: 0;
-  }
 
   .alignright {
     float: right;
