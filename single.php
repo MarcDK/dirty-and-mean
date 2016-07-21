@@ -4,47 +4,39 @@
  * @subpackage Default_Theme
  */
 get_header();
+
+$godmode = false;
+
+if( (get_post_meta($id, 'extraCss', true) == '')){
+    $godmode = true;
+}
+
 ?>
 
 <?php if (have_posts()) : while (have_posts()) :
 the_post(); ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class('entry article section'); ?>>
-    <div class="article-wrapper">
 
-
-        <div class="meta">
-            <small>
-                <?php if (get_the_author_meta('user_url') != "") : ?>
-                    Von <a class="vcard author" href="<?php the_author_meta('user_url'); ?>"><span
-                            class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?></span></a>
-                <?php else: ?>
-                    Von <span rel="vcard author"><span
-                            class="fn"><?php the_author_meta('first_name'); ?> <?php the_author_meta('last_name'); ?>
-                            am <?php the_date(); ?></span></span>
-                <?php endif ?> am
-                <time class="updated" datetime="<?php the_date('c'); ?>"><?php the_time(__('F j, Y')); ?> </time>
-
-
-                — <a class="link_to_comments" href="#commentbox"><span
-                        class="dashicons dashicons-admin-comments"></span><?php comments_number('Noch kein Kommentar', 'Ein Kommentar', '% Kommentare'); ?>
-                </a></small><?php edit_post_link('edit', ' | <small> ', '</small>'); ?>
-        </div>
-
-        <h1 class="entry-title title "><span><?php esc_html(the_title()); ?></span></h1>
-
-        <div class="content-body">
-            <div class="inner entry-content">
-                <?php the_content(); ?>
-                <div class="tools">
-                    <ul class="hlist">
-                        <li class="tag tags"><?php
-                            if (function_exists('marctv_post_tags')) {
-                                echo marctv_post_tags(get_the_tags());
-                            }
-                            ?>
-                        </li>
-                        <?php wp_link_pages(array('before' => ' <li class="article_pagination"><div class="nav-paged"><span class="first">Artikelseiten:</span> ', 'after' => '</div></li>', 'next_or_number' => 'number', 'pagelink' => '<span>%</span>')); ?>
-                       <!-- <li class="nav-article-tool">
+<?php if ($godmode == true) { echo get_marctv_header(); } ?>
+<div class="site main-content">
+    <div id="post-<?php the_ID(); ?>" <?php post_class('entry article section'); ?>>
+        <div class="article-wrapper">
+            <?php if ($godmode != true) { ?>
+                <?php echo get_marctv_meta(); ?>
+                <h1 class="entry-title title "><span><?php esc_html(the_title()); ?></span></h1>
+            <?php } ?>
+            <div class="content-body">
+                <div class="inner entry-content">
+                    <?php the_content(); ?>
+                    <div class="tools">
+                        <ul class="hlist">
+                            <li class="tag tags"><?php
+                                if (function_exists('marctv_post_tags')) {
+                                    echo marctv_post_tags(get_the_tags());
+                                }
+                                ?>
+                            </li>
+                            <?php wp_link_pages(array('before' => ' <li class="article_pagination"><div class="nav-paged"><span class="first">Artikelseiten:</span> ', 'after' => '</div></li>', 'next_or_number' => 'number', 'pagelink' => '<span>%</span>')); ?>
+                            <!-- <li class="nav-article-tool">
                             <div class="nav-article">
                     <span class="nav-previous">
                       <?php previous_post_link(); ?>
@@ -54,18 +46,18 @@ the_post(); ?>
                     </span>
                             </div>
                         </li> -->
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <?php
-    endwhile;
-    else:
-        ?>
-        <p>Leider wurde kein Artikel gefunden.</p>
-    <?php endif; ?>
-</div> <!-- / hentry -->
+        <?php
+        endwhile;
+        else:
+            ?>
+            <p>Leider wurde kein Artikel gefunden.</p>
+        <?php endif; ?>
+    </div> <!-- / hentry -->
 
 
 </div> <!-- /site -->
@@ -95,4 +87,6 @@ if (function_exists('related_posts')) {
             echo get_marctv_favourite_articles();
             echo marctv_get_randompost(); ?>
         </div>
-        <?php get_footer(); ?>
+    </div>
+</div>
+<?php get_footer(); ?>

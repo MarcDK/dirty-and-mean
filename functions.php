@@ -1,7 +1,6 @@
 <?php
 
-function echo_memory_usage()
-{
+function echo_memory_usage() {
     $mem_usage = memory_get_usage(true);
 
     if ($mem_usage < 1024)
@@ -15,21 +14,11 @@ function echo_memory_usage()
 
 if (function_exists('add_image_size')) {
     add_image_size('facebookimage', 403, 403, true);
-    //(cropped)
-    add_image_size('fullhd', 1920, 0);
-    add_image_size('legacy_m', 460, 0);
-    add_image_size('legacy_s', 300, 0);
-    add_image_size('legacy_b', 960, 0);
-    add_image_size('legacy_l', 1200, 0);
-
+    add_image_size('fullhd', 1920, 0);;
+    add_image_size('thumbnail_x2', 600, 260, true);
+    add_image_size('medium_x2', 920, 0);
     add_image_size('large_x2', 2048, 0);
-
-    //(cropped)
-    add_image_size('fullhd', 1920, 0);
-    add_image_size('medium_x2', 600, 0);
-    add_image_size('large_x2', 2048, 0);
-
-
+    add_image_size('thumbnail_x4', 1200, 0);
     add_image_size('4k', 3840, 1680);
     add_image_size('EOS', 4000, 1750);
 }
@@ -38,12 +27,29 @@ add_filter('searchwp_index_comments', '__return_false');
 
 add_filter('image_size_names_choose', 'my_custom_sizes');
 
+
+function get_marctv_header(){
+    if ((has_post_thumbnail())) {
+        $teaser  = '<div class="article-header">';
+        $teaser .= get_the_post_thumbnail();
+        $teaser .= '<div class="article-box-wrapper">';
+        $teaser .= '<div class="article-box">';
+        $teaser .= '<h1 class="article-title">' . get_the_title() . '</h1>';
+        $teaser .= get_marctv_meta();
+        $teaser .= '</div>';
+        $teaser .= '</div>';
+        $teaser .= '</div>';
+        echo $teaser;
+    }
+}
+
+
 function my_custom_sizes($sizes)
 {
     return array_merge($sizes, array('4k' => __('4k Resolution'), 'EOS' => __('EOS Full'),));
 }
 
-// img unautop
+// remove p tags around figures
 function img_unautop($pee)
 {
     $pee = preg_replace('/<p>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', '<div class="figure">$1</div>', $pee);
@@ -51,6 +57,7 @@ function img_unautop($pee)
 }
 
 add_filter('the_content', 'img_unautop', 30);
+
 
 function marctv_posted_on()
 {
@@ -182,7 +189,7 @@ function get_marctv_mini_articles()
 
         $tagobj = get_term_by('slug', $tag_slug, 'post_tag');
 
-        if ($tagobj->name) {
+        if ($tagobj && $tagobj->name) {
 
             query_posts(array('tag' => $tag_slug, 'showposts' => 6, 'post__not_in' => $do_not_duplicate));
 
@@ -207,7 +214,7 @@ function get_marctv_mini_articles()
                     $html .= '<li class="box">';
                 }
                 $key++;
-                $html .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', false);
+                $html .= get_marctv_teaser($post->ID, true, '', 'thumbnail', true, '', '', false);
                 $html .= '</li>';
             endwhile;
             $html .= '</ul>';
@@ -217,6 +224,48 @@ function get_marctv_mini_articles()
     return $html;
 }
 
+function get_marctv_meta() {
+    $meta = '<div class="meta">';
+    $meta .= '<small>';
+
+    if (get_the_author_meta("user_url") != "") {
+
+        $meta .= 'Von <a class="vcard author" href="' . get_the_author_meta("user_url") . '">';
+
+        $meta .= '<span class="fn">' . get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") . '</span></a>';
+
+    } else {
+        $meta .= 'Von <span rel="vcard author"><span class="fn">' . get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") . '</span></span>';
+    }
+
+    $meta .= ' am <time class="updated" datetime="' . get_the_date("c") . '">' . get_the_time(__("F j, Y")) . '</time>';
+
+
+    $meta .= '— <a class="link_to_comments" href="#commentbox"><span class="dashicons dashicons-admin-comments"></span>';
+    $meta .= get_comments_number_correct();
+    $meta .= '</a></small></div>';
+
+    return $meta;
+}
+
+function get_comments_number_correct() {
+    $num_comments = get_comments_number(); // get_comments_number returns only a numeric value
+
+    if ( comments_open() ) {
+        if ( $num_comments == 0 ) {
+            $comments = __('Noch keine Kommentare');
+        } elseif ( $num_comments > 1 ) {
+            $comments = $num_comments . __(' Kommentare');
+        } else {
+            $comments = __('Ein Kommentar');
+        }
+        $write_comments = '<a href="' . get_comments_link() .'">'. $comments.'</a>';
+    } else {
+        $write_comments =  __('');
+    }
+
+    return $write_comments;
+}
 
 /**
  * Display fav articles
@@ -257,7 +306,7 @@ function get_marctv_favourite_articles()
                 }
 
                 $key++;
-                $html .= get_marctv_teaser(get_the_ID(), true, '', 'legacy_m', true, '', '', false);
+                $html .= get_marctv_teaser(get_the_ID(), true, '', 'thumbnail', true, '', '', false);
                 $html .= '</li>';
             endwhile;
             $html .= '</ul>';
@@ -320,7 +369,7 @@ function get_adb_article()
 
         $tagobj = get_term_by('slug', $the_tag, 'post_tag');
 
-        if ($tagobj->name) {
+        if ($tagobj && $tagobj->name) {
 
             query_posts(array('tag' => $the_tag, 'showposts' => 2, 'post__not_in' => $do_not_duplicate, 'orderby' => 'rand'));
 
@@ -339,7 +388,7 @@ function get_adb_article()
                     $html .= '<li class="box">';
                 }
                 $key++;
-                $html .= get_marctv_teaser(get_the_ID(), true, '', 'larges', true, '', '', false);
+                $html .= get_marctv_teaser(get_the_ID(), true, '', 'thumbnail', true, '', '', false);
 
                 $html .= '</li>';
             endwhile;
@@ -378,7 +427,7 @@ function get_marctv_sticky_posts()
             $html .= '<li class="box">';
         }
         $key++;
-        $html .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
+        $html .= get_marctv_teaser($post->ID, true, '', 'thumbnail', true, '', '', true);
         $html .= '</li>';
         $do_not_duplicate[] = $post->ID;
     }
@@ -426,7 +475,7 @@ function get_marctv_most_commented_articles()
                 $html .= '<li class="box">';
             }
             $key++;
-            $html .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', false);
+            $html .= get_marctv_teaser($post->ID, true, '', 'thumbnail', true, '', '', false);
             $html .= '</li>';
         }
 
@@ -507,7 +556,7 @@ function get_marctv_category_container_box($cat_id, $class, $offset = false, $ch
     $teaser .= '<div class="supertitle"><span><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></span></div>';
 
     foreach ($postlist as $post) {
-        $teaser .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
+        $teaser .= get_marctv_teaser($post->ID, true, '', 'thumbnail', true, '', '', true);
         $do_not_duplicate[] = $post->ID;
         update_option('do_not_duplicate', $do_not_duplicate);
     }
@@ -522,7 +571,14 @@ function get_marctv_category_box($cat_id, $count = 6)
     $teaser = '<div class="supertitle"><span><a href="' . get_category_link($cat_id) . '">' . get_cat_name($cat_id) . '</a></span><a class="cat-link" href="' . get_category_link($cat_id) . '">mehr</a></span></div>';
 
     $tag = get_term_by('slug', 'mini', 'post_tag');
-    $mini_tag_id =  $tag->term_id;
+
+    if($tag){
+        $mini_tag_id =  $tag->term_id;
+    } else {
+        $mini_tag_id = '';
+    }
+
+
 
     $args = array(
         'posts_per_page' => $count,
@@ -561,7 +617,7 @@ function get_marctv_category_box($cat_id, $count = 6)
         } else {
             $teaser .= '<li class="box">';
         }
-        $teaser .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
+        $teaser .= get_marctv_teaser($post->ID, true, '', 'thumbnail', true, '', '', true);
         $teaser .= '</li>';
         $key++;
     }
@@ -637,7 +693,7 @@ function get_marctv_posts_container($duplicates = true, $docked = true)
         $html .= '<li class="box ' . $class . '">';
         $html .= '<div class="supertitle"><span><a href="' . get_category_link(get_parent_category_id($post->ID)) . '">' . get_cat_name(get_parent_category_id($post->ID)) . '</a></span></div>';
 
-        $html .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
+        $html .= get_marctv_teaser($post->ID, true, '', 'thumbnail', true, '', '', true);
         $do_not_duplicate[] = $post->ID;
 
         $html .= '</li>';
@@ -843,11 +899,16 @@ add_theme_support('automatic-feed-links');
 
 add_theme_support('post-thumbnails');
 
+add_theme_support( 'html5', array(
+    'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+) );
+
 function marctv_load_basejs()
 {
-   wp_enqueue_script("marctv.base", get_template_directory_uri() . "/js/marctv_base.js", array("jquery"), "1.1", true);
-    wp_enqueue_script("jquery.sticky", get_template_directory_uri() . "/js/jquery.sticky.1.0.3.js", array("jquery"), "1.1", true);
+    wp_enqueue_script("marctv.base", get_template_directory_uri() . "/js/marctv_base.js", array("jquery"), "1.0", true);
+
 }
+
 
 add_action('wp_enqueue_scripts', 'marctv_load_basejs');
 
@@ -991,6 +1052,8 @@ class sub_nav_walker extends Walker_Nav_Menu {
         //this only works for second level sub navigations
         $parent_item_id = 0;
 
+        $item_output = '';
+
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
 
         $class_names = $value = '';
@@ -1048,5 +1111,7 @@ class sub_nav_walker extends Walker_Nav_Menu {
         }
     }
 }
+
+
 
 ?>

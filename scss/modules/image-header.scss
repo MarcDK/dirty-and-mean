@@ -10,7 +10,6 @@ html .article-header {
   margin-left: auto;
   margin-right: auto;
 
-
   .article-box {
 
     position: absolute;
@@ -28,6 +27,10 @@ html .article-header {
     box-decoration-break: clone;
     @include text-shadow(black 1px 1px 6px);
     padding: 0;
+
+  .article-title {
+    line-height: 1.2;
+  }
   }
 
   img {

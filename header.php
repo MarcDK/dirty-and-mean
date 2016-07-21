@@ -54,5 +54,5 @@ Grüße an alle Quelltextleser!
         </div>
     </div>
 </div>
-<div class="site main-content">
+
 

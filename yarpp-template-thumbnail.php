@@ -14,7 +14,7 @@
        
           <?php
           //$mostcom = '<div class="supertitle"><span>Mehr zum Thema</span></div>';
-          $mostcom .= '<ul class="container">';
+          $mostcom = '<ul class="container">';
           $key = 1;
           ?>
           <?php while (have_posts()) : the_post(); ?> 
@@ -29,7 +29,7 @@
               $mostcom .= '<li class="box">';
             }
             $key++;
-            $mostcom .= get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', false, false);
+            $mostcom .= get_marctv_teaser(get_the_ID(), true, '', 'thumbnail', true, '', false, false);
             $mostcom .= '</li>';
             ?>
           <?php endwhile; ?>

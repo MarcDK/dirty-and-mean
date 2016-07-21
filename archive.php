@@ -5,6 +5,7 @@
  */
 get_header();
 ?>
+    <div class="site main-content">
     <div id="content" class="section">
 
         <?php if (have_posts()) : ?>
@@ -50,7 +51,7 @@ get_header();
                     echo '<li class="box">';
                 }
 
-                echo get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', true);
+                echo get_marctv_teaser(get_the_ID(), true, '', 'thumbnail', true, '', '', true);
 
                 echo '</li>';
             endwhile;
@@ -72,7 +73,7 @@ get_header();
                 get_search_form();
             endif;
             ?>
-            <div class="dd" id="navigation">
+            <div>
                 <?php if (function_exists('pgntn_display_pagination')) pgntn_display_pagination('posts'); ?>
             </div>
 
@@ -81,6 +82,7 @@ get_header();
     </div> -->
 
 
+    </div>
     </div>
 
 <?php get_footer(); ?>

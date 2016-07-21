@@ -39,6 +39,7 @@ get_header();
                 echo get_marctv_teaser(get_the_ID(), true, '', 'medium', true, '', '', true);
 
                 echo '</li>';
+
             endwhile;
 
             else : ?>
@@ -58,6 +59,8 @@ get_header();
                 </div>
             <?php endif; ?>
 
-            <?php //marctv_pagination(" ", '<div class="nav-paged">', "</div>", "« Vorherige", "Nächste »", 'span', '6'); ?>
+
+                <?php if (function_exists('pgntn_display_pagination')) pgntn_display_pagination('posts'); ?>
+
     </div>
 <?php get_footer(); ?>

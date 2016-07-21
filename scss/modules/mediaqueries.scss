@@ -1,18 +1,26 @@
 @import 'vars';
 
 #navigation .hamburger-icon {
-  display:none;
+  display: none;
 }
 
-@media only screen and  (max-width : 1054px)  {
-  html .section{
+@media only screen and (max-width: 1054px) {
+  html .section {
     width: 100%;
   }
 
-  html .article-header .article-box {
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 100%;
+  html .article-header {
+
+    .article-box-wrapper {
+
+      .article-box {
+
+        margin-left: $marctv-margin;
+        margin-right: $marctv-margin;
+        width: 90%;
+
+      }
+    }
   }
 }
 

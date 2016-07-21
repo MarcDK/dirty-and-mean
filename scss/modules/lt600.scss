@@ -4,22 +4,23 @@
 
   html#marctv .article-header {
 
+    .article-box-wrapper {
 
-    .article-box {
+      .article-box {
 
-      margin-left: $marctv-margin/2;
-      margin-right: $marctv-margin/2;
+        margin-left: $marctv-margin/2;
+        margin-right: $marctv-margin/2;
 
-      .article-title {
+        .article-title {
 
+        }
       }
-    }
 
-    .meta {
+      .meta {
 
+        a {
 
-      a {
-
+        }
       }
     }
 
@@ -51,7 +52,7 @@
         }
 
         ol li,
-        ul li{
+        ul li {
           margin-left: $marctv-margin;
           margin-right: $marctv-margin;
         }

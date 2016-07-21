@@ -1,4 +1,5 @@
 ﻿<?php get_header(); ?>
+<div class="site main-content">
 <?php if (!is_paged()) : ?>
     <div id="content" class="section">
 
@@ -16,7 +17,13 @@
                 $linkcat = get_option("marctv_linkcat");
 
                 $tag = get_term_by('slug', 'mini', 'post_tag');
+
+                if($tag){
                 $mini_tag_id =  $tag->term_id;
+                } else {
+                    $mini_tag_id = '';
+                }
+
 
                 $args = array(
                     'numberposts' => '1',
@@ -112,5 +119,21 @@
 
     </div>
 <?php endif; ?>
+ <?php
+    $tagcache = false;
+    if (get_option('marctv-cache')) {
+        $tagcache = get_transient('taghtml');
 
+        // If it wasn't there regenerate the data and save the transient
+    }
+
+    if (!$tagcache) {
+        $tagcache = wp_tag_cloud(array('smallest' => 10, 'largest' => 18, 'number' => 50, 'format' => 'flat', 'echo' => false));
+        set_transient('taghtml', $tagcache, 24 * 60 * 60);
+    }
+
+    echo '<div class="section tagcloud"><div class="col_title supertitle"><span>Weitere Themen</span></div><p>' . $tagcache . '</p></div>';
+    ?>
+</div>
+</div>
 <?php get_footer(); ?>

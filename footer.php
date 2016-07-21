@@ -1,22 +1,3 @@
-<?php if (is_home()): ?>
-
-    <?php
-    $tagcache = false;
-    if (get_option('marctv-cache')) {
-        $tagcache = get_transient('taghtml');
-
-        // If it wasn't there regenerate the data and save the transient
-    }
-
-    if (!$tagcache) {
-        $tagcache = wp_tag_cloud(array('smallest' => 10, 'largest' => 18, 'number' => 50, 'format' => 'flat', 'echo' => false));
-        set_transient('taghtml', $tagcache, 24 * 60 * 60);
-    }
-
-    echo '<div class="section tagcloud"><div class="col_title supertitle"><span>Weitere Themen</span></div><p>' . $tagcache . '</p></div>';
-    ?>
-<?php endif ?>
-</div>
 
 <div class="site projects">
 
@@ -27,15 +8,15 @@
 
             <li class="box first"><a class="inverted infobox " href="http://shortscore.org"
                                      rel="bookmark">
-                    <?php echo get_the_post_thumbnail(20648, 'medium'); ?>
+                    <?php echo get_the_post_thumbnail(20648, 'thumbnail'); ?>
                     <h2 class="title">SHORTSCORE.org</h2></a></li>
             <li class="box "><a class="inverted infobox " href="http://verschlichtern.de"
                                 rel="bookmark">
-                    <?php echo get_the_post_thumbnail(20695, 'medium'); ?>
+                    <?php echo get_the_post_thumbnail(20695, 'thumbnail'); ?>
                     <h2 class="title">verschlichtern.de</h2></a></li>
             <li class="box last"><a class="inverted infobox " href="http://kunstpixel.de"
                                     rel="bookmark">
-                    <?php echo get_the_post_thumbnail(21168, 'medium'); ?>
+                    <?php echo get_the_post_thumbnail(21168, 'thumbnail'); ?>
                     <h2 class="title">kunstpixel.de</h2></a></li>
         </ul>
     </div>
