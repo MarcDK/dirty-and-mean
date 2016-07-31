@@ -2,6 +2,28 @@
 
 html .article-header {
 
+  @media only screen and  (min-width : 700px) {
+
+
+    img:active {
+      opacity: 1;
+    }
+    /*
+    &:active .article-box-wrapper {
+      @include transition(all 0.1s ease-out);
+      position: relative;
+      opacity: 0;
+      top: 50px;
+    }
+
+
+    .article-box-wrapper {
+      opacity: 1;
+      top: 0;
+    }
+    */
+  }
+
   overflow: hidden;
   position: relative;
   display: block;
@@ -10,8 +32,21 @@ html .article-header {
   margin-left: auto;
   margin-right: auto;
 
-  .article-box {
+  .article-img {
+    background: black;
+  }
 
+  img {
+    @include transition(opacity 0.1s linear);
+    width: 100%;
+    height: auto;
+    opacity: 0.85;
+    display: block;
+  }
+
+
+
+  .article-box {
     position: absolute;
     zoom: 1;
     font-size: 400%;
@@ -25,17 +60,13 @@ html .article-header {
     background: none;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    @include text-shadow(black 1px 1px 6px);
+    @include text-shadow(black 2px 2px 6px);
     padding: 0;
 
-  .article-title {
-    line-height: 1.2;
-  }
-  }
-
-  img {
-    width: 100%;
-    height: auto;
+    .article-title {
+      line-height: 1.2;
+      font-weight: 700;
+    }
   }
 
 

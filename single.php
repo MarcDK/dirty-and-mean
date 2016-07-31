@@ -7,7 +7,10 @@ get_header();
 
 $godmode = false;
 
-if( (get_post_meta($id, 'extraCss', true) == '')){
+/* check if this is an adb post */
+$adb = get_post_meta(get_the_ID(), 'extraCss', true);
+
+if( ($adb == false)) {
     $godmode = true;
 }
 

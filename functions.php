@@ -31,7 +31,7 @@ add_filter('image_size_names_choose', 'my_custom_sizes');
 function get_marctv_header(){
     if ((has_post_thumbnail())) {
         $teaser  = '<div class="article-header">';
-        $teaser .= get_the_post_thumbnail();
+        $teaser .= '<div class="article-img">' . get_the_post_thumbnail() . '</div>';
         $teaser .= '<div class="article-box-wrapper">';
         $teaser .= '<div class="article-box">';
         $teaser .= '<h1 class="article-title">' . get_the_title() . '</h1>';

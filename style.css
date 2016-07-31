@@ -145,7 +145,45 @@ html .article-header {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 13, ../scss/modules/image-header.scss */
+@media only screen and (min-width: 700px) {
+  /* line 3, ../scss/modules/image-header.scss */
+  html .article-header {
+    /*
+    &:active .article-box-wrapper {
+      @include transition(all 0.1s ease-out);
+      position: relative;
+      opacity: 0;
+      top: 50px;
+    }
+
+
+    .article-box-wrapper {
+      opacity: 1;
+      top: 0;
+    }
+    */
+  }
+  /* line 8, ../scss/modules/image-header.scss */
+  html .article-header img:active {
+    opacity: 1;
+  }
+}
+/* line 35, ../scss/modules/image-header.scss */
+html .article-header .article-img {
+  background: black;
+}
+/* line 39, ../scss/modules/image-header.scss */
+html .article-header img {
+  -moz-transition: opacity 0.1s linear;
+  -o-transition: opacity 0.1s linear;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  width: 100%;
+  height: auto;
+  opacity: 0.85;
+  display: block;
+}
+/* line 49, ../scss/modules/image-header.scss */
 html .article-header .article-box {
   position: absolute;
   zoom: 1;
@@ -160,24 +198,20 @@ html .article-header .article-box {
   background: none;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  text-shadow: black 1px 1px 6px;
+  text-shadow: black 2px 2px 6px;
   padding: 0;
 }
-/* line 31, ../scss/modules/image-header.scss */
+/* line 66, ../scss/modules/image-header.scss */
 html .article-header .article-box .article-title {
   line-height: 1.2;
+  font-weight: 700;
 }
-/* line 36, ../scss/modules/image-header.scss */
-html .article-header img {
-  width: 100%;
-  height: auto;
-}
-/* line 42, ../scss/modules/image-header.scss */
+/* line 73, ../scss/modules/image-header.scss */
 html .article-header .meta {
   font-size: 27%;
   color: white;
 }
-/* line 45, ../scss/modules/image-header.scss */
+/* line 76, ../scss/modules/image-header.scss */
 html .article-header .meta a {
   color: white;
 }
@@ -224,23 +258,24 @@ html .article-header .meta a {
   html#marctv .article-header .article-box-wrapper .article-box {
     margin-left: 2.5%;
     margin-right: 2.5%;
+    margin-top: 0.3em;
   }
 
-  /* line 31, ../scss/modules/lt600.scss */
+  /* line 32, ../scss/modules/lt600.scss */
   html body {
     font-size: 90%;
   }
-  /* line 35, ../scss/modules/lt600.scss */
+  /* line 36, ../scss/modules/lt600.scss */
   html .dashicons {
     font-size: 130%;
   }
-  /* line 42, ../scss/modules/lt600.scss */
+  /* line 43, ../scss/modules/lt600.scss */
   html body.single .site.main-content,
   html body.page .site.main-content {
     margin-left: 0;
     margin-right: 0;
   }
-  /* line 46, ../scss/modules/lt600.scss */
+  /* line 47, ../scss/modules/lt600.scss */
   html body.single .site.main-content .hreview,
   html body.single .site.main-content .childIMG,
   html body.single .site.main-content .jqvideoplayer,
@@ -250,7 +285,7 @@ html .article-header .meta a {
     margin-left: 0;
     margin-right: 0;
   }
-  /* line 54, ../scss/modules/lt600.scss */
+  /* line 55, ../scss/modules/lt600.scss */
   html body.single .site.main-content ol li,
   html body.single .site.main-content ul li,
   html body.page .site.main-content ol li,
@@ -258,13 +293,13 @@ html .article-header .meta a {
     margin-left: 5%;
     margin-right: 5%;
   }
-  /* line 60, ../scss/modules/lt600.scss */
+  /* line 61, ../scss/modules/lt600.scss */
   html body.single .site.main-content ul.hlist li,
   html body.page .site.main-content ul.hlist li {
     margin-left: 0;
     margin-right: 0;
   }
-  /* line 65, ../scss/modules/lt600.scss */
+  /* line 66, ../scss/modules/lt600.scss */
   html body.single .site.main-content p, html body.single .site.main-content h1, html body.single .site.main-content h2, html body.single .site.main-content h3, html body.single .site.main-content h4, html body.single .site.main-content h5, html body.single .site.main-content .tools, html body.single .site.main-content .hreview .text, html body.single .site.main-content .meta, html body.single .site.main-content .sharedaddy,
   html body.page .site.main-content p,
   html body.page .site.main-content h1,
@@ -279,64 +314,64 @@ html .article-header .meta a {
     margin-left: 2.5%;
     margin-right: 2.5%;
   }
-  /* line 70, ../scss/modules/lt600.scss */
+  /* line 71, ../scss/modules/lt600.scss */
   html body.single .site.main-content blockquote,
   html body.page .site.main-content blockquote {
     padding-left: 0;
   }
-  /* line 77, ../scss/modules/lt600.scss */
+  /* line 78, ../scss/modules/lt600.scss */
   html .hreview .rating {
     width: 100%;
   }
-  /* line 80, ../scss/modules/lt600.scss */
+  /* line 81, ../scss/modules/lt600.scss */
   html .hreview .text {
     width: 90%;
   }
 
-  /* line 90, ../scss/modules/lt600.scss */
+  /* line 91, ../scss/modules/lt600.scss */
   #commentform .comment-form-email input,
   #commentform .comment-form-author input,
   #commentform .comment-form-url input {
     width: 97%;
   }
-  /* line 96, ../scss/modules/lt600.scss */
+  /* line 97, ../scss/modules/lt600.scss */
   #commentform label {
     display: block;
   }
 
-  /* line 101, ../scss/modules/lt600.scss */
+  /* line 102, ../scss/modules/lt600.scss */
   #marctv .article-wrapper {
     width: 100%;
     margin: 0 auto;
   }
 
-  /* line 108, ../scss/modules/lt600.scss */
+  /* line 109, ../scss/modules/lt600.scss */
   html .archive .nav-article .nav-next, html .archive .nav-article .nav-previous {
     width: 50%;
     margin-bottom: 20px;
   }
-  /* line 115, ../scss/modules/lt600.scss */
+  /* line 116, ../scss/modules/lt600.scss */
   html .lead .box {
     margin-bottom: 1em;
   }
-  /* line 119, ../scss/modules/lt600.scss */
+  /* line 120, ../scss/modules/lt600.scss */
   html .lead .title {
     font-size: 120%;
   }
-  /* line 123, ../scss/modules/lt600.scss */
+  /* line 124, ../scss/modules/lt600.scss */
   html .lead p {
     margin-bottom: 2em;
   }
-  /* line 127, ../scss/modules/lt600.scss */
+  /* line 128, ../scss/modules/lt600.scss */
   html .entry .title {
     font-size: 170%;
   }
-  /* line 130, ../scss/modules/lt600.scss */
+  /* line 131, ../scss/modules/lt600.scss */
   html .box .title {
     font-size: 140%;
   }
 
-  /* line 135, ../scss/modules/lt600.scss */
+  /* line 136, ../scss/modules/lt600.scss */
   #marctv .container .box {
     width: 100%;
     float: none;
@@ -344,7 +379,7 @@ html .article-header .meta a {
     margin-left: 0;
   }
 
-  /* line 142, ../scss/modules/lt600.scss */
+  /* line 143, ../scss/modules/lt600.scss */
   #marctv .container.small .box {
     width: 31.2%;
     border: 0;
@@ -352,76 +387,76 @@ html .article-header .meta a {
     margin-right: 1.6%;
     float: left;
   }
-  /* line 149, ../scss/modules/lt600.scss */
+  /* line 150, ../scss/modules/lt600.scss */
   #marctv .container.small .box.first {
     margin-left: 0;
     padding-left: 0;
   }
-  /* line 153, ../scss/modules/lt600.scss */
+  /* line 154, ../scss/modules/lt600.scss */
   #marctv .container.small .box.last {
     margin-right: 0;
     padding-right: 0;
   }
-  /* line 158, ../scss/modules/lt600.scss */
+  /* line 159, ../scss/modules/lt600.scss */
   #marctv .container.small .box .title {
     font-size: 80%;
   }
 
-  /* line 167, ../scss/modules/lt600.scss */
+  /* line 168, ../scss/modules/lt600.scss */
   html .commentlist .comment-meta a:first-child:before {
     content: "# ";
   }
-  /* line 170, ../scss/modules/lt600.scss */
+  /* line 171, ../scss/modules/lt600.scss */
   html .commentlist .comment-meta span {
     display: none;
   }
-  /* line 174, ../scss/modules/lt600.scss */
+  /* line 175, ../scss/modules/lt600.scss */
   html .commentlist li {
     border-top: 1px dotted #23282d;
     padding-left: 0;
   }
-  /* line 177, ../scss/modules/lt600.scss */
+  /* line 178, ../scss/modules/lt600.scss */
   html .commentlist li .vcard {
     padding-left: 2.5em;
   }
-  /* line 178, ../scss/modules/lt600.scss */
+  /* line 179, ../scss/modules/lt600.scss */
   html .commentlist li .vcard .avatar {
     width: 2em;
     height: 2em;
   }
-  /* line 184, ../scss/modules/lt600.scss */
+  /* line 185, ../scss/modules/lt600.scss */
   html .commentlist li .comment-author {
     padding-bottom: 0.5em;
   }
-  /* line 188, ../scss/modules/lt600.scss */
+  /* line 189, ../scss/modules/lt600.scss */
   html .commentlist .pingback .vcard {
     padding-bottom: 0.5em;
   }
-  /* line 191, ../scss/modules/lt600.scss */
+  /* line 192, ../scss/modules/lt600.scss */
   html .commentlist li .children {
     background-image: url("images/left-stroke.png");
     background-repeat: repeat-y;
   }
-  /* line 196, ../scss/modules/lt600.scss */
+  /* line 197, ../scss/modules/lt600.scss */
   html .commentlist li .children .vcard .avatar {
     left: 1em;
     width: 2em;
     height: 2em;
   }
-  /* line 201, ../scss/modules/lt600.scss */
+  /* line 202, ../scss/modules/lt600.scss */
   html .commentlist li .children li {
     padding-left: 1em;
   }
 
-  /* line 209, ../scss/modules/lt600.scss */
+  /* line 210, ../scss/modules/lt600.scss */
   #marctv .container.multi .box {
     height: 13em;
   }
-  /* line 215, ../scss/modules/lt600.scss */
+  /* line 216, ../scss/modules/lt600.scss */
   #marctv .container.multi .title {
     font-size: 120%;
   }
-  /* line 220, ../scss/modules/lt600.scss */
+  /* line 221, ../scss/modules/lt600.scss */
   #marctv .container.multi .box, #marctv .container.double .box, #marctv .container.morph .box {
     width: 48%;
     border: 0;
@@ -429,34 +464,34 @@ html .article-header .meta a {
     margin-left: 2%;
     float: left;
   }
-  /* line 223, ../scss/modules/lt600.scss */
+  /* line 224, ../scss/modules/lt600.scss */
   #marctv .container.multi .box .title, #marctv .container.double .box .title, #marctv .container.morph .box .title {
     font-size: 110%;
   }
-  /* line 233, ../scss/modules/lt600.scss */
+  /* line 234, ../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(odd), #marctv .container.morph .box:nth-child(odd), #marctv .container.double .box.first {
     margin-left: 0;
     padding-left: 0;
   }
-  /* line 237, ../scss/modules/lt600.scss */
+  /* line 238, ../scss/modules/lt600.scss */
   #marctv .container.multi .box:nth-child(even), #marctv .container.morph .box:nth-child(even), #marctv .container.double .box.last {
     margin-right: 0;
     padding-right: 0;
   }
-  /* line 241, ../scss/modules/lt600.scss */
+  /* line 242, ../scss/modules/lt600.scss */
   #marctv .container.morph .box p {
     height: 6em;
   }
 
   /* last comments and related */
-  /* line 250, ../scss/modules/lt600.scss */
+  /* line 251, ../scss/modules/lt600.scss */
   #marctv .container.last-commented.multi img,
   #marctv .container.last-commented.multi .info,
   #marctv .relatedbox .container img,
   #marctv .relatedbox .container .info {
     display: none;
   }
-  /* line 255, ../scss/modules/lt600.scss */
+  /* line 256, ../scss/modules/lt600.scss */
   #marctv .container.last-commented.multi .box,
   #marctv .container.last-commented.multi .box.first,
   #marctv .container.last-commented.multi .box.last,
@@ -477,12 +512,12 @@ html .article-header .meta a {
     margin-bottom: 1em;
     white-space: normal;
   }
-  /* line 272, ../scss/modules/lt600.scss */
+  /* line 273, ../scss/modules/lt600.scss */
   #marctv .container.last-commented.multi .title,
   #marctv .relatedbox .container .title {
     height: auto;
   }
-  /* line 276, ../scss/modules/lt600.scss */
+  /* line 277, ../scss/modules/lt600.scss */
   #marctv .container.last-commented.multi a,
   #marctv .relatedbox .container a {
     font-size: 130%;
@@ -504,7 +539,15 @@ html .article-header .meta a {
     overflow: hidden;
     position: static;
   }
-  /* line 20, ../scss/modules/lt700.scss */
+  /* line 18, ../scss/modules/lt700.scss */
+  #marctv .article-header .article-image {
+    background: transparent;
+  }
+  /* line 22, ../scss/modules/lt700.scss */
+  #marctv .article-header img {
+    opacity: 1;
+  }
+  /* line 28, ../scss/modules/lt700.scss */
   #marctv .article-header .article-box-wrapper .article-box {
     position: static;
     top: 0;
@@ -513,19 +556,20 @@ html .article-header .meta a {
     left: 0;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 0.3em;
   }
-  /* line 31, ../scss/modules/lt700.scss */
+  /* line 40, ../scss/modules/lt700.scss */
   #marctv .article-header .article-box-wrapper .article-box .article-title {
     text-shadow: none;
     color: #333;
     font-size: 60%;
   }
-  /* line 38, ../scss/modules/lt700.scss */
+  /* line 47, ../scss/modules/lt700.scss */
   #marctv .article-header .article-box-wrapper .meta {
     text-shadow: none;
     color: #737373;
   }
-  /* line 43, ../scss/modules/lt700.scss */
+  /* line 52, ../scss/modules/lt700.scss */
   #marctv .article-header .article-box-wrapper .meta a {
     color: #737373;
     text-shadow: none;
@@ -2137,10 +2181,10 @@ a:hover .info {
 }
 /* line 39, ../scss/modules/infobox.scss */
 .infobox .info {
-  -moz-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
-  transition: all 0.1s linear;
+  -moz-transition: opacity 0.1s linear;
+  -o-transition: opacity 0.1s linear;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
   -moz-border-radius: 0 0px 2px 0px;
   -webkit-border-radius: 0;
   border-radius: 0 0px 2px 0px;
