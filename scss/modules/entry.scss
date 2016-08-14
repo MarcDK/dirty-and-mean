@@ -2,10 +2,6 @@
 
 /* article */
 
-.entry.section {
-  overflow: initial;
-}
-
 .main-content {
   margin-top: 2em;
 }
@@ -25,6 +21,10 @@
   overflow: visible;
   font-size: 110%;
 
+  &.section {
+    overflow: initial;
+  }
+
   cite {
     font-style: italic;
     color: lighten($font-color, 25);
@@ -42,7 +42,30 @@
     border-bottom: 1px solid $font-color;
   }
 
+  figure a,
+  .figure a,
+  .wp-caption-text a {
+    border-bottom: none;
 
+    &:hover {
+      color: $font-color;
+      text-decoration: none;
+      border-bottom: none;
+    }
+  }
+
+  a {
+    transition:color .5s, border-bottom .5s;
+    text-decoration: none;
+    border-bottom: 1px solid #aaa;
+    color: $font-color;
+
+    &:hover {
+      color: $marctv-color;
+      text-decoration: none;
+      border-bottom: 1px solid $marctv-color;
+    }
+  }
 
   .wp-caption-text, .pictext {
     font-size: 85%;
@@ -98,6 +121,10 @@
       content: " — ";
     }
 
+    &.alignleft {
+      margin-top: 0;
+    }
+
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -151,10 +178,6 @@
     width: 33%;
   }
 
-  blockquote.alignleft {
-    margin-top: 0;
-  }
-
 }
 
 .tools {
@@ -169,6 +192,7 @@
   .tags {
     a {
       color: $font-color;
+      border-bottom: none;
 
       &:hover {
         color: $marctv-color;

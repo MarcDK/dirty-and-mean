@@ -448,6 +448,11 @@ html .yarpp-related {
   width: 100% ! important;
 }
 
+.line {
+  border-top: 1px solid $font-color;
+  padding-top: 0.5em;
+}
+
 .more_link {
   text-decoration: underline;
 }

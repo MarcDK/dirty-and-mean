@@ -3,7 +3,7 @@ Theme Name: Dirty and Mean
 Theme URI: http://marctv.de
 Description: MarcTV Theme 2014
 Author: MarcDK
-Version: 5.2
+Version: 5.3
 License: GPL v3
 License URI: license.txt
 Tags: responsive, MarcTV
@@ -12,6 +12,7 @@ Tags: responsive, MarcTV
 @import 'compass/reset';
 @import 'compass/css3';
 @import 'modules/gallery';
+@import 'modules/archive';
 @import 'modules/image-header';
 @import 'modules/mediaqueries';
 @import 'modules/mixins';

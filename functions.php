@@ -241,7 +241,7 @@ function get_marctv_meta() {
     $meta .= ' am <time class="updated" datetime="' . get_the_date("c") . '">' . get_the_time(__("F j, Y")) . '</time>';
 
 
-    $meta .= '— <a class="link_to_comments" href="#commentbox"><span class="dashicons dashicons-admin-comments"></span>';
+    $meta .= '&nbsp; &mdash; <a class="link_to_comments" href="#commentbox"><span class="dashicons dashicons-admin-comments"></span>';
     $meta .= get_comments_number_correct();
     $meta .= '</a></small></div>';
 
@@ -259,7 +259,7 @@ function get_comments_number_correct() {
         } else {
             $comments = __('Ein Kommentar');
         }
-        $write_comments = '<a href="' . get_comments_link() .'">'. $comments.'</a>';
+        $write_comments = $comments;
     } else {
         $write_comments =  __('');
     }

@@ -8,7 +8,7 @@
  */
 get_header();
 ?>
-
+    <div class="site main-content">
     <div id="content" class="section">
 
         <div class="entry">
@@ -62,5 +62,6 @@ get_header();
 
                 <?php if (function_exists('pgntn_display_pagination')) pgntn_display_pagination('posts'); ?>
 
+    </div>
     </div>
 <?php get_footer(); ?>

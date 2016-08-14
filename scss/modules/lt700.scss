@@ -32,6 +32,7 @@
         bottom: 0;
         right: 0;
         left: 0;
+        padding:0;
 
         margin-left: $marctv-margin;
         margin-right: $marctv-margin;
@@ -40,17 +41,34 @@
         .article-title {
           text-shadow: none;
           color: $font-color;
-          font-size: 60%;
+          font-size: 80%;
+        }
+
+        .article-title, .meta {
+          background: none;
+          color: $font-color;
+          padding: 0;
+          display: block;
+
         }
       }
 
+
+
       .meta {
+
+        small {
+          background: none;
+          padding: 0;
+          color: $font-color;
+        }
+
         text-shadow: none;
 
-        color: lighten($font-color, 25);
+        color: $font-color;
 
         a {
-          color: lighten($font-color, 25);
+          color: $font-color;
           text-shadow: none;
         }
       }

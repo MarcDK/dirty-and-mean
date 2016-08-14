@@ -5,9 +5,11 @@ sass_dir = "scss"
 images_dir = "images"
 javascripts_dir = "js"
 
-output_style = :uncompressed
-output_style = :expanded
-environment = :development
+output_style = :compressed
+
+# output_style = :uncompressed
+# output_style = :expanded
+# environment = :development
 
 relative_assets = true
 
