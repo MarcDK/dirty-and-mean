@@ -113,6 +113,8 @@ a {
   position: relative;
   color: $marctv-color;
   text-decoration: none;
+  transition: color $duration;
+
   &.inverted {
 
     color: $font-color;
@@ -163,6 +165,7 @@ a {
   margin-bottom: 8px;
   font-size: 130%;
   font-family: $fonts-title;
+  transition:color $duration;
 }
 
 .headline {
@@ -428,8 +431,8 @@ a[href*='=087022'] {
     text-decoration: inherit;
     font-weight: 400;
     font-style: normal;
-    -webkit-transition: color .1s ease-in 0;
-    transition: color .1s ease-in 0;
+    -webkit-transition: color $duration ease-in 0;
+    transition: color $duration ease-in 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -445,7 +448,7 @@ html .yarpp-related {
 }
 
 .twitter-tweet-rendered {
-  width: 100% ! important;
+  margin: 0 auto;
 }
 
 .line {

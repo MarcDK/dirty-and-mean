@@ -24,7 +24,7 @@
       .info {
         opacity: 1;
         .dashicons {
-          transition: color 0.3s ease;
+          transition: color $duration ease;
         }
       }
 

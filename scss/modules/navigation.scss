@@ -48,6 +48,7 @@ html #tagnav {
     margin: 0;
     padding: 0;
   }
+
   a {
     color: $black;
     display: block;
@@ -58,23 +59,24 @@ html #tagnav {
     text-decoration: none;
     white-space: nowrap;
     letter-spacing: 0.05em;
-  }
-  li:last-child a {
-    border-right: none;
-  }
-  > ul a {
-    width: auto;
-  }
-  a {
     float: none;
+
     &:hover {
-      color: $black;
+      color: $marctv-color;
 
     }
     &:active {
       color: #2200C1;
     }
   }
+
+  li:last-child a {
+    border-right: none;
+  }
+  > ul a {
+    width: auto;
+  }
+
   #current, .current-menu-item, .current-menu-parent {
     border-width: 0;
   }
@@ -103,6 +105,7 @@ html #tagnav {
   .sub-menu li {
     float: none;
     position: relative;
+
     a {
       border: none;
       padding: 10px 5px 6px 10px;
@@ -114,9 +117,11 @@ html #tagnav {
       font-size: 90%;
       text-transform: inherit;
     }
+
     &.current-menu-item a {
       color: #eee;
     }
+    
     a:hover {
       color: #eee;
 
@@ -129,10 +134,8 @@ html #tagnav {
     padding: 0;
   }
   .menu li:hover > a, ul ul *:hover > a {
-    color: $black;
-    text-decoration: underline;
+    color: $marctv-color;
   }
-
 
 }
 
@@ -181,5 +184,4 @@ html #tagnav {
     }
 
   }
-
 }

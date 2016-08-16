@@ -37,7 +37,7 @@ a:hover .info{
 
   }
   .info {
-    @include transition(opacity 0.1s linear);
+    @include transition(opacity $duration linear);
     @include border-radius(0 0px 2px 0px);
     //@include box-shadow(rgba(0,0,0,0.5) 2px 2px 2px);
     //@include text-shadow(0px 1px 0px rgba(255, 255, 255, 0.3), 0px 1px 0px rgba(0, 0, 0, 0.7));
