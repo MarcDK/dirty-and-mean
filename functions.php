@@ -214,7 +214,7 @@ function get_marctv_mini_articles()
                     $html .= '<li class="box">';
                 }
                 $key++;
-                $html .= get_marctv_teaser($post->ID, true, '', 'thumbnail', true, '', '', false);
+                $html .= get_marctv_teaser('', true, '', 'thumbnail', true, '', '', false);
                 $html .= '</li>';
             endwhile;
             $html .= '</ul>';
