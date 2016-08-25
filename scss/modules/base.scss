@@ -191,67 +191,6 @@ a {
 
 
 
-/* hreview */
-
-.marctv-score {
-  overflow: hidden;
-  padding: 0;
-  border-top: 6px solid $marctv-color;
-  .rating {
-    float: right;
-    font-size: 300%;
-    color: #EEE;
-    line-height: 1.2;
-    padding: 0;
-
-    .inner-box {
-      padding: 2px;
-      display: block;
-      background: $marctv-color;
-      @include text-shadow(0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7));
-    }
-
-  }
-
-  .shortscore-link {
-    margin-top: 0.5em;
-  }
-
-  .claim,
-  .shortscore-link {
-    display: block;
-    font-size: 30%;
-    padding-bottom: 0.8em;
-    text-align: center;
-  }
-
-  .text {
-    float: left;
-    width: 65%;
-    margin-top: 0.5em;
-    padding-bottom: 1em;
-    .item .fn {
-      font-weight: 700;
-    }
-  }
-  .summary {
-    font-size: 110%;
-  }
-}
-
-.text .item {
-  font-size: 110%;
-}
-
-.dtreviewed {
-  display: none;
-}
-
-.hreview .inner {
-  padding: 0.1em 0.3em 0.2em;
-  display: block;
-  text-align: center;
-}
 
 /* pageination */
 
