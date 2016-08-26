@@ -62,6 +62,7 @@
         ?>
 
         <?php echo display_facebook_box(); ?>
+
         <?php echo get_marctv_category_box(get_option("marctv_cat1"),6); ?>
         <?php echo get_marctv_category_box(get_option("marctv_cat2"),6); ?>
         <?php echo get_marctv_category_box(get_option("marctv_cat3"),6); ?>

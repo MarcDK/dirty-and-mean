@@ -26,8 +26,6 @@
 	background: #3B5998;
 
 	&:before {
-		transition: color $duration ease, font-size $duration ease, transform $duration ease;
-
 		content: "\f305";
 		display: block;
 		width: 0;
