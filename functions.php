@@ -351,6 +351,21 @@ function marctv_get_randompost($exclude = array(), $cat = "Reviews")
     return $html;
 }
 
+
+function display_facebook_box(){
+    $html = '<ul class="container lead">
+    <li class="box facebook first last">
+    <p>Mehr Video und Beiträge findet ihr auf Facebook</p>
+    <a href="https://www.facebook.com/MarcTV.de/" rel="bookmark">
+        <div class="logo-box"><span class="dashicons dashicons-facebook"></span></div>
+        <div class="text-box"><span>Jetzt Marc.TV auf Facebook liken</span></div>
+    </a>
+    </li>
+</ul>';
+
+    return $html;
+}
+
 /**
  * Display adb articles
  *

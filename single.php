@@ -92,4 +92,8 @@ if (function_exists('related_posts')) {
         </div>
     </div>
 </div>
+
+
+<?php echo display_facebook_box(); ?>
+
 <?php get_footer(); ?>

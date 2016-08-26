@@ -1,4 +1,6 @@
 @import "compass/css3/opacity";
+@import 'vars';
+@import 'compass/css3';
 
 .socialbox {
 	text-align: center;
@@ -15,5 +17,112 @@
 	a:hover {
 		color: #0e7dc4;
 		text-decoration: none;
+	}
+}
+
+.box.facebook {
+	height: 150px;
+	widt: 100%;
+	background: #3B5998;
+
+	&:before {
+		transition: color $duration ease, font-size $duration ease, transform $duration ease;
+
+		content: "\f305";
+		display: block;
+		width: 0;
+		height: 0;
+		font-size: 231px;
+		margin-left: -50px;
+		line-height: 1.2;
+		font-family: dashicons;
+		padding-right: 0.3em;
+		text-decoration: inherit;
+		font-weight: 400;
+		font-style: normal;
+		vertical-align: top;
+		text-align: center;
+		-webkit-transition: color .1s ease-in 0;
+		transition: color .1s ease-in 0;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		color: #7f99c9;
+		transform: rotate(341deg);
+	}
+
+	p {
+		text-align: center;
+		font-size: 150%;
+		color: white;
+		margin-top: 1em;
+		position: relative;
+		padding: 0 0.5em;
+	}
+
+	.thumb{
+		overflow: hidden;
+		font-size: 300px;
+		color: white;
+	}
+
+	a {
+		width: 340px;
+		height: 40px;
+		display: block;
+		margin:0 auto;
+		bottom: 2em;
+		background: white;
+		color: white;
+
+		&:active {
+			top: initial;
+		}
+
+
+		.logo-box {
+			height: 40px;
+			width: 40px;
+			float: left;
+			color: #3B5998;
+
+			span {
+				position: absolute;
+				left: 6px;
+				top: 6px;
+				font-size: 30px;
+
+			}
+		}
+
+		.text-box {
+			float: right;
+			height: 40px;
+			color: #3B5998;
+			width: 290px;
+			padding-left: 5px;
+			padding-right: 5px;
+			background-color: #cadfff;
+			text-align: center;
+			transition: background-color $duration ease;
+			font-size: 18px !important;
+
+
+			span {
+				position: absolute;
+				left: 50px;
+				top: 6px;
+			}
+		}
+
+		&:hover {
+			.text-box {
+				background-color: white;
+				color: #3B5998;
+			}
+
+			.logo-box {
+
+			}
+		}
 	}
 }

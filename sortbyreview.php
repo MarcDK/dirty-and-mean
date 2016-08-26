@@ -7,7 +7,7 @@
  */
 get_header();
 ?>
-
+<div class="site main-content">
 <div id="content" class="section">
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <div class="entry">
@@ -76,6 +76,7 @@ get_header();
 </ul>
 <?php marctv_pagination(" ", '<span class="pagenav">', "</span>", "« Vorherige", "Nächste »", 'span', '9'); ?>
 </div><!-- #primary -->
+</div>
 
 <?php get_footer(); ?>
 
