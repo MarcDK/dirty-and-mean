@@ -56,7 +56,7 @@
 
         <?php
         if (function_exists('get_last_commented_articles')) {
-            echo '<div class="container docked"><div class="supertitle"><span><a href="/letzte-kommentare/">Zuletzt kommentiert</a></span><a class="cat-link" href="/letzte-kommentare/">mehr</a></div></div>';
+            echo '<div class="container docked"><div class="supertitle"><span><a href="/letzte-kommentare/">Kommentare</a></span><a class="cat-link" href="/letzte-kommentare/">mehr</a></div></div>';
             echo get_last_commented_articles(6, 'container last-commented multi nohover showontouch');
         }
         ?>

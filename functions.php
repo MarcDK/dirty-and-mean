@@ -34,7 +34,7 @@ function get_marctv_header(){
         $teaser .= '<div class="article-img">' . get_the_post_thumbnail() . '</div>';
         $teaser .= '<div class="article-box-wrapper">';
         $teaser .= '<div class="article-box">';
-        $teaser .= '<h1 class="article-title">' . get_the_title() . '</h1>';
+        $teaser .= '<h1 class="article-title entry-title">' . get_the_title() . '</h1>';
         $teaser .= get_marctv_meta();
         $teaser .= '</div>';
         $teaser .= '</div>';
@@ -1126,6 +1126,14 @@ class sub_nav_walker extends Walker_Nav_Menu {
         }
     }
 }
+
+function marctv_remove_hentry( $classes ) {
+    if ( is_single() ) {
+        $classes = array_diff( $classes, array( 'hentry' ) );
+    }
+    return $classes;
+}
+add_filter( 'post_class','marctv_remove_hentry' );
 
 
 

@@ -18,7 +18,7 @@ if( ($adb == false)) {
 
 <?php if (have_posts()) : while (have_posts()) :
 the_post(); ?>
-
+<div class="hentry">
 <?php if ($godmode == true) { echo get_marctv_header(); } ?>
 <div class="site main-content">
     <div id="post-<?php the_ID(); ?>" <?php post_class('entry article section'); ?>>
@@ -61,10 +61,8 @@ the_post(); ?>
             <p>Leider wurde kein Artikel gefunden.</p>
         <?php endif; ?>
     </div> <!-- / hentry -->
-
-
 </div> <!-- /site -->
-
+</div>
 <?php
 if (function_exists('related_posts')) {
     related_posts();
