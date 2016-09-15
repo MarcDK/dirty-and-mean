@@ -12,6 +12,10 @@ function echo_memory_usage() {
     }
 }
 
+function doo($input){
+    return $input->shortscore->userscore;
+}
+
 if (function_exists('add_image_size')) {
     add_image_size('facebookimage', 403, 403, true);
     add_image_size('fullhd', 1920, 0);;
@@ -138,7 +142,7 @@ function get_marctv_teaser($post_id, $show_info = true, $additional_classes = ''
             $comment_count = "Keine ";
         }
 
-        $score = get_post_meta($post_id, 'rating');
+        $score = get_post_meta($post_id, '_shortscore_user_rating');
 
         if ($extra) {
             $teaser .= '<div class="info">' . $extra . ' </div>';

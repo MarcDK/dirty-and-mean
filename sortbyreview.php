@@ -23,9 +23,9 @@ get_header();
     <?php
     $args = array(
       'post_type' => 'post',
-      'meta_key' => 'rating',
+      'meta_key' => "_shortscore_user_rating",
       'orderby' => 'meta_value_num',
-      'posts_per_page' => '99',
+      'posts_per_page' => '200',
       'cat' => get_option("marctv_cat2"),
       'nopaging' => false,
       'order' => 'DESC'
