@@ -10,9 +10,7 @@ get_header();
 
             <?php if (have_posts()) : ?>
 
-            <div class="entry">
-                <?php the_archive_title('<h1 class="title">', '</h1>'); ?>
-            </div>
+
             <?php
             if ($paged == 0 || empty($paged)) {
                 echo '<p>';
@@ -25,6 +23,9 @@ get_header();
                 echo '</p>';
             }
             ?>
+            <div class="entry">
+                <?php the_archive_title('<h1 class="title">', '</h1>'); ?>
+            </div>
             <ul class="container six docked">
 
                 <?php
