@@ -1,0 +1,158 @@
+@import 'vars';
+@import 'compass/css3';
+
+.main-content {
+
+  .type-game {
+
+    margin-bottom: 2em;
+
+    .shortscore-title {
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .shortscore-hreview {
+
+      border-top: 4px solid #108d4f;
+      padding: 0.5em 0;
+
+      .text {
+        float: left;
+        width: 65%;
+        background-color: #fff;
+        color: $font-color;
+        padding: 0.5em;
+
+        a {
+          color: $font-color;
+        }
+
+      }
+
+      .rating {
+        margin-top: 0.1em;
+        margin-bottom: 0.5em;
+
+        .shortscore {
+          margin-bottom: 0;
+        }
+
+        .outof {
+          display: block;
+          color: #108d4f;
+          font-size: 50%;
+          text-align: center;
+
+          .best {
+            display: inline;
+          }
+        }
+      }
+
+      .link {
+        font-size: 80%;
+        padding: 0;
+
+        a:before {
+          content: "\f110";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          font-size: 20px;
+          line-height: 1.2;
+          font-family: dashicons;
+          padding-right: 0.3em;
+          text-decoration: inherit;
+          font-weight: 400;
+          font-style: normal;
+          vertical-align: top;
+          text-align: center;
+          -webkit-transition: color .1s ease-in 0;
+          transition: color .1s ease-in 0;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        .text {
+          float: none;
+          width: inherit;
+          margin-left: 0 !important;
+          padding: 0.2em 1em;
+          margin-right: 0 !important;
+
+        }
+
+        .link {
+          padding: 0.2em 1em;
+
+          a:before{
+            line-height: 0.8;
+          }
+        }
+      }
+    }
+  }
+
+  .marctv-score {
+    overflow: hidden;
+    padding: 0;
+    border-top: 6px solid $marctv-color;
+    .rating {
+      float: right;
+      font-size: 300%;
+      color: #EEE;
+      line-height: 1.2;
+      padding: 0;
+
+      .inner-box {
+        padding: 2px;
+        display: block;
+        background: $marctv-color;
+        @include text-shadow(0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7));
+      }
+
+    }
+
+    .shortscore-link {
+      margin-top: 0.5em;
+    }
+
+    .claim,
+    .shortscore-link {
+      display: block;
+      font-size: 30%;
+      padding-bottom: 0.8em;
+      text-align: center;
+    }
+
+    .text {
+      float: left;
+      width: 65%;
+      margin-top: 0.5em;
+      padding-bottom: 1em;
+      .item .fn {
+        font-weight: 700;
+      }
+    }
+    .summary {
+      font-size: 110%;
+    }
+  }
+
+  .text .item {
+    font-size: 110%;
+  }
+
+  .dtreviewed {
+    display: none;
+  }
+
+  .hreview .inner {
+    padding: 0.1em 0.3em 0.2em;
+    display: block;
+    text-align: center;
+  }
+}
