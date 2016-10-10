@@ -84,7 +84,7 @@ if (function_exists('related_posts')) {
                 echo '<div class="container docked"><div class="supertitle"><span><a href="/letzte-kommentare">Zuletzt kommentiert</a></span></div></div>';
                 echo get_last_commented_articles(6, 'container multi last-commented nohover showontouch');
             }
-
+            echo get_marctv_recent_articles();
             echo get_marctv_favourite_articles();
             echo marctv_get_randompost(); ?>
         </div>

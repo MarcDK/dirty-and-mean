@@ -506,9 +506,11 @@ p.comment-subscription-form {
 
 #commentform .quicktags-toolbar {
   margin-top: 1em;
+
   input {
     font-size: 90%;
     margin: 0.5em 0.4em;
+    width: inherit;
   }
 }
 

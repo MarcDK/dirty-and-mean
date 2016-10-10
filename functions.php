@@ -275,6 +275,65 @@ function get_comments_number_correct() {
  * Display fav articles
  *
  */
+function get_marctv_recent_articles()
+{
+    $html = false;
+
+    if (get_option('marctv-cache')) {
+        $html = get_transient('marctv-purified-recentarea');
+    }
+
+    if (!$html) {
+
+        $cid = get_the_ID();
+
+        $do_not_duplicate = get_option('do_not_duplicate');
+
+        $tagobj = get_term_by('slug', get_option("marctv_catfav"), 'post_tag');
+
+
+
+        $postlist = query_posts(
+                array(
+                'showposts' => 6
+                )
+            );
+
+            $html = '<div class="container docked"><div class="supertitle"><span><a href="/">Neu</a></span><a class="cat-link" href="/">mehr</a></div></div>';
+            $html .= '<ul class="container six">';
+
+        $key = 1;
+
+        foreach ($postlist as $post) {
+            /* first-last classes */
+            if ($key == 1) {
+                $html .= '<li class="box first">';
+            } else if ($key % 6 == 0) {
+                $html .= '<li class="box last">';
+            } else if ($key == 3) {
+                $html .= '<li class="box multi-last">';
+            } else if ($key == 4) {
+                $html .= '<li class="box multi-first">';
+            } else {
+                $html .= '<li class="box">';
+            }
+            $html .= get_marctv_teaser($post->ID, true, '', 'medium', true, '', '', true);
+            $html .= '</li>';
+            $key++;
+        }
+
+        $html .= '</ul>';
+
+        set_transient('marctv-purified-recentarea', $html, 24 * 60 * 60);
+    }
+    return $html;
+}
+
+
+/**
+ * Display fav articles
+ *
+ */
 function get_marctv_favourite_articles()
 {
     $html = false;
@@ -1139,6 +1198,11 @@ function marctv_remove_hentry( $classes ) {
 }
 add_filter( 'post_class','marctv_remove_hentry' );
 
-
+function my_searchwp_minimum_word_length() {
+  // index and search for words with at least two characters
+  return 2;
+}
+ 
+add_filter('searchwp_minimum_word_length','my_searchwp_minimum_word_length');
 
 ?>
