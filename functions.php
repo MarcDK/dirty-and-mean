@@ -285,21 +285,18 @@ function get_marctv_recent_articles()
 
     if (!$html) {
 
-        $cid = get_the_ID();
+        $cid = array(get_the_ID());
 
-        $do_not_duplicate = get_option('do_not_duplicate');
-
-        $tagobj = get_term_by('slug', get_option("marctv_catfav"), 'post_tag');
-
-
+        
 
         $postlist = query_posts(
                 array(
-                'showposts' => 6
+                    'showposts' => 6,
+                    'post__not_in' => $cid
                 )
             );
 
-            $html = '<div class="container docked"><div class="supertitle"><span><a href="/">Neu</a></span><a class="cat-link" href="/">mehr</a></div></div>';
+            $html = '<div class="container docked"><div class="supertitle"><span><a href="/">Neuste Artikel</a></span><a class="cat-link" href="/">mehr</a></div></div>';
             $html .= '<ul class="container six">';
 
         $key = 1;
