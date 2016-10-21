@@ -12,10 +12,6 @@ function echo_memory_usage() {
     }
 }
 
-function doo($input){
-    return $input->shortscore->userscore;
-}
-
 if (function_exists('add_image_size')) {
     add_image_size('facebookimage', 403, 403, true);
     add_image_size('fullhd', 1920, 0);;
@@ -272,7 +268,7 @@ function get_comments_number_correct() {
 }
 
 /**
- * Display fav articles
+ * Display recent articles
  *
  */
 function get_marctv_recent_articles()
@@ -287,7 +283,7 @@ function get_marctv_recent_articles()
 
         $cid = array(get_the_ID());
 
-        
+
 
         $postlist = query_posts(
                 array(
@@ -321,7 +317,7 @@ function get_marctv_recent_articles()
 
         $html .= '</ul>';
 
-        set_transient('marctv-purified-recentarea', $html, 24 * 60 * 60);
+        set_transient('marctv-purified-recentarea', $html, 60 * 60);
     }
     return $html;
 }
@@ -1199,7 +1195,7 @@ function my_searchwp_minimum_word_length() {
   // index and search for words with at least two characters
   return 2;
 }
- 
+
 add_filter('searchwp_minimum_word_length','my_searchwp_minimum_word_length');
 
 ?>
