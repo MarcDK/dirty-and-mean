@@ -1,8 +1,11 @@
 $marctv-margin: 5%;
+$marctv-margin-small: $marctv-margin/3;
+$comment-children-padding: 0.8em;
+
 $marctv-color: #0e7dc4;
 $black: #23282d;
 $light-background: lighten($black,15);
-$commentbox-color: lighten($black,75);
+$commentbox-color: #F6F7F9;
 $commentbox-fontcolor: #000;
 $font-color: #333;
 $duration: .2s;

@@ -2,29 +2,33 @@
 
 @media only screen and (max-width: 600px) {
 
-  html#marctv .article-header {
+  html#marctv {
 
-    .article-box-wrapper {
 
-      .article-box {
 
-        margin-left: $marctv-margin/2;
-        margin-right: $marctv-margin/2;
-        margin-top: 0.3em;
+    .article-header {
 
-        .article-title {
+      .article-box-wrapper {
 
+        .article-box {
+
+          margin-left: $marctv-margin-small;
+          margin-right: $marctv-margin-small;
+          margin-top: 0.3em;
+
+          .article-title {
+
+          }
         }
-      }
 
-      .meta {
+        .meta {
 
-        a {
+          a {
 
+          }
         }
       }
     }
-
   }
 
   html {
@@ -64,8 +68,8 @@
         }
 
         p, h1, h2, h3, h4, h5, .tools, .hreview .text, .meta, .sharedaddy {
-          margin-left: $marctv-margin/2;
-          margin-right: $marctv-margin/2;
+          margin-left: $marctv-margin-small;
+          margin-right: $marctv-margin-small;
         }
 
         blockquote {
@@ -173,7 +177,7 @@
       }
     }
     li {
-      border-top: 1px dotted $black;
+      border-top: 1px dotted #D1D3D6;
       padding-left: 0;
       .vcard {
         .avatar {
@@ -191,7 +195,7 @@
     }
     li .children {
 
-      background-image: url('images/left-stroke.png');
+      background-image: url('images/left-border.png');
       background-repeat: repeat-y;
 
       .vcard .avatar {
@@ -200,7 +204,7 @@
         height: 2em;
       }
       li {
-        padding-left: 1em;
+        padding-left: $comment-children-padding;
       }
     }
   }
@@ -263,7 +267,7 @@
         margin-left: 0;
         margin-right: 0;
         padding: 0;
-        padding-left: $marctv-margin/2;
+        padding-left: $marctv-margin-small;
         border-left: 1px solid $black;
         margin-bottom: 1em;
         white-space: normal;

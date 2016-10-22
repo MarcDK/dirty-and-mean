@@ -87,8 +87,8 @@ small {
   margin-left: $marctv-margin;
   margin-right: $marctv-margin;
   @media screen and (max-width: 600px) {
-    margin-left: $marctv-margin/2;
-    margin-right: $marctv-margin/2;
+    margin-left: $marctv-margin-small;
+    margin-right: $marctv-margin-small;
   }
 }
 
