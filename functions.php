@@ -283,12 +283,9 @@ function get_marctv_recent_articles()
 
         $cid = array(get_the_ID());
 
-
-
         $postlist = query_posts(
                 array(
-                    'showposts' => 6,
-                    'post__not_in' => $cid
+                    'showposts' => 6
                 )
             );
 

@@ -46,10 +46,23 @@ Grüße an alle Quelltextleser!
                             'container' => '',
                             'menu_class' => 'hamburger menu',
                         )); ?>
+
                     </div>
                 </nav>
                 <?php get_search_form(); ?>
+            </div>
+            <div class="section" id="tagnav">
+                <?php
+                if (has_nav_menu('tagnav')) {
+                    echo ' <div class="tagnav-title">Aktuelle Themen:</div>';
+                }
 
+                wp_nav_menu(array(
+                    'theme_location' => 'tagnav',
+                    'container' => '',
+                    'menu_class' => '',
+                ));
+                ?>
             </div>
         </div>
     </div>
