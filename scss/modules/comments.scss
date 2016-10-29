@@ -134,8 +134,7 @@ p.comment-subscription-form {
 .searchform .formbutton,
 #commentform #submit,
 #hsc-btn-hideshow,
-#hsc-btn-loadmore,
-.reply a {
+#hsc-btn-loadmore {
   background-color: shade(#eee, $shade_ammount);
   @include background-image(linear-gradient(shade(#eee, $shade_ammount), shade(#ddd, $shade_ammount)));
   /*
@@ -310,7 +309,9 @@ p.comment-subscription-form {
   #respond {
     margin-left: 0;
     //background-color: shade($commentbox-color, 10);
-    padding: 0.3em;
+    padding: 0;
+    overflow: hidden;
+    padding-top: 2em;
   }
 
   .comment {
@@ -396,17 +397,16 @@ p.comment-subscription-form {
 
       .reply {
         margin-bottom: 0em;
-        margin-top: 1em;
       }
 
       li {
-        padding: 5px 7px 5px 75px;
+        padding: 5px 7px 2em 75px;
       }
 
       .depth-2,
       .depth-3,
       .depth-4 {
-        margin: 0 0 5px;
+        margin: 0 0 3em;
       }
 
       .vcard .avatar {
@@ -444,12 +444,18 @@ p.comment-subscription-form {
 
     .reply {
       margin-bottom: 3em;
-      margin-top: 1em;
+      margin-top: 20px;
+
     }
 
     .reply a {
       text-decoration: none;
-      padding: 0.3em 1em;
+      font-size: 90%;
+      color: $marctv-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     #cancel-comment-reply-link {

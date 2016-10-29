@@ -129,3 +129,12 @@ a[rel="tag"]::before,
 .entry blockquote.promoted-comment p {
   font-size: inherit;
 }
+
+.js .marctv-moderate-links {
+  float: right;
+  margin-top: 20px;
+
+  a {
+    text-decoration: none;
+  }
+}
