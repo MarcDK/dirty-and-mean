@@ -36,9 +36,9 @@ html .article-header {
     .article-title {
       line-height: 1.2;
       font-weight: 700;
-      color: $font-color;
+      color: white;
       display: inline;
-      background: white;
+      background: $marctv-color;
       //background: rgba(255,255,255,0.8);
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;

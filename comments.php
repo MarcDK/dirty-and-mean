@@ -19,8 +19,7 @@ if (post_password_required()) {
 
 <?php if (have_comments()) : ?>
 
-    <div
-        class="comments-title title"><?php comments_number(__('Noch kein Kommentar'), __('Ein Kommentar'), __('% Kommentare')); ?></div>
+    <div class="comments-title supertitle"><span><?php comments_number(__('Noch kein Kommentar'), __('Ein Kommentar'), __('% Kommentare')); ?></span></div>
     <ol class="commentlist">
         <?php wp_list_comments(array('avatar_size' => 80, 'callback' => 'marctv_comment')); ?>
     </ol>
