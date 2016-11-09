@@ -137,29 +137,34 @@ p.comment-subscription-form {
 #hsc-btn-loadmore {
   background-color: shade($marctv-color, 0);
   @include background-image(linear-gradient(shade($marctv-color, 0), shade($marctv-color, 5)));
-  border: 1px solid shade(#ccc, $shade_ammount);
-  border-bottom: 1px solid shade(#bbb, $shade_ammount);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
+  @include border-radius(3px);
+  border: 1px solid shade($marctv-color, 10);
+  border-bottom: 1px solid shade($marctv-color, 20);
   color: white;
   line-height: 1;
   padding: 0.6em 1em;
   text-align: center;
-  text-shadow: 0 1px 0 shade(#eee, $shade_ammount);
   width: auto;
   font-family: $fonts-title;
+  outline: none;
+  cursor: pointer;
+  position: relative;
 
   &:hover {
-    background-color: shade($marctv-color, 40);
-    @include background-image(linear-gradient(lighten($marctv-color, 5), lighten($marctv-color, 10)));
-    color: white;
-    border: 1px solid shade(#bbb, $shade_ammount);
-    border-bottom: 1px solid shade(#999, $shade_ammount);
-    cursor: pointer;
+    background-color: shade($marctv-color, 0);
+    @include background-image(linear-gradient(shade($marctv-color, 5), shade($marctv-color, 10)));
+    border: 1px solid shade($marctv-color, 20);
+    border-bottom: 1px solid shade($marctv-color, 30);
+    @include box-shadow(rgba(0,0,0,0.3) 1px 1px 10px);
 
+  }
+
+  &:active {
+    background-color: shade($marctv-color, 10);
+    @include background-image(linear-gradient(shade($marctv-color, 10), shade($marctv-color, 15)));
+    border: 1px solid shade($marctv-color, 20);
+    border-bottom: 1px solid shade($marctv-color, 30);
+    top: 1px;
   }
 }
 
@@ -168,12 +173,7 @@ p.comment-subscription-form {
   font-size: 90%;
 }
 
-.searchform .formbutton:active,
-#commentform #submit:active {
-  border: 1px solid #aaa;
-  border-bottom: 1px solid #888;
-  @include box-shadow(#aaaaaa 0 0 5px 2px inset, $black 0 1px 0 0);
-}
+
 
 #comments textarea {
   border: none;
