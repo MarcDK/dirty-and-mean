@@ -71,15 +71,14 @@
     border-bottom: none;
     border-bottom: 1px solid white;
     border-color: white;
-
-    transition: border-color $duration ease-out;
-    //@include box-shadow(#333 0 0 2px);
+    transition: border-color $duration ease-out, box-shadow $duration ease-out;
 
   }
 
   .is-sticky .innerheader {
     border-bottom: 1px solid #d2d2d2;
     border-color: #d2d2d2;
+    @include box-shadow(0 0 15px rgba(0,0,0,.3));
   }
 
   .searchbox {
