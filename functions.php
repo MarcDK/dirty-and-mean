@@ -40,6 +40,17 @@ function get_marctv_header(){
         $teaser .= '</div>';
         $teaser .= '</div>';
         echo $teaser;
+    } else {
+        $teaser  = '<div class="article-header">';
+        $teaser .= '<div class="article-img">' . get_the_post_thumbnail(23528) . '</div>';
+        $teaser .= '<div class="article-box-wrapper">';
+        $teaser .= '<div class="article-box">';
+        $teaser .= '<h1 class="article-title entry-title">' . get_the_title() . '</h1>';
+        $teaser .= get_marctv_meta();
+        $teaser .= '</div>';
+        $teaser .= '</div>';
+        $teaser .= '</div>';
+        echo $teaser;
     }
 }
 
@@ -235,7 +246,7 @@ function get_marctv_meta() {
         $meta .= '<span class="fn">' . get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") . '</span></a>';
 
     } else {
-        $meta .= 'Von <span rel="vcard author"><span class="fn">' . get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") . '</span></span>';
+        $meta .= 'Von <span class="vcard author"><span class="fn">' . get_the_author_meta("first_name") . ' ' . get_the_author_meta("last_name") . '</span></span>';
     }
 
     $meta .= ' am <time class="updated" datetime="' . get_the_date("c") . '">' . get_the_time(__("F j, Y")) . '</time>';

@@ -145,7 +145,6 @@ p.comment-subscription-form {
   padding: 0.6em 1em;
   text-align: center;
   width: auto;
-  font-family: $fonts-title;
   outline: none;
   cursor: pointer;
   position: relative;
@@ -155,7 +154,7 @@ p.comment-subscription-form {
     @include background-image(linear-gradient(shade($marctv-color, 5), shade($marctv-color, 10)));
     border: 1px solid shade($marctv-color, 20);
     border-bottom: 1px solid shade($marctv-color, 30);
-    @include box-shadow(rgba(0,0,0,0.3) 1px 1px 10px);
+    @include box-shadow(rgba(0,0,0,0.6) 1px 1px 10px);
 
   }
 
