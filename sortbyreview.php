@@ -7,7 +7,7 @@
  */
 get_header();
 ?>
-<div class="site">
+<div class="site main-content">
     <div id="content" class="section">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <div class="entry">
