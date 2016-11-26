@@ -35,7 +35,7 @@ html #tagnav {
     font-size: 70%;
     margin-top: 0;
     margin-bottom: 0;
-    float: left;
+    float: right;
 
     a:first-child {
       padding-left: 0;
@@ -50,8 +50,7 @@ html #tagnav {
 
     a:active,
     a:hover {
-      color: lighten($black,15);
-      text-decoration: underline;
+      color: $marctv-color;
     }
 
   }

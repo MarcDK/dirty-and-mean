@@ -53,15 +53,14 @@ Grüße an alle Quelltextleser!
             </div>
             <div class="section" id="tagnav">
                 <?php
-                if (has_nav_menu('tagnav')) {
-                    echo ' <div class="tagnav-title">Aktuelle Themen:</div>';
-                }
-
                 wp_nav_menu(array(
                     'theme_location' => 'tagnav',
                     'container' => '',
                     'menu_class' => '',
                 ));
+                if (has_nav_menu('tagnav')) {
+                    echo ' <div class="tagnav-title">Aktuelle Themen:</div>';
+                }
                 ?>
             </div>
         </div>
