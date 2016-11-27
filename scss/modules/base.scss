@@ -45,7 +45,7 @@ small {
   margin-bottom: 0.5em;
   margin-top: 0.2em;
   font-weight: 300;
-  border-bottom: 4px solid $black;
+  border-bottom: 4px solid $marctv-color;
   padding: 0;
   font-size: 150%;
   text-transform: uppercase;
@@ -55,7 +55,7 @@ small {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   span {
-    background: $black;
+    background: $marctv-color;
     padding: 0 0.3em;
   }
   a {

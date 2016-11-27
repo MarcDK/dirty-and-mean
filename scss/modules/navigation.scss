@@ -182,7 +182,7 @@ html #tagnav {
   margin-bottom: 2em;
   background: white;
   font-size: 90%;
-  border-bottom: 1px solid $black;
+  border-bottom: 1px solid $marctv-color;
 
   li {
 
@@ -193,7 +193,7 @@ html #tagnav {
     &.current-menu-item a,
     & a:hover {
       color: white;
-      background-color: $black;
+      background-color: $marctv-color;
 
     }
 
